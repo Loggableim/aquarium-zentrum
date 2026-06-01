@@ -1,0 +1,5 @@
+# Redirect all aquarienzentrum.com variants to aquaristik-zentrum.com
+https://aquarienzentrum.com/* https://aquaristik-zentrum.com/:splat 301
+https://aquarien-zentrum.com/* https://aquaristik-zentrum.com/:splat 301
+https://www.aquarienzentrum.com/* https://aquaristik-zentrum.com/:splat 301
+https://www.aquarien-zentrum.com/* https://aquaristik-zentrum.com/:splat 301
