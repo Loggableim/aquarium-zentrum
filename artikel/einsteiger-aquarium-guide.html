@@ -19,32 +19,171 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
 </head>
 <body>
-<div class="promo-bar">
+<div class="promo-bar" id="promoBar">
   🐟 Neuer Guide: Aquarium Pflegeroutine – Der ultimative Wartungsplan
   <a href="/artikel/aquarium-pflegeroutine-guide.html">→ Jetzt lesen</a>
 </div>
 
-<div class="nav-main">
+<div class="nav-main" id="navMain">
   <div class="nav-inner">
     <div class="nav-left">
       <a href="/" class="nav-logo">
         <div class="mark">🐠</div>
         <div class="name"><span>Aqua</span>ristik</div>
       </a>
-      <div class="nav-links">
-        <a href="/artikel/einsteiger-aquarium-guide.html">🐟 Einsteiger <span class="count">4</span></a>
-        <a href="/artikel/aquarienpflanzen-anfaenger.html">🌿 Pflanzen <span class="count">3</span></a>
-        <a href="/artikel/aquarium-technik-ueberblick.html">⚙️ Technik <span class="count">2</span></a>
-        <a href="/artikel/garnelen-im-aquarium.html">🦐 Tiere <span class="count">3</span></a>
-        <a href="/artikel/algen-im-aquarium.html">💊 Pflege <span class="count">4</span></a>
-        <a href="/artikel/einsteiger-aquarium-guide.html">📰 Alle <span class="count">14</span></a>
-        <a href="/about.html">ℹ️ Über</a>
+
+      <!-- Hamburger toggle (mobile only) -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Nav links + mega-menus -->
+      <div class="nav-links" id="navLinks">
+        <div class="nav-item" data-category="einsteiger">
+          <a href="/artikel/einsteiger-aquarium-guide.html" class="nav-link">🐟 Einsteiger <span class="count">4</span></a>
+          <div class="dropdown">
+            <div class="cat">
+              <h4>🐟 Einsteiger-Guides</h4>
+              <a href="/artikel/einsteiger-aquarium-guide.html"><span class="dot" style="background:#06b6d4"></span> Einsteiger-Guide <small>Beckengröße, Technik, Besatz</small></a>
+              <a href="/artikel/bodengrund-aquarium-guide.html"><span class="dot" style="background:#06b6d4"></span> Bodengrund-Guide <small>Kies, Sand, Soil im Vergleich</small></a>
+              <a href="/artikel/aquarium-einfahren-nitritpeak.html"><span class="dot" style="background:#06b6d4"></span> Aquarium einfahren <small>Nitritpeak sicher meistern</small></a>
+              <a href="/artikel/wasserwerte-aquarium-guide.html"><span class="dot" style="background:#06b6d4"></span> Wasserwerte-Guide <small>pH, GH, KH, NO₂ &amp; NO₃</small></a>
+            </div>
+            <div class="cat">
+              <h4>⭐ Empfohlen</h4>
+              <a href="/artikel/bodengrund-aquarium-guide.html" class="featured-card">
+                <div class="thumb" style="background-image:url('/images/bodengrund-arten.png')"></div>
+                <div class="info">
+                  <h5>Bodengrund-Guide</h5>
+                  <p>Die richtige Substratwahl</p>
+                </div>
+              </a>
+            </div>
+            <div class="cat">
+              <h4>🔗 Schnellzugriff</h4>
+              <a href="/artikel/einsteiger-aquarium-guide.html">📋 Alle Einsteiger-Artikel</a>
+              <a href="/artikel/wasserwerte-aquarium-guide.html">📊 Wasserwerte-Tabelle</a>
+            </div>
+            <div class="cat">
+              <h4>📸 Neuester</h4>
+              <a href="/artikel/bodengrund-aquarium-guide.html" class="featured-card">
+                <div class="thumb" style="background:linear-gradient(135deg,#ff6b6b,#0d9488)"></div>
+                <div class="info">
+                  <h5>Bodengrund-Guide</h5>
+                  <p>5000+ Wörter · 2 Bilder</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-category="pflanzen">
+          <a href="/artikel/aquarienpflanzen-anfaenger.html" class="nav-link">🌿 Pflanzen <span class="count">3</span></a>
+          <div class="dropdown" style="grid-template-columns:1.5fr 1fr 1fr;">
+            <div class="cat">
+              <h4>🌿 Pflanzen</h4>
+              <a href="/artikel/aquarienpflanzen-anfaenger.html"><span class="dot" style="background:#10b981"></span> Aquarienpflanzen <small>Pflegeleichte Arten</small></a>
+              <a href="/artikel/co2-im-aquarium.html"><span class="dot" style="background:#10b981"></span> CO₂ im Aquarium <small>Anlage, Diffusor, Test</small></a>
+            </div>
+            <div class="cat">
+              <h4>🪨 Aquascaping</h4>
+              <a href="/artikel/aquascaping-anfaenger.html"><span class="dot" style="background:#0d9488"></span> Aquascaping <small>Hardscape &amp; Gestaltung</small></a>
+            </div>
+            <div class="cat">
+              <h4>⭐ Empfohlen</h4>
+              <a href="/artikel/aquarienpflanzen-anfaenger.html" class="featured-card">
+                <div class="thumb" style="background-image:url('/images/aquarienpflanzen.png')"></div>
+                <div class="info"><h5>Pflanzen-Guide</h5><p>Die 15 besten Arten</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-category="technik">
+          <a href="/artikel/aquarium-technik-ueberblick.html" class="nav-link">⚙️ Technik <span class="count">2</span></a>
+          <div class="dropdown" style="grid-template-columns:1.5fr 1fr 1fr;">
+            <div class="cat">
+              <h4>⚙️ Technik</h4>
+              <a href="/artikel/aquarium-technik-ueberblick.html"><span class="dot" style="background:#8b5cf6"></span> Technik-Überblick <small>Filter, Licht, Heizung</small></a>
+              <a href="/artikel/co2-im-aquarium.html"><span class="dot" style="background:#8b5cf6"></span> CO₂-Guide <small>Anlage, Diffusor</small></a>
+            </div>
+            <div class="cat">
+              <h4>🛒 Produkte</h4>
+              <a href="/artikel/aquarium-technik-ueberblick.html" class="featured-card">
+                <div class="thumb" style="background-image:url('/images/technik.png')"></div>
+                <div class="info"><h5>Technik-Guide</h5><p>Equipment im Überblick</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-category="tiere">
+          <a href="/artikel/garnelen-im-aquarium.html" class="nav-link">🦐 Tiere <span class="count">3</span></a>
+          <div class="dropdown" style="grid-template-columns:1.5fr 1fr 1fr;">
+            <div class="cat">
+              <h4>🦐 Garnelen</h4>
+              <a href="/artikel/garnelen-im-aquarium.html"><span class="dot" style="background:#ff6b6b"></span> Garnelen-Guide <small>Haltung, Pflege, Zucht</small></a>
+            </div>
+            <div class="cat">
+              <h4>🐟 Fische</h4>
+              <a href="/artikel/kampffisch-haltung-betta.html"><span class="dot" style="background:#ec4899"></span> Kampffisch Haltung <small>Betta splendens</small></a>
+              <a href="/artikel/beliebteste-aquarienfische.html"><span class="dot" style="background:#ec4899"></span> Aquarienfische <small>Top 10 für Einsteiger</small></a>
+            </div>
+            <div class="cat">
+              <h4>⭐ Empfohlen</h4>
+              <a href="/artikel/garnelen-im-aquarium.html" class="featured-card">
+                <div class="thumb" style="background-image:url('/images/garnelen.png')"></div>
+                <div class="info"><h5>Garnelen-Guide</h5><p>Zwerggarnelen im Aquarium</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-category="pflege">
+          <a href="/artikel/algen-im-aquarium.html" class="nav-link">💊 Pflege <span class="count">4</span></a>
+          <div class="dropdown">
+            <div class="cat">
+              <h4>💊 Gesundheit</h4>
+              <a href="/artikel/algen-im-aquarium.html"><span class="dot" style="background:#ffd93d"></span> Algen-Guide <small>Erkennen &amp; bekämpfen</small></a>
+              <a href="/artikel/fischkrankheiten-aquarium-guide.html"><span class="dot" style="background:#ffd93d"></span> Fischkrankheiten <small>Diagnose &amp; Behandlung</small></a>
+            </div>
+            <div class="cat">
+              <h4>🧹 Wartung</h4>
+              <a href="/artikel/aquarium-pflegeroutine-guide.html"><span class="dot" style="background:#ffd93d"></span> Pflegeroutine <small>Wasserwechsel &amp; Filter</small></a>
+            </div>
+            <div class="cat">
+              <h4>⭐ Empfohlen</h4>
+              <a href="/artikel/aquarium-pflegeroutine-guide.html" class="featured-card">
+                <div class="thumb" style="background-image:url('/images/wasserwechsel.png')"></div>
+                <div class="info"><h5>Pflegeroutine-Guide</h5><p>Ultimativer Wartungsplan</p></div>
+              </a>
+            </div>
+            <div class="cat">
+              <h4>📸 Neu</h4>
+              <a href="/artikel/fischkrankheiten-aquarium-guide.html" class="featured-card">
+                <div class="thumb" style="background-image:url('/images/krankheiten-symptome.png')"></div>
+                <div class="info"><h5>Fischkrankheiten</h5><p>Ich, Flossenfäule &amp; Co.</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="/artikel/einsteiger-aquarium-guide.html" class="nav-link">📰 Alle <span class="count">14</span></a>
+        <a href="/about.html" class="nav-link">ℹ️ Über</a>
       </div>
     </div>
-    <div class="nav-right">
-      <button class="search" aria-label="Suchen" onclick="alert('🔍 Suche – coming soon')">🔍</button>
+
+    <!-- Desktop right side -->
+    <div class="nav-right" id="navRight">
+      <div class="search-wrapper">
+        <button class="search" id="searchToggle" aria-label="Suchen">🔍</button>
+        <div class="search-bar" id="searchBar">
+          <input type="text" placeholder="Artikel durchsuchen…" id="searchInput" aria-label="Suchbegriff">
+          <button id="searchSubmit" aria-label="Suchen starten">→</button>
+        </div>
+      </div>
       <a href="#" class="cta">📬 Abonnieren</a>
     </div>
+
+    <!-- Mobile overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
   </div>
 </div>
 
@@ -209,13 +348,114 @@
 </div>
 
 <script>
-document.getElementById('cookieAccept')?.addEventListener('click', function() {
-  localStorage.setItem('cookieConsent', 'true');
-  document.getElementById('cookieBanner').classList.remove('show');
-});
-if (!localStorage.getItem('cookieConsent')) {
-  document.getElementById('cookieBanner').classList.add('show');
-}
+// Cookie Banner
+(function() {
+  const banner = document.getElementById('cookieBanner');
+  const acceptBtn = document.getElementById('cookieAccept');
+  if (banner && !localStorage.getItem('cookieConsent')) {
+    banner.classList.add('show');
+  }
+  acceptBtn?.addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'true');
+    banner.classList.remove('show');
+  });
+})();
+
+// Mobile Nav Toggle
+(function() {
+  const hamburger = document.getElementById('navHamburger');
+  const navLinks = document.getElementById('navLinks');
+  const overlay = document.getElementById('navOverlay');
+
+  function toggleMenu(open) {
+    hamburger?.classList.toggle('active', open);
+    navLinks?.classList.toggle('open', open);
+    overlay?.classList.toggle('active', open);
+    hamburger?.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  hamburger?.addEventListener('click', function() {
+    const isOpen = navLinks?.classList.contains('open');
+    toggleMenu(!isOpen);
+  });
+
+  overlay?.addEventListener('click', function() {
+    toggleMenu(false);
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navLinks?.classList.contains('open')) {
+      toggleMenu(false);
+    }
+  });
+
+  // Mobile mega-menu accordion: tap to expand
+  document.querySelectorAll('.nav-item').forEach(function(item) {
+    const link = item.querySelector('.nav-link');
+    const dropdown = item.querySelector('.dropdown');
+    if (link && dropdown && window.innerWidth <= 768) {
+      link.addEventListener('click', function(e) {
+        // On mobile, toggle mega-menu accordion instead of navigating
+        if (window.innerWidth <= 768) {
+          // Close all others
+          document.querySelectorAll('.nav-item.mobile-open').forEach(function(other) {
+            if (other !== item) other.classList.remove('mobile-open');
+          });
+          item.classList.toggle('mobile-open');
+          e.preventDefault();
+        }
+      });
+    }
+  });
+})();
+
+// Search toggle
+(function() {
+  const searchToggle = document.getElementById('searchToggle');
+  const searchBar = document.getElementById('searchBar');
+  const searchInput = document.getElementById('searchInput');
+  const searchSubmit = document.getElementById('searchSubmit');
+
+  searchToggle?.addEventListener('click', function() {
+    const isOpen = searchBar?.classList.contains('open');
+    if (isOpen) {
+      searchBar.classList.remove('open');
+      searchToggle.style.display = '';
+    } else {
+      searchBar.classList.add('open');
+      searchToggle.style.display = 'none';
+      setTimeout(function() { searchInput?.focus(); }, 100);
+    }
+  });
+
+  searchSubmit?.addEventListener('click', function() {
+    const query = searchInput?.value?.trim();
+    if (query) {
+      window.location.href = '/?q=' + encodeURIComponent(query);
+    }
+  });
+
+  searchInput?.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') searchSubmit?.click();
+    if (e.key === 'Escape') {
+      searchBar?.classList.remove('open');
+      searchToggle.style.display = '';
+    }
+  });
+})();
+
+// Active nav link detection
+(function() {
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(function(link) {
+    const href = link.getAttribute('href');
+    if (href && currentPath.endsWith(href)) {
+      link.classList.add('active');
+    }
+  });
+})();
 </script>
 </body>
 </html>
