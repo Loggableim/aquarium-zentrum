@@ -11,37 +11,44 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aquaristik-zentrum.com/about.html">
   <meta property="og:site_name" content="Aquaristik Zentrum">
-
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
 </head>
 <body>
 
 <!-- Header -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="logo">
-      <a href="/">
-        <img src="/images/logo.svg" alt="Aquaristik Zentrum" width="180" height="48">
-      </a>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Navigation umschalten">☰</button>
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/">Startseite</a></li>
-        <li><a href="/artikel/einsteiger-aquarium-guide.html">Artikel</a></li>
-        <li><a href="/about.html" class="active">Über uns</a></li>
-        <li><a href="/impressum.html">Impressum</a></li>
-      </ul>
-    </nav>
+<div class="brand-bar">
+  <div class="brand-left">
+    <a href="/" class="brand-logo">
+      <div class="fish-icon">🐠</div>
+      <div class="brand-text">
+        <div class="top"><span>Aquaristik</span> Zentrum</div>
+        <div class="subtitle">Magazin</div>
+      </div>
+    </a>
   </div>
-</header>
+  <div class="brand-right">
+    <button class="search-btn" aria-label="Suchen" onclick="alert('🔍 Suche – coming soon')">🔍</button>
+    <a href="#" class="newsletter-btn">📬 Abonnieren</a>
+  </div>
+</div>
 
-<!-- Page Header -->
-<div class="page-header">
+<div class="tab-bar">
+  <div class="tab-item"><a href="/" class="tab-link">🏠 Alle</a></div>
+  <div class="tab-item"><a href="/artikel/einsteiger-aquarium-guide.html" class="tab-link">🐟 Einsteiger <span class="count">4</span></a></div>
+  <div class="tab-item"><a href="/artikel/aquarienpflanzen-anfaenger.html" class="tab-link">🌿 Pflanzen <span class="count">3</span></a></div>
+  <div class="tab-item"><a href="/artikel/aquarium-technik-ueberblick.html" class="tab-link">⚙️ Technik <span class="count">2</span></a></div>
+  <div class="tab-item"><a href="/artikel/garnelen-im-aquarium.html" class="tab-link">🦐 Tiere <span class="count">3</span></a></div>
+  <div class="tab-item"><a href="/artikel/algen-im-aquarium.html" class="tab-link">💊 Pflege <span class="count">4</span></a></div>
+  <div class="tab-item"><a href="/artikel/einsteiger-aquarium-guide.html" class="tab-link">📰 Alle</a></div>
+  <div class="tab-item"><a href="/about.html" class="tab-link active">ℹ️ Über uns</a></div>
+</div>
+
+<!-- Page Hero -->
+<div class="page-hero">
   <h1>Über Aquaristik Zentrum</h1>
 </div>
 

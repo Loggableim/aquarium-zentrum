@@ -3,339 +3,434 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aquaristik Zentrum – Alles rund ums Aquarium | Ratgeber & Blog</title>
-  <meta name="description" content="Aquaristik Zentrum – Dein Ratgeber für Aquarieneinrichtung, Aquascaping, Garnelenhaltung und vieles mehr. Tipps für Einsteiger und Fortgeschrittene.">
-  <meta name="keywords" content="Aquaristik, Aquarium, Aquascaping, Garnelen, Fische, Pflanzen, Einsteiger, Ratgeber, Blog">
+  <title>Aquaristik Zentrum – Alles rund ums Aquarium | Megapage</title>
+  <meta name="description" content="Aquaristik Zentrum – Dein Ratgeber für Aquarieneinrichtung, Aquascaping, Garnelenhaltung, Fischkrankheiten, Technik & Pflege. 5000+ Wort Guides mit Pop Art Comic Illustrationen.">
+  <meta name="keywords" content="Aquaristik, Aquarium, Aquascaping, Garnelen, Fische, Pflanzen, Einsteiger, Ratgeber, Blog, Bodengrund, Fischkrankheiten, Pflegeroutine">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="de">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Aquaristik Zentrum – Alles rund ums Aquarium">
-  <meta property="og:description" content="Dein Ratgeber für Aquarieneinrichtung, Aquascaping, Garnelenhaltung und vieles mehr.">
+  <meta property="og:description" content="Dein Ratgeber mit 5000+ Wort Guides, Pop Art Comic Illustrationen und praktischen Tipps für Einsteiger und Profis.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aquaristik-zentrum.com/">
   <meta property="og:site_name" content="Aquaristik Zentrum">
-  <meta property="og:locale" content="de_DE">
   <meta property="og:image" content="https://aquaristik-zentrum.com/images/hero.png">
 
-  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Aquaristik Zentrum",
     "url": "https://aquaristik-zentrum.com/",
-    "description": "Alles rund ums Aquarium – Ratgeber, Tipps und Inspiration für Aquaristik-Einsteiger und Profis.",
+    "description": "Alles rund ums Aquarium – Ratgeber, Tipps und Inspiration.",
     "inLanguage": "de-DE",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://aquaristik-zentrum.com/?q={search_term_string}"
-      },
+      "target": {"@type": "EntryPoint", "urlTemplate": "https://aquaristik-zentrum.com/?q={search_term_string}"},
       "query-input": "required name=search_term_string"
     }
   }
   </script>
 
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
 </head>
 <body>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="logo">
-      <a href="/">
-        <img src="/images/logo.svg" alt="Aquaristik Zentrum" width="180" height="48">
+<!-- ═══════════ HEADER ═══════════ -->
+<div class="brand-bar">
+  <div class="brand-left">
+    <a href="/" class="brand-logo">
+      <div class="fish-icon">🐠</div>
+      <div class="brand-text">
+        <div class="top"><span>Aquaristik</span> Zentrum</div>
+        <div class="subtitle">Magazin</div>
+      </div>
+    </a>
+  </div>
+  <div class="brand-right">
+    <button class="search-btn" aria-label="Suchen" onclick="alert('🔍 Suche – coming soon')">🔍</button>
+    <a href="#" class="newsletter-btn">📬 Abonnieren</a>
+  </div>
+</div>
+
+<div class="tab-bar">
+  <div class="tab-item">
+    <a href="/" class="tab-link active">🏠 Alle</a>
+  </div>
+  <div class="tab-item">
+    <a href="/artikel/einsteiger-aquarium-guide.html" class="tab-link">🐟 Einsteiger <span class="count">4</span></a>
+    <div class="mega-menu">
+      <div class="mega-section">
+        <h4>🐟 Einsteiger-Guides</h4>
+        <a href="/artikel/einsteiger-aquarium-guide.html" class="mega-link"><span class="dot" style="background:#06B6D4"></span> Der ultimative Einsteiger-Guide <small>Beckengröße, Technik, erster Besatz</small></a>
+        <a href="/artikel/bodengrund-aquarium-guide.html" class="mega-link"><span class="dot" style="background:#06B6D4"></span> Aquarium Bodengrund-Guide <small>Kies, Sand, Soil – die richtige Wahl</small></a>
+        <a href="/artikel/aquarium-einfahren-nitritpeak.html" class="mega-link"><span class="dot" style="background:#06B6D4"></span> Aquarium einfahren & Nitritpeak <small>Die Einlaufphase sicher meistern</small></a>
+        <a href="/artikel/wasserwerte-aquarium-guide.html" class="mega-link"><span class="dot" style="background:#06B6D4"></span> Wasserwerte verstehen <small>pH, GH, KH, NO₂ & NO₃</small></a>
+      </div>
+      <div class="mega-section">
+        <h4>⭐ Empfohlen</h4>
+        <div class="mega-featured">
+          <div class="thumb" style="background-image:url('/images/bodengrund-arten.png')"></div>
+          <h5>Bodengrund-Guide</h5>
+          <p>Die richtige Substratwahl für jedes Becken</p>
+        </div>
+      </div>
+      <div class="mega-section">
+        <h4>🔗 Schnellzugriff</h4>
+        <a href="/artikel/einsteiger-aquarium-guide.html" class="mega-link">📋 Alle Einsteiger-Artikel</a>
+        <a href="/artikel/wasserwerte-aquarium-guide.html" class="mega-link">📊 Wasserwerte-Tabelle</a>
+      </div>
+    </div>
+  </div>
+  <div class="tab-item">
+    <a href="/artikel/aquarienpflanzen-anfaenger.html" class="tab-link">🌿 Pflanzen & Aquascaping <span class="count">3</span></a>
+    <div class="mega-menu">
+      <div class="mega-section">
+        <h4>🌿 Pflanzen</h4>
+        <a href="/artikel/aquarienpflanzen-anfaenger.html" class="mega-link"><span class="dot" style="background:#10B981"></span> Aquarienpflanzen für Anfänger <small>Pflegeleichte Arten & Düngung</small></a>
+        <a href="/artikel/co2-im-aquarium.html" class="mega-link"><span class="dot" style="background:#10B981"></span> CO₂ im Aquarium <small>Anlage, Diffusor, Dauertest</small></a>
+      </div>
+      <div class="mega-section">
+        <h4>🪨 Aquascaping</h4>
+        <a href="/artikel/aquascaping-anfaenger.html" class="mega-link"><span class="dot" style="background:#0D9488"></span> Aquascaping für Anfänger <small>Hardscape, Gestaltungsregeln</small></a>
+      </div>
+      <div class="mega-section">
+        <h4>⭐ Empfohlen</h4>
+        <div class="mega-featured">
+          <div class="thumb" style="background-image:url('/images/aquarienpflanzen.png')"></div>
+          <h5>Aquarienpflanzen-Guide</h5>
+          <p>Die 15 besten Arten für dein Aquarium</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-item">
+    <a href="/artikel/aquarium-technik-ueberblick.html" class="tab-link">⚙️ Technik <span class="count">2</span></a>
+    <div class="mega-menu">
+      <div class="mega-section">
+        <h4>⚙️ Technik & Zubehör</h4>
+        <a href="/artikel/aquarium-technik-ueberblick.html" class="mega-link"><span class="dot" style="background:#8B5CF6"></span> Aquarium-Technik im Überblick <small>Filter, Beleuchtung, Heizung</small></a>
+        <a href="/artikel/co2-im-aquarium.html" class="mega-link"><span class="dot" style="background:#8B5CF6"></span> CO₂ im Aquarium <small>Anlage, Diffusor, Dauertest</small></a>
+      </div>
+      <div class="mega-section">
+        <h4>🛒 Produkte</h4>
+        <div class="mega-featured">
+          <div class="thumb" style="background-image:url('/images/technik.png')"></div>
+          <h5>Technik-Guide</h5>
+          <p>Alles zu Filtern, Licht und CO₂</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-item">
+    <a href="/artikel/garnelen-im-aquarium.html" class="tab-link">🦐 Garnelen & Fische <span class="count">3</span></a>
+    <div class="mega-menu">
+      <div class="mega-section">
+        <h4>🦐 Garnelen</h4>
+        <a href="/artikel/garnelen-im-aquarium.html" class="mega-link"><span class="dot" style="background:#FF6B6B"></span> Garnelen im Aquarium <small>Haltung, Pflege, Vermehrung</small></a>
+      </div>
+      <div class="mega-section">
+        <h4>🐟 Fische</h4>
+        <a href="/artikel/kampffisch-haltung-betta.html" class="mega-link"><span class="dot" style="background:#EC4899"></span> Kampffisch Haltung <small>Betta splendens artgerecht pflegen</small></a>
+        <a href="/artikel/beliebteste-aquarienfische.html" class="mega-link"><span class="dot" style="background:#EC4899"></span> Beliebteste Aquarienfische <small>Arten für Einsteiger</small></a>
+      </div>
+    </div>
+  </div>
+  <div class="tab-item">
+    <a href="/artikel/algen-im-aquarium.html" class="tab-link">💊 Pflege & Gesundheit <span class="count">4</span></a>
+    <div class="mega-menu">
+      <div class="mega-section">
+        <h4>💊 Fischgesundheit</h4>
+        <a href="/artikel/algen-im-aquarium.html" class="mega-link"><span class="dot" style="background:#FFD93D"></span> Algen im Aquarium <small>Erkennen, bekämpfen, vorbeugen</small></a>
+        <a href="/artikel/fischkrankheiten-aquarium-guide.html" class="mega-link"><span class="dot" style="background:#FFD93D"></span> Fischkrankheiten erkennen <small>Die große Übersicht</small></a>
+      </div>
+      <div class="mega-section">
+        <h4>🧹 Pflege</h4>
+        <a href="/artikel/aquarium-pflegeroutine-guide.html" class="mega-link"><span class="dot" style="background:#FFD93D"></span> Aquarium Pflegeroutine <small>Wasserwechsel, Filter, Wartung</small></a>
+      </div>
+      <div class="mega-section">
+        <h4>⭐ Empfohlen</h4>
+        <div class="mega-featured">
+          <div class="thumb" style="background-image:url('/images/pflege-checkliste.png')"></div>
+          <h5>Pflegeroutine-Guide</h5>
+          <p>Der ultimative Wartungsplan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-item">
+    <a href="/artikel/einsteiger-aquarium-guide.html" class="tab-link">📰 Alle Artikel <span class="count">14</span></a>
+  </div>
+  <div class="tab-item">
+    <a href="/about.html" class="tab-link">ℹ️ Über uns</a>
+  </div>
+</div>
+
+<!-- ═══════════ MEGAPAGE ═══════════ -->
+<main class="megapage">
+
+  <!-- Hero -->
+  <div class="hero-mega">
+    <div class="hero-main">
+      <span class="cat-tag">⭐ Neu</span>
+      <h2>Aquarium Pflegeroutine<br>Der große Wartungsplan</h2>
+      <p>Wasserwechsel, Filterreinigung, Algenentfernung — Schritt für Schritt zur perfekten Routine. Mit Checkliste zum Ausdrucken.</p>
+    </div>
+    <div class="hero-side">
+      <a href="/artikel/bodengrund-aquarium-guide.html" class="side-card">
+        <div class="thumb-mini" style="background-image:url('/images/bodengrund-arten.png')"></div>
+        <div class="info">
+          <h5>Bodengrund-Guide</h5>
+          <small>Kies, Sand oder Soil?</small>
+        </div>
+      </a>
+      <a href="/artikel/fischkrankheiten-aquarium-guide.html" class="side-card">
+        <div class="thumb-mini" style="background-image:url('/images/krankheiten-symptome.png')"></div>
+        <div class="info">
+          <h5>Fischkrankheiten erkennen</h5>
+          <small>Ich, Flossenfäule & Co.</small>
+        </div>
+      </a>
+      <a href="/artikel/co2-im-aquarium.html" class="side-card">
+        <div class="thumb-mini" style="background-image:url('/images/co2-anlage.png')"></div>
+        <div class="info">
+          <h5>CO₂-Anlage einstellen</h5>
+          <small>Diffusor, Dauertest, Düngung</small>
+        </div>
       </a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Navigation umschalten">☰</button>
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/" class="active">Startseite</a></li>
-        <li><a href="/artikel/einsteiger-aquarium-guide.html">Artikel</a></li>
-        <li><a href="/about.html">Über uns</a></li>
-        <li><a href="/impressum.html">Impressum</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-inner">
-    <h1>Tauche ein in die <span>Aquaristik</span></h1>
-    <p>Dein Blog rund um Aquarieneinrichtung, Aquascaping, Garnelen- und Fischhaltung. Praxisnahe Tipps für Einsteiger und erfahrene Aquarianer.</p>
-    <img src="/images/hero.png" alt="Aquarium Illustration" class="hero-image" onerror="this.style.display='none'" width="700" height="400">
-  </div>
-</section>
-
-<!-- Main Content -->
-<main>
-  <div class="container">
-    <h2 class="section-title">Neueste Artikel</h2>
-
-    <div class="blog-grid">
-
-      <!-- Einsteiger Guide -->
-      <article class="blog-card" data-category="einsteiger">
-        <div class="card-image">
-          <img src="/images/einsteiger-guide.png" alt="Aquarium Einsteiger-Guide" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Einsteiger</span>
-            <time datetime="2025-06-01">1. Juni 2025</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/einsteiger-aquarium-guide.html">Der ultimative Einsteiger-Guide für dein erstes Aquarium</a></h3>
-          <p class="card-excerpt">Du möchtest mit der Aquaristik beginnen? Wir zeigen dir Schritt für Schritt, was du brauchst – von der Beckengröße über die Technik bis zum ersten Besatz.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/einsteiger-aquarium-guide.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Aquarienpflanzen -->
-      <article class="blog-card" data-category="pflanzen">
-        <div class="card-image">
-          <img src="/images/aquarienpflanzen.png" alt="Aquarienpflanzen für Anfänger" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Pflanzen</span>
-            <time datetime="2026-06-02">2. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/aquarienpflanzen-anfaenger.html">Aquarienpflanzen für Anfänger – Pflegeleichte Arten &amp; perfektes Wachstum</a></h3>
-          <p class="card-excerpt">Pflanzen verwandeln dein Aquarium in ein lebendiges Ökosystem. Erfahre, welche Arten garantiert gedeihen und worauf es beim Wachstum ankommt.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/aquarienpflanzen-anfaenger.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Technik -->
-      <article class="blog-card" data-category="technik">
-        <div class="card-image">
-          <img src="/images/technik.png" alt="Aquarium-Technik Überblick" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Technik</span>
-            <time datetime="2026-06-02">2. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/aquarium-technik-ueberblick.html">Aquarium-Technik im Überblick – Filter, Beleuchtung, Heizung &amp; CO₂ richtig wählen</a></h3>
-          <p class="card-excerpt">Die richtige Technik ist das Herz jedes Aquariums. Wir erklären dir die wichtigsten Komponenten und worauf du achten solltest.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/aquarium-technik-ueberblick.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Algen & Pflege -->
-      <article class="blog-card" data-category="pflege">
-        <div class="card-image">
-          <img src="/images/algen.png" alt="Algen im Aquarium" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Aquarium Pflege</span>
-            <time datetime="2026-06-02">2. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/algen-im-aquarium.html">Algen im Aquarium erkennen, bekämpfen und vorbeugen – Der komplette Guide</a></h3>
-          <p class="card-excerpt">Algen sind kein Zeichen von Versagen, sondern ein Hinweis auf das biologische Gleichgewicht. So findest du die Ursache und bringst dein Aquarium in Balance.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/algen-im-aquarium.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Aquascaping -->
-      <article class="blog-card" data-category="aquascaping">
-        <div class="card-image">
-          <img src="/images/aquascaping.png" alt="Aquascaping für Anfänger" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Aquascaping</span>
-            <time datetime="2025-05-25">25. Mai 2025</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/aquascaping-anfaenger.html">Aquascaping für Anfänger: Atemberaubende Unterwasserlandschaften gestalten</a></h3>
-          <p class="card-excerpt">Lerne die Grundlagen des Aquascapings kennen: Hardscape, Pflanzenarrangement und die wichtigsten Gestaltungsregeln für dein Traum-Aquarium.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/aquascaping-anfaenger.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Garnelen -->
-      <article class="blog-card" data-category="garnelen">
-        <div class="card-image">
-          <img src="/images/garnelen.png" alt="Garnelen im Aquarium" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Garnelen</span>
-            <time datetime="2025-05-18">18. Mai 2025</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/garnelen-im-aquarium.html">Garnelen im Aquarium: Haltung, Pflege und Vermehrung</a></h3>
-          <p class="card-excerpt">Zwerggarnelen sind faszinierend und pflegeleicht. Erfahre alles über die artgerechte Haltung, Wasserwerte und die erfolgreiche Nachzucht.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/garnelen-im-aquarium.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Aquarium einfahren -->
-      <article class="blog-card" data-category="einsteiger">
-        <div class="card-image">
-          <img src="/images/aquarium-einfahren.png" alt="Aquarium einfahren und Nitritpeak verstehen" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Einsteiger</span>
-            <time datetime="2026-06-02">2. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/aquarium-einfahren-nitritpeak.html">Aquarium einfahren und Nitritpeak: Schritt-für-Schritt sicher zum stabilen Becken</a></h3>
-          <p class="card-excerpt">Schritt-für-Schritt durch die Einlaufphase: Nitritpeak verstehen, Wasserwerte richtig messen und den ersten Besatz sicher planen.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/aquarium-einfahren-nitritpeak.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Kampffisch Haltung -->
-      <article class="blog-card" data-category="fische">
-        <div class="card-image">
-          <img src="/images/kampffisch-haltung.png" alt="Kampffisch Betta splendens artgerecht halten" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Fische</span>
-            <time datetime="2026-06-02">2. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/kampffisch-haltung-betta.html">Kampffisch Haltung: Betta splendens artgerecht im Aquarium pflegen</a></h3>
-          <p class="card-excerpt">Artgerechte Kampffisch Haltung einfach erklärt: Aquariumgröße, Wasserwerte, Einrichtung, Futter, Pflege und Vergesellschaftung für Betta splendens.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/kampffisch-haltung-betta.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- CO2 im Aquarium -->
-      <article class="blog-card" data-category="technik">
-        <div class="card-image">
-          <img src="/images/co2-anlage.png" alt="CO2 Anlage im Aquarium richtig einstellen" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Technik</span>
-            <time datetime="2026-06-02">2. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/co2-im-aquarium.html">CO₂ im Aquarium: Anlage, Diffusor, Dauertest und Düngung richtig einstellen</a></h3>
-          <p class="card-excerpt">Praxisleitfaden für stabile CO₂-Werte, gesunde Pflanzen und weniger Algen: So stellst du Anlage, Diffusor, Dauertest, Licht und Düngung richtig ein.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/co2-im-aquarium.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Bodengrund Guide -->
-      <article class="blog-card" data-category="einsteiger">
-        <div class="card-image">
-          <img src="/images/bodengrund-arten.png" alt="Aquarium Bodengrund Arten und Substrate" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Einsteiger</span>
-            <time datetime="2026-06-03">3. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/bodengrund-aquarium-guide.html">Aquarium Bodengrund – Die richtige Substratwahl für jedes Becken</a></h3>
-          <p class="card-excerpt">Kies, Sand, Nährboden oder Soil? Der große Ratgeber für den perfekten Bodengrund – mit Schichtungs-Tipps, Mengenberechnung und Pflegehinweisen.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/bodengrund-aquarium-guide.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Fischkrankheiten -->
-      <article class="blog-card" data-category="pflege">
-        <div class="card-image">
-          <img src="/images/krankheiten-symptome.png" alt="Fischkrankheiten Symptome erkennen" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Aquarium Pflege</span>
-            <time datetime="2026-06-03">3. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/fischkrankheiten-aquarium-guide.html">Fischkrankheiten im Aquarium erkennen, behandeln und vorbeugen – Der große Guide</a></h3>
-          <p class="card-excerpt">Ich, Flossenfäule, Bauchwassersucht & Co.: Alle wichtigen Fischkrankheiten erkennen und richtig behandeln. Inklusive Vorbeugung und Quarantäne.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/fischkrankheiten-aquarium-guide.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Pflegeroutine -->
-      <article class="blog-card" data-category="pflege">
-        <div class="card-image">
-          <img src="/images/wasserwechsel.png" alt="Aquarium Wasserwechsel und Pflegeroutine" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Aquarium Pflege</span>
-            <time datetime="2026-06-03">3. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/aquarium-pflegeroutine-guide.html">Aquarium Pflegeroutine – Wasserwechsel, Filterreinigung und Wartungsplan</a></h3>
-          <p class="card-excerpt">Der ultimative Guide für die regelmäßige Aquarium-Pflege: Schritt-für-Schritt-Anleitung für Wasserwechsel, Filterreinigung, Algenentfernung und den perfekten Wartungsplan.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/aquarium-pflegeroutine-guide.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
   </div>
 
-  <!-- AdSense -->
-  <div class="container">
-    <div class="adsense-placeholder">
-      [Google AdSense – Responsive Anzeigenplatzhalter]
-    </div>
+  <!-- Einsteiger -->
+  <div class="section-divider">
+    <h3><span class="emoji">🐟</span> Einsteiger</h3>
+    <span class="count-badge">4 Artikel</span>
+    <span class="line"></span>
+  </div>
+  <div class="card-grid">
+    <a href="/artikel/einsteiger-aquarium-guide.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/einsteiger-guide.png')">
+        <span class="cat-tag" style="background:#06B6D4;color:#fff;">Einsteiger</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">1. Juni 2025</span>
+        <h4>Der ultimative Einsteiger-Guide für dein erstes Aquarium</h4>
+        <p>Von der Beckengröße über die Technik bis zum ersten Besatz – der komplette Start-Guide.</p>
+      </div>
+    </a>
+    <a href="/artikel/bodengrund-aquarium-guide.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/bodengrund-arten.png')">
+        <span class="cat-tag" style="background:#06B6D4;color:#fff;">Einsteiger</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">3. Juni 2026</span>
+        <h4>Aquarium Bodengrund – Die richtige Substratwahl</h4>
+        <p>Kies, Sand, Nährboden oder Soil? 5000+ Wort Guide mit Schichtung und Pflege.</p>
+      </div>
+    </a>
+    <a href="/artikel/aquarium-einfahren-nitritpeak.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/aquarium-einfahren.png')">
+        <span class="cat-tag" style="background:#06B6D4;color:#fff;">Einsteiger</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">2. Juni 2026</span>
+        <h4>Aquarium einfahren & Nitritpeak verstehen</h4>
+        <p>Schritt-für-Schritt durch die Einlaufphase – Wasserwerte messen und ersten Besatz planen.</p>
+      </div>
+    </a>
+    <a href="/artikel/wasserwerte-aquarium-guide.html" class="article-card">
+      <div class="art-thumb" style="background:linear-gradient(135deg,#06B6D4,#0891B2)">
+        <span class="cat-tag" style="background:#06B6D4;color:#fff;">Einsteiger</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">15. Juni 2025</span>
+        <h4>Aquarium Wasserwerte: Der komplette Guide</h4>
+        <p>pH, GH, KH, NO₂ & NO₃ – alle Werte verstehen und richtig messen.</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Pflanzen & Aquascaping -->
+  <div class="section-divider">
+    <h3><span class="emoji">🌿</span> Pflanzen & Aquascaping</h3>
+    <span class="count-badge">3 Artikel</span>
+    <span class="line"></span>
+  </div>
+  <div class="card-grid">
+    <a href="/artikel/aquarienpflanzen-anfaenger.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/aquarienpflanzen.png')">
+        <span class="cat-tag" style="background:#10B981;color:#fff;">Pflanzen</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">2. Juni 2026</span>
+        <h4>Aquarienpflanzen für Anfänger – Pflegeleichte Arten</h4>
+        <p>Anubias, Javafarn, Vallisnerie & mehr – die besten Pflanzen für den Start.</p>
+      </div>
+    </a>
+    <a href="/artikel/co2-im-aquarium.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/co2-anlage.png')">
+        <span class="cat-tag" style="background:#10B981;color:#fff;">Technik</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">2. Juni 2026</span>
+        <h4>CO₂ im Aquarium – Anlage, Diffusor, Dauertest</h4>
+        <p>Stabile CO₂-Werte für gesunde Pflanzen und weniger Algen.</p>
+      </div>
+    </a>
+    <a href="/artikel/aquascaping-anfaenger.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/aquascaping.png')">
+        <span class="cat-tag" style="background:#0D9488;color:#fff;">Aquascaping</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">25. Mai 2025</span>
+        <h4>Aquascaping für Anfänger</h4>
+        <p>Hardscape, Pflanzenarrangement und Gestaltungsregeln für dein Traum-Aquarium.</p>
+      </div>
+    </a>
   </div>
 
   <!-- Newsletter -->
-  <div class="newsletter-section">
-    <h2>📬 Bleib auf dem Laufenden</h2>
-    <p>Keine neuen Artikel mehr verpassen. Hol dir Aquaristik-Tipps direkt in dein Postfach.</p>
-    <div class="newsletter-btns">
-      <a href="#" class="btn btn-primary">Newsletter abonnieren</a>
-      <a href="#" class="btn btn-secondary">Instagram folgen</a>
+  <div class="newsletter-mega">
+    <div class="nl-text">
+      <h3>📬 Keinen Artikel mehr verpassen</h3>
+      <p>Unser Newsletter liefert dir jede Woche die besten Aquaristik-Tipps – kostenlos.</p>
+    </div>
+    <div class="nl-cta">
+      <a href="#" class="btn-outline">Instagram</a>
+      <a href="#" class="btn-primary">Newsletter abonnieren →</a>
     </div>
   </div>
+
+  <!-- Technik -->
+  <div class="section-divider">
+    <h3><span class="emoji">⚙️</span> Technik</h3>
+    <span class="count-badge">2 Artikel</span>
+    <span class="line"></span>
+  </div>
+  <div class="card-grid">
+    <a href="/artikel/aquarium-technik-ueberblick.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/technik.png')">
+        <span class="cat-tag" style="background:#8B5CF6;color:#fff;">Technik</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">2. Juni 2026</span>
+        <h4>Aquarium-Technik im Überblick</h4>
+        <p>Filter, Beleuchtung, Heizung & CO₂ richtig wählen und einsetzen.</p>
+      </div>
+    </a>
+    <a href="/artikel/co2-im-aquarium.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/co2-anlage.png')">
+        <span class="cat-tag" style="background:#8B5CF6;color:#fff;">Technik</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">2. Juni 2026</span>
+        <h4>CO₂ im Aquarium – Komplett-Guide</h4>
+        <p>Anlage, Diffusor, Dauertest und Düngung richtig einstellen.</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Garnelen & Fische -->
+  <div class="section-divider">
+    <h3><span class="emoji">🦐</span> Garnelen & Fische</h3>
+    <span class="count-badge">3 Artikel</span>
+    <span class="line"></span>
+  </div>
+  <div class="card-grid">
+    <a href="/artikel/garnelen-im-aquarium.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/garnelen.png')">
+        <span class="cat-tag" style="background:#FF6B6B;color:#fff;">Garnelen</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">18. Mai 2025</span>
+        <h4>Garnelen im Aquarium – Haltung, Pflege und Vermehrung</h4>
+        <p>Alles über Zwerggarnelen: artgerechte Haltung, Wasserwerte und erfolgreiche Nachzucht.</p>
+      </div>
+    </a>
+    <a href="/artikel/kampffisch-haltung-betta.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/kampffisch-haltung.png')">
+        <span class="cat-tag" style="background:#EC4899;color:#fff;">Fische</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">2. Juni 2026</span>
+        <h4>Kampffisch Haltung – Betta splendens artgerecht pflegen</h4>
+        <p>Aquariumgröße, Wasserwerte, Einrichtung und Vergesellschaftung.</p>
+      </div>
+    </a>
+    <a href="/artikel/beliebteste-aquarienfische.html" class="article-card">
+      <div class="art-thumb" style="background:linear-gradient(135deg,#EC4899,#DB2777)">
+        <span class="cat-tag" style="background:#EC4899;color:#fff;">Fische</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">15. Juni 2025</span>
+        <h4>Die 10 beliebtesten Aquarienfische für Einsteiger</h4>
+        <p>Arten, Haltung und Steckbriefe der beliebtesten Aquarienfische.</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Pflege & Gesundheit -->
+  <div class="section-divider">
+    <h3><span class="emoji">💊</span> Pflege & Gesundheit</h3>
+    <span class="count-badge">4 Artikel</span>
+    <span class="line"></span>
+  </div>
+  <div class="card-grid">
+    <a href="/artikel/algen-im-aquarium.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/algen.png')">
+        <span class="cat-tag" style="background:#FFD93D;color:#0F172A;">Pflege</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">2. Juni 2026</span>
+        <h4>Algen im Aquarium erkennen, bekämpfen und vorbeugen</h4>
+        <p>Der komplette Guide zu Fadenalgen, Bartalgen, Kieselalgen und Co.</p>
+      </div>
+    </a>
+    <a href="/artikel/fischkrankheiten-aquarium-guide.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/krankheiten-symptome.png')">
+        <span class="cat-tag" style="background:#FFD93D;color:#0F172A;">Pflege</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">3. Juni 2026</span>
+        <h4>Fischkrankheiten erkennen, behandeln und vorbeugen</h4>
+        <p>Ich, Flossenfäule, Bauchwassersucht & Co. – die große Übersicht.</p>
+      </div>
+    </a>
+    <a href="/artikel/aquarium-pflegeroutine-guide.html" class="article-card">
+      <div class="art-thumb" style="background-image:url('/images/wasserwechsel.png')">
+        <span class="cat-tag" style="background:#FFD93D;color:#0F172A;">Pflege</span>
+      </div>
+      <div class="art-body">
+        <span class="art-date">3. Juni 2026</span>
+        <h4>Aquarium Pflegeroutine – Wartungsplan & Checkliste</h4>
+        <p>Wasserwechsel, Filterreinigung, Algenentfernung – der ultimative Wartungsplan.</p>
+      </div>
+    </a>
+  </div>
+
+  <!-- Newsletter 2 -->
+  <div class="newsletter-mega">
+    <div class="nl-text">
+      <h3>🐟 Bereit für dein Traum-Aquarium?</h3>
+      <p>Melde dich an und erhalte die besten Tipps, Tricks und Guides direkt in dein Postfach.</p>
+    </div>
+    <div class="nl-cta">
+      <a href="#" class="btn-primary">Newsletter abonnieren →</a>
+    </div>
+  </div>
+
 </main>
 
-<!-- Footer -->
+<!-- ═══════════ FOOTER ═══════════ -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-col">
-      <h4>Aquaristik Zentrum</h4>
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">
+        <div style="width:28px;height:28px;background:linear-gradient(135deg,#06B6D4,#0D9488);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.8rem;">🐠</div>
+        <div style="font-weight:900;font-size:1rem;letter-spacing:-0.3px;"><span style="color:#06B6D4;">Aquaristik</span> Zentrum</div>
+      </div>
       <p>Dein unabhängiger Blog rund um die Aquaristik. Wir teilen praxisnahe Tipps, Erfahrungsberichte und Inspiration für dein Aquarium – vom Einsteiger bis zum Profi.</p>
     </div>
     <div class="footer-col">
@@ -351,46 +446,36 @@
       <h4>Kategorien</h4>
       <ul>
         <li><a href="/artikel/einsteiger-aquarium-guide.html">Einsteiger</a></li>
-        <li><a href="/artikel/aquarienpflanzen-anfaenger.html">Pflanzen</a></li>
-        <li><a href="/artikel/aquarium-technik-ueberblick.html">Technik</a></li>
         <li><a href="/artikel/aquascaping-anfaenger.html">Aquascaping</a></li>
         <li><a href="/artikel/garnelen-im-aquarium.html">Garnelen</a></li>
-        <li><a href="/artikel/algen-im-aquarium.html">Algen & Pflege</a></li>
+        <li><a href="/artikel/bodengrund-aquarium-guide.html">Bodengrund</a></li>
+        <li><a href="/artikel/fischkrankheiten-aquarium-guide.html">Fischkrankheiten</a></li>
+        <li><a href="/artikel/aquarium-pflegeroutine-guide.html">Pflegeroutine</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <p>&copy; 2025-2026 Aquaristik Zentrum. Alle Rechte vorbehalten.</p>
-    <p class="affiliate-hinweis">* Diese Seite enthält Affiliate-Links (Amazon DE). Als Amazon-Partner verdienen wir an qualifizierten Verkäufen. Für dich entstehen keine zusätzlichen Kosten.</p>
+    <p class="affiliate-hinweis">* Diese Seite enthält Affiliate-Links (Amazon DE). Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
   </div>
 </footer>
 
 <!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
   <div class="cookie-inner">
-    <p>🍪 Diese Website verwendet Cookies und Dienste von Drittanbietern (Google AdSense, Amazon Affiliate), um dir ein optimales Erlebnis zu bieten. Mit der Nutzung stimmst du der Verwendung von Cookies zu. <a href="/impressum.html">Mehr erfahren</a></p>
+    <p>🍪 Diese Website verwendet Cookies und Dienste von Drittanbietern. Mit der Nutzung stimmst du der Verwendung von Cookies zu. <a href="/impressum.html">Mehr erfahren</a></p>
     <button class="cookie-btn" id="cookieAccept">Verstanden</button>
   </div>
 </div>
 
 <script>
-// Mobile Nav Toggle
-document.getElementById('navToggle')?.addEventListener('click', function() {
-  document.getElementById('navLinks').classList.toggle('open');
+document.getElementById('cookieAccept')?.addEventListener('click', function() {
+  localStorage.setItem('cookieConsent', 'true');
+  document.getElementById('cookieBanner').classList.remove('show');
 });
-
-// Cookie Banner
-(function() {
-  const banner = document.getElementById('cookieBanner');
-  const acceptBtn = document.getElementById('cookieAccept');
-  if (!localStorage.getItem('cookieConsent')) {
-    banner.classList.add('show');
-  }
-  acceptBtn?.addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'true');
-    banner.classList.remove('show');
-  });
-})();
+if (!localStorage.getItem('cookieConsent')) {
+  document.getElementById('cookieBanner').classList.add('show');
+}
 </script>
 
 </body>

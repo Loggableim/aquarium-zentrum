@@ -74,22 +74,32 @@
 </div>
 
 <!-- Header -->
-<header class="site-header">
-  <div class="header-inner">
-    <div class="logo">
-      <a href="/"><span>Aquaristik</span> Zentrum</a>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Navigation umschalten">☰</button>
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/">Startseite</a></li>
-        <li><a href="/artikel/einsteiger-aquarium-guide.html" class="active">Artikel</a></li>
-        <li><a href="/about.html">Über uns</a></li>
-        <li><a href="/impressum.html">Impressum</a></li>
-      </ul>
-    </nav>
+<div class="brand-bar">
+  <div class="brand-left">
+    <a href="/" class="brand-logo">
+      <div class="fish-icon">🐠</div>
+      <div class="brand-text">
+        <div class="top"><span>Aquaristik</span> Zentrum</div>
+        <div class="subtitle">Magazin</div>
+      </div>
+    </a>
   </div>
-</header>
+  <div class="brand-right">
+    <button class="search-btn" aria-label="Suchen" onclick="alert('🔍 Suche – coming soon')">🔍</button>
+    <a href="#" class="newsletter-btn">📬 Abonnieren</a>
+  </div>
+</div>
+
+<div class="tab-bar">
+  <div class="tab-item"><a href="/" class="tab-link">🏠 Alle</a></div>
+  <div class="tab-item"><a href="/artikel/einsteiger-aquarium-guide.html" class="tab-link">🐟 Einsteiger <span class="count">4</span></a></div>
+  <div class="tab-item"><a href="/artikel/aquarienpflanzen-anfaenger.html" class="tab-link">🌿 Pflanzen <span class="count">3</span></a></div>
+  <div class="tab-item"><a href="/artikel/aquarium-technik-ueberblick.html" class="tab-link">⚙️ Technik <span class="count">2</span></a></div>
+  <div class="tab-item"><a href="/artikel/garnelen-im-aquarium.html" class="tab-link">🦐 Tiere <span class="count">3</span></a></div>
+  <div class="tab-item"><a href="/artikel/algen-im-aquarium.html" class="tab-link">💊 Pflege <span class="count">4</span></a></div>
+  <div class="tab-item"><a href="/artikel/einsteiger-aquarium-guide.html" class="tab-link">📰 Alle</a></div>
+  <div class="tab-item"><a href="/about.html" class="tab-link">ℹ️ Über</a></div>
+</div>
 
 <!-- Article Header -->
 <section class="article-header">
