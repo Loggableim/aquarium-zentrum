@@ -349,6 +349,7 @@ main {
 .blog-card[data-category="garnelen"] { border-top: 6px solid var(--color-coral-pop); }
 .blog-card[data-category="pflege"] { border-top: 6px solid var(--color-warm-yellow); }
 .blog-card[data-category="technik"] { border-top: 6px solid var(--color-purple-pop); }
+.blog-card[data-category="fische"] { border-top: 6px solid var(--color-pink-pop); }
 
 /* Card Image */
 .card-image {
@@ -386,6 +387,7 @@ main {
 .blog-card[data-category="garnelen"] .card-image { background: linear-gradient(135deg, #FF6B6B, #E24545); }
 .blog-card[data-category="pflege"] .card-image { background: linear-gradient(135deg, #FFD93D, #F59E0B); }
 .blog-card[data-category="technik"] .card-image { background: linear-gradient(135deg, #8B5CF6, #7C3AED); }
+.blog-card[data-category="fische"] .card-image { background: linear-gradient(135deg, #EC4899, #DB2777); }
 
 /* Card Body */
 .card-body {
@@ -420,6 +422,7 @@ main {
 .blog-card[data-category="garnelen"] .card-tag { background: #FF6B6B; color: #fff; }
 .blog-card[data-category="pflege"] .card-tag { background: #FFD93D; color: #0F172A; }
 .blog-card[data-category="technik"] .card-tag { background: #8B5CF6; color: #fff; }
+.blog-card[data-category="fische"] .card-tag { background: #EC4899; color: #fff; }
 
 .card-title {
   font-size: 1.2rem;
