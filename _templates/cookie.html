@@ -1,0 +1,18 @@
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <p>🍪 Diese Website verwendet Cookies und Dienste von Drittanbietern. Mit der Nutzung stimmst du der Verwendung von Cookies zu. <a href="/impressum.html">Mehr erfahren</a></p>
+    <button class="cookie-btn" id="cookieAccept">Verstanden</button>
+  </div>
+</div>
+
+<script>
+document.getElementById('cookieAccept')?.addEventListener('click', function() {
+  localStorage.setItem('cookieConsent', 'true');
+  document.getElementById('cookieBanner').classList.remove('show');
+});
+if (!localStorage.getItem('cookieConsent')) {
+  document.getElementById('cookieBanner').classList.add('show');
+}
+</script>
+</body>
+</html>

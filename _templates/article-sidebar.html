@@ -1,0 +1,23 @@
+    <div class="article-sidebar">
+      <div class="side-section">
+        <h5>📚 Verwandte Artikel</h5>
+        {{RELATED_ARTICLES}}
+      </div>
+      <div class="side-section">
+        <h5>🛒 Empfohlenes Zubehör</h5>
+        <div class="side-product-card">
+          <div class="prod-thumb" style="background:linear-gradient(135deg,{{PROD_COLOR1}},{{PROD_COLOR2}})"></div>
+          <p>{{PROD_NAME}}</p>
+          <p class="prod-sub">{{PROD_DESC}}</p>
+          <a href="https://www.amazon.de/dp/{{PROD_ASIN}}?tag=nova079-20" target="_blank" class="prod-link">→ Bei Amazon ansehen</a>
+        </div>
+      </div>
+      <div class="side-section">
+        <h5>📋 Inhaltsverzeichnis</h5>
+        <div>
+          {{TABLE_OF_CONTENTS}}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
