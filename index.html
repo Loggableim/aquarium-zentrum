@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aquaristik Zentrum – Alles rund ums Aquarium | Blog & Ratgeber</title>
-  <meta name="description" content="Aquaristik Zentrum – Ihr Ratgeber für Aquarieneinrichtung, Aquascaping, Garnelenhaltung und vieles mehr. Tipps für Einsteiger und Fortgeschrittene.">
+  <title>Aquaristik Zentrum – Alles rund ums Aquarium | Ratgeber & Blog</title>
+  <meta name="description" content="Aquaristik Zentrum – Dein Ratgeber für Aquarieneinrichtung, Aquascaping, Garnelenhaltung und vieles mehr. Tipps für Einsteiger und Fortgeschrittene.">
   <meta name="keywords" content="Aquaristik, Aquarium, Aquascaping, Garnelen, Fische, Pflanzen, Einsteiger, Ratgeber, Blog">
   <meta name="robots" content="index, follow">
   <meta name="language" content="de">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Aquaristik Zentrum – Alles rund ums Aquarium">
-  <meta property="og:description" content="Ihr Ratgeber für Aquarieneinrichtung, Aquascaping, Garnelenhaltung und vieles mehr.">
+  <meta property="og:description" content="Dein Ratgeber für Aquarieneinrichtung, Aquascaping, Garnelenhaltung und vieles mehr.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aquaristik-zentrum.com/">
   <meta property="og:site_name" content="Aquaristik Zentrum">
   <meta property="og:locale" content="de_DE">
+  <meta property="og:image" content="https://aquaristik-zentrum.com/images/hero.png">
 
-  <!-- JSON-LD WebSite -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,32 +38,21 @@
   }
   </script>
 
-  <!-- JSON-LD BlogPosting for homepage (placeholder) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Aquaristik Zentrum Blog",
-    "description": "Aktuelle Artikel rund um Aquaristik, Aquascaping und Aquarienpflege.",
-    "url": "https://aquaristik-zentrum.com/"
-  }
-  </script>
-
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- Google AdSense Platzhalter -->
-<div class="adsense-placeholder" style="margin:0;border-radius:0;border:none;background:#f0f0f0;padding:0.5rem;font-size:0.75rem;">
-  [Google AdSense – Anzeigenplatzhalter]
-</div>
 
 <!-- Header -->
 <header class="site-header">
   <div class="header-inner">
     <div class="logo">
-      <a href="/"><span>Aquaristik</span> Zentrum</a>
+      <a href="/">
+        <img src="/images/logo.svg" alt="Aquaristik Zentrum" width="180" height="48">
+      </a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Navigation umschalten">☰</button>
     <nav>
@@ -78,8 +68,11 @@
 
 <!-- Hero -->
 <section class="hero">
-  <h1>Willkommen bei Aquaristik Zentrum</h1>
-  <p>Dein Blog rund um Aquarieneinrichtung, Aquascaping, Garnelen- und Fischhaltung. Tipps für Einsteiger und erfahrene Aquarianer.</p>
+  <div class="hero-inner">
+    <h1>Tauche ein in die <span>Aquaristik</span></h1>
+    <p>Dein Blog rund um Aquarieneinrichtung, Aquascaping, Garnelen- und Fischhaltung. Praxisnahe Tipps für Einsteiger und erfahrene Aquarianer.</p>
+    <img src="/images/hero.png" alt="Aquarium Illustration" class="hero-image" onerror="this.style.display='none'" width="700" height="400">
+  </div>
 </section>
 
 <!-- Main Content -->
@@ -89,79 +82,10 @@
 
     <div class="blog-grid">
 
-      <!-- NEW: Aquarienpflanzen -->
-      <article class="blog-card">
+      <!-- Einsteiger Guide -->
+      <article class="blog-card" data-category="einsteiger">
         <div class="card-image">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" fill="#c8e6c9"/>
-            <text x="50" y="55" text-anchor="middle" font-size="12" fill="#666">🌿 Pflanzen</text>
-          </svg>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Pflanzen</span>
-            <time datetime="2026-06-02">2. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/aquarienpflanzen-anfaenger.html">Aquarienpflanzen für Anfänger – Pflegeleichte Arten &amp; perfektes Wachstum</a></h3>
-          <p class="card-excerpt">Pflanzen verwandeln dein Aquarium in ein lebendiges Ökosystem. Erfahre, welche Arten garantiert gedeihen und worauf es beim Wachstum ankommt.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/aquarienpflanzen-anfaenger.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- NEW: Technik -->
-      <article class="blog-card">
-        <div class="card-image">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" fill="#ffe0b2"/>
-            <text x="50" y="55" text-anchor="middle" font-size="12" fill="#666">⚙️ Technik</text>
-          </svg>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Technik</span>
-            <time datetime="2026-06-02">2. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/aquarium-technik-ueberblick.html">Aquarium-Technik im Überblick – Filter, Beleuchtung, Heizung &amp; CO₂ richtig wählen</a></h3>
-          <p class="card-excerpt">Die richtige Technik ist das Herz jedes Aquariums. Wir erklären dir, worauf es bei Filter, Beleuchtung, Heizung und CO₂-Anlage ankommt.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/aquarium-technik-ueberblick.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- NEW: Algen -->
-      <article class="blog-card">
-        <div class="card-image">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" fill="#d4e8d4"/>
-            <text x="50" y="55" text-anchor="middle" font-size="12" fill="#666">🦐 Pflege</text>
-          </svg>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Aquarium Pflege</span>
-            <time datetime="2026-06-02">2. Juni 2026</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/algen-im-aquarium.html">Algen im Aquarium erkennen, bekämpfen und vorbeugen – Der komplette Guide</a></h3>
-          <p class="card-excerpt">Algen sind kein Zeichen von Versagen, sondern ein Hinweis auf das biologische Gleichgewicht. So findest du die Ursache und bringst dein Aquarium dauerhaft in Balance.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/algen-im-aquarium.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Article 1 -->
-      <article class="blog-card">
-        <div class="card-image">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" fill="#e0e0e0"/>
-            <text x="50" y="55" text-anchor="middle" font-size="12" fill="#999">🐟 Aquarium</text>
-          </svg>
+          <img src="/images/einsteiger-guide.png" alt="Aquarium Einsteiger-Guide" loading="lazy">
         </div>
         <div class="card-body">
           <div class="card-meta">
@@ -177,43 +101,18 @@
         </div>
       </article>
 
-      <!-- Article 2 -->
-      <article class="blog-card">
+      <!-- Aquarienpflanzen -->
+      <article class="blog-card" data-category="pflanzen">
         <div class="card-image">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" fill="#d4e8d4"/>
-            <text x="50" y="55" text-anchor="middle" font-size="12" fill="#666">🌿 Aquascaping</text>
-          </svg>
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="card-tag">Aquascaping</span>
-            <time datetime="2025-05-25">25. Mai 2025</time>
-          </div>
-          <h3 class="card-title"><a href="/artikel/aquascaping-anfaenger.html">Aquascaping für Anfänger: Atemberaubende Unterwasserlandschaften gestalten</a></h3>
-          <p class="card-excerpt">Lerne die Grundlagen des Aquascapings kennen: Hardscape, Pflanzenarrangement und die wichtigsten Gestaltungsregeln für dein Trauma-Aquarium.</p>
-          <div class="card-footer">
-            <span>👤 Alexander</span>
-            <a href="/artikel/aquascaping-anfaenger.html" class="read-more">Weiterlesen →</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Article 4 – neu -->
-      <article class="blog-card">
-        <div class="card-image">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" fill="#c8e6c9"/>
-            <text x="50" y="55" text-anchor="middle" font-size="12" fill="#666">🌿 Pflanzen</text>
-          </svg>
+          <img src="/images/aquarienpflanzen.png" alt="Aquarienpflanzen für Anfänger" loading="lazy">
         </div>
         <div class="card-body">
           <div class="card-meta">
             <span class="card-tag">Pflanzen</span>
-            <time datetime="2026-06-15">15. Juni 2026</time>
+            <time datetime="2026-06-02">2. Juni 2026</time>
           </div>
-          <h3 class="card-title"><a href="/artikel/aquarienpflanzen-anfaenger.html">Aquarienpflanzen für Anfänger: Die 15 besten Arten für dein Aquarium</a></h3>
-          <p class="card-excerpt">Von Anubias über Vallisnerie bis zu Rotala – der ultimative Guide zu pflegeleichten und anspruchsvollen Aquarienpflanzen mit Pflegetipps und Vermehrung.</p>
+          <h3 class="card-title"><a href="/artikel/aquarienpflanzen-anfaenger.html">Aquarienpflanzen für Anfänger – Pflegeleichte Arten &amp; perfektes Wachstum</a></h3>
+          <p class="card-excerpt">Pflanzen verwandeln dein Aquarium in ein lebendiges Ökosystem. Erfahre, welche Arten garantiert gedeihen und worauf es beim Wachstum ankommt.</p>
           <div class="card-footer">
             <span>👤 Alexander</span>
             <a href="/artikel/aquarienpflanzen-anfaenger.html" class="read-more">Weiterlesen →</a>
@@ -221,33 +120,67 @@
         </div>
       </article>
 
-      <!-- Article 5 – Algen -->
-      <article class="blog-card">
+      <!-- Technik -->
+      <article class="blog-card" data-category="technik">
         <div class="card-image">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" fill="#e0f2f1"/>
-            <text x="50" y="55" text-anchor="middle" font-size="12" fill="#666">🫧 Algen</text>
-          </svg>
+          <img src="/images/technik.png" alt="Aquarium-Technik Überblick" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag">Technik</span>
+            <time datetime="2026-06-02">2. Juni 2026</time>
+          </div>
+          <h3 class="card-title"><a href="/artikel/aquarium-technik-ueberblick.html">Aquarium-Technik im Überblick – Filter, Beleuchtung, Heizung &amp; CO₂ richtig wählen</a></h3>
+          <p class="card-excerpt">Die richtige Technik ist das Herz jedes Aquariums. Wir erklären dir die wichtigsten Komponenten und worauf du achten solltest.</p>
+          <div class="card-footer">
+            <span>👤 Alexander</span>
+            <a href="/artikel/aquarium-technik-ueberblick.html" class="read-more">Weiterlesen →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Algen & Pflege -->
+      <article class="blog-card" data-category="pflege">
+        <div class="card-image">
+          <img src="/images/algen.png" alt="Algen im Aquarium" loading="lazy">
         </div>
         <div class="card-body">
           <div class="card-meta">
             <span class="card-tag">Aquarium Pflege</span>
-            <time datetime="2025-06-02">2. Juni 2025</time>
+            <time datetime="2026-06-02">2. Juni 2026</time>
           </div>
-          <h3 class="card-title"><a href="/artikel/algen-im-aquarium.html">Algen im Aquarium erkennen, bekämpfen und vorbeugen</a></h3>
-          <p class="card-excerpt">Der komplette Guide zu Fadenalgen, Bartalgen, Kieselalgen, Schwebealgen und Blaualgen – Ursachen verstehen und dein Becken dauerhaft in Balance bringen.</p>
+          <h3 class="card-title"><a href="/artikel/algen-im-aquarium.html">Algen im Aquarium erkennen, bekämpfen und vorbeugen – Der komplette Guide</a></h3>
+          <p class="card-excerpt">Algen sind kein Zeichen von Versagen, sondern ein Hinweis auf das biologische Gleichgewicht. So findest du die Ursache und bringst dein Aquarium in Balance.</p>
           <div class="card-footer">
             <span>👤 Alexander</span>
             <a href="/artikel/algen-im-aquarium.html" class="read-more">Weiterlesen →</a>
           </div>
         </div>
       </article>
-      <article class="blog-card">
+
+      <!-- Aquascaping -->
+      <article class="blog-card" data-category="aquascaping">
         <div class="card-image">
-          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" fill="#ffe0b2"/>
-            <text x="50" y="55" text-anchor="middle" font-size="12" fill="#666">🦐 Garnelen</text>
-          </svg>
+          <img src="/images/aquascaping.png" alt="Aquascaping für Anfänger" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-tag">Aquascaping</span>
+            <time datetime="2025-05-25">25. Mai 2025</time>
+          </div>
+          <h3 class="card-title"><a href="/artikel/aquascaping-anfaenger.html">Aquascaping für Anfänger: Atemberaubende Unterwasserlandschaften gestalten</a></h3>
+          <p class="card-excerpt">Lerne die Grundlagen des Aquascapings kennen: Hardscape, Pflanzenarrangement und die wichtigsten Gestaltungsregeln für dein Traum-Aquarium.</p>
+          <div class="card-footer">
+            <span>👤 Alexander</span>
+            <a href="/artikel/aquascaping-anfaenger.html" class="read-more">Weiterlesen →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Garnelen -->
+      <article class="blog-card" data-category="garnelen">
+        <div class="card-image">
+          <img src="/images/garnelen.png" alt="Garnelen im Aquarium" loading="lazy">
         </div>
         <div class="card-body">
           <div class="card-meta">
@@ -266,20 +199,20 @@
     </div>
   </div>
 
-  <!-- AdSense Placeholder -->
+  <!-- AdSense -->
   <div class="container">
     <div class="adsense-placeholder">
       [Google AdSense – Responsive Anzeigenplatzhalter]
     </div>
   </div>
 
-  <!-- Newsletter / Social -->
-  <div class="container" style="text-align:center;padding:3rem 1.5rem;">
-    <h2 style="font-size:1.5rem;margin-bottom:0.5rem;">📬 Bleib auf dem Laufenden</h2>
-    <p style="color:var(--color-text-light);margin-bottom:1.5rem;">Folge uns für regelmäßige Aquaristik-Tipps und neue Artikel.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href="#" style="background:var(--color-primary);color:#fff;padding:0.75rem 2rem;border-radius:8px;font-weight:600;">Newsletter abonnieren</a>
-      <a href="#" style="background:var(--color-bg-alt);color:var(--color-text);padding:0.75rem 2rem;border-radius:8px;font-weight:600;border:1px solid var(--color-border);">Instagram</a>
+  <!-- Newsletter -->
+  <div class="newsletter-section">
+    <h2>📬 Bleib auf dem Laufenden</h2>
+    <p>Keine neuen Artikel mehr verpassen. Hol dir Aquaristik-Tipps direkt in dein Postfach.</p>
+    <div class="newsletter-btns">
+      <a href="#" class="btn btn-primary">Newsletter abonnieren</a>
+      <a href="#" class="btn btn-secondary">Instagram folgen</a>
     </div>
   </div>
 </main>
@@ -301,7 +234,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Beliebte Kategorien</h4>
+      <h4>Kategorien</h4>
       <ul>
         <li><a href="/artikel/einsteiger-aquarium-guide.html">Einsteiger</a></li>
         <li><a href="/artikel/aquarienpflanzen-anfaenger.html">Pflanzen</a></li>
@@ -318,7 +251,7 @@
   </div>
 </footer>
 
-<!-- Cookie Banner (DSGVO) -->
+<!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
   <div class="cookie-inner">
     <p>🍪 Diese Website verwendet Cookies und Dienste von Drittanbietern (Google AdSense, Amazon Affiliate), um dir ein optimales Erlebnis zu bieten. Mit der Nutzung stimmst du der Verwendung von Cookies zu. <a href="/impressum.html">Mehr erfahren</a></p>
@@ -327,7 +260,7 @@
 </div>
 
 <script>
-// Mobile Navigation Toggle
+// Mobile Nav Toggle
 document.getElementById('navToggle')?.addEventListener('click', function() {
   document.getElementById('navLinks').classList.toggle('open');
 });
@@ -344,9 +277,6 @@ document.getElementById('navToggle')?.addEventListener('click', function() {
     banner.classList.remove('show');
   });
 })();
-
-// Google Analytics Platzhalter
-console.log('Google Analytics würde hier initialisiert werden.');
 </script>
 
 </body>

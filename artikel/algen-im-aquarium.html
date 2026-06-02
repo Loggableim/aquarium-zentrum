@@ -37,7 +37,7 @@
       "name": "Aquaristik Zentrum",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://aquaristik-zentrum.com/images/logo.png"
+        "url": "https://aquaristik-zentrum.com/images/logo.svg"
       }
     },
     "mainEntityOfPage": {
@@ -49,20 +49,19 @@
   </script>
 
   <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
 </head>
 <body>
 
-<!-- AdSense Platzhalter -->
-<div class="adsense-placeholder" style="margin:0;border-radius:0;border:none;background:#f0f0f0;padding:0.5rem;font-size:0.75rem;">
-  [Google AdSense – Anzeigenplatzhalter]
-</div>
-
-<!-- Header -->
 <header class="site-header">
   <div class="header-inner">
     <div class="logo">
-      <a href="/"><span>Aquaristik</span> Zentrum</a>
+      <a href="/">
+        <img src="/images/logo.svg" alt="Aquaristik Zentrum" width="180" height="48">
+      </a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Navigation umschalten">☰</button>
     <nav>
@@ -260,12 +259,11 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 Aquaristik Zentrum. Alle Rechte vorbehalten.</p>
+    <p>&copy; 2025-2026 Aquaristik Zentrum. Alle Rechte vorbehalten.</p>
     <p class="affiliate-hinweis">* Diese Seite enthält Affiliate-Links (Amazon DE). Als Amazon-Partner verdienen wir an qualifizierten Verkäufen. Für dich entstehen keine zusätzlichen Kosten.</p>
   </div>
 </footer>
 
-<!-- Cookie Banner -->
 <div class="cookie-banner" id="cookieBanner">
   <div class="cookie-inner">
     <p>🍪 Diese Website verwendet Cookies und Dienste von Drittanbietern (Google AdSense, Amazon Affiliate), um dir ein optimales Erlebnis zu bieten. Mit der Nutzung stimmst du der Verwendung von Cookies zu. <a href="/impressum.html">Mehr erfahren</a></p>
@@ -277,7 +275,6 @@
 document.getElementById('navToggle')?.addEventListener('click', function() {
   document.getElementById('navLinks').classList.toggle('open');
 });
-
 (function() {
   const banner = document.getElementById('cookieBanner');
   const acceptBtn = document.getElementById('cookieAccept');

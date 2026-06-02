@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" width="400" height="100">
+  <defs>
+    <linearGradient id="fishGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4"/>
+      <stop offset="100%" style="stop-color:#0D9488"/>
+    </linearGradient>
+    <linearGradient id="fishGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B"/>
+      <stop offset="100%" style="stop-color:#FFD93D"/>
+    </linearGradient>
+  </defs>
+  <!-- Fish body -->
+  <g transform="translate(5, 18)">
+    <!-- Tail fin -->
+    <path d="M 0 32 L 20 20 L 20 44 Z" fill="#0D9488" opacity="0.8"/>
+    <!-- Body -->
+    <ellipse cx="45" cy="32" rx="28" ry="16" fill="url(#fishGrad)"/>
+    <!-- Dorsal fin -->
+    <path d="M 35 16 Q 45 6 55 16" fill="#FF6B6B" opacity="0.7"/>
+    <!-- Ventral fin -->
+    <path d="M 40 44 Q 45 52 50 44" fill="#FFD93D" opacity="0.7"/>
+    <!-- Eye -->
+    <circle cx="62" cy="28" r="5" fill="white"/>
+    <circle cx="63" cy="27" r="3" fill="#0F172A"/>
+    <!-- Mouth -->
+    <path d="M 72 32 Q 76 30 73 34" stroke="#0F172A" stroke-width="1.5" fill="none"/>
+    <!-- Stripe accents -->
+    <path d="M 35 26 Q 40 32 35 38" stroke="#FFD93D" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <!-- Bubbles -->
+    <circle cx="78" cy="22" r="3" fill="none" stroke="#06B6D4" stroke-width="1" opacity="0.5"/>
+    <circle cx="85" cy="16" r="2" fill="none" stroke="#06B6D4" stroke-width="1" opacity="0.4"/>
+    <circle cx="82" cy="10" r="1.5" fill="none" stroke="#06B6D4" stroke-width="1" opacity="0.3"/>
+  </g>
+  <!-- Text -->
+  <text x="100" y="42" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="28" fill="#0F172A" letter-spacing="-1">Aquaristik</text>
+  <text x="100" y="72" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="18" fill="#06B6D4" letter-spacing="3" text-transform="uppercase">ZENTRUM</text>
+</svg>
