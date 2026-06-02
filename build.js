@@ -295,6 +295,66 @@ const ARTICLES = {
     ],
     prod: ['Mulmsauger Set', 'Für die wöchentliche Reinigung', 'B0BZ7XQ8J7', '#ffd93d', '#f59e0b'],
   },
+  'aquarium-beleuchtung-guide': {
+    title: 'Aquarium Beleuchtung – Licht für gesundes Pflanzenwachstum',
+    excerpt: 'LED, T5, HQI: Alles über die richtige Aquarienbeleuchtung – Lichtmenge, Spektrum, Dauer und die besten Leisten für jedes Becken.',
+    date: '3. Juni 2026',
+    cat: 'Technik', catColor: '#8b5cf6', catEmoji: '⚙️',
+    img: 'beleuchtung.png', readingTime: 6,
+    toc: ['Warum Beleuchtung wichtig ist', 'LED vs T5 vs HQI', 'Lichtmenge: Lumen, Lux, Watt', 'Lichtfarbe und Spektrum', 'Beleuchtungsdauer', 'Becken-Typen', 'Häufige Fehler', 'Fazit'],
+    related: [
+      ['aquarium-technik-ueberblick', 'Technik-Guide', 'Filter, CO₂, Licht', 'technik.png'],
+      ['aquarienpflanzen-anfaenger', 'Pflanzen-Guide', 'Pflanzen brauchen Licht', 'aquarienpflanzen.png'],
+      ['co2-im-aquarium', 'CO₂-Guide', 'Licht + CO₂ kombinieren', 'co2-anlage.png'],
+      ['aquarium-duengung-guide', 'Düngung-Guide', 'Nährstoffe für Pflanzen', 'duengung-pflanzen.png'],
+    ],
+    prod: ['LED Aquarium Leiste', 'Vollspektrum, dimmbar', 'B0DDLNYNNL', '#8b5cf6', '#7c3aed'],
+  },
+  'aquarium-filter-guide': {
+    title: 'Aquarium Filter und Filtermedien – Der komplette Guide',
+    excerpt: 'Außenfilter, Innenfilter, Hamburger Mattenfilter: Alles zu Filterarten, Medien, Reinigung und Wartung für klares Wasser.',
+    date: '3. Juni 2026',
+    cat: 'Technik', catColor: '#8b5cf6', catEmoji: '⚙️',
+    img: 'filter-guide.png', readingTime: 7,
+    toc: ['Warum filtern?', 'Außenfilter', 'Innenfilter', 'Hamburger Mattenfilter', 'Filtermedien', 'Reinigung & Wartung', 'Die Einfahrphase', 'Fazit'],
+    related: [
+      ['aquarium-technik-ueberblick', 'Technik-Guide', 'Equipment-Überblick', 'technik.png'],
+      ['aquarium-beleuchtung-guide', 'Beleuchtung', 'Licht fürs Aquarium', 'beleuchtung.png'],
+      ['co2-im-aquarium', 'CO₂-Guide', 'CO₂-Anlage & Filter', 'co2-anlage.png'],
+      ['aquarium-pflegeroutine-guide', 'Pflegeroutine', 'Filter reinigen', 'wasserwechsel.png'],
+    ],
+    prod: ['Außenfilter Set', 'Leistungsstark & leise', 'B0DDLNYNNL', '#8b5cf6', '#7c3aed'],
+  },
+  'aquarium-duengung-guide': {
+    title: 'Aquarium Düngung – Pflanzendünger für gesundes Wachstum',
+    excerpt: 'Makro- und Mikronährstoffe, Flüssigdünger, Wurzeltabs: Der komplette Guide zur richtigen Düngung deiner Aquarienpflanzen.',
+    date: '3. Juni 2026',
+    cat: 'Pflanzen', catColor: '#10b981', catEmoji: '🌿',
+    img: 'duengung-pflanzen.png', readingTime: 7,
+    toc: ['Warum düngen?', 'Makronährstoffe NPK', 'Mikronährstoffe & Eisen', 'Flüssigdünger', 'Wurzeldünger', 'Düngeplan', 'Mangel erkennen', 'Fazit'],
+    related: [
+      ['aquarienpflanzen-anfaenger', 'Pflanzen-Guide', 'Arten für Anfänger', 'aquarienpflanzen.png'],
+      ['co2-im-aquarium', 'CO₂-Guide', 'CO₂ + Düngung', 'co2-anlage.png'],
+      ['aquarium-beleuchtung-guide', 'Beleuchtung', 'Licht für Pflanzen', 'beleuchtung.png'],
+      ['bodengrund-aquarium-guide', 'Bodengrund', 'Nährboden für Pflanzen', 'bodengrund-arten.png'],
+    ],
+    prod: ['Pflanzendünger Set', 'Eisen + NPK + Spurenelemente', 'B00DB3HGG4', '#10b981', '#059669'],
+  },
+  'schnecken-im-aquarium': {
+    title: 'Schnecken im Aquarium – Nützliche Helfer und ihre Pflege',
+    excerpt: 'Turmschnecken, Posthornschnecken, Napfschnecken: Arten, Haltung, Vermehrung und warum Schnecken zu den besten Aquarienhelfern gehören.',
+    date: '3. Juni 2026',
+    cat: 'Pflege', catColor: '#ffd93d', catEmoji: '💊',
+    img: 'schnecken-im-aquarium.png', readingTime: 6,
+    toc: ['Warum Schnecken?', 'Turmschnecken', 'Posthornschnecken', 'Napfschnecken', 'Blasenschnecken', 'Haltung & Pflege', 'Vermehrung kontrollieren', 'Mythen & Fakten', 'Fazit'],
+    related: [
+      ['garnelen-im-aquarium', 'Garnelen-Guide', 'Mitbewohner im Becken', 'garnelen.png'],
+      ['algen-im-aquarium', 'Algen-Guide', 'Schnecken gegen Algen', 'algen.png'],
+      ['aquarium-pflegeroutine-guide', 'Pflegeroutine', 'Regelmäßige Pflege', 'wasserwechsel.png'],
+      ['einsteiger-aquarium-guide', 'Einsteiger-Guide', 'Starten mit Schnecken', 'einsteiger-guide.png'],
+    ],
+    prod: ['Schnecken-Pflegeset', 'Futter & Kalk für Schnecken', 'B0CBHFMY7H', '#ffd93d', '#f59e0b'],
+  },
 };
 
 // ── TOPICS / TAGS ──
@@ -311,6 +371,10 @@ const TOPICS = [
   ['Pflegeroutine', '#f59e0b', '/artikel/aquarium-pflegeroutine-guide.html'],
   ['Wasserwerte', '#0891b2', '/artikel/wasserwerte-aquarium-guide.html'],
   ['Kampffisch', '#db2777', '/artikel/kampffisch-haltung-betta.html'],
+  ['Beleuchtung', '#a78bfa', '/artikel/aquarium-beleuchtung-guide.html'],
+  ['Filter', '#6366f1', '/artikel/aquarium-filter-guide.html'],
+  ['Düngung', '#34d399', '/artikel/aquarium-duengung-guide.html'],
+  ['Schnecken', '#fbbf24', '/artikel/schnecken-im-aquarium.html'],
 ];
 
 // ── CATEGORY DATA for index page ──
@@ -320,20 +384,20 @@ const CATEGORIES = [
     cards: ['einsteiger-aquarium-guide', 'bodengrund-aquarium-guide', 'aquarium-einfahren-nitritpeak', 'wasserwerte-aquarium-guide']
   },
   {
-    emoji: '🌿', name: 'Pflanzen & Aquascaping', count: 3, catColor: '#10b981',
-    cards: ['aquarienpflanzen-anfaenger', 'co2-im-aquarium', 'aquascaping-anfaenger']
+    emoji: '🌿', name: 'Pflanzen & Aquascaping', count: 4, catColor: '#10b981',
+    cards: ['aquarienpflanzen-anfaenger', 'co2-im-aquarium', 'aquascaping-anfaenger', 'aquarium-duengung-guide']
   },
   {
-    emoji: '⚙️', name: 'Technik', count: 2, catColor: '#8b5cf6',
-    cards: ['aquarium-technik-ueberblick', 'co2-im-aquarium']
+    emoji: '⚙️', name: 'Technik', count: 4, catColor: '#8b5cf6',
+    cards: ['aquarium-technik-ueberblick', 'co2-im-aquarium', 'aquarium-beleuchtung-guide', 'aquarium-filter-guide']
   },
   {
     emoji: '🦐', name: 'Garnelen & Fische', count: 3, catColor: '#ff6b6b',
     cards: ['garnelen-im-aquarium', 'kampffisch-haltung-betta', 'beliebteste-aquarienfische']
   },
   {
-    emoji: '💊', name: 'Pflege & Gesundheit', count: 3, catColor: '#ffd93d',
-    cards: ['algen-im-aquarium', 'fischkrankheiten-aquarium-guide', 'aquarium-pflegeroutine-guide']
+    emoji: '💊', name: 'Pflege & Gesundheit', count: 4, catColor: '#ffd93d',
+    cards: ['algen-im-aquarium', 'fischkrankheiten-aquarium-guide', 'aquarium-pflegeroutine-guide', 'schnecken-im-aquarium']
   },
 ];
 
