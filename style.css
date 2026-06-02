@@ -612,13 +612,186 @@ img { max-width: 100%; height: auto; display: block; }
   padding-top: 1.5rem; border-top: 1px solid var(--border-light);
   text-align: center; font-size: 0.8rem; color: var(--text-dim);
 }
-.footer-bottom .affiliate-hinweis { margin-top: 0.5rem; font-size: 0.72rem; opacity: 0.6; }
+/* ─── STATS BAR ─── */
+.stats-bar {
+  max-width: var(--max-width); margin: 0 auto; padding: 1.5rem 2rem 0;
+}
+.stats-inner {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+.stat-num {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--cyan);
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+.stat-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+.stat-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+/* ─── MP SECTION WRAPPER ─── */
+.mp-section {
+  margin-bottom: 0.5rem;
+}
+
+/* ─── EDITORS PICK GRID (4 cols) ─── */
+.hero-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.hero-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+}
+.hero-card:hover { transform: translateY(-4px); border-color: rgba(6,182,212,0.3); box-shadow: 0 8px 30px rgba(0,0,0,0.4); }
+
+.hero-card-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transition: transform 0.4s;
+}
+.hero-card:hover .hero-card-bg { transform: scale(1.05); }
+
+.hero-card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(10,10,15,0.95) 0%, rgba(10,10,15,0.1) 60%, transparent 100%);
+}
+
+.hero-card-body {
+  position: relative; z-index: 1;
+  padding: 1.5rem;
+}
+.hero-card-tag {
+  display: inline-block;
+  font-size: 0.55rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  padding: 0.2rem 0.6rem; border-radius: 3px;
+  margin-bottom: 0.5rem;
+}
+.hero-card-body h3 {
+  font-size: 1rem; font-weight: 800;
+  color: var(--text); line-height: 1.25;
+  margin-bottom: 0.35rem;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.hero-card-body p {
+  font-size: 0.75rem; color: var(--text-muted);
+  line-height: 1.4; margin-bottom: 0.5rem;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.hero-card-meta {
+  font-size: 0.65rem; color: var(--text-dim);
+}
+
+/* ─── TOPIC CLOUD ─── */
+.topic-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem 2rem;
+}
+
+.topic-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: 100px;
+  text-decoration: none;
+  color: var(--text-on-card);
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  transition: all 0.2s;
+}
+.topic-tag:hover {
+  border-color: var(--topic-color, var(--cyan));
+  color: var(--topic-color, var(--cyan));
+  background: rgba(6,182,212,0.06);
+}
+
+/* ─── CARD READ BADGE ─── */
+.card-modern .art-img .read-badge {
+  position: absolute;
+  bottom: 0.75rem; left: 0.75rem;
+  font-size: 0.55rem; font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  color: rgba(255,255,255,0.8);
+}
+
+/* ─── HERO CTA ─── */
+.hero-feat-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  flex-wrap: wrap;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background: var(--coral);
+  color: #fff !important;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.hero-cta:hover { background: var(--coral-dark); transform: translateY(-1px); box-shadow: 0 4px 15px rgba(238,68,68,0.3); }
 
 /* ─── RESPONSIVE ─── */
 @media (max-width: 1100px) {
   .nav-links > a.nav-link,
   .nav-links .nav-item > a.nav-link { padding: 0.5rem 0.5rem; font-size: 0.75rem; }
   .dropdown { width: 680px; }
+  .hero-grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 980px) {
@@ -704,6 +877,21 @@ img { max-width: 100%; height: auto; display: block; }
   .section-title { padding: 2rem 1rem 1rem; }
   .section-title h3 { font-size: 1.1rem; }
 
+  /* ─── Editors Pick ─── */
+  .hero-grid-4 { grid-template-columns: 1fr 1fr; padding: 0 1rem 1.5rem; }
+  .hero-card { min-height: 220px; }
+  .hero-card-body { padding: 1.25rem; }
+  .hero-card-body h3 { font-size: 0.9rem; }
+
+  /* ─── Stats ─── */
+  .stats-bar { padding: 1rem 1rem 0; }
+  .stats-inner { padding: 1rem 1.25rem; gap: 1rem; }
+  .stat-num { font-size: 1.2rem; }
+
+  /* ─── Topics ─── */
+  .topic-cloud { padding: 0 1rem 1.5rem; gap: 0.5rem; }
+  .topic-tag { font-size: 0.75rem; padding: 0.4rem 0.75rem; }
+
   /* ─── Article ─── */
   .article-layout { grid-template-columns: 1fr; padding: 1.5rem 1rem; }
   .article-main h1 { font-size: 1.6rem; letter-spacing: -0.5px; }
@@ -732,4 +920,11 @@ img { max-width: 100%; height: auto; display: block; }
   .card-modern .art-img { height: 160px; }
   .article-main h1 { font-size: 1.3rem; }
   .nav-links { width: 85vw; }
+  .hero-grid-4 { grid-template-columns: 1fr; }
+  .hero-card { min-height: 200px; }
+  .hero-feat-meta { font-size: 0.7rem; gap: 0.5rem; }
+  .hero-cta { padding: 0.35rem 1rem; font-size: 0.7rem; }
+  .stats-inner { gap: 0.75rem; padding: 0.75rem 1rem; }
+  .stat-num { font-size: 1rem; }
+  .stat-dot { display: none; }
 }

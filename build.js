@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 /**
- * build.js — Aquaristik Zentrum Static Site Builder
+ * build.js — Aquaristik Zentrum Static Site Builder v3 (Megamagazin)
  * Reads templates/ + page data → generates all HTML files.
- * 
- * Usage: node build.js
- * Cloudflare Pages build command: node build.js
  */
 
 const fs = require('fs');
@@ -13,9 +10,8 @@ const path = require('path');
 const ROOT = __dirname;
 const TEMPLATES = path.join(ROOT, '_templates');
 const CONTENT = path.join(ROOT, 'content');
-const OUTPUT = ROOT; // output to root
+const OUTPUT = ROOT;
 
-// ── Read templates ──
 function readTemplate(name) {
   return fs.readFileSync(path.join(TEMPLATES, name), 'utf-8');
 }
@@ -26,27 +22,45 @@ const T = {
   footer: readTemplate('footer.html'),
   cookie: readTemplate('cookie.html'),
   pageHero: readTemplate('page-hero.html'),
-  categorySection: readTemplate('category-section.html'),
 };
 
 // ── Helpers ──
-function cardHTML(slug, title, excerpt, img, cat, catColor, date) {
+function cardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
   const imgStyle = img.startsWith('linear-gradient')
     ? `background:${img}`
     : `background-image:url('/images/${img}')`;
-  const catBg = catColor || 'rgba(0,0,0,0.5)';
   const catStyle = catColor && catColor.startsWith('#ffd93d')
     ? `background:${catColor};color:#0a0a0f;`
-    : `background:${catBg};`;
+    : `background:${catColor || 'rgba(0,0,0,0.5)'};`;
   return `<a href="/artikel/${slug}" class="card-modern">
     <div class="art-img" style="${imgStyle}">
       <span class="cat-badge" style="${catStyle}">${cat}</span>
+      ${readingTime ? `<span class="read-badge">${readingTime} Min</span>` : ''}
     </div>
     <div class="art-body">
       <span class="date">${date}</span>
       <h4>${title}</h4>
       <p>${excerpt}</p>
       <span class="read-link">Weiterlesen →</span>
+    </div>
+  </a>`;
+}
+
+function heroCardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
+  const imgStyle = img.startsWith('linear-gradient')
+    ? `background:${img}`
+    : `background-image:url('/images/${img}')`;
+  const catStyle = catColor && catColor.startsWith('#ffd93d')
+    ? `background:${catColor};color:#0a0a0f;`
+    : `background:${catColor || 'rgba(0,0,0,0.5)'};`;
+  return `<a href="/artikel/${slug}" class="hero-card">
+    <div class="hero-card-bg" style="${imgStyle}"></div>
+    <div class="hero-card-overlay"></div>
+    <div class="hero-card-body">
+      <span class="hero-card-tag" style="${catStyle}">${cat}</span>
+      <h3>${title}</h3>
+      <p>${excerpt}</p>
+      <span class="hero-card-meta">${date} · ${readingTime} Min Lesezeit</span>
     </div>
   </a>`;
 }
@@ -63,6 +77,10 @@ function recCardHTML(slug, title, desc, img) {
 
 function tocItem(text) {
   return `<div class="toc-item">→ ${text}</div>`;
+}
+
+function topicTag(name, color, url) {
+  return `<a href="${url}" class="topic-tag" style="--topic-color:${color}">${name}</a>`;
 }
 
 // ── ARTICLE DATA ──
@@ -279,67 +297,68 @@ const ARTICLES = {
   },
 };
 
+// ── TOPICS / TAGS ──
+const TOPICS = [
+  ['Einsteiger', '#06b6d4', '/artikel/einsteiger-aquarium-guide.html'],
+  ['Aquarienpflanzen', '#10b981', '/artikel/aquarienpflanzen-anfaenger.html'],
+  ['Aquascaping', '#0d9488', '/artikel/aquascaping-anfaenger.html'],
+  ['Garnelen', '#ff6b6b', '/artikel/garnelen-im-aquarium.html'],
+  ['Fischkrankheiten', '#ec4899', '/artikel/fischkrankheiten-aquarium-guide.html'],
+  ['Algen', '#ffd93d', '/artikel/algen-im-aquarium.html'],
+  ['Technik', '#8b5cf6', '/artikel/aquarium-technik-ueberblick.html'],
+  ['CO₂', '#a78bfa', '/artikel/co2-im-aquarium.html'],
+  ['Bodengrund', '#06b6d4', '/artikel/bodengrund-aquarium-guide.html'],
+  ['Pflegeroutine', '#f59e0b', '/artikel/aquarium-pflegeroutine-guide.html'],
+  ['Wasserwerte', '#0891b2', '/artikel/wasserwerte-aquarium-guide.html'],
+  ['Kampffisch', '#db2777', '/artikel/kampffisch-haltung-betta.html'],
+];
+
 // ── CATEGORY DATA for index page ──
 const CATEGORIES = [
   {
-    emoji: '🐟', name: 'Einsteiger', count: 4,
-    gridStyle: '',
+    emoji: '🐟', name: 'Einsteiger', count: 4, catColor: '#06b6d4',
     cards: ['einsteiger-aquarium-guide', 'bodengrund-aquarium-guide', 'aquarium-einfahren-nitritpeak', 'wasserwerte-aquarium-guide']
   },
   {
-    emoji: '🌿', name: 'Pflanzen & Aquascaping', count: 3,
-    gridStyle: '',
+    emoji: '🌿', name: 'Pflanzen & Aquascaping', count: 3, catColor: '#10b981',
     cards: ['aquarienpflanzen-anfaenger', 'co2-im-aquarium', 'aquascaping-anfaenger']
   },
   {
-    emoji: '⚙️', name: 'Technik', count: 2,
-    gridStyle: ' style="grid-template-columns:repeat(2,1fr);"',
+    emoji: '⚙️', name: 'Technik', count: 2, catColor: '#8b5cf6',
     cards: ['aquarium-technik-ueberblick', 'co2-im-aquarium']
   },
   {
-    emoji: '🦐', name: 'Garnelen & Fische', count: 3,
-    gridStyle: '',
+    emoji: '🦐', name: 'Garnelen & Fische', count: 3, catColor: '#ff6b6b',
     cards: ['garnelen-im-aquarium', 'kampffisch-haltung-betta', 'beliebteste-aquarienfische']
   },
   {
-    emoji: '💊', name: 'Pflege & Gesundheit', count: 3,
-    gridStyle: '',
+    emoji: '💊', name: 'Pflege & Gesundheit', count: 3, catColor: '#ffd93d',
     cards: ['algen-im-aquarium', 'fischkrankheiten-aquarium-guide', 'aquarium-pflegeroutine-guide']
   },
 ];
 
+// ── STATS ──
+const totalArticles = Object.keys(ARTICLES).length;
+const totalMinutes = Object.values(ARTICLES).reduce((sum, a) => sum + (a.readingTime || 0), 0);
+const totalCategories = new Set(Object.values(ARTICLES).map(a => a.cat)).size;
+
 // ── GENERATE INDEX ──
 function buildIndex() {
+  // Hero: featured article + 3 side articles
+  const featured = ARTICLES['aquarium-pflegeroutine-guide'];
+  const heroSideSlugs = ['bodengrund-aquarium-guide', 'fischkrankheiten-aquarium-guide', 'co2-im-aquarium'];
+
   let heroSide = '';
-  const heroLinks = [
-    ['bodengrund-aquarium-guide', 'Bodengrund-Guide', 'Kies, Sand oder Soil?', 'bodengrund-arten.png'],
-    ['fischkrankheiten-aquarium-guide', 'Fischkrankheiten', 'Ich, Flossenfäule & Co.', 'krankheiten-symptome.png'],
-    ['co2-im-aquarium', 'CO₂-Anlage', 'Diffusor, Dauertest, Düngung', 'co2-anlage.png'],
-  ];
-  for (const [slug, title, desc, img] of heroLinks) {
-    const imgStyle = img.startsWith('linear-gradient')
-      ? `background:${img}`
-      : `background-image:url('/images/${img}')`;
+  for (const slug of heroSideSlugs) {
+    const a = ARTICLES[slug];
+    if (!a) continue;
+    const imgStyle = a.img.startsWith('linear-gradient')
+      ? `background:${a.img}`
+      : `background-image:url('/images/${a.img}')`;
     heroSide += `<a href="/artikel/${slug}" class="side-item">
       <div class="thumb" style="${imgStyle}"></div>
-      <div class="info"><h5>${title}</h5><small>${desc}</small></div>
+      <div class="info"><h5>${a.title}</h5><small>${a.cat} · ${a.readingTime} Min</small></div>
     </a>\n`;
-  }
-
-  let catSections = '';
-  for (const cat of CATEGORIES) {
-    let cardsHTML = '';
-    for (const slug of cat.cards) {
-      const a = ARTICLES[slug];
-      if (!a) continue;
-      cardsHTML += cardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.date);
-    }
-    catSections += T.categorySection
-      .replace('{{CAT_EMOJI}}', cat.emoji)
-      .replace('{{CAT_NAME}}', cat.name)
-      .replace('{{CAT_COUNT}}', cat.count)
-      .replace('{{GRID_STYLE}}', cat.gridStyle)
-      .replace('{{CAT_CARDS}}', cardsHTML) + '\n';
   }
 
   const heroHTML = `<div class="hero-modern">
@@ -347,8 +366,13 @@ function buildIndex() {
       <div class="bg-img" style="background-image:url('/images/hero.png')"></div>
       <div class="content">
         <span class="tag">⭐ Neu</span>
-        <h2>Aquarium Pflegeroutine<br>Der große Wartungsplan</h2>
-        <p>Wasserwechsel, Filterreinigung, Algenentfernung — Schritt f\u00fcr Schritt zur perfekten Routine. Inklusive Checkliste.</p>
+        <h2>${featured.title}</h2>
+        <p>${featured.excerpt}</p>
+        <div class="hero-feat-meta">
+          <span>📅 ${featured.date}</span>
+          <span>📖 ${featured.readingTime} Min Lesezeit</span>
+          <a href="/artikel/aquarium-pflegeroutine-guide.html" class="hero-cta">Jetzt lesen →</a>
+        </div>
       </div>
     </div>
     <div class="hero-side">
@@ -356,11 +380,67 @@ function buildIndex() {
     </div>
   </div>`;
 
+  // Stats Bar
+  const statsHTML = `<div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item"><span class="stat-num">${totalArticles}</span><span class="stat-label">Artikel</span></div>
+      <div class="stat-dot"></div>
+      <div class="stat-item"><span class="stat-num">${totalCategories}</span><span class="stat-label">Kategorien</span></div>
+      <div class="stat-dot"></div>
+      <div class="stat-item"><span class="stat-num">${totalMinutes}+</span><span class="stat-label">Min. Lesestoff</span></div>
+      <div class="stat-dot"></div>
+      <div class="stat-item"><span class="stat-num">${Object.keys(ARTICLES).filter(s => ARTICLES[s].img !== 'linear-gradient(135deg,#ec4899,#db2777)').length}</span><span class="stat-label">Pop Art Bilder</span></div>
+    </div>
+  </div>`;
+
+  // Employees Pick (Editors Pick)
+  const picks = ['bodengrund-aquarium-guide', 'fischkrankheiten-aquarium-guide', 'aquarienpflanzen-anfaenger', 'kampffisch-haltung-betta'];
+  let picksHTML = '';
+  for (const slug of picks) {
+    const a = ARTICLES[slug];
+    if (!a) continue;
+    picksHTML += heroCardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.date, a.readingTime);
+  }
+
+  const edsPickHTML = `<section class="mp-section">
+    <div class="section-title">
+      <h3><span class="emoji">⭐</span> Editors Picks</h3>
+      <span class="count">Empfohlene Artikel</span>
+      <span class="line"></span>
+    </div>
+    <div class="hero-grid-4">
+      ${picksHTML}
+    </div>
+  </section>`;
+
+  // Category sections
+  let catSections = '';
+  for (const cat of CATEGORIES) {
+    let cardsHTML = '';
+    for (const slug of cat.cards) {
+      const a = ARTICLES[slug];
+      if (!a) continue;
+      cardsHTML += cardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.date, a.readingTime);
+    }
+    const catGridStyle = cat.cards.length === 2 ? ' style="grid-template-columns:repeat(2,1fr);"' : '';
+    catSections += `<section class="mp-section">
+      <div class="section-title">
+        <h3><span class="emoji">${cat.emoji}</span> ${cat.name}</h3>
+        <span class="count">${cat.count} Artikel</span>
+        <span class="line"></span>
+      </div>
+      <div class="card-grid"${catGridStyle}>
+        ${cardsHTML}
+      </div>
+    </section>\n`;
+  }
+
+  // Newsletter
   const nlGlow = `<div class="newsletter-glow">
     <div class="nl-inner">
       <div class="nl-text">
         <h3>📬 Keinen Artikel mehr verpassen</h3>
-        <p>Unser Newsletter liefert dir jede Woche die besten Aquaristik-Tipps – kostenlos und jederzeit k\u00fcndbar.</p>
+        <p>Unser Newsletter liefert dir jede Woche die besten Aquaristik-Tipps – kostenlos und jederzeit kündbar.</p>
       </div>
       <div class="nl-cta">
         <a href="#" class="btn-ghost">Instagram</a>
@@ -369,10 +449,28 @@ function buildIndex() {
     </div>
   </div>`;
 
+  // Topic Explorer
+  let topicsHTML = '';
+  for (const [name, color, url] of TOPICS) {
+    topicsHTML += topicTag(name, color, url);
+  }
+
+  const topicsSection = `<section class="mp-section">
+    <div class="section-title">
+      <h3><span class="emoji">🏷️</span> Themen entdecken</h3>
+      <span class="count">${TOPICS.length} Topics</span>
+      <span class="line"></span>
+    </div>
+    <div class="topic-cloud">
+      ${topicsHTML}
+    </div>
+  </section>`;
+
+  // Newsletter 2
   const nlGlow2 = `<div class="newsletter-glow">
     <div class="nl-inner">
       <div class="nl-text">
-        <h3>🐟 Bereit f\u00fcr dein Traum-Aquarium?</h3>
+        <h3>🐟 Bereit für dein Traum-Aquarium?</h3>
         <p>Melde dich an und erhalte die besten Tipps, Tricks und Guides direkt in dein Postfach.</p>
       </div>
       <div class="nl-cta">
@@ -381,8 +479,22 @@ function buildIndex() {
     </div>
   </div>`;
 
-  const body = `<main class="megapage">\n${heroHTML}\n${catSections}\n${nlGlow}\n${nlGlow2}\n</main>`;
-  return wrapPage('Aquaristik Zentrum – Alles rund ums Aquarium | Megapage', 'Aquaristik Zentrum – Dein Ratgeber mit 5000+ Wort Guides, Pop Art Comic Illustrationen und praktischen Tipps.', '/images/hero.png', body);
+  const body = `<main class="megapage">
+${heroHTML}
+${statsHTML}
+${nlGlow}
+${edsPickHTML}
+${catSections}
+${topicsSection}
+${nlGlow2}
+</main>`;
+
+  return wrapPage(
+    'Aquaristik Zentrum – Alles rund ums Aquarium | Megapage',
+    'Aquaristik Zentrum – Dein Magazin mit 5000+ Wort Guides, Pop Art Comic Illustrationen und praktischen Tipps für Einsteiger und Profis.',
+    '/images/hero.png',
+    body
+  );
 }
 
 // ── GENERATE ARTICLE ──
@@ -390,26 +502,21 @@ function buildArticle(slug) {
   const a = ARTICLES[slug];
   if (!a) { console.error(`Article not found: ${slug}`); return; }
 
-  // Build related articles
   let relatedHTML = '';
   for (const [rslug, rtitle, rdesc, rimg] of a.related) {
     relatedHTML += recCardHTML(rslug, rtitle, rdesc, rimg);
   }
-  // Build TOC
   let tocHTML = '';
   for (const item of a.toc) {
     tocHTML += tocItem(item);
   }
-  // Build product
   const [pname, pdesc, pasin, pc1, pc2] = a.prod;
 
-  // Read existing content from content/artikel/
   const contentPath = path.join(CONTENT, 'artikel', `${slug}.html`);
   let bodyContent = '';
   if (fs.existsSync(contentPath)) {
     bodyContent = fs.readFileSync(contentPath, 'utf-8').trim();
   } else {
-    // Fallback: try to extract from existing article
     const existingPath = path.join(ROOT, 'artikel', `${slug}.html`);
     if (fs.existsSync(existingPath)) {
       const existing = fs.readFileSync(existingPath, 'utf-8');
@@ -417,19 +524,11 @@ function buildArticle(slug) {
       if (match) {
         bodyContent = match[1].trim();
       } else {
-        // Try to find article content more broadly
         const m2 = existing.match(/<div class="article-content">([\s\S]*?)<\/div>\s*<\/div>\s*<div class="article-sidebar"/);
-        if (m2) {
-          bodyContent = m2[1].trim();
-        } else {
-          console.error(`Cannot extract content from existing file: ${slug}`);
-          return;
-        }
+        if (m2) bodyContent = m2[1].trim();
+        else { console.error(`Cannot extract content from: ${slug}`); return; }
       }
-    } else {
-      console.error(`Missing content file: ${slug}`);
-      return;
-    }
+    } else { console.error(`Missing content file: ${slug}`); return; }
   }
 
   const sidebarHTML = `<div class="article-sidebar">
@@ -497,7 +596,6 @@ function wrapPage(title, desc, ogImage, body) {
 <meta property="og:site_name" content="Aquaristik Zentrum">
 ${ogImage ? `<meta property="og:image" content="https://aquaristik-zentrum.com${ogImage}">` : ''}
 ${T.head}`;
-
   return `<!DOCTYPE html>
 <html lang="de">
 <head>
@@ -514,15 +612,12 @@ ${T.cookie}
 
 // ── MAIN ──
 function main() {
-  console.log('🔨 Building aquaristik-zentrum.com...\n');
+  console.log('🔨 Building aquaristik-zentrum.com (Megamagazin v3)...\n');
 
-  // 1. Index
   fs.writeFileSync(path.join(OUTPUT, 'index.html'), buildIndex());
   console.log('  ✓ index.html');
 
-  // 2. Articles
   for (const slug of Object.keys(ARTICLES)) {
-    buildArticle(slug);
     const outPath = path.join(OUTPUT, 'artikel', `${slug}.html`);
     const html = buildArticle(slug);
     if (html) {
@@ -531,7 +626,6 @@ function main() {
     }
   }
 
-  // 3. About page
   const aboutPath = path.join(CONTENT, 'about.html');
   if (fs.existsSync(aboutPath)) {
     const content = fs.readFileSync(aboutPath, 'utf-8').trim();
@@ -539,7 +633,6 @@ function main() {
     console.log('  ✓ about.html');
   }
 
-  // 4. Impressum
   const imprPath = path.join(CONTENT, 'impressum.html');
   if (fs.existsSync(imprPath)) {
     const content = fs.readFileSync(imprPath, 'utf-8').trim();
