@@ -24,6 +24,15 @@ const T = {
   pageHero: readTemplate('page-hero.html'),
 };
 
+const AMAZON_TAG = 'nova079-20';
+function amazonAffiliateUrl(ref) {
+  if (ref && ref.startsWith('search:')) {
+    const query = encodeURIComponent(ref.replace(/^search:/, '').trim()).replace(/%20/g, '+');
+    return `https://www.amazon.de/s?k=${query}&amp;tag=${AMAZON_TAG}`;
+  }
+  return `https://www.amazon.de/dp/${ref}?tag=${AMAZON_TAG}`;
+}
+
 // ── Helpers ──
 function cardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
   const imgStyle = img.startsWith('linear-gradient')
@@ -278,7 +287,7 @@ const ARTICLES = {
       ['kampffisch-haltung-betta', 'Kampffisch', 'Typische Krankheiten', 'kampffisch-haltung.png'],
       ['garnelen-im-aquarium', 'Garnelen-Guide', 'Krankheiten bei Garnelen', 'garnelen.png'],
     ],
-    prod: ['Medikamenten Set', 'Für häufige Krankheiten', 'B0A0A0A0A0', '#ffd93d', '#f59e0b'],
+    prod: ['Medikamenten Set', 'Für häufige Krankheiten', 'search:Aquarium Fischkrankheiten Medikamente kupferfrei', '#ffd93d', '#f59e0b'],
   },
   'aquarium-pflegeroutine-guide': {
     title: 'Aquarium Pflegeroutine – Wasserwechsel, Filterreinigung und Wartungsplan',
@@ -631,61 +640,117 @@ const CATEGORIES = [
   },
 ];
 
-// ── STATS ──
-const totalArticles = Object.keys(ARTICLES).length;
-const totalMinutes = Object.values(ARTICLES).reduce((sum, a) => sum + (a.readingTime || 0), 0);
-const totalCategories = new Set(Object.values(ARTICLES).map(a => a.cat)).size;
-
 // ── GENERATE INDEX ──
 function buildIndex() {
-  // Hero: featured article + 3 side articles
-  const featured = ARTICLES['aquarium-pflegeroutine-guide'];
-  const heroSideSlugs = ['bodengrund-aquarium-guide', 'fischkrankheiten-aquarium-guide', 'co2-im-aquarium'];
-
-  let heroSide = '';
-  for (const slug of heroSideSlugs) {
+  // Hero: rotating editorial showcase + topic radar
+  const featureSlugs = ['aquarium-pflegeroutine-guide', 'beckenformen-groessen', 'stroemung-im-aquarium'];
+  const heroLabels = ['💊 Neu im Fokus', '🐟 Guide-Rotation', '⚙️ Guide-Rotation'];
+  const heroSlides = featureSlugs.map((slug, i) => {
     const a = ARTICLES[slug];
-    if (!a) continue;
     const imgStyle = a.img.startsWith('linear-gradient')
       ? `background:${a.img}`
       : `background-image:url('/images/${a.img}')`;
-    heroSide += `<a href="/artikel/${slug}" class="side-item">
-      <div class="thumb" style="${imgStyle}"></div>
-      <div class="info"><h5>${a.title}</h5><small>${a.cat} · ${a.readingTime} Min</small></div>
-    </a>\n`;
-  }
-
-  const heroHTML = `<div class="hero-modern">
-    <div class="hero-feat">
-      <div class="bg-img" style="background-image:url('/images/hero.png')"></div>
+    const tagStyle = a.catColor.startsWith('#ffd93d')
+      ? `background:${a.catColor};color:#0a0a0f;`
+      : `background:${a.catColor};color:#fff;`;
+    return `<a href="/artikel/${slug}.html" class="hero-slide" style="--i:${i};--accent:${a.catColor};">
+      <div class="bg-img" style="${imgStyle}"></div>
+      <div class="slide-shade"></div>
       <div class="content">
-        <span class="tag">⭐ Neu</span>
-        <h2>${featured.title}</h2>
-        <p>${featured.excerpt}</p>
+        <span class="tag" style="${tagStyle}">${heroLabels[i]}</span>
+        <h2>${a.title}</h2>
+        <p>${a.excerpt}</p>
         <div class="hero-feat-meta">
-          <span>📅 ${featured.date}</span>
-          <span>📖 ${featured.readingTime} Min Lesezeit</span>
-          <a href="/artikel/aquarium-pflegeroutine-guide.html" class="hero-cta">Jetzt lesen →</a>
+          <span>📅 ${a.date}</span>
+          <span>📖 ${a.readingTime} Min</span>
+          <span class="hero-cta">Jetzt lesen →</span>
         </div>
       </div>
+    </a>`;
+  }).join('\n');
+
+  const topicSlides = [
+    ['einsteiger-aquarium-guide', 'Startklar werden', 'Einsteiger-Guide', '#06b6d4'],
+    ['wasserwerte-aquarium-guide', 'Wasser verstehen', 'pH, GH, KH & Nitrit', '#0891b2'],
+    ['beckenformen-groessen', 'Becken planen', 'Form, Größe & Standort', '#06b6d4'],
+    ['aquarium-technik-ueberblick', 'Technik abstimmen', 'Filter, Licht & Strömung', '#8b5cf6'],
+    ['aquarium-pflegeroutine-guide', 'Pflege vereinfachen', 'Routine statt Rätselraten', '#ffd93d'],
+  ].map(([slug, title, desc, color], i) => `<a href="/artikel/${slug}.html" class="topic-slide" style="--i:${i};--accent:${color};">
+      <span class="topic-index" style="background:${color};color:${color === '#ffd93d' ? '#0a0a0f' : '#fff'};">${i + 1}</span>
+      <span><strong>${title}</strong><small>${desc}</small></span>
+    </a>`).join('\n');
+
+  const heroSideSlugs = ['bodengrund-aquarium-guide', 'fischkrankheiten-aquarium-guide', 'co2-im-aquarium'];
+  const heroSide = heroSideSlugs.map(slug => {
+    const a = ARTICLES[slug];
+    const imgStyle = a.img.startsWith('linear-gradient')
+      ? `background:${a.img}`
+      : `background-image:url('/images/${a.img}')`;
+    return `<a href="/artikel/${slug}.html" class="side-item" style="--accent:${a.catColor};">
+      <div class="thumb" style="${imgStyle}"></div>
+      <div class="info"><h5>${a.title}</h5><small>${a.cat} · ${a.readingTime} Min</small></div>
+    </a>`;
+  }).join('\n');
+
+  const heroHTML = `<section class="hero-modern hero-showcase" aria-label="Empfohlene Aquaristik-Guides">
+    <div class="hero-rotator">
+      ${heroSlides}
+      <div class="hero-dots" aria-hidden="true"><span></span><span></span><span></span></div>
     </div>
-    <div class="hero-side">
-      ${heroSide}
-    </div>
+    <aside class="hero-side hero-control-panel" aria-label="Themen-Radar">
+      <div class="panel-head">
+        <span class="eyebrow">Themen-Radar</span>
+        <h3>Was willst du heute im Aquarium lösen?</h3>
+        <p>Kurze Wege zu Guides, die wirklich praktisch sind.</p>
+      </div>
+      <div class="topic-rotator">
+        ${topicSlides}
+      </div>
+      <div class="hero-actions">
+        <a href="/artikel/wasserwerte-aquarium-guide.html">Werte prüfen</a>
+        <a href="/artikel/aquarium-einfahren-nitritpeak.html">Start planen</a>
+      </div>
+      <div class="hero-side-list">
+        ${heroSide}
+      </div>
+    </aside>
+  </section>`;
+
+  const tickerItems = [
+    ['Einsteiger-Guide', '/artikel/einsteiger-aquarium-guide.html'],
+    ['Aquarium einfahren', '/artikel/aquarium-einfahren-nitritpeak.html'],
+    ['Wasserwerte prüfen', '/artikel/wasserwerte-aquarium-guide.html'],
+    ['Pflanzen wählen', '/artikel/aquarienpflanzen-anfaenger.html'],
+    ['Filter verstehen', '/artikel/aquarium-filter-guide.html'],
+    ['Fische kombinieren', '/artikel/vergesellschaftung-aquarienfische.html'],
+    ['Algen stoppen', '/artikel/algen-im-aquarium.html'],
+    ['DIY Aquarium bauen', '/artikel/diy-aquarium-bauen.html'],
+  ];
+  const tickerTrack = [...tickerItems, ...tickerItems]
+    .map(([label, url]) => `<a href="${url}" class="ticker-item">${label}<span>→</span></a>`)
+    .join('');
+  const heroTickerHTML = `<div class="hero-ticker" aria-label="Schnelleinstiege">
+    <div class="ticker-track">${tickerTrack}</div>
   </div>`;
 
-  // Stats Bar
-  const statsHTML = `<div class="stats-bar">
-    <div class="stats-inner">
-      <div class="stat-item"><span class="stat-num">${totalArticles}</span><span class="stat-label">Artikel</span></div>
-      <div class="stat-dot"></div>
-      <div class="stat-item"><span class="stat-num">${totalCategories}</span><span class="stat-label">Kategorien</span></div>
-      <div class="stat-dot"></div>
-      <div class="stat-item"><span class="stat-num">${totalMinutes}+</span><span class="stat-label">Min. Lesestoff</span></div>
-      <div class="stat-dot"></div>
-      <div class="stat-item"><span class="stat-num">${Object.keys(ARTICLES).filter(s => ARTICLES[s].img !== 'linear-gradient(135deg,#ec4899,#db2777)').length}</span><span class="stat-label">Pop Art Bilder</span></div>
+  const shoppingHubHTML = `<section class="shopping-hub" aria-label="Amazon Shopping-Guide für Aquarium-Zubehör">
+  <div class="shopping-panel">
+    <div class="shopping-head">
+      <span class="eyebrow">Amazon Shopping-Guide</span>
+      <h2>Was brauchst du als Nächstes?</h2>
+      <p>Direkte Einstiege zu typischen Aquarium-Käufen – bewusst als Suchlinks, damit du aktuelle Preise, Verfügbarkeit und Bewertungen selbst vergleichen kannst.</p>
+      <span class="shopping-disclosure">Werbelinks: Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</span>
     </div>
-  </div>`;
+    <div class="shopping-grid">
+      <a class="shopping-card" href="${amazonAffiliateUrl('search:Aquarium Komplettset 60l')}" target="_blank" rel="nofollow sponsored noopener"><span>🐠</span><strong>Startersets</strong><em>Becken, Filter, Licht</em></a>
+      <a class="shopping-card" href="${amazonAffiliateUrl('search:Aquarium Wassertest Koffer')}" target="_blank" rel="nofollow sponsored noopener"><span>💧</span><strong>Wassertests</strong><em>NO₂, NO₃, pH, GH/KH</em></a>
+      <a class="shopping-card" href="${amazonAffiliateUrl('search:Aquarium Filter Heizstab LED')}" target="_blank" rel="nofollow sponsored noopener"><span>⚙️</span><strong>Technik</strong><em>Filter, Heizer, LED</em></a>
+      <a class="shopping-card" href="${amazonAffiliateUrl('search:Aquarienpflanzen Set Dünger Soil')}" target="_blank" rel="nofollow sponsored noopener"><span>🌿</span><strong>Pflanzen</strong><em>Sets, Soil, Dünger</em></a>
+      <a class="shopping-card" href="${amazonAffiliateUrl('search:Mulmsauger Algenmagnet Aquarium Pflege')}" target="_blank" rel="nofollow sponsored noopener"><span>🧽</span><strong>Pflege</strong><em>Mulmsauger & Tools</em></a>
+      <a class="shopping-card" href="${amazonAffiliateUrl('search:Aquascaping Wurzeln Steine Hardscape')}" target="_blank" rel="nofollow sponsored noopener"><span>🪨</span><strong>Aquascaping</strong><em>Wurzeln, Steine, Hardscape</em></a>
+    </div>
+  </div>
+</section>`;
 
   // Employees Pick (Editors Pick)
   const picks = ['bodengrund-aquarium-guide', 'fischkrankheiten-aquarium-guide', 'aquarienpflanzen-anfaenger', 'kampffisch-haltung-betta'];
@@ -774,8 +839,10 @@ function buildIndex() {
   </div>`;
 
   const body = `<main class="megapage">
+<h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;white-space:nowrap;">Aquaristik Zentrum – Alles rund ums Aquarium</h1>
 ${heroHTML}
-${statsHTML}
+${heroTickerHTML}
+${shoppingHubHTML}
 ${nlGlow}
 ${edsPickHTML}
 ${catSections}
@@ -785,7 +852,7 @@ ${nlGlow2}
 
   return wrapPage(
     'Aquaristik Zentrum – Alles rund ums Aquarium | Megapage',
-    'Aquaristik Zentrum – Dein Magazin mit 5000+ Wort Guides, Pop Art Comic Illustrationen und praktischen Tipps für Einsteiger und Profis.',
+    'Aquaristik Zentrum – Dein modernes Aquarium-Magazin mit praktischen Guides, klarer Themenführung und Tipps für Einsteiger und Profis.',
     'https://aquaristik-zentrum.com/',
     '/images/hero.png',
     body
@@ -836,7 +903,7 @@ function buildArticle(slug) {
           <div class="prod-thumb" style="background:linear-gradient(135deg,${pc1},${pc2})"></div>
           <p>${pname}</p>
           <p class="prod-sub">${pdesc}</p>
-          <a href="https://www.amazon.de/dp/${pasin}?tag=nova079-20" target="_blank" class="prod-link">→ Bei Amazon ansehen</a>
+          <a href="${amazonAffiliateUrl(pasin)}" target="_blank" rel="nofollow sponsored noopener" class="prod-link">→ Bei Amazon ansehen</a>
         </div>
       </div>
       <div class="side-section">
