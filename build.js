@@ -687,7 +687,6 @@ for (const item of LONG_CONTENT_ARTICLES) {
   if (group && !group.cards.includes(item.slug)) group.cards.unshift(item.slug);
 }
 for (const group of CATEGORIES) group.count = group.cards.length;
-T.nav = T.nav.replace(/<span class="count">\d+<\/span>/, `<span class="count">${Object.keys(ARTICLES).length}</span>`);
 
 // ── GENERATE INDEX ──
 function buildIndex() {
