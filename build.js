@@ -535,6 +535,33 @@ const ARTICLES = {
     related: [['beckenformen-groessen','Beckenformen','Die richtige Größe','becken-formen.png'],['einsteiger-aquarium-guide','Einsteiger-Guide','Grundlagen','einsteiger-guide.png'],['aquarium-technik-ueberblick','Technik-Guide','Technik fürs DIY','technik.png'],['bodengrund-aquarium-guide','Bodengrund','Bodengrund einfüllen','bodengrund-arten.png']],
     prod: ['Aquariumsilikon Set', 'Für selbstgebaute Becken', 'B0DDLNYNNL', '#06b6d4', '#0891b2'],
   },
+  'panzerwelse-aquarium': {
+    title: 'Panzerwelse im Aquarium – Haltung, Arten und Pflege',
+    excerpt: 'Corydoras im Porträt: die beliebtesten Panzerwelsarten, Beckeneinrichtung, Wasserwerte, Vergesellschaftung und Nachzucht.',
+    date: '3. Juni 2026', cat: 'Fische', catColor: '#ec4899', catEmoji: '🐟',
+    img: 'panzerwelse.png', readingTime: 8,
+    toc: ['Warum Panzerwelse?', 'Beliebte Arten', 'Beckengröße & Einrichtung', 'Wasserwerte', 'Vergesellschaftung', 'Ernährung', 'Nachzucht', 'Fazit'],
+    related: [['vergesellschaftung-aquarienfische','Vergesellschaftung','Fisch-Kombos','vergesellschaftung-vertraeglich.png'],['lebendgebärende-zahnkarpfen','Lebendgebärende','Guppys, Platys','lebendgebarende-arten.png'],['garnelen-im-aquarium','Garnelen','Mitbewohner','garnelen.png'],['aquarium-futter-ernaehrung','Futter-Guide','Ernährung','futter-arten.png']],
+    prod: ['Panzerwelse Futter', 'Spezialfutter für Bodenfische', 'B0D6FZWF5R', '#ec4899', '#db2777'],
+  },
+  'salmler-aquarium': {
+    title: 'Salmler im Aquarium – Neonsalmler, Rote von Rio & Co.',
+    excerpt: 'Die schönsten Salmlerarten fürs Aquarium: Neonsalmler, Rote von Rio, Blauer Neon – Haltung, Wasserwerte und Schwarmverhalten.',
+    date: '3. Juni 2026', cat: 'Fische', catColor: '#ec4899', catEmoji: '🐟',
+    img: 'salmler.png', readingTime: 8,
+    toc: ['Was sind Salmler?', 'Neonsalmler', 'Roter von Rio', 'Blauer Neon', 'Beckengröße & Haltung', 'Wasserwerte', 'Vergesellschaftung', 'Fazit'],
+    related: [['beliebteste-aquarienfische','Aquarienfische','Top 10','linear-gradient(135deg,#ec4899,#db2777)'],['kampffisch-haltung-betta','Kampffisch','Betta Pflege','kampffisch-haltung.png'],['garnelen-im-aquarium','Garnelen','Vergesellschaftung','garnelen.png'],['aquarium-pflegeroutine-guide','Pflegeroutine','Wasserwechsel','wasserwechsel.png']],
+    prod: ['Salmler Futter Set', 'Feines Granulat & Flocken', 'B0CBHFMY7H', '#ec4899', '#db2777'],
+  },
+  'aquarium-moosarten': {
+    title: 'Moosarten im Aquarium – Javamoos, Christmas Moos und Mooskugeln',
+    excerpt: 'Die besten Moosarten fürs Aquarium: Javamoos, Christmas Moos, Mooskugeln – Pflege, Befestigung und Einsatzmöglichkeiten.',
+    date: '3. Juni 2026', cat: 'Pflanzen', catColor: '#10b981', catEmoji: '🌿',
+    img: 'aquarium-moos.png', readingTime: 7,
+    toc: ['Warum Moos?', 'Javamoos', 'Christmas Moos', 'Mooskugeln', 'Befestigung', 'Pflege & Schnitt', 'Fazit'],
+    related: [['aquarienpflanzen-anfaenger','Pflanzen-Guide','Arten für Anfänger','aquarienpflanzen.png'],['bodendecker-teppichpflanzen','Teppichpflanzen','Bodendecker','teppich-pflanzen.png'],['pflanzenvermehrung-aquarium','Pflanzenvermehrung','Stecklinge','pflanzen-vermehrung.png'],['aquarium-duengung-guide','Düngung','Nährstoffe','duengung-pflanzen.png']],
+    prod: ['Aquarium Moos Set', 'Javamoos + Christmas Moos', 'B00DB3HGG4', '#10b981', '#059669'],
+  },
 };
 
 // ── TOPICS / TAGS ──
@@ -575,6 +602,9 @@ const TOPICS = [
   ['Algenfresser', '#84cc16', '/artikel/algenfresser-portrait.html'],
   ['Wassertests', '#06b6d4', '/artikel/wassertest-wasserpflege.html'],
   ['DIY Aquarium', '#a8a29e', '/artikel/diy-aquarium-bauen.html'],
+  ['Panzerwelse', '#ec4899', '/artikel/panzerwelse-aquarium.html'],
+  ['Salmler', '#ec4899', '/artikel/salmler-aquarium.html'],
+  ['Aquarium Moos', '#10b981', '/artikel/aquarium-moosarten.html'],
 ];
 
 // ── CATEGORY DATA for index page ──
@@ -584,16 +614,16 @@ const CATEGORIES = [
     cards: ['einsteiger-aquarium-guide', 'bodengrund-aquarium-guide', 'aquarium-einfahren-nitritpeak', 'wasserwerte-aquarium-guide', 'wurzeln-holz-aquarium', 'beckenformen-groessen', 'gesellschaftsbecken-einrichten', 'diy-aquarium-bauen']
   },
   {
-    emoji: '🌿', name: 'Pflanzen & Aquascaping', count: 8, catColor: '#10b981',
-    cards: ['aquarienpflanzen-anfaenger', 'co2-im-aquarium', 'aquascaping-anfaenger', 'aquarium-duengung-guide', 'co2-einsteiger-guide', 'bodendecker-teppichpflanzen', 'rote-aquarienpflanzen', 'pflanzenvermehrung-aquarium']
+    emoji: '🌿', name: 'Pflanzen & Aquascaping', count: 9, catColor: '#10b981',
+    cards: ['aquarium-moosarten', 'aquarienpflanzen-anfaenger', 'co2-im-aquarium', 'aquascaping-anfaenger', 'aquarium-duengung-guide', 'co2-einsteiger-guide', 'bodendecker-teppichpflanzen', 'rote-aquarienpflanzen', 'pflanzenvermehrung-aquarium']
   },
   {
     emoji: '⚙️', name: 'Technik', count: 8, catColor: '#8b5cf6',
     cards: ['aquarium-technik-ueberblick', 'co2-im-aquarium', 'aquarium-beleuchtung-guide', 'aquarium-filter-guide', 'osmoseanlage-wasseraufbereitung', 'heizung-temperatur-aquarium', 'stroemung-im-aquarium', 'wassertest-wasserpflege']
   },
   {
-    emoji: '🦐', name: 'Garnelen & Fische', count: 8, catColor: '#ff6b6b',
-    cards: ['garnelen-im-aquarium', 'kampffisch-haltung-betta', 'beliebteste-aquarienfische', 'vergesellschaftung-aquarienfische', 'fische-fortgeschrittene', 'lebendgebärende-zahnkarpfen', 'aquarium-futter-ernaehrung', 'nachzucht-fische']
+    emoji: '🦐', name: 'Garnelen & Fische', count: 10, catColor: '#ff6b6b',
+    cards: ['panzerwelse-aquarium', 'salmler-aquarium', 'garnelen-im-aquarium', 'kampffisch-haltung-betta', 'beliebteste-aquarienfische', 'vergesellschaftung-aquarienfische', 'fische-fortgeschrittene', 'lebendgebärende-zahnkarpfen', 'aquarium-futter-ernaehrung', 'nachzucht-fische']
   },
   {
     emoji: '💊', name: 'Pflege & Gesundheit', count: 8, catColor: '#ffd93d',
