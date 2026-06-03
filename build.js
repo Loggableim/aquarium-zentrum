@@ -571,6 +571,33 @@ const ARTICLES = {
     related: [['aquarienpflanzen-anfaenger','Pflanzen-Guide','Arten für Anfänger','aquarienpflanzen.png'],['bodendecker-teppichpflanzen','Teppichpflanzen','Bodendecker','teppich-pflanzen.png'],['pflanzenvermehrung-aquarium','Pflanzenvermehrung','Stecklinge','pflanzen-vermehrung.png'],['aquarium-duengung-guide','Düngung','Nährstoffe','duengung-pflanzen.png']],
     prod: ['Aquarium Moos Set', 'Javamoos + Christmas Moos', 'B00DB3HGG4', '#10b981', '#059669'],
   },
+  'nano-aquarium-guide': {
+    title: 'Nano Aquarium – Der komplette Guide für Mini-Becken bis 30 Liter',
+    excerpt: 'Mini-Aquarien im Trend: Beckengrößen, Technik, Besatz und Pflege von Nano-Aquarien – der ultimative Guide für kleine Becken.',
+    date: '4. Juni 2026', cat: 'Einsteiger', catColor: '#06b6d4', catEmoji: '🐟',
+    img: 'nano-aquarium-guide.png', readingTime: 7,
+    toc: ['Was ist ein Nano Aquarium?', 'Geeignete Beckengrößen', 'Technik für Nano-Becken', 'Geeignete Fische & Garnelen', 'Bepflanzung & Aquascaping', 'Pflegeroutine', 'Vor- und Nachteile', 'Fazit'],
+    related: [['beckenformen-groessen','Beckenformen','Die richtige Form','becken-formen.png'],['einsteiger-aquarium-guide','Einsteiger-Guide','Grundlagen','einsteiger-guide.png'],['aquarium-technik-ueberblick','Technik-Guide','Technik-Überblick','technik.png'],['garnelen-im-aquarium','Garnelen','Perfekt für Nano','garnelen.png']],
+    prod: ['Aquarium Komplettset 30L', 'Ideal für den Nano-Start', 'B00CIF8TCS', '#06b6d4', '#0891b2'],
+  },
+  'aquarium-schaedlinge': {
+    title: 'Aquarium Schädlinge: Planarien, Hydra & Schneckenplage erkennen und bekämpfen',
+    excerpt: 'Planarien, Hydra, Schneckenplage und Federwürmer – der große Guide zur Erkennung und Bekämpfung von Aquarien-Schädlingen.',
+    date: '4. Juni 2026', cat: 'Pflege', catColor: '#ffd93d', catEmoji: '💊',
+    img: 'aquarium-schaedlinge.png', readingTime: 8,
+    toc: ['Übersicht', 'Planarien', 'Hydra', 'Schneckenplage', 'Feder- & Borstenwürmer', 'Sonstige Schädlinge', 'Vorbeugung', 'Chemisch vs. Biologisch', 'Fazit'],
+    related: [['fischkrankheiten-aquarium-guide','Fischkrankheiten','Diagnose & Behandlung','krankheiten-symptome.png'],['garnelen-im-aquarium','Garnelen','Gefährdung durch Hydra','garnelen.png'],['quarantaene-medikamente','Quarantäne','Einschleppung verhindern','quarantaene-becken.png'],['aquarium-pflegeroutine-guide','Pflegeroutine','Sauberkeit','wasserwechsel.png']],
+    prod: ['Wassertest Set Profi', 'Zur Kontrolle der Wasserwerte', 'B0D6FZWF5R', '#ffd93d', '#f59e0b'],
+  },
+  'aquarium-automation': {
+    title: 'Aquarium Automation: Smarte Technik für die moderne Aquaristik',
+    excerpt: 'Smarte Steckdosen, Futterautomaten, Aquarien-Controller und Dosierpumpen – der Guide zur Automatisierung deines Aquariums.',
+    date: '4. Juni 2026', cat: 'Technik', catColor: '#8b5cf6', catEmoji: '⚙️',
+    img: 'aquarium-automation.png', readingTime: 7,
+    toc: ['Einleitung', 'Smarte Steckdosen', 'Automatische Fütterung', 'Automatischer Wasserwechsel', 'Smart-Home-Steuerung', 'Aquarien-Controller', 'Dosierpumpen', 'Kameras & Live-Stream', 'Kosten & Nutzen', 'Fazit'],
+    related: [['aquarium-technik-ueberblick','Technik-Guide','Equipment-Überblick','technik.png'],['aquarium-pflegeroutine-guide','Pflegeroutine','Automatisierte Pflege','wasserwechsel.png'],['aquarium-filter-guide','Filter-Guide','Smarte Filtersteuerung','filter-guide.png'],['aquarium-beleuchtung-guide','Beleuchtung','Smarte Beleuchtung','beleuchtung.png']],
+    prod: ['Smarte Steckdose WLAN', 'Für Licht & CO₂-Automatik', 'B0DDLNYNNL', '#8b5cf6', '#7c3aed'],
+  },
 };
 
 // ── TOPICS / TAGS ──
@@ -614,36 +641,39 @@ const TOPICS = [
   ['Panzerwelse', '#ec4899', '/artikel/panzerwelse-aquarium.html'],
   ['Salmler', '#ec4899', '/artikel/salmler-aquarium.html'],
   ['Aquarium Moos', '#10b981', '/artikel/aquarium-moosarten.html'],
+  ['Nano Aquarium', '#06b6d4', '/artikel/nano-aquarium-guide.html'],
+  ['Schädlinge', '#f59e0b', '/artikel/aquarium-schaedlinge.html'],
+  ['Aquarium Automation', '#8b5cf6', '/artikel/aquarium-automation.html'],
 ];
 
 // ── CATEGORY DATA for index page ──
 const CATEGORIES = [
   {
-    emoji: '🐟', name: 'Einsteiger', count: 8, catColor: '#06b6d4',
-    cards: ['einsteiger-aquarium-guide', 'bodengrund-aquarium-guide', 'aquarium-einfahren-nitritpeak', 'wasserwerte-aquarium-guide', 'wurzeln-holz-aquarium', 'beckenformen-groessen', 'gesellschaftsbecken-einrichten', 'diy-aquarium-bauen']
+    emoji: '🐟', name: 'Einsteiger', count: 9, catColor: '#06b6d4',
+    cards: ['nano-aquarium-guide', 'einsteiger-aquarium-guide', 'bodengrund-aquarium-guide', 'aquarium-einfahren-nitritpeak', 'wasserwerte-aquarium-guide', 'wurzeln-holz-aquarium', 'beckenformen-groessen', 'gesellschaftsbecken-einrichten', 'diy-aquarium-bauen']
   },
   {
     emoji: '🌿', name: 'Pflanzen & Aquascaping', count: 9, catColor: '#10b981',
     cards: ['aquarium-moosarten', 'aquarienpflanzen-anfaenger', 'co2-im-aquarium', 'aquascaping-anfaenger', 'aquarium-duengung-guide', 'co2-einsteiger-guide', 'bodendecker-teppichpflanzen', 'rote-aquarienpflanzen', 'pflanzenvermehrung-aquarium']
   },
   {
-    emoji: '⚙️', name: 'Technik', count: 8, catColor: '#8b5cf6',
-    cards: ['aquarium-technik-ueberblick', 'co2-im-aquarium', 'aquarium-beleuchtung-guide', 'aquarium-filter-guide', 'osmoseanlage-wasseraufbereitung', 'heizung-temperatur-aquarium', 'stroemung-im-aquarium', 'wassertest-wasserpflege']
+    emoji: '⚙️', name: 'Technik', count: 9, catColor: '#8b5cf6',
+    cards: ['aquarium-automation', 'aquarium-technik-ueberblick', 'co2-im-aquarium', 'aquarium-beleuchtung-guide', 'aquarium-filter-guide', 'osmoseanlage-wasseraufbereitung', 'heizung-temperatur-aquarium', 'stroemung-im-aquarium', 'wassertest-wasserpflege']
   },
   {
     emoji: '🦐', name: 'Garnelen & Fische', count: 10, catColor: '#ff6b6b',
     cards: ['panzerwelse-aquarium', 'salmler-aquarium', 'garnelen-im-aquarium', 'kampffisch-haltung-betta', 'beliebteste-aquarienfische', 'vergesellschaftung-aquarienfische', 'fische-fortgeschrittene', 'lebendgebärende-zahnkarpfen', 'aquarium-futter-ernaehrung', 'nachzucht-fische']
   },
   {
-    emoji: '💊', name: 'Pflege & Gesundheit', count: 8, catColor: '#ffd93d',
-    cards: ['algen-im-aquarium', 'fischkrankheiten-aquarium-guide', 'aquarium-pflegeroutine-guide', 'schnecken-im-aquarium', 'quarantaene-medikamente', 'algenfresser-portrait', 'steinarten-hardscape', 'wurzeln-holz-aquarium']
+    emoji: '💊', name: 'Pflege & Gesundheit', count: 9, catColor: '#ffd93d',
+    cards: ['aquarium-schaedlinge', 'algen-im-aquarium', 'fischkrankheiten-aquarium-guide', 'aquarium-pflegeroutine-guide', 'schnecken-im-aquarium', 'quarantaene-medikamente', 'algenfresser-portrait', 'steinarten-hardscape', 'wurzeln-holz-aquarium']
   },
 ];
 
 // ── GENERATE INDEX ──
 function buildIndex() {
   // Hero: rotating editorial showcase + topic radar
-  const featureSlugs = ['aquarium-pflegeroutine-guide', 'beckenformen-groessen', 'stroemung-im-aquarium'];
+  const featureSlugs = ['nano-aquarium-guide', 'aquarium-automation', 'aquarium-schaedlinge'];
   const heroLabels = ['💊 Neu im Fokus', '🐟 Guide-Rotation', '⚙️ Guide-Rotation'];
   const heroSlides = featureSlugs.map((slug, i) => {
     const a = ARTICLES[slug];
