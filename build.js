@@ -786,6 +786,7 @@ ${nlGlow2}
   return wrapPage(
     'Aquaristik Zentrum – Alles rund ums Aquarium | Megapage',
     'Aquaristik Zentrum – Dein Magazin mit 5000+ Wort Guides, Pop Art Comic Illustrationen und praktischen Tipps für Einsteiger und Profis.',
+    'https://aquaristik-zentrum.com/',
     '/images/hero.png',
     body
   );
@@ -889,27 +890,28 @@ function buildArticle(slug) {
     ${sidebarHTML}
   </div>`;
 
-  return wrapPage(`${a.title} | Aquaristik Zentrum`, a.excerpt, `/images/${a.img}`, body, jsonLd);
+  return wrapPage(`${a.title} | Aquaristik Zentrum`, a.excerpt, `https://aquaristik-zentrum.com/artikel/${slug}.html`, `/images/${a.img}`, body, jsonLd);
 }
 
-function buildPage(title, desc, bodyContent) {
+function buildPage(title, desc, canonical, bodyContent) {
   const hero = T.pageHero.replace('{{PAGE_TITLE}}', title);
   const body = `${hero}\n<main>\n  <div class="page-content">\n    ${bodyContent}\n  </div>\n</main>`;
-  return wrapPage(`${title} – Aquaristik Zentrum`, desc, '', body);
+  return wrapPage(`${title} – Aquaristik Zentrum`, desc, canonical, '', body);
 }
 
 // ── WRAPPER ──
-function wrapPage(title, desc, ogImage, body, jsonLd) {
+function wrapPage(title, desc, canonical, ogImage, body, jsonLd) {
   const jsonLdTag = jsonLd ? `\n${jsonLd}` : '';
   const head = `<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${title}</title>
 <meta name="description" content="${desc}">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="${canonical}">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${desc}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://aquaristik-zentrum.com/">
+<meta property="og:url" content="${canonical}">
 <meta property="og:site_name" content="Aquaristik Zentrum">
 ${ogImage ? `<meta property="og:image" content="https://aquaristik-zentrum.com${ogImage}">` : ''}
 ${T.head}${jsonLdTag}`;
@@ -946,14 +948,14 @@ function main() {
   const aboutPath = path.join(CONTENT, 'about.html');
   if (fs.existsSync(aboutPath)) {
     const content = fs.readFileSync(aboutPath, 'utf-8').trim();
-    fs.writeFileSync(path.join(OUTPUT, 'about.html'), buildPage('Über Aquaristik Zentrum', 'Erfahre mehr über Aquaristik Zentrum – unseren Blog, unsere Mission und das Team.', content));
+    fs.writeFileSync(path.join(OUTPUT, 'about.html'), buildPage('Über Aquaristik Zentrum', 'Erfahre mehr über Aquaristik Zentrum – unseren Blog, unsere Mission und das Team.', 'https://aquaristik-zentrum.com/about.html', content));
     console.log('  ✓ about.html');
   }
 
   const imprPath = path.join(CONTENT, 'impressum.html');
   if (fs.existsSync(imprPath)) {
     const content = fs.readFileSync(imprPath, 'utf-8').trim();
-    fs.writeFileSync(path.join(OUTPUT, 'impressum.html'), buildPage('Impressum', 'Impressum der Webseite Aquaristik Zentrum.', content));
+    fs.writeFileSync(path.join(OUTPUT, 'impressum.html'), buildPage('Impressum', 'Impressum der Webseite Aquaristik Zentrum.', 'https://aquaristik-zentrum.com/impressum.html', content));
     console.log('  ✓ impressum.html');
   }
 
