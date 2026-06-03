@@ -1,0 +1,1022 @@
+[
+  {
+    "slug": "aquarium-umzug-transport-guide",
+    "title": "Aquarium umziehen: Der komplette Transport-Guide ohne Fischstress",
+    "excerpt": "Aquarium umziehen ohne Chaos: Schritt-für-Schritt-Plan für Fische, Filter, Bodengrund, Wasser und Neustart am neuen Standort.",
+    "topic": "Aquarium Umzug",
+    "cat": "Einsteiger",
+    "categoryGroup": "Einsteiger",
+    "catColor": "#06b6d4",
+    "catEmoji": "🐟",
+    "readingTime": 24,
+    "img": "aquarium-umzug-transport-guide.png",
+    "toc": [
+      "Umzug planen",
+      "Fische sicher fangen",
+      "Filter und Bakterien schützen",
+      "Wasser, Bodengrund und Pflanzen transportieren",
+      "Aufbau am neuen Standort",
+      "Die ersten 14 Tage überwachen",
+      "Typische Fehler vermeiden",
+      "Checkliste für den Umzug",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "einsteiger-aquarium-guide",
+        "Einsteiger-Guide",
+        "Grundlagen sauber starten",
+        "einsteiger-guide.png"
+      ],
+      [
+        "wasserwerte-aquarium-guide",
+        "Wasserwerte",
+        "pH, GH, KH und Nitrit verstehen",
+        "linear-gradient(135deg,#06b6d4,#0891b2)"
+      ],
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Aquarium einfahren",
+        "Startphase sicher meistern",
+        "aquarium-einfahren.png"
+      ]
+    ],
+    "prod": [
+      "Transport- und Umzugszubehör",
+      "Eimer, Boxen, Kescher und Luftversorgung",
+      "search:Aquarium Transportbox Eimer Kescher Luftpumpe",
+      "#06b6d4",
+      "#0891b2"
+    ],
+    "intent": "Umzugsplanung für laufende Aquarien inklusive Fischtransport, Filterbakterien, Wasserwerte und Neustart."
+  },
+  {
+    "slug": "truebes-wasser-schaum-geruch-aquarium",
+    "title": "Trübes Wasser, Schaum und Geruch im Aquarium: Ursachen finden und richtig handeln",
+    "excerpt": "Wenn das Aquarium kippt: klare Diagnose für Trübungen, Schaum, muffigen Geruch, Bakterienblüte und schnelle Gegenmaßnahmen.",
+    "topic": "Trübes Wasser",
+    "cat": "Pflege",
+    "categoryGroup": "Pflege & Gesundheit",
+    "catColor": "#ffd93d",
+    "catEmoji": "💊",
+    "readingTime": 25,
+    "img": "truebes-wasser-schaum-geruch-aquarium.png",
+    "toc": [
+      "Symptome richtig lesen",
+      "Weiße, grüne und braune Trübungen",
+      "Schaum an der Oberfläche",
+      "Muffiger Geruch",
+      "Sofortmaßnahmen",
+      "Ursachen dauerhaft abstellen",
+      "Diagnose-Tabelle",
+      "Vorbeugung",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarium-pflegeroutine-guide",
+        "Pflegeroutine",
+        "Stabile Pflege im Alltag",
+        "aquarium-pflegeroutine.png"
+      ],
+      [
+        "wassertest-wasserpflege",
+        "Wassertests",
+        "Wasserpflege messbar machen",
+        "wassertest-wasserpflege.png"
+      ],
+      [
+        "algen-im-aquarium",
+        "Algen-Guide",
+        "Algenursachen erkennen",
+        "algen-aquarium.png"
+      ]
+    ],
+    "prod": [
+      "Wassertest-Set",
+      "Für schnelle Diagnose bei Trübung und Geruch",
+      "search:Aquarium Wassertest Set Nitrit Ammonium",
+      "#ffd93d",
+      "#f59e0b"
+    ],
+    "intent": "Troubleshooting-Longform für sichtbare und riechbare Wasserprobleme im Süßwasseraquarium."
+  },
+  {
+    "slug": "antennenwels-l-welse-haltung",
+    "title": "Antennenwelse und L-Welse halten: Arten, Becken, Futter und typische Fehler",
+    "excerpt": "Der große Wels-Guide: Antennenwelse, L-Welse, Holz, Höhlen, Strömung, Fütterung, Vergesellschaftung und Beckengröße verständlich erklärt.",
+    "topic": "Welse",
+    "cat": "Fische",
+    "categoryGroup": "Garnelen & Fische",
+    "catColor": "#ec4899",
+    "catEmoji": "🐟",
+    "readingTime": 26,
+    "img": "antennenwels-l-welse-haltung.png",
+    "toc": [
+      "Welse verstehen",
+      "Antennenwelse vs. L-Welse",
+      "Beckengröße und Einrichtung",
+      "Holz, Höhlen und Reviere",
+      "Futter und Verdauung",
+      "Vergesellschaftung",
+      "Zucht und Nachwuchs",
+      "Kaufberatung",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "beliebteste-aquarienfische",
+        "Beliebte Aquarienfische",
+        "Besatzideen vergleichen",
+        "beliebte-fische.png"
+      ],
+      [
+        "vergesellschaftung-aquarienfische",
+        "Vergesellschaftung",
+        "Fische passend kombinieren",
+        "vergesellschaftung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Futter-Guide",
+        "Fische sinnvoll ernähren",
+        "aquarium-futter-ernaehrung.png"
+      ]
+    ],
+    "prod": [
+      "Wels-Höhlen und Futtertabletten",
+      "Verstecke und pflanzliche Nahrung für Welse",
+      "search:Antennenwels Höhle Futtertabletten Aquarium",
+      "#ec4899",
+      "#db2777"
+    ],
+    "intent": "Praxisratgeber für Harnischwelse, Antennenwelse und beliebte L-Welse im Süßwasser."
+  },
+  {
+    "slug": "brackwasser-aquarium-guide",
+    "title": "Brackwasser-Aquarium einrichten: Salz, Technik, Besatz und Pflege im Praxis-Guide",
+    "excerpt": "Brackwasser verständlich erklärt: Salzgehalt, Messung, Filterung, passende Tiere, Einrichtung und Pflege für stabile Übergangswasser-Aquarien.",
+    "topic": "Brackwasser",
+    "cat": "Einsteiger",
+    "categoryGroup": "Einsteiger",
+    "catColor": "#06b6d4",
+    "catEmoji": "🐟",
+    "readingTime": 25,
+    "img": "brackwasser-aquarium-guide.png",
+    "toc": [
+      "Was Brackwasser ist",
+      "Salzgehalt messen",
+      "Technik und Einrichtung",
+      "Geeignete Tiere",
+      "Pflanzen und Hardscape",
+      "Wasserwechsel",
+      "Fehler vermeiden",
+      "Praxis-Setup",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "einsteiger-aquarium-guide",
+        "Einsteiger-Guide",
+        "Grundlagen sauber starten",
+        "einsteiger-guide.png"
+      ],
+      [
+        "wasserwerte-aquarium-guide",
+        "Wasserwerte",
+        "pH, GH, KH und Nitrit verstehen",
+        "linear-gradient(135deg,#06b6d4,#0891b2)"
+      ],
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Aquarium einfahren",
+        "Startphase sicher meistern",
+        "aquarium-einfahren.png"
+      ]
+    ],
+    "prod": [
+      "Aräometer und Meersalz",
+      "Salzgehalt im Brackwasser sicher einstellen",
+      "search:Brackwasser Aquarium Salz Aräometer",
+      "#06b6d4",
+      "#0ea5e9"
+    ],
+    "intent": "Einsteigerfreundlicher Longguide für Brackwasserbecken zwischen Süß- und Meerwasser."
+  },
+  {
+    "slug": "kaltwasser-aquarium-guide",
+    "title": "Kaltwasser-Aquarium: Fische, Pflanzen und Technik ohne Heizer richtig planen",
+    "excerpt": "Kaltwasser-Aquarien sind kein Goldfischglas: Tiere, Temperaturen und Technik für unbeheizte Becken realistisch planen.",
+    "topic": "Kaltwasser Aquarium",
+    "cat": "Einsteiger",
+    "categoryGroup": "Einsteiger",
+    "catColor": "#06b6d4",
+    "catEmoji": "🐟",
+    "readingTime": 24,
+    "img": "kaltwasser-aquarium-guide.png",
+    "toc": [
+      "Kaltwasser richtig definieren",
+      "Geeignete Fischarten",
+      "Beckengröße und Sauerstoff",
+      "Pflanzen für kühlere Becken",
+      "Technik ohne Heizer",
+      "Sommerhitze kontrollieren",
+      "Pflegeplan",
+      "Besatzbeispiele",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "einsteiger-aquarium-guide",
+        "Einsteiger-Guide",
+        "Grundlagen sauber starten",
+        "einsteiger-guide.png"
+      ],
+      [
+        "wasserwerte-aquarium-guide",
+        "Wasserwerte",
+        "pH, GH, KH und Nitrit verstehen",
+        "linear-gradient(135deg,#06b6d4,#0891b2)"
+      ],
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Aquarium einfahren",
+        "Startphase sicher meistern",
+        "aquarium-einfahren.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium-Thermometer",
+      "Temperatur im Kaltwasserbecken zuverlässig überwachen",
+      "search:Aquarium Thermometer digital Kaltwasser",
+      "#06b6d4",
+      "#38bdf8"
+    ],
+    "intent": "Planungsratgeber für unbeheizte Süßwasseraquarien und robuste Besatzideen."
+  },
+  {
+    "slug": "meerwasser-aquarium-einstieg",
+    "title": "Meerwasser-Aquarium für Einsteiger: Kosten, Technik und realistische Planung",
+    "excerpt": "Meerwasser ohne Märchen: Technik, Kosten, Osmosewasser, Salz, erste Tiere und typische Anfängerfehler nüchtern erklärt.",
+    "topic": "Meerwasser Einstieg",
+    "cat": "Einsteiger",
+    "categoryGroup": "Einsteiger",
+    "catColor": "#06b6d4",
+    "catEmoji": "🐟",
+    "readingTime": 27,
+    "img": "meerwasser-aquarium-einstieg.png",
+    "toc": [
+      "Meerwasser realistisch einschätzen",
+      "Kosten und laufende Pflege",
+      "Becken und Technik",
+      "Lebendgestein und Riffaufbau",
+      "Salz, Osmose und Messwerte",
+      "Erste Tiere",
+      "Wartungsroutine",
+      "Fehler vermeiden",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "einsteiger-aquarium-guide",
+        "Einsteiger-Guide",
+        "Grundlagen sauber starten",
+        "einsteiger-guide.png"
+      ],
+      [
+        "wasserwerte-aquarium-guide",
+        "Wasserwerte",
+        "pH, GH, KH und Nitrit verstehen",
+        "linear-gradient(135deg,#06b6d4,#0891b2)"
+      ],
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Aquarium einfahren",
+        "Startphase sicher meistern",
+        "aquarium-einfahren.png"
+      ]
+    ],
+    "prod": [
+      "Meerwasser-Testset",
+      "Salz, Dichte und Kernwerte kontrollieren",
+      "search:Meerwasser Aquarium Testset Salzgehalt",
+      "#06b6d4",
+      "#6366f1"
+    ],
+    "intent": "Realistische Einstiegshilfe für Süßwasseraquarianer, die Meerwasser planen."
+  },
+  {
+    "slug": "wasseraufbereiter-aquarium-vergleich",
+    "title": "Wasseraufbereiter im Aquarium: Wann er sinnvoll ist und wann du ihn nicht brauchst",
+    "excerpt": "Wasseraufbereiter, Bakterienstarter, Huminstoffe und Osmosewasser: Der große Vergleich für Leitungswasser, Notfälle und stabile Pflege.",
+    "topic": "Wasseraufbereiter",
+    "cat": "Pflege",
+    "categoryGroup": "Pflege & Gesundheit",
+    "catColor": "#ffd93d",
+    "catEmoji": "💊",
+    "readingTime": 24,
+    "img": "wasseraufbereiter-aquarium-vergleich.png",
+    "toc": [
+      "Was Wasseraufbereiter leisten",
+      "Chlor, Metalle und Schleimhaut",
+      "Bakterienstarter einordnen",
+      "Huminstoffe und Schwarzwasser",
+      "Osmose statt Chemie",
+      "Notfälle und Wasserwechsel",
+      "Produktarten vergleichen",
+      "Dosierfehler vermeiden",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarium-pflegeroutine-guide",
+        "Pflegeroutine",
+        "Stabile Pflege im Alltag",
+        "aquarium-pflegeroutine.png"
+      ],
+      [
+        "wassertest-wasserpflege",
+        "Wassertests",
+        "Wasserpflege messbar machen",
+        "wassertest-wasserpflege.png"
+      ],
+      [
+        "algen-im-aquarium",
+        "Algen-Guide",
+        "Algenursachen erkennen",
+        "algen-aquarium.png"
+      ]
+    ],
+    "prod": [
+      "Wasseraufbereiter und Bakterienstarter",
+      "Für Wasserwechsel, Neustart und Notfälle",
+      "search:Aquarium Wasseraufbereiter Bakterienstarter",
+      "#ffd93d",
+      "#f59e0b"
+    ],
+    "intent": "Nüchterner Vergleich von Wasseraufbereitern, Startern und Alternativen."
+  },
+  {
+    "slug": "artemia-grindal-futtertiere-zuechten",
+    "title": "Futtertiere selbst züchten: Artemia, Grindal, Mikrowürmchen und Lebendfutter zuhause",
+    "excerpt": "Lebendfutter selber ziehen: Artemia, Grindalwürmer, Mikrowürmchen und Infusorien hygienisch, günstig und passend für Jungfische einsetzen.",
+    "topic": "Lebendfutter",
+    "cat": "Fische",
+    "categoryGroup": "Garnelen & Fische",
+    "catColor": "#ec4899",
+    "catEmoji": "🐟",
+    "readingTime": 26,
+    "img": "artemia-grindal-futtertiere-zuechten.png",
+    "toc": [
+      "Warum Lebendfutter",
+      "Artemia ansetzen",
+      "Grindalwürmer pflegen",
+      "Mikrowürmchen und Infusorien",
+      "Hygiene und Lagerung",
+      "Fütterungsplan",
+      "Jungfische aufziehen",
+      "Fehler vermeiden",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "beliebteste-aquarienfische",
+        "Beliebte Aquarienfische",
+        "Besatzideen vergleichen",
+        "beliebte-fische.png"
+      ],
+      [
+        "vergesellschaftung-aquarienfische",
+        "Vergesellschaftung",
+        "Fische passend kombinieren",
+        "vergesellschaftung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Futter-Guide",
+        "Fische sinnvoll ernähren",
+        "aquarium-futter-ernaehrung.png"
+      ]
+    ],
+    "prod": [
+      "Artemia-Aufzuchtset",
+      "Lebendfutter für Jungfische und kleine Arten",
+      "search:Artemia Aufzuchtset Aquarium",
+      "#ec4899",
+      "#f97316"
+    ],
+    "intent": "Praxisanleitung für Lebendfutterkulturen im Hobbymaßstab."
+  },
+  {
+    "slug": "aquarium-kamera-livestream",
+    "title": "Aquarium-Kamera und Livestream: Technik, Positionierung und Datenschutz im Guide",
+    "excerpt": "Aquarium live beobachten: Kameras, WLAN, Licht, Positionierung, Zeitraffer, Livestreams und praktische Setups ohne Technikspielerei.",
+    "topic": "Aquarium Kamera",
+    "cat": "Technik",
+    "categoryGroup": "Technik",
+    "catColor": "#8b5cf6",
+    "catEmoji": "⚙️",
+    "readingTime": 23,
+    "img": "aquarium-kamera-livestream.png",
+    "toc": [
+      "Warum eine Aquarium-Kamera",
+      "Kameraarten",
+      "Position und Blickwinkel",
+      "Licht und Reflexionen",
+      "Livestream und Zeitraffer",
+      "Datenschutz und Sicherheit",
+      "Smart-Home-Integration",
+      "Setup-Beispiele",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarium-technik-ueberblick",
+        "Technik-Überblick",
+        "Filter, Licht und Heizung planen",
+        "technik-ueberblick.png"
+      ],
+      [
+        "aquarium-filter-guide",
+        "Filter-Guide",
+        "Filterleistung richtig verstehen",
+        "aquarium-filter-guide.png"
+      ],
+      [
+        "stroemung-im-aquarium",
+        "Strömung",
+        "Wasserbewegung gezielt lenken",
+        "stroemung-im-aquarium.png"
+      ]
+    ],
+    "prod": [
+      "WLAN-Kamera fürs Aquarium",
+      "Becken beobachten, Zeitraffer aufnehmen und Technik kontrollieren",
+      "search:WLAN Kamera Aquarium Livestream",
+      "#8b5cf6",
+      "#6366f1"
+    ],
+    "intent": "Technikguide für Aquarienüberwachung, Livestream und praktische Kamera-Setups."
+  },
+  {
+    "slug": "uv-klaerer-aquarium-guide",
+    "title": "UV-Klärer im Aquarium: Gegen Schwebealgen, Keime und grünes Wasser richtig einsetzen",
+    "excerpt": "UV-C ohne Panik: Wann ein UV-Klärer hilft, wie lange er laufen sollte und welche Fehler bei Durchfluss, Größe und Dauerbetrieb passieren.",
+    "topic": "UV-Klärer",
+    "cat": "Technik",
+    "categoryGroup": "Technik",
+    "catColor": "#8b5cf6",
+    "catEmoji": "⚙️",
+    "readingTime": 24,
+    "img": "uv-klaerer-aquarium-guide.png",
+    "toc": [
+      "Was UV-C im Aquarium macht",
+      "Grünes Wasser und Schwebealgen",
+      "Keimdruck realistisch einordnen",
+      "Dimensionierung",
+      "Durchfluss und Installation",
+      "Dauerbetrieb oder Kur",
+      "Nebenwirkungen",
+      "Kaufkriterien",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarium-technik-ueberblick",
+        "Technik-Überblick",
+        "Filter, Licht und Heizung planen",
+        "technik-ueberblick.png"
+      ],
+      [
+        "aquarium-filter-guide",
+        "Filter-Guide",
+        "Filterleistung richtig verstehen",
+        "aquarium-filter-guide.png"
+      ],
+      [
+        "stroemung-im-aquarium",
+        "Strömung",
+        "Wasserbewegung gezielt lenken",
+        "stroemung-im-aquarium.png"
+      ]
+    ],
+    "prod": [
+      "UV-C Klärer Aquarium",
+      "Gegen grünes Wasser und Schwebealgen gezielt einsetzen",
+      "search:UV-C Klärer Aquarium grünes Wasser",
+      "#8b5cf6",
+      "#a78bfa"
+    ],
+    "intent": "Technischer Ratgeber für UV-Klärer im Süßwasseraquarium."
+  },
+  {
+    "slug": "aussenfilter-vs-innenfilter",
+    "title": "Außenfilter oder Innenfilter: Der große Aquarium-Filtervergleich für jede Beckengröße",
+    "excerpt": "Innenfilter, Außenfilter, Hang-on und Schwammfilter im Vergleich: Leistung, Wartung, Sicherheit, Lautstärke und Kosten verständlich erklärt.",
+    "topic": "Filtervergleich",
+    "cat": "Technik",
+    "categoryGroup": "Technik",
+    "catColor": "#8b5cf6",
+    "catEmoji": "⚙️",
+    "readingTime": 25,
+    "img": "aussenfilter-vs-innenfilter.png",
+    "toc": [
+      "Filtertypen im Überblick",
+      "Innenfilter",
+      "Außenfilter",
+      "Hang-on und Schwammfilter",
+      "Durchfluss und Filtervolumen",
+      "Wartung und Sicherheit",
+      "Kostenvergleich",
+      "Entscheidungsmatrix",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarium-technik-ueberblick",
+        "Technik-Überblick",
+        "Filter, Licht und Heizung planen",
+        "technik-ueberblick.png"
+      ],
+      [
+        "aquarium-filter-guide",
+        "Filter-Guide",
+        "Filterleistung richtig verstehen",
+        "aquarium-filter-guide.png"
+      ],
+      [
+        "stroemung-im-aquarium",
+        "Strömung",
+        "Wasserbewegung gezielt lenken",
+        "stroemung-im-aquarium.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Außenfilter",
+      "Mehr Filtervolumen für mittlere und große Becken",
+      "search:Aquarium Außenfilter leise",
+      "#8b5cf6",
+      "#6366f1"
+    ],
+    "intent": "Vergleichsartikel mit Entscheidungshilfe für Filterkauf und Wartungsrealität."
+  },
+  {
+    "slug": "aquarium-luftpumpe-sauerstoff",
+    "title": "Luftpumpe und Sauerstoff im Aquarium: Wann Sprudelsteine wirklich helfen",
+    "excerpt": "Sauerstoffmangel erkennen, Luftpumpen richtig einsetzen und Oberflächenbewegung verstehen – ohne unnötigen Dauerblubber im Aquarium.",
+    "topic": "Luftpumpe",
+    "cat": "Technik",
+    "categoryGroup": "Technik",
+    "catColor": "#8b5cf6",
+    "catEmoji": "⚙️",
+    "readingTime": 23,
+    "img": "aquarium-luftpumpe-sauerstoff.png",
+    "toc": [
+      "Sauerstoff im Aquarium",
+      "Oberflächenbewegung",
+      "Wann eine Luftpumpe hilft",
+      "Sprudelstein und Schwammfilter",
+      "Sommer, Medikamente und Notfälle",
+      "Lautstärke reduzieren",
+      "Fehler vermeiden",
+      "Praxis-Setups",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarium-technik-ueberblick",
+        "Technik-Überblick",
+        "Filter, Licht und Heizung planen",
+        "technik-ueberblick.png"
+      ],
+      [
+        "aquarium-filter-guide",
+        "Filter-Guide",
+        "Filterleistung richtig verstehen",
+        "aquarium-filter-guide.png"
+      ],
+      [
+        "stroemung-im-aquarium",
+        "Strömung",
+        "Wasserbewegung gezielt lenken",
+        "stroemung-im-aquarium.png"
+      ]
+    ],
+    "prod": [
+      "Leise Aquarium-Luftpumpe",
+      "Für Notfälle, Schwammfilter und zusätzliche Belüftung",
+      "search:leise Aquarium Luftpumpe Sprudelstein Rückschlagventil",
+      "#8b5cf6",
+      "#60a5fa"
+    ],
+    "intent": "Technik- und Notfallguide rund um Sauerstoff, Belüftung und Luftpumpen."
+  },
+  {
+    "slug": "low-tech-aquarium-ohne-co2",
+    "title": "Low-Tech-Aquarium ohne CO₂: Pflanzenbecken einfach, stabil und günstig betreiben",
+    "excerpt": "Schöne Pflanzen ohne CO₂-Anlage: Licht, Bodengrund, robuste Arten, Düngung und Geduld für ein stabiles Low-Tech-Aquarium.",
+    "topic": "Low-Tech Aquarium",
+    "cat": "Pflanzen",
+    "categoryGroup": "Pflanzen & Aquascaping",
+    "catColor": "#10b981",
+    "catEmoji": "🌿",
+    "readingTime": 25,
+    "img": "low-tech-aquarium-ohne-co2.png",
+    "toc": [
+      "Low-Tech richtig verstehen",
+      "Licht als Stellschraube",
+      "Robuste Pflanzen",
+      "Bodengrund und Nährstoffe",
+      "Düngung ohne Übertreibung",
+      "Algen vermeiden",
+      "Besatz und Pflege",
+      "Beispiel-Setups",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Pflanzen für Anfänger",
+        "Robuste Arten auswählen",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Düngung",
+        "Nährstoffe passend dosieren",
+        "aquarium-duengung.png"
+      ],
+      [
+        "co2-einsteiger-guide",
+        "CO₂ Einsteiger",
+        "CO₂ richtig einordnen",
+        "co2-einsteiger-guide.png"
+      ]
+    ],
+    "prod": [
+      "Low-Tech Pflanzenset",
+      "Robuste Aquarienpflanzen für Becken ohne CO₂",
+      "search:Aquarium Pflanzen Set Anfänger ohne CO2",
+      "#10b981",
+      "#34d399"
+    ],
+    "intent": "Pflanzenaquarium ohne Druckgas-CO2 für Anfänger und pragmatische Aquascaper."
+  },
+  {
+    "slug": "iwagumi-aquascape-guide",
+    "title": "Iwagumi Aquascape: Steine, Pflanzen, Layout und Pflege minimalistisch planen",
+    "excerpt": "Iwagumi verständlich: Steinsetzung, Bodendecker, Proportionen, CO₂, Licht, Algenrisiko und Pflege für klare minimalistische Layouts.",
+    "topic": "Iwagumi",
+    "cat": "Aquascaping",
+    "categoryGroup": "Pflanzen & Aquascaping",
+    "catColor": "#0d9488",
+    "catEmoji": "🪨",
+    "readingTime": 26,
+    "img": "iwagumi-aquascape-guide.png",
+    "toc": [
+      "Was Iwagumi ausmacht",
+      "Steinarten und Hardscape",
+      "Layout-Regeln",
+      "Bodendecker und Pflanzen",
+      "CO₂, Licht und Nährstoffe",
+      "Startphase",
+      "Pflege und Schnitt",
+      "Fehlerbilder",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquascaping-anfaenger",
+        "Aquascaping Anfänger",
+        "Layouts strukturieren",
+        "aquascaping-anfaenger.png"
+      ],
+      [
+        "steinarten-hardscape",
+        "Hardscape-Steine",
+        "Steine sicher auswählen",
+        "steinarten-hardscape.png"
+      ],
+      [
+        "wurzeln-holz-aquarium",
+        "Wurzeln und Holz",
+        "Natürliches Hardscape nutzen",
+        "wurzeln-holz.png"
+      ]
+    ],
+    "prod": [
+      "Aquascaping Steine",
+      "Hardscape für Iwagumi-Layouts",
+      "search:Aquascaping Steine Iwagumi Aquarium",
+      "#0d9488",
+      "#14b8a6"
+    ],
+    "intent": "Deep-dive für minimalistische Steinlayouts im Aquascaping."
+  },
+  {
+    "slug": "biotop-aquarium-amazonas-asien",
+    "title": "Biotop-Aquarium planen: Amazonas, Asien und Schwarzwasser natürlich nachbilden",
+    "excerpt": "Biotop statt Deko-Mix: Wasserwerte, Laub, Holz, Pflanzen, Besatz und Licht für naturnahe Amazonas- und Asien-Aquarien.",
+    "topic": "Biotop Aquarium",
+    "cat": "Aquascaping",
+    "categoryGroup": "Pflanzen & Aquascaping",
+    "catColor": "#0d9488",
+    "catEmoji": "🪨",
+    "readingTime": 27,
+    "img": "biotop-aquarium-amazonas-asien.png",
+    "toc": [
+      "Biotop-Idee verstehen",
+      "Amazonas-Becken",
+      "Asien-Becken",
+      "Schwarzwasser",
+      "Wasserwerte und Huminstoffe",
+      "Pflanzen und Hardscape",
+      "Besatz passend wählen",
+      "Pflege naturnaher Becken",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquascaping-anfaenger",
+        "Aquascaping Anfänger",
+        "Layouts strukturieren",
+        "aquascaping-anfaenger.png"
+      ],
+      [
+        "steinarten-hardscape",
+        "Hardscape-Steine",
+        "Steine sicher auswählen",
+        "steinarten-hardscape.png"
+      ],
+      [
+        "wurzeln-holz-aquarium",
+        "Wurzeln und Holz",
+        "Natürliches Hardscape nutzen",
+        "wurzeln-holz.png"
+      ]
+    ],
+    "prod": [
+      "Seemandelbaumblätter und Erlenzapfen",
+      "Huminstoffe für naturnahe Schwarzwasser-Setups",
+      "search:Seemandelbaumblätter Erlenzapfen Aquarium",
+      "#0d9488",
+      "#78716c"
+    ],
+    "intent": "Naturnahe Aquariengestaltung mit regional passenden Tieren, Wasserwerten und Materialien."
+  },
+  {
+    "slug": "schwimmpflanzen-aquarium-guide",
+    "title": "Schwimmpflanzen im Aquarium: Arten, Nutzen, Pflege und Kontrolle ohne Lichtchaos",
+    "excerpt": "Froschbiss, Muschelblume, Salvinia und Co.: Schwimmpflanzen richtig nutzen, Nährstoffe binden, Schatten steuern und Vermehrung kontrollieren.",
+    "topic": "Schwimmpflanzen",
+    "cat": "Pflanzen",
+    "categoryGroup": "Pflanzen & Aquascaping",
+    "catColor": "#10b981",
+    "catEmoji": "🌿",
+    "readingTime": 24,
+    "img": "schwimmpflanzen-aquarium-guide.png",
+    "toc": [
+      "Warum Schwimmpflanzen",
+      "Beliebte Arten",
+      "Licht und Schatten",
+      "Nährstoffverbrauch",
+      "Strömung und Abdeckung",
+      "Pflege und Ausdünnen",
+      "Probleme vermeiden",
+      "Einsatz bei Zucht und Garnelen",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Pflanzen für Anfänger",
+        "Robuste Arten auswählen",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Düngung",
+        "Nährstoffe passend dosieren",
+        "aquarium-duengung.png"
+      ],
+      [
+        "co2-einsteiger-guide",
+        "CO₂ Einsteiger",
+        "CO₂ richtig einordnen",
+        "co2-einsteiger-guide.png"
+      ]
+    ],
+    "prod": [
+      "Schwimmpflanzen Aquarium",
+      "Froschbiss, Salvinia und Muschelblume vergleichen",
+      "search:Schwimmpflanzen Aquarium Froschbiss Salvinia",
+      "#10b981",
+      "#84cc16"
+    ],
+    "intent": "Pflanzenratgeber für Oberfläche, Schatten, Nährstoffkontrolle und Garnelenbecken."
+  },
+  {
+    "slug": "bucephalandra-anubias-javafarn",
+    "title": "Bucephalandra, Anubias und Javafarn: Aufsitzerpflanzen richtig befestigen und pflegen",
+    "excerpt": "Aufsitzerpflanzen ohne Frust: Rhizom nicht eingraben, richtig aufbinden, langsam düngen und Algen auf Blättern vermeiden.",
+    "topic": "Aufsitzerpflanzen",
+    "cat": "Pflanzen",
+    "categoryGroup": "Pflanzen & Aquascaping",
+    "catColor": "#10b981",
+    "catEmoji": "🌿",
+    "readingTime": 25,
+    "img": "bucephalandra-anubias-javafarn.png",
+    "toc": [
+      "Was Aufsitzerpflanzen sind",
+      "Bucephalandra",
+      "Anubias",
+      "Javafarn",
+      "Befestigung auf Holz und Stein",
+      "Licht und Nährstoffe",
+      "Algen auf langsamen Blättern",
+      "Layout-Ideen",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Pflanzen für Anfänger",
+        "Robuste Arten auswählen",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Düngung",
+        "Nährstoffe passend dosieren",
+        "aquarium-duengung.png"
+      ],
+      [
+        "co2-einsteiger-guide",
+        "CO₂ Einsteiger",
+        "CO₂ richtig einordnen",
+        "co2-einsteiger-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aufsitzerpflanzen Set",
+      "Anubias, Bucephalandra und Javafarn fürs Hardscape",
+      "search:Anubias Bucephalandra Javafarn Aquarium",
+      "#10b981",
+      "#0d9488"
+    ],
+    "intent": "Spezialguide für robuste Rhizompflanzen und deren Befestigung."
+  },
+  {
+    "slug": "fischbesatz-nach-beckengroesse",
+    "title": "Fischbesatz nach Beckengröße: 30, 60, 100, 180 und 240 Liter sinnvoll planen",
+    "excerpt": "Welche Fische passen wirklich? Besatzideen nach Literzahl, Schwimmraum, Revierverhalten, Gruppenstärke und Wasserwerten ohne Zentimeter-Regel-Märchen.",
+    "topic": "Fischbesatz",
+    "cat": "Fische",
+    "categoryGroup": "Garnelen & Fische",
+    "catColor": "#ec4899",
+    "catEmoji": "🐟",
+    "readingTime": 27,
+    "img": "fischbesatz-nach-beckengroesse.png",
+    "toc": [
+      "Warum Literzahl nicht alles ist",
+      "30 Liter",
+      "60 Liter",
+      "100 Liter",
+      "180 Liter",
+      "240 Liter und größer",
+      "Schwarm, Paar und Revier",
+      "Überbesatz vermeiden",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "beliebteste-aquarienfische",
+        "Beliebte Aquarienfische",
+        "Besatzideen vergleichen",
+        "beliebte-fische.png"
+      ],
+      [
+        "vergesellschaftung-aquarienfische",
+        "Vergesellschaftung",
+        "Fische passend kombinieren",
+        "vergesellschaftung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Futter-Guide",
+        "Fische sinnvoll ernähren",
+        "aquarium-futter-ernaehrung.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset",
+      "Beckengröße passend zum Besatz planen",
+      "search:Aquarium Komplettset 60l 100l 180l",
+      "#ec4899",
+      "#f43f5e"
+    ],
+    "intent": "Besatzplaner mit konkreten Ideen je Beckengröße und klarer Warnung vor Überbesatz."
+  },
+  {
+    "slug": "urlaub-aquarium-futterautomat",
+    "title": "Aquarium im Urlaub: Futterautomat, Licht, Wasserwechsel und Notfallplan richtig vorbereiten",
+    "excerpt": "Urlaub ohne Aquarium-Panik: Futterautomat testen, Wasserwechsel planen, Technik absichern und Betreuer klar einweisen.",
+    "topic": "Aquarium Urlaub",
+    "cat": "Pflege",
+    "categoryGroup": "Pflege & Gesundheit",
+    "catColor": "#ffd93d",
+    "catEmoji": "💊",
+    "readingTime": 24,
+    "img": "urlaub-aquarium-futterautomat.png",
+    "toc": [
+      "Urlaub realistisch planen",
+      "Futterautomat oder Futterpause",
+      "Vorbereitung eine Woche vorher",
+      "Wasserwechsel und Reinigung",
+      "Licht und Technik",
+      "Betreuer einweisen",
+      "Notfallzettel",
+      "Nach der Rückkehr",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarium-pflegeroutine-guide",
+        "Pflegeroutine",
+        "Stabile Pflege im Alltag",
+        "aquarium-pflegeroutine.png"
+      ],
+      [
+        "wassertest-wasserpflege",
+        "Wassertests",
+        "Wasserpflege messbar machen",
+        "wassertest-wasserpflege.png"
+      ],
+      [
+        "algen-im-aquarium",
+        "Algen-Guide",
+        "Algenursachen erkennen",
+        "algen-aquarium.png"
+      ]
+    ],
+    "prod": [
+      "Futterautomat Aquarium",
+      "Fütterung im Urlaub kontrolliert automatisieren",
+      "search:Aquarium Futterautomat Urlaub",
+      "#ffd93d",
+      "#f59e0b"
+    ],
+    "intent": "Urlaubscheckliste für Aquarianer mit Technik, Fütterung und Betreuerkommunikation."
+  },
+  {
+    "slug": "stromausfall-aquarium-notfallplan",
+    "title": "Stromausfall im Aquarium: Notfallplan für Filter, Sauerstoff, Temperatur und Bakterien",
+    "excerpt": "Wenn der Strom weg ist: Was in den ersten Minuten, Stunden und danach zählt – inklusive Filterbakterien, Sauerstoff, Temperatur und Neustart.",
+    "topic": "Stromausfall",
+    "cat": "Technik",
+    "categoryGroup": "Technik",
+    "catColor": "#8b5cf6",
+    "catEmoji": "⚙️",
+    "readingTime": 25,
+    "img": "stromausfall-aquarium-notfallplan.png",
+    "toc": [
+      "Was beim Stromausfall passiert",
+      "Die ersten 30 Minuten",
+      "Sauerstoff sichern",
+      "Filterbakterien schützen",
+      "Temperatur halten",
+      "Nach 2 bis 8 Stunden",
+      "Wiederanlauf des Filters",
+      "Vorbereitung und Technik",
+      "FAQ"
+    ],
+    "related": [
+      [
+        "aquarium-technik-ueberblick",
+        "Technik-Überblick",
+        "Filter, Licht und Heizung planen",
+        "technik-ueberblick.png"
+      ],
+      [
+        "aquarium-filter-guide",
+        "Filter-Guide",
+        "Filterleistung richtig verstehen",
+        "aquarium-filter-guide.png"
+      ],
+      [
+        "stroemung-im-aquarium",
+        "Strömung",
+        "Wasserbewegung gezielt lenken",
+        "stroemung-im-aquarium.png"
+      ]
+    ],
+    "prod": [
+      "USB-Luftpumpe und Powerbank",
+      "Notfallbelüftung bei Stromausfall",
+      "search:USB Aquarium Luftpumpe Powerbank Stromausfall",
+      "#8b5cf6",
+      "#60a5fa"
+    ],
+    "intent": "Konkreter Notfallplan für Stromausfälle und technische Ausfälle."
+  }
+]

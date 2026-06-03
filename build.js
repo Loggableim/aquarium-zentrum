@@ -600,6 +600,17 @@ const ARTICLES = {
   },
 };
 
+// ── LONG CONTENT DATA (loaded only after each scheduled article exists) ──
+const LONG_CONTENT_PATH = path.join(ROOT, 'data', 'long-content-articles.json');
+const LONG_CONTENT_ARTICLES = fs.existsSync(LONG_CONTENT_PATH)
+  ? JSON.parse(fs.readFileSync(LONG_CONTENT_PATH, 'utf-8')).filter(item =>
+      fs.existsSync(path.join(CONTENT, 'artikel', `${item.slug}.html`)))
+  : [];
+for (const item of LONG_CONTENT_ARTICLES) {
+  const { slug, topic, categoryGroup, intent, ...article } = item;
+  ARTICLES[slug] = article;
+}
+
 // ── TOPICS / TAGS ──
 const TOPICS = [
   ['Einsteiger', '#06b6d4', '/artikel/einsteiger-aquarium-guide.html'],
@@ -669,6 +680,14 @@ const CATEGORIES = [
     cards: ['aquarium-schaedlinge', 'algen-im-aquarium', 'fischkrankheiten-aquarium-guide', 'aquarium-pflegeroutine-guide', 'schnecken-im-aquarium', 'quarantaene-medikamente', 'algenfresser-portrait', 'steinarten-hardscape', 'wurzeln-holz-aquarium']
   },
 ];
+
+for (const item of LONG_CONTENT_ARTICLES) {
+  TOPICS.push([item.topic || item.title, item.catColor, `/artikel/${item.slug}.html`]);
+  const group = CATEGORIES.find(cat => cat.name === item.categoryGroup);
+  if (group && !group.cards.includes(item.slug)) group.cards.unshift(item.slug);
+}
+for (const group of CATEGORIES) group.count = group.cards.length;
+T.nav = T.nav.replace(/<span class="count">\d+<\/span>/, `<span class="count">${Object.keys(ARTICLES).length}</span>`);
 
 // ── GENERATE INDEX ──
 function buildIndex() {
