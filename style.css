@@ -6,30 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --bg: #0a0a0f;
-  --bg-alt: #18181b;
-  --bg-card: #18181b;
-  --bg-glass: rgba(10,10,15,0.85);
-  --border: #27272a;
-  --border-light: rgba(255,255,255,0.06);
-  --text: #fff;
-  --text-dim: #52525b;
-  --text-muted: #71717a;
-  --text-on-card: #d4d4d8;
-  --cyan: #06b6d4;
-  --cyan-dark: #0d9488;
-  --coral: #ff6b6b;
-  --coral-dark: #ee4444;
-  --yellow: #ffd93d;
-  --emerald: #10b981;
-  --purple: #8b5cf6;
-  --pink: #ec4899;
-
-  --font: 'Inter', system-ui, -apple-system, sans-serif;
-  --max-width: 1400px;
-  --radius: 12px;
-  --radius-sm: 8px;
-  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --primary: #00BCD4;
+    --nav-bg: #008ba3;
 }
 
 /* ─── RESET ─── */
