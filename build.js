@@ -631,60 +631,106 @@ const CATEGORIES = [
   },
 ];
 
-// ── STATS ──
-const totalArticles = Object.keys(ARTICLES).length;
-const totalMinutes = Object.values(ARTICLES).reduce((sum, a) => sum + (a.readingTime || 0), 0);
-const totalCategories = new Set(Object.values(ARTICLES).map(a => a.cat)).size;
-
 // ── GENERATE INDEX ──
 function buildIndex() {
-  // Hero: featured article + 3 side articles
-  const featured = ARTICLES['aquarium-pflegeroutine-guide'];
+  // Hero: rotating editorial showcase + topic radar
+  const featureSlugs = ['aquarium-pflegeroutine-guide', 'beckenformen-groessen', 'stroemung-im-aquarium'];
   const heroSideSlugs = ['bodengrund-aquarium-guide', 'fischkrankheiten-aquarium-guide', 'co2-im-aquarium'];
+  const topicRail = [
+    ['Startklar werden', 'Einsteiger-Guide', '#06b6d4', '/artikel/einsteiger-aquarium-guide.html'],
+    ['Wasser verstehen', 'pH, GH, KH & Nitrit', '#0891b2', '/artikel/wasserwerte-aquarium-guide.html'],
+    ['Becken planen', 'Form, Größe & Standort', '#06b6d4', '/artikel/beckenformen-groessen.html'],
+    ['Technik abstimmen', 'Filter, Licht & Strömung', '#8b5cf6', '/artikel/aquarium-technik-ueberblick.html'],
+    ['Pflege vereinfachen', 'Routine statt Rätselraten', '#ffd93d', '/artikel/aquarium-pflegeroutine-guide.html'],
+  ];
+  const tickerTopics = [
+    ['Einsteiger-Guide', '/artikel/einsteiger-aquarium-guide.html'],
+    ['Aquarium einfahren', '/artikel/aquarium-einfahren-nitritpeak.html'],
+    ['Wasserwerte prüfen', '/artikel/wasserwerte-aquarium-guide.html'],
+    ['Pflanzen wählen', '/artikel/aquarienpflanzen-anfaenger.html'],
+    ['Filter verstehen', '/artikel/aquarium-filter-guide.html'],
+    ['Fische kombinieren', '/artikel/vergesellschaftung-aquarienfische.html'],
+    ['Algen stoppen', '/artikel/algen-im-aquarium.html'],
+    ['DIY Aquarium bauen', '/artikel/diy-aquarium-bauen.html'],
+  ];
+
+  const imgStyleFor = (img) => img.startsWith('linear-gradient')
+    ? `background:${img}`
+    : `background-image:url('/images/${img}')`;
+
+  let heroSlides = '';
+  featureSlugs.forEach((slug, index) => {
+    const a = ARTICLES[slug];
+    if (!a) return;
+    const tagStyle = a.catColor === '#ffd93d'
+      ? `background:${a.catColor};color:#0a0a0f;`
+      : `background:${a.catColor};color:#fff;`;
+    heroSlides += `<a href="/artikel/${slug}.html" class="hero-slide" style="--i:${index};--accent:${a.catColor};">
+      <div class="bg-img" style="${imgStyleFor(a.img)}"></div>
+      <div class="slide-shade"></div>
+      <div class="content">
+        <span class="tag" style="${tagStyle}">${a.catEmoji || '🐠'} ${index === 0 ? 'Neu im Fokus' : 'Guide-Rotation'}</span>
+        <h2>${a.title}</h2>
+        <p>${a.excerpt}</p>
+        <div class="hero-feat-meta">
+          <span>📅 ${a.date}</span>
+          <span>📖 ${a.readingTime} Min</span>
+          <span class="hero-cta">Jetzt lesen →</span>
+        </div>
+      </div>
+    </a>\n`;
+  });
 
   let heroSide = '';
   for (const slug of heroSideSlugs) {
     const a = ARTICLES[slug];
     if (!a) continue;
-    const imgStyle = a.img.startsWith('linear-gradient')
-      ? `background:${a.img}`
-      : `background-image:url('/images/${a.img}')`;
-    heroSide += `<a href="/artikel/${slug}" class="side-item">
-      <div class="thumb" style="${imgStyle}"></div>
+    heroSide += `<a href="/artikel/${slug}.html" class="side-item" style="--accent:${a.catColor};">
+      <div class="thumb" style="${imgStyleFor(a.img)}"></div>
       <div class="info"><h5>${a.title}</h5><small>${a.cat} · ${a.readingTime} Min</small></div>
     </a>\n`;
   }
 
-  const heroHTML = `<div class="hero-modern">
-    <div class="hero-feat">
-      <div class="bg-img" style="background-image:url('/images/hero.png')"></div>
-      <div class="content">
-        <span class="tag">⭐ Neu</span>
-        <h2>${featured.title}</h2>
-        <p>${featured.excerpt}</p>
-        <div class="hero-feat-meta">
-          <span>📅 ${featured.date}</span>
-          <span>📖 ${featured.readingTime} Min Lesezeit</span>
-          <a href="/artikel/aquarium-pflegeroutine-guide.html" class="hero-cta">Jetzt lesen →</a>
-        </div>
-      </div>
-    </div>
-    <div class="hero-side">
-      ${heroSide}
-    </div>
-  </div>`;
+  let topicSlides = '';
+  topicRail.forEach(([label, desc, color, url], index) => {
+    const tone = color === '#ffd93d' ? 'color:#0a0a0f;' : 'color:#fff;';
+    topicSlides += `<a href="${url}" class="topic-slide" style="--i:${index};--accent:${color};">
+      <span class="topic-index" style="background:${color};${tone}">${index + 1}</span>
+      <span><strong>${label}</strong><small>${desc}</small></span>
+    </a>\n`;
+  });
 
-  // Stats Bar
-  const statsHTML = `<div class="stats-bar">
-    <div class="stats-inner">
-      <div class="stat-item"><span class="stat-num">${totalArticles}</span><span class="stat-label">Artikel</span></div>
-      <div class="stat-dot"></div>
-      <div class="stat-item"><span class="stat-num">${totalCategories}</span><span class="stat-label">Kategorien</span></div>
-      <div class="stat-dot"></div>
-      <div class="stat-item"><span class="stat-num">${totalMinutes}+</span><span class="stat-label">Min. Lesestoff</span></div>
-      <div class="stat-dot"></div>
-      <div class="stat-item"><span class="stat-num">${Object.keys(ARTICLES).filter(s => ARTICLES[s].img !== 'linear-gradient(135deg,#ec4899,#db2777)').length}</span><span class="stat-label">Pop Art Bilder</span></div>
+  const tickerItems = [...tickerTopics, ...tickerTopics]
+    .map(([label, url]) => `<a href="${url}" class="ticker-item">${label}<span>→</span></a>`)
+    .join('');
+
+  const heroHTML = `<section class="hero-modern hero-showcase" aria-label="Empfohlene Aquaristik-Guides">
+    <div class="hero-rotator">
+      ${heroSlides}
+      <div class="hero-dots" aria-hidden="true"><span></span><span></span><span></span></div>
     </div>
+    <aside class="hero-side hero-control-panel" aria-label="Themen-Radar">
+      <div class="panel-head">
+        <span class="eyebrow">Themen-Radar</span>
+        <h3>Was willst du heute im Aquarium lösen?</h3>
+        <p>Kurze Wege zu Guides, die wirklich praktisch sind.</p>
+      </div>
+      <div class="topic-rotator">
+        ${topicSlides}
+      </div>
+      <div class="hero-actions">
+        <a href="/artikel/wasserwerte-aquarium-guide.html">Werte prüfen</a>
+        <a href="/artikel/aquarium-einfahren-nitritpeak.html">Start planen</a>
+      </div>
+      <div class="hero-side-list">
+        ${heroSide}
+      </div>
+    </aside>
+  </section>`;
+
+  // Rotating quick-access ticker instead of numeric stats
+  const statsHTML = `<div class="hero-ticker" aria-label="Schnelleinstiege">
+    <div class="ticker-track">${tickerItems}</div>
   </div>`;
 
   // Employees Pick (Editors Pick)
@@ -774,6 +820,7 @@ function buildIndex() {
   </div>`;
 
   const body = `<main class="megapage">
+<h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;white-space:nowrap;">Aquaristik Zentrum – Alles rund ums Aquarium</h1>
 ${heroHTML}
 ${statsHTML}
 ${nlGlow}
@@ -785,7 +832,7 @@ ${nlGlow2}
 
   return wrapPage(
     'Aquaristik Zentrum – Alles rund ums Aquarium | Megapage',
-    'Aquaristik Zentrum – Dein Magazin mit 5000+ Wort Guides, Pop Art Comic Illustrationen und praktischen Tipps für Einsteiger und Profis.',
+    'Aquaristik Zentrum – Dein modernes Aquarium-Magazin mit praktischen Guides, klarer Themenführung und Tipps für Einsteiger und Profis.',
     'https://aquaristik-zentrum.com/',
     '/images/hero.png',
     body
