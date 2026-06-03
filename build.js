@@ -818,6 +818,29 @@ function buildArticle(slug) {
     ? `background:${a.catColor};color:#0a0a0f;`
     : `background:${a.catColor};color:#fff;`;
 
+  const jsonLd = `<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "${a.title}",
+  "description": "${a.excerpt}",
+  "image": "https://aquaristik-zentrum.com/images/${a.img}",
+  "author": {
+    "@type": "Person",
+    "name": "Alexander"
+  },
+  "datePublished": "${a.date}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Aquaristik Zentrum"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://aquaristik-zentrum.com/artikel/${slug}.html"
+  }
+}
+<\/script>`;
+
   const body = `<div class="article-layout">
     <div class="article-main">
       <span class="cat-head" style="${style}">${a.cat}</span>
@@ -836,10 +859,9 @@ function buildArticle(slug) {
     ${sidebarHTML}
   </div>`;
 
-  return wrapPage(`${a.title} | Aquaristik Zentrum`, a.excerpt, `/images/${a.img}`, body);
+  return wrapPage(`${a.title} | Aquaristik Zentrum`, a.excerpt, `/images/${a.img}`, body, jsonLd);
 }
 
-// ── GENERATE PAGE (about, impressum) ──
 function buildPage(title, desc, bodyContent) {
   const hero = T.pageHero.replace('{{PAGE_TITLE}}', title);
   const body = `${hero}\n<main>\n  <div class="page-content">\n    ${bodyContent}\n  </div>\n</main>`;
@@ -847,7 +869,8 @@ function buildPage(title, desc, bodyContent) {
 }
 
 // ── WRAPPER ──
-function wrapPage(title, desc, ogImage, body) {
+function wrapPage(title, desc, ogImage, body, jsonLd) {
+  const jsonLdTag = jsonLd ? `\n${jsonLd}` : '';
   const head = `<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${title}</title>
@@ -859,7 +882,7 @@ function wrapPage(title, desc, ogImage, body) {
 <meta property="og:url" content="https://aquaristik-zentrum.com/">
 <meta property="og:site_name" content="Aquaristik Zentrum">
 ${ogImage ? `<meta property="og:image" content="https://aquaristik-zentrum.com${ogImage}">` : ''}
-${T.head}`;
+${T.head}${jsonLdTag}`;
   return `<!DOCTYPE html>
 <html lang="de">
 <head>
