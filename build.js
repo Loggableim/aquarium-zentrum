@@ -1103,52 +1103,61 @@ ${T.cookie}
 }
 
 // ════════════════════════════════════════════
-// MAGAZINE HERO — State-of-the-Art Editorial Layout
+// MAGAZINE HERO — Responsive Editorial Layout
 // ════════════════════════════════════════════
 function buildMagazineHero() {
-  const feature = ARTICLES['nano-aquarium-guide'];
-  const secondary = ['aquarium-automation', 'aquarium-schaedlinge', 'einsteiger-aquarium-guide']
-    .map(s => ARTICLES[s]).filter(Boolean);
+  const slugs = ['nano-aquarium-guide', 'aquarium-automation', 'aquarium-schaedlinge', 'einsteiger-aquarium-guide'];
+  const [featureSlug, ...cardSlugs] = slugs;
+  const feature = ARTICLES[featureSlug];
 
-  const secondaryHTML = secondary.map((a, i) => {
+  const cardsHTML = cardSlugs.map((slug, i) => {
+    const a = ARTICLES[slug];
+    if (!a) return '';
     const img = a.img && !a.img.startsWith('linear-gradient')
       ? `linear-gradient(180deg,transparent 20%,rgba(0,0,0,0.88)),url('/images/${a.img}')`
       : `linear-gradient(135deg,${a.catColor},#1a1a2e)`;
-    return `<a href="/artikel/${a.slug || Object.keys(ARTICLES).find(k => ARTICLES[k] === a)}.html" class="mag-card" style="--card-idx:${i};background-image:${img};">
+    return `<a href="/artikel/${slug}.html" class="mag-card" style="--idx:${i};background-image:${img};">
       <span class="mag-card-cat" style="background:${a.catColor}">${a.cat}</span>
       <h3>${a.title}</h3>
       <span class="mag-card-meta">${a.readingTime} Min Lesezeit</span>
     </a>`;
   }).join('');
 
+  const topics = ['Einsteiger', 'Aquarienpflanzen', 'Technik', 'Garnelen', 'Algen', 'CO₂', 'Filter', 'Aquascaping', 'Bodengrund', 'Wasserwerte'];
+  const topicsHTML = topics.map(t => {
+    const topic = TOPICS.find(x => x[0] === t);
+    if (!topic) return '';
+    return `<a href="${topic[2]}" class="mag-topic" style="--topic-clr:${topic[1]}">${t}</a>`;
+  }).join('');
+
+  const featureImg = feature.img && !feature.img.startsWith('linear-gradient')
+    ? `linear-gradient(180deg,transparent 25%,rgba(0,0,0,0.9)),url('/images/${feature.img}')`
+    : `linear-gradient(135deg,${feature.catColor},#1a1a2e)`;
+
   return `<section class="mag-hero" aria-label="Magazin">
     <div class="mag-intro">
       <span class="mag-eyebrow">Aquaristik Zentrum Magazin</span>
-      <h1 class="mag-title">Dein Leitfaden für<br><span>perfekte Aquarien</span></h1>
-      <p class="mag-desc"><strong>${Object.keys(ARTICLES).length}+ praxisnahe Artikel</strong> — von der ersten Einrichtung bis zur Profi-Pflege</p>
+      <h1 class="mag-title">Dein Leitfaden f&uuml;r<br><span>perfekte Aquarien</span></h1>
+      <p class="mag-desc"><strong>${Object.keys(ARTICLES).length}+ praxisnahe Artikel</strong> &mdash; von der ersten Einrichtung bis zur Profi-Pflege</p>
     </div>
     <div class="mag-grid">
-      <a href="/artikel/nano-aquarium-guide.html" class="mag-feature" style="background-image:linear-gradient(180deg,transparent 30%,rgba(0,0,0,0.9)),url('/images/nano-aquarium-guide.png');">
-        <div class="mag-feature-badge" style="background:${feature.catColor}">${feature.cat}</div>
+      <a href="/artikel/${featureSlug}.html" class="mag-feature" style="background-image:${featureImg};">
+        <span class="mag-feature-badge" style="background:${feature.catColor}">${feature.cat}</span>
         <div class="mag-feature-body">
           <h2>${feature.title}</h2>
           <p>${feature.excerpt}</p>
           <div class="mag-feature-meta">
-            <span>📅 ${feature.date}</span>
-            <span>📖 ${feature.readingTime} Min</span>
+            <span>&#128197; ${feature.date}</span>
+            <span>&#128214; ${feature.readingTime} Min</span>
           </div>
         </div>
       </a>
-      ${secondaryHTML}
+      ${cardsHTML}
     </div>
     <div class="mag-topics">
       <span class="mag-topics-label">Themen</span>
       <div class="mag-topics-list">
-        ${['Einsteiger', 'Aquarienpflanzen', 'Technik', 'Garnelen', 'Algen', 'CO₂', 'Filter', 'Aquascaping', 'Bodengrund', 'Wasserwerte'].map(t => {
-          const topic = TOPICS.find(x => x[0] === t);
-          if (!topic) return '';
-          return `<a href="${topic[2]}" class="mag-topic" style="--topic-clr:${topic[1]}">${t}</a>`;
-        }).join('')}
+        ${topicsHTML}
       </div>
     </div>
   </section>`;
