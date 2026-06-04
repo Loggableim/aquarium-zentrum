@@ -353,155 +353,160 @@ img { max-width: 100%; height: auto; display: block; }
 .card-modern:hover .art-body .read-link { gap: 0.5rem; }
 
 /* ════════════════════════════════════════════
-   WINDOWS 8 × ANDY WARHOL — TILE HERO
+   MAGAZINE HERO — State-of-the-Art Editorial
    ════════════════════════════════════════════ */
 
-.warhol-hero {
-  max-width: var(--max-width); margin: 0 auto; padding: 1.5rem 2rem 0;
+.mag-hero {
+  max-width: var(--max-width); margin: 0 auto; padding: 1.25rem 2rem 0;
 }
 
-.warhol-header {
-  margin-bottom: 1.25rem;
+/* ─── Intro ─── */
+.mag-intro { margin-bottom: 1.5rem; }
+.mag-eyebrow {
+  display: inline-block; font-size: 0.65rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 2px; color: var(--cyan);
+  margin-bottom: 0.5rem; padding: 0.25rem 0.75rem;
+  border: 1px solid rgba(6,182,212,0.25); border-radius: 999px;
+  background: rgba(6,182,212,0.06);
 }
-.warhol-title {
-  font-size: 3.6rem; font-weight: 900; letter-spacing: -2.5px; line-height: 0.94;
-  margin: 0; text-transform: uppercase;
+.mag-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 900;
+  letter-spacing: -1.5px; line-height: 1.02; margin: 0;
 }
-.warhol-title span {
+.mag-title span {
   display: inline-block;
-  background: linear-gradient(135deg, var(--coral), #ff0066, #9933ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(135deg, #06b6d4, #06b6d4 30%, #8b5cf6 70%, #ff6b6b);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.warhol-sub {
-  font-size: 0.95rem; color: var(--text-muted); margin-top: 0.5rem;
-}
+.mag-desc { font-size: 0.95rem; color: var(--text-muted); margin-top: 0.5rem; }
+.mag-desc strong { color: var(--text); }
 
-/* ─── TILE GRID (Windows 8 Metro) ─── */
-.warhol-tilegrid {
+/* ─── Grid: Feature + 3 Cards ─── */
+.mag-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-auto-rows: 160px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
-.warhol-tile {
-  display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 1.25rem;
-  border-radius: 6px;
-  text-decoration: none; color: #fff;
-  background: var(--tile-color);
+/* Featured Article */
+.mag-feature {
+  grid-row: span 2;
   position: relative; overflow: hidden;
-  transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s;
-  min-height: 160px;
-  animation: tileAppear 0.5s ease both;
-  animation-delay: var(--anim-delay, 0s);
+  border-radius: 16px; min-height: 420px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  background-size: cover; background-position: center;
+  text-decoration: none; color: #fff;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s;
 }
-@keyframes tileAppear {
-  from { opacity: 0; transform: translateY(24px) scale(0.96); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+.mag-feature::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 25%, rgba(0,0,0,0.85) 85%);
+  pointer-events: none; z-index: 1;
 }
+.mag-feature::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(6,182,212,0.08), transparent 50%);
+  pointer-events: none; z-index: 1; opacity: 0;
+  transition: opacity 0.5s;
+}
+.mag-feature:hover { transform: scale(1.015); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+.mag-feature:hover::after { opacity: 1; }
 
-.tile-bg-pattern {
-  position: absolute; inset: 0; opacity: 0;
-  background:
-    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.06) 10px, rgba(255,255,255,0.06) 20px);
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-.warhol-tile:hover .tile-bg-pattern { opacity: 1; }
-
-.warhol-tile::after {
-  content: ''; z-index: 0;
-  position: absolute; inset: 0;
-  background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 50%);
-  pointer-events: none;
-}
-.warhol-tile:hover {
-  transform: scale(1.03) translateY(-4px);
-  box-shadow: 0 16px 48px color-mix(in srgb, var(--tile-color) 45%, transparent);
-  z-index: 3;
-}
-
-.tile-arrow {
-  position: absolute; bottom: 0.75rem; right: 0.9rem;
-  font-size: 1.4rem; font-weight: 900; opacity: 0;
-  transition: opacity 0.25s, transform 0.25s cubic-bezier(0.34,1.56,0.64,1);
-  z-index: 1;
-}
-.warhol-tile:hover .tile-arrow {
-  opacity: 1;
-  transform: translateX(6px);
-}
-.warhol-tile:not(:hover) .tile-arrow {
-  transition-delay: 0.1s;
-}
-
-/* Warhol-Effekt: diagonale Streifen-Overlays auf einigen Tiles */
-.warhol-tile:nth-child(3)::before,
-.warhol-tile:nth-child(6)::before,
-.warhol-tile:nth-child(7)::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent, transparent 8px,
-    rgba(255,255,255,0.08) 8px, rgba(255,255,255,0.08) 16px
-  );
-  pointer-events: none;
-}
-/* Punkte-Raster auf Tile 4 und 8 */
-.warhol-tile:nth-child(4)::before,
-.warhol-tile:nth-child(8)::before {
-  content: '';
-  position: absolute; inset: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
-  background-size: 12px 12px;
-  pointer-events: none;
-}
-
-.tile-wide { grid-column: span 2; grid-row: span 2; }
-.tile-tall { grid-column: span 1; grid-row: span 2; }
-
-.tile-label {
+.mag-feature-badge {
+  position: absolute; top: 1.25rem; left: 1.25rem; z-index: 2;
   font-size: 0.6rem; font-weight: 800; text-transform: uppercase;
-  letter-spacing: 1.5px; opacity: 0.85; margin-bottom: 0.3rem;
-  position: relative; z-index: 2;
-}
-.tile-title {
-  font-size: 1rem; font-weight: 800; line-height: 1.2;
-  position: relative; z-index: 2;
-}
-.tile-meta {
-  font-size: 0.7rem; opacity: 0.75; margin-top: 0.25rem;
-  position: relative; z-index: 2;
-}
-
-/* Große Tiles (wide) — fettere Titel */
-.tile-wide .tile-title { font-size: 1.6rem; max-width: 80%; }
-.tile-wide .tile-label { font-size: 0.7rem; }
-
-/* Hover-Zoom bei Tiles mit Hintergrundbild */
-.warhol-tile[style*="background-image"] { background-size: cover; background-position: center; }
-.warhol-tile[style*="background-image"]:hover { background-size: 110%; }
-
-/* ─── TOPIC CHIPS ─── */
-.warhol-topics {
-  display: flex; flex-wrap: wrap; gap: 6px;
-}
-.topic-chip {
-  display: inline-flex;
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-  font-size: 0.75rem; font-weight: 700;
+  letter-spacing: 1px; padding: 0.3rem 0.8rem; border-radius: 999px;
   color: #fff;
-  background: color-mix(in srgb, var(--chip-color) 70%, #000);
-  text-decoration: none;
-  transition: transform 0.15s;
 }
-.topic-chip:hover { transform: translateY(-2px); color: #fff; }
+.mag-feature-body {
+  position: relative; z-index: 2; padding: 2rem;
+}
+.mag-feature-body h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 900;
+  line-height: 1.08; letter-spacing: -0.5px; margin-bottom: 0.5rem;
+}
+.mag-feature-body p {
+  font-size: 0.88rem; color: rgba(255,255,255,0.7);
+  line-height: 1.5; max-width: 560px; margin-bottom: 0.75rem;
+}
+.mag-feature-meta {
+  display: flex; gap: 1rem; font-size: 0.78rem; color: rgba(255,255,255,0.5);
+}
+
+/* Secondary Cards */
+.mag-card {
+  position: relative; overflow: hidden;
+  border-radius: 12px; min-height: 200px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  background-size: cover; background-position: center;
+  text-decoration: none; color: #fff; padding: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s;
+  animation: cardFloatIn 0.5s ease both;
+  animation-delay: calc(0.1s + var(--card-idx, 0) * 0.1s);
+}
+@keyframes cardFloatIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.mag-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, transparent 50%);
+  pointer-events: none; z-index: 0;
+}
+.mag-card:hover { transform: translateY(-4px) scale(1.01); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+.mag-card:nth-child(2) { grid-row: 1; }
+.mag-card:nth-child(3) { grid-row: 2; }
+
+.mag-card-cat {
+  position: relative; z-index: 1;
+  display: inline-block; align-self: flex-start;
+  font-size: 0.55rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 1px; padding: 0.2rem 0.6rem; border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.mag-card h3 {
+  position: relative; z-index: 1;
+  font-size: 0.95rem; font-weight: 800; line-height: 1.2;
+  margin: 0 0 0.3rem;
+}
+.mag-card-meta {
+  position: relative; z-index: 1;
+  font-size: 0.7rem; color: rgba(255,255,255,0.55);
+}
+
+/* ─── Topic Bar ─── */
+.mag-topics {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.75rem 0; flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+.mag-topics-label {
+  font-size: 0.65rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--text-dim); flex-shrink: 0;
+}
+.mag-topics-list { display: flex; flex-wrap: wrap; gap: 5px; }
+.mag-topic {
+  display: inline-flex;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.72rem; font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.mag-topic:hover {
+  color: #fff;
+  background: var(--topic-clr, var(--cyan));
+  border-color: var(--topic-clr, var(--cyan));
+  transform: translateY(-1px);
+}
 
 /* ─── NEWSLETTER GLOW ─── */
 .newsletter-glow {

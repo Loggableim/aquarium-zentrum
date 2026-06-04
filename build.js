@@ -789,98 +789,8 @@ function topicTagByName(name) {
 
 // ── GENERATE INDEX ──
 function buildIndex() {
-  // Hero: rotating editorial showcase + topic radar
-  const featureSlugs = ['nano-aquarium-guide', 'aquarium-automation', 'aquarium-schaedlinge'];
-  const heroLabels = ['💊 Neu im Fokus', '🐟 Guide-Rotation', '⚙️ Guide-Rotation'];
-  const heroSlides = featureSlugs.map((slug, i) => {
-    const a = ARTICLES[slug];
-    const imgStyle = a.img.startsWith('linear-gradient')
-      ? `background:${a.img}`
-      : `background-image:url('/images/${a.img}')`;
-    const tagStyle = a.catColor.startsWith('#ffd93d')
-      ? `background:${a.catColor};color:#0a0a0f;`
-      : `background:${a.catColor};color:#fff;`;
-    return `<a href="/artikel/${slug}.html" class="hero-slide" style="--i:${i};--accent:${a.catColor};">
-      <div class="bg-img" style="${imgStyle}"></div>
-      <div class="slide-shade"></div>
-      <div class="content">
-        <span class="tag" style="${tagStyle}">${heroLabels[i]}</span>
-        <h2>${a.title}</h2>
-        <p>${a.excerpt}</p>
-        <div class="hero-feat-meta">
-          <span>📅 ${a.date}</span>
-          <span>📖 ${a.readingTime} Min</span>
-          <span class="hero-cta">Jetzt lesen →</span>
-        </div>
-      </div>
-    </a>`;
-  }).join('\n');
-
-  const topicSlides = [
-    ['einsteiger-aquarium-guide', 'Startklar werden', 'Einsteiger-Guide', '#06b6d4'],
-    ['wasserwerte-aquarium-guide', 'Wasser verstehen', 'pH, GH, KH & Nitrit', '#0891b2'],
-    ['beckenformen-groessen', 'Becken planen', 'Form, Größe & Standort', '#06b6d4'],
-    ['aquarium-technik-ueberblick', 'Technik abstimmen', 'Filter, Licht & Strömung', '#8b5cf6'],
-    ['aquarium-pflegeroutine-guide', 'Pflege vereinfachen', 'Routine statt Rätselraten', '#ffd93d'],
-  ].map(([slug, title, desc, color], i) => `<a href="/artikel/${slug}.html" class="topic-slide" style="--i:${i};--accent:${color};">
-      <span class="topic-index" style="background:${color};color:${color === '#ffd93d' ? '#0a0a0f' : '#fff'};">${i + 1}</span>
-      <span><strong>${title}</strong><small>${desc}</small></span>
-    </a>`).join('\n');
-
-  const heroSideSlugs = ['bodengrund-aquarium-guide', 'fischkrankheiten-aquarium-guide', 'co2-im-aquarium'];
-  const heroSide = heroSideSlugs.map(slug => {
-    const a = ARTICLES[slug];
-    const imgStyle = a.img.startsWith('linear-gradient')
-      ? `background:${a.img}`
-      : `background-image:url('/images/${a.img}')`;
-    return `<a href="/artikel/${slug}.html" class="side-item" style="--accent:${a.catColor};">
-      <div class="thumb" style="${imgStyle}"></div>
-      <div class="info"><h5>${a.title}</h5><small>${a.cat} · ${a.readingTime} Min</small></div>
-    </a>`;
-  }).join('\n');
-
-  // ═══ WINDOWS 8 × WARHOL — TILE HERO ═══
-  const warholColors = ['#ff0066', '#00ccff', '#ffcc00', '#00ff88', '#ff6600', '#9933ff', '#ff3399', '#00ffcc'];
-  const tileArticles = ['nano-aquarium-guide', 'aquarium-automation', 'aquarium-schaedlinge', 'einsteiger-aquarium-guide', 'aquarienpflanzen-anfaenger', 'garnelen-im-aquarium', 'algen-im-aquarium', 'aquarium-technik-ueberblick'];
-  
-  let tileHTML = '';
-  tileArticles.forEach((slug, i) => {
-    const a = ARTICLES[slug];
-    if (!a) return;
-    const color = warholColors[i % warholColors.length];
-    const isWide = i < 2;
-    const isTall = i >= 2 && i < 4;
-    const cls = isWide ? 'tile-wide' : isTall ? 'tile-tall' : '';
-    // Hintergrundbild + Farbverlauf für Warhol-Ästhetik
-    const imgStyle = a.img && !a.img.startsWith('linear-gradient')
-      ? `background-image:linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.1)),url('/images/${a.img}');background-size:cover;background-position:center;`
-      : `background:var(--tile-color);`;
-    const delay = i * 0.08;
-    tileHTML += `<a href="/artikel/${slug}.html" class="warhol-tile ${cls}" style="--tile-color:${color};--anim-delay:${delay}s;${imgStyle}">
-      <div class="tile-bg-pattern"></div>
-      <span class="tile-label">${a.cat}</span>
-      <span class="tile-title">${a.title}</span>
-      <span class="tile-meta">${a.readingTime} Min · ${a.date}</span>
-      <span class="tile-arrow">→</span>
-    </a>`;
-  });
-
-  const heroHTML = `<section class="warhol-hero" aria-label="Empfohlene Guides">
-    <div class="warhol-header">
-      <h1 class="warhol-title">🐠 Aquaristik<br><span>Zentrum</span></h1>
-      <p class="warhol-sub">Dein Guide durch die Welt der Aquaristik — <strong>${Object.keys(ARTICLES).length}+ Artikel</strong></p>
-    </div>
-    <div class="warhol-tilegrid">
-      ${tileHTML}
-    </div>
-    <div class="warhol-topics">
-      ${['Einsteiger', 'Wasserwerte', 'Aquarienpflanzen', 'Technik', 'Garnelen', 'Algen', 'Filter', 'CO₂'].map((t, i) => {
-        const topic = TOPICS.find(x => x[0] === t);
-        if (!topic) return '';
-        return `<a href="${topic[2]}" class="topic-chip" style="--chip-color:${topic[1]}">${t}</a>`;
-      }).join('')}
-    </div>
-  </section>`;
+  // Hero: Magazine-style editorial layout with featured story + secondary grid + topic bar
+  const heroHTML = buildMagazineHero();
 
   const tickerItems = [
     ['Einsteiger-Guide', '/artikel/einsteiger-aquarium-guide.html'],
@@ -1190,6 +1100,58 @@ ${T.footer}
 ${T.cookie}
 </body>
 </html>`;
+}
+
+// ════════════════════════════════════════════
+// MAGAZINE HERO — State-of-the-Art Editorial Layout
+// ════════════════════════════════════════════
+function buildMagazineHero() {
+  const feature = ARTICLES['nano-aquarium-guide'];
+  const secondary = ['aquarium-automation', 'aquarium-schaedlinge', 'einsteiger-aquarium-guide']
+    .map(s => ARTICLES[s]).filter(Boolean);
+
+  const secondaryHTML = secondary.map((a, i) => {
+    const img = a.img && !a.img.startsWith('linear-gradient')
+      ? `linear-gradient(180deg,transparent 20%,rgba(0,0,0,0.88)),url('/images/${a.img}')`
+      : `linear-gradient(135deg,${a.catColor},#1a1a2e)`;
+    return `<a href="/artikel/${a.slug || Object.keys(ARTICLES).find(k => ARTICLES[k] === a)}.html" class="mag-card" style="--card-idx:${i};background-image:${img};">
+      <span class="mag-card-cat" style="background:${a.catColor}">${a.cat}</span>
+      <h3>${a.title}</h3>
+      <span class="mag-card-meta">${a.readingTime} Min Lesezeit</span>
+    </a>`;
+  }).join('\\n');
+
+  return `<section class="mag-hero" aria-label="Magazin">
+    <div class="mag-intro">
+      <span class="mag-eyebrow">Aquaristik Zentrum Magazin</span>
+      <h1 class="mag-title">Dein Leitfaden für<br><span>perfekte Aquarien</span></h1>
+      <p class="mag-desc"><strong>${Object.keys(ARTICLES).length}+ praxisnahe Artikel</strong> — von der ersten Einrichtung bis zur Profi-Pflege</p>
+    </div>
+    <div class="mag-grid">
+      <a href="/artikel/nano-aquarium-guide.html" class="mag-feature" style="background-image:linear-gradient(180deg,transparent 30%,rgba(0,0,0,0.9)),url('/images/nano-aquarium-guide.png');">
+        <div class="mag-feature-badge" style="background:${feature.catColor}">${feature.cat}</div>
+        <div class="mag-feature-body">
+          <h2>${feature.title}</h2>
+          <p>${feature.excerpt}</p>
+          <div class="mag-feature-meta">
+            <span>📅 ${feature.date}</span>
+            <span>📖 ${feature.readingTime} Min</span>
+          </div>
+        </div>
+      </a>
+      ${secondaryHTML}
+    </div>
+    <div class="mag-topics">
+      <span class="mag-topics-label">Themen</span>
+      <div class="mag-topics-list">
+        ${['Einsteiger', 'Aquarienpflanzen', 'Technik', 'Garnelen', 'Algen', 'CO₂', 'Filter', 'Aquascaping', 'Bodengrund', 'Wasserwerte'].map(t => {
+          const topic = TOPICS.find(x => x[0] === t);
+          if (!topic) return '';
+          return `<a href="${topic[2]}" class="mag-topic" style="--topic-clr:${topic[1]}">${t}</a>`;
+        }).join('')}
+      </div>
+    </div>
+  </section>`;
 }
 
 // ── MAIN ──
