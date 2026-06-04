@@ -839,28 +839,40 @@ function buildIndex() {
     </a>`;
   }).join('\n');
 
-  const heroHTML = `<section class="hero-modern hero-showcase" aria-label="Empfohlene Aquaristik-Guides">
-    <div class="hero-rotator">
-      ${heroSlides}
-      <div class="hero-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+  // ═══ WINDOWS 8 × WARHOL — TILE HERO ═══
+  const warholColors = ['#ff0066', '#00ccff', '#ffcc00', '#00ff88', '#ff6600', '#9933ff', '#ff3399', '#00ffcc'];
+  const tileArticles = ['nano-aquarium-guide', 'aquarium-automation', 'aquarium-schaedlinge', 'einsteiger-aquarium-guide', 'aquarienpflanzen-anfaenger', 'garnelen-im-aquarium', 'algen-im-aquarium', 'aquarium-technik-ueberblick'];
+  
+  let tileHTML = '';
+  tileArticles.forEach((slug, i) => {
+    const a = ARTICLES[slug];
+    if (!a) return;
+    const color = warholColors[i % warholColors.length];
+    const isWide = i < 2; // erste 2 = große Tiles
+    const isTall = i >= 2 && i < 4; // nächste 2 = hohe Tiles
+    const cls = isWide ? 'tile-wide' : isTall ? 'tile-tall' : '';
+    tileHTML += `<a href="/artikel/${slug}.html" class="warhol-tile ${cls}" style="--tile-color:${color};">
+      <span class="tile-label">${a.cat}</span>
+      <span class="tile-title">${a.title}</span>
+      <span class="tile-meta">${a.readingTime} Min · ${a.date}</span>
+    </a>`;
+  });
+
+  const heroHTML = `<section class="warhol-hero" aria-label="Empfohlene Guides">
+    <div class="warhol-header">
+      <h1 class="warhol-title">🐠 Aquaristik<br><span>Zentrum</span></h1>
+      <p class="warhol-sub">Dein Guide durch die Welt der Aquaristik — <strong>${Object.keys(ARTICLES).length}+ Artikel</strong></p>
     </div>
-    <aside class="hero-side hero-control-panel" aria-label="Themen-Radar">
-      <div class="panel-head">
-        <span class="eyebrow">Themen-Radar</span>
-        <h3>Was willst du heute im Aquarium lösen?</h3>
-        <p>Kurze Wege zu Guides, die wirklich praktisch sind.</p>
-      </div>
-      <div class="topic-rotator">
-        ${topicSlides}
-      </div>
-      <div class="hero-actions">
-        <a href="/artikel/wasserwerte-aquarium-guide.html">Werte prüfen</a>
-        <a href="/artikel/aquarium-einfahren-nitritpeak.html">Start planen</a>
-      </div>
-      <div class="hero-side-list">
-        ${heroSide}
-      </div>
-    </aside>
+    <div class="warhol-tilegrid">
+      ${tileHTML}
+    </div>
+    <div class="warhol-topics">
+      ${['Einsteiger-Guide', 'Wasserwerte', 'Pflanzen', 'Technik', 'Garnelen', 'Algen', 'Filter', 'CO₂'].map((t, i) => {
+        const topic = TOPICS.find(x => x[0] === t);
+        if (!topic) return '';
+        return `<a href="${topic[2]}" class="topic-chip" style="--chip-color:${topic[1]}">${t}</a>`;
+      }).join('')}
+    </div>
   </section>`;
 
   const tickerItems = [

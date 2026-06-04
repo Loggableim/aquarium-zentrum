@@ -352,161 +352,123 @@ img { max-width: 100%; height: auto; display: block; }
 .card-modern .art-body .read-link { font-size: 0.75rem; font-weight: 700; color: var(--cyan); margin-top: 0.75rem; display: flex; align-items: center; gap: 0.25rem; transition: gap 0.2s; }
 .card-modern:hover .art-body .read-link { gap: 0.5rem; }
 
-/* ─── HERO ─── */
-.hero-modern {
-  max-width: var(--max-width); margin: 0 auto; padding: 2.25rem 2rem 0;
-  display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(340px, 0.85fr); gap: 1.25rem;
-  position: relative;
+/* ════════════════════════════════════════════
+   WINDOWS 8 × ANDY WARHOL — TILE HERO
+   ════════════════════════════════════════════ */
+
+.warhol-hero {
+  max-width: var(--max-width); margin: 0 auto; padding: 1.5rem 2rem 0;
 }
-.hero-showcase::before {
-  content: ''; position: absolute; inset: 0 1rem auto;
-  height: 420px; pointer-events: none; z-index: 0;
-  background:
-    radial-gradient(circle at 18% 18%, rgba(6,182,212,0.22), transparent 34%),
-    radial-gradient(circle at 78% 20%, rgba(255,107,107,0.16), transparent 32%),
-    radial-gradient(circle at 58% 80%, rgba(139,92,246,0.14), transparent 36%);
-  filter: blur(28px); opacity: 0.85;
+
+.warhol-header {
+  margin-bottom: 1.25rem;
 }
-.hero-rotator {
-  min-height: 480px; position: relative; overflow: hidden; isolation: isolate;
-  border-radius: 28px; border: 1px solid rgba(255,255,255,0.10);
-  background: linear-gradient(135deg, #05070d, #101827 48%, #06131d);
-  box-shadow: 0 34px 90px rgba(0,0,0,0.46), inset 0 1px 0 rgba(255,255,255,0.08);
-  z-index: 1;
+.warhol-title {
+  font-size: 3.6rem; font-weight: 900; letter-spacing: -2.5px; line-height: 0.94;
+  margin: 0; text-transform: uppercase;
 }
-.hero-rotator::after {
-  content: ''; position: absolute; inset: 0; z-index: 3; pointer-events: none;
-  background: linear-gradient(120deg, rgba(255,255,255,0.16), transparent 18%, transparent 72%, rgba(6,182,212,0.14));
-  mix-blend-mode: screen; opacity: 0.55;
+.warhol-title span {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--coral), #ff0066, #9933ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.hero-slide {
-  position: absolute; inset: 0; display: flex; align-items: flex-end;
-  color: #fff; text-decoration: none; opacity: 0;
-  animation: heroFade 18s infinite; animation-delay: calc(var(--i) * 6s);
+.warhol-sub {
+  font-size: 0.95rem; color: var(--text-muted); margin-top: 0.5rem;
 }
-.hero-slide .bg-img {
-  position: absolute; inset: 0; background-size: cover; background-position: center;
-  transform: scale(1.02); filter: saturate(1.08) contrast(1.02);
-}
-.hero-slide .slide-shade {
-  position: absolute; inset: 0; z-index: 1;
-  background:
-    linear-gradient(90deg, rgba(5,7,13,0.94) 0%, rgba(5,7,13,0.72) 42%, rgba(5,7,13,0.16) 100%),
-    linear-gradient(0deg, rgba(5,7,13,0.94), rgba(5,7,13,0.08) 62%);
-}
-.hero-slide .content {
-  position: relative; z-index: 2; padding: clamp(2rem, 4.5vw, 4.5rem);
-  max-width: 760px;
-}
-.hero-slide .tag {
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  font-size: 0.68rem; font-weight: 900; text-transform: uppercase; letter-spacing: 1px;
-  padding: 0.34rem 0.78rem; border-radius: 999px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.24);
-  margin-bottom: 1.05rem;
-}
-.hero-slide h2 {
-  font-size: clamp(2rem, 4.2vw, 4.45rem); font-weight: 900;
-  line-height: 0.96; letter-spacing: -2.4px; max-width: 760px;
+
+/* ─── TILE GRID (Windows 8 Metro) ─── */
+.warhol-tilegrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-auto-rows: 160px;
+  gap: 8px;
   margin-bottom: 1rem;
 }
-.hero-slide p {
-  font-size: clamp(0.95rem, 1.25vw, 1.1rem); color: rgba(255,255,255,0.74);
-  line-height: 1.65; max-width: 600px;
-}
-.hero-dots {
-  position: absolute; left: clamp(2rem, 4.5vw, 4.5rem); bottom: 1.35rem;
-  display: flex; gap: 0.45rem; z-index: 4;
-}
-.hero-dots span {
-  width: 34px; height: 4px; border-radius: 999px;
-  background: rgba(255,255,255,0.22); overflow: hidden; position: relative;
-}
-.hero-dots span::before {
-  content: ''; position: absolute; inset: 0; transform-origin: left; transform: scaleX(0);
-  background: linear-gradient(90deg, var(--cyan), var(--coral));
-  animation: heroDot 18s infinite;
-}
-.hero-dots span:nth-child(2)::before { animation-delay: 6s; }
-.hero-dots span:nth-child(3)::before { animation-delay: 12s; }
 
-.hero-control-panel {
-  z-index: 1; display: flex; flex-direction: column; gap: 0.95rem;
-  padding: 1.15rem; border-radius: 28px;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: linear-gradient(180deg, rgba(24,24,27,0.86), rgba(10,10,15,0.92));
-  backdrop-filter: blur(18px) saturate(1.25);
-  -webkit-backdrop-filter: blur(18px) saturate(1.25);
-  box-shadow: 0 24px 70px rgba(0,0,0,0.32), inset 0 1px 0 rgba(255,255,255,0.06);
+.warhol-tile {
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 1.25rem;
+  border-radius: 6px;
+  text-decoration: none; color: #fff;
+  background: var(--tile-color);
+  position: relative; overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
+  min-height: 160px;
 }
-.panel-head { padding: 0.35rem 0.25rem 0; }
-.panel-head .eyebrow {
-  display: inline-flex; color: var(--cyan); font-size: 0.68rem; font-weight: 900;
-  text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.45rem;
+.warhol-tile::after {
+  content: '→';
+  position: absolute; bottom: 0.75rem; right: 0.9rem;
+  font-size: 1.4rem; font-weight: 900; opacity: 0.3;
+  transition: opacity 0.2s, transform 0.2s;
 }
-.panel-head h3 { font-size: 1.32rem; line-height: 1.08; letter-spacing: -0.8px; margin-bottom: 0.45rem; }
-.panel-head p { color: var(--text-muted); font-size: 0.84rem; line-height: 1.5; }
-.topic-rotator {
-  position: relative; min-height: 228px; overflow: hidden;
-  border: 1px solid var(--border-light); border-radius: 20px;
-  background:
-    radial-gradient(circle at 0 0, rgba(6,182,212,0.12), transparent 35%),
-    linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+.warhol-tile:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px color-mix(in srgb, var(--tile-color) 40%, transparent);
+  z-index: 2;
 }
-.topic-slide {
-  position: absolute; inset: 1rem; display: grid; grid-template-columns: 42px 1fr; gap: 0.85rem;
-  align-items: center; padding: 0.8rem; border-radius: 16px; text-decoration: none;
-  color: #fff; border: 1px solid rgba(255,255,255,0.08);
-  background: linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.03));
-  opacity: 0; transform: translateY(18px);
-  animation: topicPulse 20s infinite; animation-delay: calc(var(--i) * 4s);
-}
-.topic-slide::before {
-  content: ''; position: absolute; inset: auto 0 0; height: 3px;
-  background: var(--accent); border-radius: 999px;
-}
-.topic-index {
-  width: 42px; height: 42px; border-radius: 14px; display: inline-flex; align-items: center; justify-content: center;
-  font-weight: 900; box-shadow: 0 10px 28px color-mix(in srgb, var(--accent) 36%, transparent);
-}
-.topic-slide strong { display: block; color: var(--text); font-size: 0.98rem; line-height: 1.2; }
-.topic-slide small { display: block; color: var(--text-muted); margin-top: 0.18rem; font-size: 0.76rem; }
-.hero-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
-.hero-actions a {
-  text-align: center; padding: 0.72rem 0.85rem; border-radius: 14px;
-  font-weight: 800; font-size: 0.78rem; color: #fff;
-  background: linear-gradient(135deg, rgba(6,182,212,0.92), rgba(13,148,136,0.9));
-  box-shadow: 0 12px 30px rgba(6,182,212,0.18);
-}
-.hero-actions a:nth-child(2) { background: linear-gradient(135deg, rgba(255,107,107,0.92), rgba(236,72,153,0.88)); }
-.hero-actions a:hover { color: #fff; transform: translateY(-2px); }
-.hero-side-list { display: flex; flex-direction: column; gap: 0.65rem; }
-.hero-modern .hero-side .side-item {
-  display: flex; gap: 0.85rem; align-items: center;
-  background: rgba(255,255,255,0.035); border-radius: 16px; padding: 0.78rem;
-  border: 1px solid rgba(255,255,255,0.07); text-decoration: none;
-  transition: all var(--transition); min-height: 76px;
-}
-.hero-modern .hero-side .side-item:hover { border-color: var(--accent, rgba(6,182,212,0.3)); transform: translateX(4px); background: rgba(255,255,255,0.055); }
-.hero-modern .hero-side .side-item .thumb {
-  width: 70px; height: 50px; border-radius: 12px; flex-shrink: 0; background-size: cover; background-position: center;
-}
-.hero-modern .hero-side .side-item .info h5 { font-size: 0.82rem; font-weight: 800; line-height: 1.25; color: var(--text); }
-.hero-modern .hero-side .side-item .info small { font-size: 0.68rem; color: var(--text-dim); }
+.warhol-tile:hover::after { opacity: 0.8; transform: translateX(4px); }
 
-@keyframes heroFade {
-  0%, 30% { opacity: 1; }
-  36%, 94% { opacity: 0; }
-  100% { opacity: 1; }
+/* Warhol-Effekt: diagonale Streifen-Overlays auf einigen Tiles */
+.warhol-tile:nth-child(3)::before,
+.warhol-tile:nth-child(6)::before,
+.warhol-tile:nth-child(7)::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent, transparent 8px,
+    rgba(255,255,255,0.08) 8px, rgba(255,255,255,0.08) 16px
+  );
+  pointer-events: none;
 }
-@keyframes heroDot {
-  0%, 30% { transform: scaleX(1); }
-  36%, 100% { transform: scaleX(0); }
+/* Punkte-Raster auf Tile 4 und 8 */
+.warhol-tile:nth-child(4)::before,
+.warhol-tile:nth-child(8)::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 12px 12px;
+  pointer-events: none;
 }
-@keyframes topicPulse {
-  0%, 18% { opacity: 1; transform: translateY(0); }
-  23%, 100% { opacity: 0; transform: translateY(-18px); }
+
+.tile-wide { grid-column: span 2; grid-row: span 2; }
+.tile-tall { grid-column: span 1; grid-row: span 2; }
+
+.tile-label {
+  font-size: 0.6rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 1.5px; opacity: 0.85; margin-bottom: 0.3rem;
+  position: relative; z-index: 1;
 }
+.tile-title {
+  font-size: 1rem; font-weight: 800; line-height: 1.2;
+  position: relative; z-index: 1;
+}
+.tile-meta {
+  font-size: 0.7rem; opacity: 0.75; margin-top: 0.25rem;
+  position: relative; z-index: 1;
+}
+
+/* Große Tiles (wide) — fettere Titel */
+.tile-wide .tile-title { font-size: 1.6rem; max-width: 80%; }
+.tile-wide .tile-label { font-size: 0.7rem; }
+
+/* ─── TOPIC CHIPS ─── */
+.warhol-topics {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.topic-chip {
+  display: inline-flex;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.75rem; font-weight: 700;
+  color: #fff;
+  background: color-mix(in srgb, var(--chip-color) 70%, #000);
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+.topic-chip:hover { transform: translateY(-2px); color: #fff; }
 
 /* ─── NEWSLETTER GLOW ─── */
 .newsletter-glow {
