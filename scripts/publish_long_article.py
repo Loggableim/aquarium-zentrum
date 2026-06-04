@@ -24,7 +24,7 @@ def word_count(path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--slug', required=True)
-    ap.add_argument('--model', default='deepseek-ai/deepseek-v4-flash')
+    ap.add_argument('--model', default='nvidia/nemotron-3-super-120b-a12b')
     args = ap.parse_args()
 
     metas = json.loads(META_PATH.read_text(encoding='utf-8'))

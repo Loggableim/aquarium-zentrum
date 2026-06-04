@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 META_PATH = ROOT / 'data' / 'long-content-articles.json'
 OUT_DIR = ROOT / 'content' / 'artikel'
 API_URL = 'https://integrate.api.nvidia.com/v1/chat/completions'
-DEFAULT_MODEL = 'deepseek-ai/deepseek-v4-flash'
+DEFAULT_MODEL = 'nvidia/nemotron-3-super-120b-a12b'
 MIN_WORDS = 4000
 TARGET_WORDS = 4300
 
@@ -140,7 +140,7 @@ Schreibe einen zusätzlichen, neuen Abschnitt mit der H2-Überschrift "{extra_he
         content += '\n\n' + clean_html(chat(key, model, [{'role': 'system', 'content': system}, {'role': 'user', 'content': prompt}], max_tokens=2600, temperature=0.75))
         extra_no += 1
 
-    return '<!-- GENERATED_BY_NVIDIA_FREE_MODEL: deepseek-ai/deepseek-v4-flash -->\n' + content.strip() + '\n'
+    return '<!-- GENERATED_BY_NVIDIA_FREE_MODEL: nvidia/nemotron-3-super-120b-a12b -->\n' + content.strip() + '\n'
 
 
 def main():
