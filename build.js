@@ -1119,7 +1119,7 @@ function buildMagazineHero() {
       <h3>${a.title}</h3>
       <span class="mag-card-meta">${a.readingTime} Min Lesezeit</span>
     </a>`;
-  }).join('\\n');
+  }).join('');
 
   return `<section class="mag-hero" aria-label="Magazin">
     <div class="mag-intro">
