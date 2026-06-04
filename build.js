@@ -867,7 +867,7 @@ function buildIndex() {
       ${tileHTML}
     </div>
     <div class="warhol-topics">
-      ${['Einsteiger-Guide', 'Wasserwerte', 'Pflanzen', 'Technik', 'Garnelen', 'Algen', 'Filter', 'CO₂'].map((t, i) => {
+      ${['Einsteiger', 'Wasserwerte', 'Aquarienpflanzen', 'Technik', 'Garnelen', 'Algen', 'Filter', 'CO₂'].map((t, i) => {
         const topic = TOPICS.find(x => x[0] === t);
         if (!topic) return '';
         return `<a href="${topic[2]}" class="topic-chip" style="--chip-color:${topic[1]}">${t}</a>`;
