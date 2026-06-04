@@ -80,12 +80,6 @@
               </a>
             </div>
             <div class="cat">
-              <h4>🔗 Schnellzugriff</h4>
-              <a href="/artikel/einsteiger-aquarium-guide.html">📋 Alle Einsteiger-Artikel</a>
-              <a href="/artikel/wasserwerte-aquarium-guide.html">📊 Wasserwerte-Tabelle</a>
-              <a href="/artikel/diy-aquarium-bauen.html">🔨 DIY Aquarium bauen</a>
-            </div>
-            <div class="cat">
               <h4>📸 Neuester</h4>
               <a href="/artikel/beckenformen-groessen.html" class="featured-card">
                 <div class="thumb" style="background:linear-gradient(135deg,#06b6d4,#0891b2)"></div>
@@ -201,7 +195,7 @@
             </div>
           </div>
         </div>
-        <a href="/artikel/einsteiger-aquarium-guide.html" class="nav-link">📰 Alle <span class="count">41</span></a>
+        <a href="/artikel/" class="nav-link">📰 Alle <span class="count">41</span></a>
         <a href="/about.html" class="nav-link">ℹ️ Über</a>
       </div>
     </div>
@@ -296,7 +290,7 @@
       <h4>Seiten</h4>
       <ul>
         <li><a href="/">Startseite</a></li>
-        <li><a href="/artikel/einsteiger-aquarium-guide.html">Artikel</a></li>
+        <li><a href="/artikel/">Artikel</a></li>
         <li><a href="/about.html">Über uns</a></li>
         <li><a href="/impressum.html">Impressum</a></li>
       </ul>
@@ -422,6 +416,19 @@
       searchToggle.style.display = '';
     }
   });
+})();
+
+// Sidebar toggle (mobile)
+(function() {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.querySelector('.article-sidebar');
+  if (toggle && sidebar) {
+    toggle.addEventListener('click', function() {
+      sidebar.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
+    });
+  }
 })();
 
 // Active nav link detection

@@ -107,12 +107,6 @@
               </a>
             </div>
             <div class="cat">
-              <h4>🔗 Schnellzugriff</h4>
-              <a href="/artikel/einsteiger-aquarium-guide.html">📋 Alle Einsteiger-Artikel</a>
-              <a href="/artikel/wasserwerte-aquarium-guide.html">📊 Wasserwerte-Tabelle</a>
-              <a href="/artikel/diy-aquarium-bauen.html">🔨 DIY Aquarium bauen</a>
-            </div>
-            <div class="cat">
               <h4>📸 Neuester</h4>
               <a href="/artikel/beckenformen-groessen.html" class="featured-card">
                 <div class="thumb" style="background:linear-gradient(135deg,#06b6d4,#0891b2)"></div>
@@ -228,7 +222,7 @@
             </div>
           </div>
         </div>
-        <a href="/artikel/einsteiger-aquarium-guide.html" class="nav-link">📰 Alle <span class="count">41</span></a>
+        <a href="/artikel/" class="nav-link">📰 Alle <span class="count">41</span></a>
         <a href="/about.html" class="nav-link">ℹ️ Über</a>
       </div>
     </div>
@@ -1031,9 +1025,29 @@ Paragraph 2:
 Count.
 
 Beim1 Abpumpen2 des3 Wassers4 empfiehlt5 es6 sich,7 etwa8 ein9 Drittel10 des11 ursprünglichen12 Volumens13 im14 Becken15 zu16 lassen.17 Dieser18 Rest19 enthält20 wichtige21 Mikroorganismen22 und23 hilft,24 den25 biologischen26 Filter27 nicht28 völlig29 zu30 zerstören.31 Das32 abgepumpte33 Wasser34 sollte35 in36 sauberen37 Behältern38 aufbewahrt39 werden,40 idealerweise41 mit42 einem43 Deckel44 versehen,45 um46 Temperaturschwankungen47 zu48 minimieren.49 Während50 des51 Transports52 gilt53 es,54 die55 Behälter56 vor57 direkter58 Sonneneinstrahlung59 und60 Zugluft61 zu62 schützen,63 damit64 die65 Temperatur66 möglichst67 konstant68 bleibt.69 Ein70 Thermometer7
+        <div class="related-bottom"><h3>📖 Weiterführende Artikel</h3><div class="related-bottom-grid"><a href="/artikel/einsteiger-aquarium-guide.html" class="related-bottom-card">
+      <h4>Einsteiger-Guide</h4>
+      <p>Grundlagen sauber starten</p>
+      <span class="read-link-sm">Weiterlesen →</span>
+    </a><a href="/artikel/wasserwerte-aquarium-guide.html" class="related-bottom-card">
+      <h4>Wasserwerte</h4>
+      <p>pH, GH, KH und Nitrit verstehen</p>
+      <span class="read-link-sm">Weiterlesen →</span>
+    </a><a href="/artikel/aquarium-einfahren-nitritpeak.html" class="related-bottom-card">
+      <h4>Aquarium einfahren</h4>
+      <p>Startphase sicher meistern</p>
+      <span class="read-link-sm">Weiterlesen →</span>
+    </a></div></div>
       </div>
     </div>
     <div class="article-sidebar">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Sidebar ein-/ausblenden">☰ Menü</button>
+      <div class="side-section side-cat-nav">
+        <h5>📂 Kategorien</h5>
+        <div class="side-cat-list">
+          <a href="/artikel/einsteiger-aquarium-guide.html" class="side-cat-item active" style="--cat-color:#06b6d4">🐟 Einsteiger</a><a href="/artikel/aquarienpflanzen-anfaenger.html" class="side-cat-item" style="--cat-color:#10b981">🌿 Pflanzen</a><a href="/artikel/aquascaping-anfaenger.html" class="side-cat-item" style="--cat-color:#0d9488">🪨 Aquascaping</a><a href="/artikel/aquarium-technik-ueberblick.html" class="side-cat-item" style="--cat-color:#8b5cf6">⚙️ Technik</a><a href="/artikel/garnelen-im-aquarium.html" class="side-cat-item" style="--cat-color:#ff6b6b">🦐 Garnelen & Fische</a><a href="/artikel/algen-im-aquarium.html" class="side-cat-item" style="--cat-color:#ffd93d">💊 Pflege</a>
+        </div>
+      </div>
       <div class="side-section">
         <h5>📚 Verwandte Artikel</h5><a href="/artikel/einsteiger-aquarium-guide" class="rec-card">
   <div class="rthumb" style="background-image:url('/images/einsteiger-guide.png')"></div>
@@ -1074,7 +1088,7 @@ Beim1 Abpumpen2 des3 Wassers4 empfiehlt5 es6 sich,7 etwa8 ein9 Drittel10 des11 u
       <h4>Seiten</h4>
       <ul>
         <li><a href="/">Startseite</a></li>
-        <li><a href="/artikel/einsteiger-aquarium-guide.html">Artikel</a></li>
+        <li><a href="/artikel/">Artikel</a></li>
         <li><a href="/about.html">Über uns</a></li>
         <li><a href="/impressum.html">Impressum</a></li>
       </ul>
@@ -1200,6 +1214,19 @@ Beim1 Abpumpen2 des3 Wassers4 empfiehlt5 es6 sich,7 etwa8 ein9 Drittel10 des11 u
       searchToggle.style.display = '';
     }
   });
+})();
+
+// Sidebar toggle (mobile)
+(function() {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.querySelector('.article-sidebar');
+  if (toggle && sidebar) {
+    toggle.addEventListener('click', function() {
+      sidebar.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
+    });
+  }
 })();
 
 // Active nav link detection

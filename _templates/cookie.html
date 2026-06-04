@@ -104,6 +104,19 @@
   });
 })();
 
+// Sidebar toggle (mobile)
+(function() {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.querySelector('.article-sidebar');
+  if (toggle && sidebar) {
+    toggle.addEventListener('click', function() {
+      sidebar.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
+    });
+  }
+})();
+
 // Active nav link detection
 (function() {
   const currentPath = window.location.pathname;

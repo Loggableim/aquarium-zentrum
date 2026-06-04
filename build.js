@@ -84,6 +84,19 @@ function recCardHTML(slug, title, desc, img) {
 </a>`;
 }
 
+function relatedBottomHTML(related) {
+  let html = '<div class="related-bottom"><h3>📖 Weiterführende Artikel</h3><div class="related-bottom-grid">';
+  for (const [rslug, rtitle, rdesc] of related) {
+    html += `<a href="/artikel/${rslug}.html" class="related-bottom-card">
+      <h4>${rtitle}</h4>
+      <p>${rdesc}</p>
+      <span class="read-link-sm">Weiterlesen →</span>
+    </a>`;
+  }
+  html += '</div></div>';
+  return html;
+}
+
 function tocItem(text) {
   return `<div class="toc-item">→ ${text}</div>`;
 }
@@ -749,6 +762,31 @@ for (const item of LONG_CONTENT_ARTICLES) {
 }
 for (const group of CATEGORIES) group.count = group.cards.length;
 
+// ── SIDEBAR CATEGORY NAV for article pages (5-6 main categories) ──
+const SIDEBAR_CATS = [
+  ['🐟 Einsteiger', '/artikel/einsteiger-aquarium-guide.html', '#06b6d4'],
+  ['🌿 Pflanzen', '/artikel/aquarienpflanzen-anfaenger.html', '#10b981'],
+  ['🪨 Aquascaping', '/artikel/aquascaping-anfaenger.html', '#0d9488'],
+  ['⚙️ Technik', '/artikel/aquarium-technik-ueberblick.html', '#8b5cf6'],
+  ['🦐 Garnelen & Fische', '/artikel/garnelen-im-aquarium.html', '#ff6b6b'],
+  ['💊 Pflege', '/artikel/algen-im-aquarium.html', '#ffd93d'],
+];
+
+// ── TOPIC GROUPS for compact topic cloud ──
+const TOPIC_GROUPS = [
+  { label: '🐟 Einsteiger', topics: ['Einsteiger', 'Bodengrund', 'Wasserwerte', 'Beckenformen', 'Nano Aquarium'] },
+  { label: '🌿 Pflanzen & Aquascaping', topics: ['Aquarienpflanzen', 'Aquascaping', 'CO₂', 'Düngung', 'Teppichpflanzen'] },
+  { label: '⚙️ Technik', topics: ['Technik', 'Beleuchtung', 'Filter', 'Heizung', 'Automation'] },
+  { label: '🦐 Garnelen & Fische', topics: ['Garnelen', 'Kampffisch', 'Lebendgebärende', 'Vergesellschaftung', 'Futter'] },
+  { label: '💊 Pflege', topics: ['Algen', 'Pflegeroutine', 'Fischkrankheiten', 'Schnecken', 'Algenfresser'] },
+];
+
+function topicTagByName(name) {
+  const t = TOPICS.find(t => t[0] === name);
+  if (!t) return '';
+  return `<a href="${t[2]}" class="topic-tag" style="--topic-color:${t[1]}">${t[0]}</a>`;
+}
+
 // ── GENERATE INDEX ──
 function buildIndex() {
   // Hero: rotating editorial showcase + topic radar
@@ -917,20 +955,26 @@ function buildIndex() {
     </div>
   </div>`;
 
-  // Topic Explorer
+  // Topic Explorer — grouped compact badge style
   let topicsHTML = '';
-  for (const [name, color, url] of TOPICS) {
-    topicsHTML += topicTag(name, color, url);
+  for (const group of TOPIC_GROUPS) {
+    topicsHTML += `<div class="topic-group">
+      <span class="topic-group-label">${group.label}</span>
+      <div class="topic-group-tags">
+        ${group.topics.map(name => topicTagByName(name)).join('')}
+      </div>
+    </div>`;
   }
 
   const topicsSection = `<section class="mp-section">
     <div class="section-title">
       <h3><span class="emoji">🏷️</span> Themen entdecken</h3>
-      <span class="count">${TOPICS.length} Topics</span>
+      <span class="count">${TOPIC_GROUPS.reduce((s,g) => s + g.topics.length, 0)} von ${TOPICS.length} Topics</span>
       <span class="line"></span>
     </div>
-    <div class="topic-cloud">
+    <div class="topic-cloud topic-cloud-groups">
       ${topicsHTML}
+      <a href="/artikel/" class="topic-show-all">→ Alle ${TOPICS.length} Themen im Überblick</a>
     </div>
   </section>`;
 
@@ -1003,6 +1047,17 @@ function buildArticle(slug) {
   }
 
   const sidebarHTML = `<div class="article-sidebar">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Sidebar ein-/ausblenden">☰ Menü</button>
+      <div class="side-section side-cat-nav">
+        <h5>📂 Kategorien</h5>
+        <div class="side-cat-list">
+          ${SIDEBAR_CATS.map(([name, url, color]) => {
+            const isActive = a.cat === name.split(' ').slice(1).join(' ') || a.catColor === color;
+            // Match: check if article's category matches the category
+            return `<a href="${url}" class="side-cat-item${isActive ? ' active' : ''}" style="--cat-color:${color}">${name}</a>`;
+          }).join('')}
+        </div>
+      </div>
       <div class="side-section">
         <h5>📚 Verwandte Artikel</h5>${relatedHTML}
       </div>
@@ -1071,6 +1126,7 @@ ${breadcrumbSchema([
       </div>
       <div class="body-text">
         ${addLazyLoading(bodyContent)}
+        ${relatedBottomHTML(a.related)}
       </div>
     </div>
     ${sidebarHTML}

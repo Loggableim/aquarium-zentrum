@@ -3,3 +3,7 @@ https://aquarienzentrum.com/* https://aquaristik-zentrum.com/:splat 301
 https://aquarien-zentrum.com/* https://aquaristik-zentrum.com/:splat 301
 https://www.aquarienzentrum.com/* https://aquaristik-zentrum.com/:splat 301
 https://www.aquarien-zentrum.com/* https://aquaristik-zentrum.com/:splat 301
+
+# Catch-all: alte 404-Seiten zur Hauptseite (HTTP 404 Status bleibt erhalten)
+# Cloudflare Pages serviert automatisch /404.html für nicht gefundene Seiten
+# Zusätzliche Splat-Redirects für alte, umbenannte Pfade:

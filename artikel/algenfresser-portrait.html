@@ -107,12 +107,6 @@
               </a>
             </div>
             <div class="cat">
-              <h4>🔗 Schnellzugriff</h4>
-              <a href="/artikel/einsteiger-aquarium-guide.html">📋 Alle Einsteiger-Artikel</a>
-              <a href="/artikel/wasserwerte-aquarium-guide.html">📊 Wasserwerte-Tabelle</a>
-              <a href="/artikel/diy-aquarium-bauen.html">🔨 DIY Aquarium bauen</a>
-            </div>
-            <div class="cat">
               <h4>📸 Neuester</h4>
               <a href="/artikel/beckenformen-groessen.html" class="featured-card">
                 <div class="thumb" style="background:linear-gradient(135deg,#06b6d4,#0891b2)"></div>
@@ -228,7 +222,7 @@
             </div>
           </div>
         </div>
-        <a href="/artikel/einsteiger-aquarium-guide.html" class="nav-link">📰 Alle <span class="count">41</span></a>
+        <a href="/artikel/" class="nav-link">📰 Alle <span class="count">41</span></a>
         <a href="/about.html" class="nav-link">ℹ️ Über</a>
       </div>
     </div>
@@ -360,9 +354,33 @@
     <p>Algenfressende Fische, Garnelen und Schnecken sind aus einem gut funktionierenden Aquarium kaum wegzudenken. Sie übernehmen wichtige Aufgaben im Ökosystem, halten Algen in Schach und tragen zur natürlichen Balance bei. Doch sie sind kein Ersatz für eine gute Aquarienpflege und eine durchdachte Technik. Die Kombination aus stabilen Wasserwerten, richtigem Licht, ausgewogener Düngung und einer gut gewählten Putzmannschaft ist der Schlüssel zu einem algenarmen Aquarium. Wähle deine Algenfresser nach den spezifischen Algenproblemen in deinem Becken aus und achte auf ihre Haltungsansprüche – dann hast du lange Freude an ihnen und sie an dir.</p>
 
     <p><em>Mehr zur Algenbekämpfung und zu den Ursachen von Algenwachstum findest du in unserem Artikel <a href="/artikel/algen-im-aquarium.html">Algen im Aquarium erkennen und bekämpfen</a>. Und wenn du mehr über Garnelen als Algenfresser erfahren möchtest, lies unseren <a href="/artikel/garnelen-im-aquarium.html">Garnelen-Guide</a>.</em></p>
+        <div class="related-bottom"><h3>📖 Weiterführende Artikel</h3><div class="related-bottom-grid"><a href="/artikel/algen-im-aquarium.html" class="related-bottom-card">
+      <h4>Algen-Guide</h4>
+      <p>Algen erkennen</p>
+      <span class="read-link-sm">Weiterlesen →</span>
+    </a><a href="/artikel/garnelen-im-aquarium.html" class="related-bottom-card">
+      <h4>Garnelen-Guide</h4>
+      <p>Garnelen pflegen</p>
+      <span class="read-link-sm">Weiterlesen →</span>
+    </a><a href="/artikel/schnecken-im-aquarium.html" class="related-bottom-card">
+      <h4>Schnecken</h4>
+      <p>Schnecken-Guide</p>
+      <span class="read-link-sm">Weiterlesen →</span>
+    </a><a href="/artikel/aquarium-pflegeroutine-guide.html" class="related-bottom-card">
+      <h4>Pflegeroutine</h4>
+      <p>Sauberkeit</p>
+      <span class="read-link-sm">Weiterlesen →</span>
+    </a></div></div>
       </div>
     </div>
     <div class="article-sidebar">
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Sidebar ein-/ausblenden">☰ Menü</button>
+      <div class="side-section side-cat-nav">
+        <h5>📂 Kategorien</h5>
+        <div class="side-cat-list">
+          <a href="/artikel/einsteiger-aquarium-guide.html" class="side-cat-item" style="--cat-color:#06b6d4">🐟 Einsteiger</a><a href="/artikel/aquarienpflanzen-anfaenger.html" class="side-cat-item" style="--cat-color:#10b981">🌿 Pflanzen</a><a href="/artikel/aquascaping-anfaenger.html" class="side-cat-item" style="--cat-color:#0d9488">🪨 Aquascaping</a><a href="/artikel/aquarium-technik-ueberblick.html" class="side-cat-item" style="--cat-color:#8b5cf6">⚙️ Technik</a><a href="/artikel/garnelen-im-aquarium.html" class="side-cat-item" style="--cat-color:#ff6b6b">🦐 Garnelen & Fische</a><a href="/artikel/algen-im-aquarium.html" class="side-cat-item active" style="--cat-color:#ffd93d">💊 Pflege</a>
+        </div>
+      </div>
       <div class="side-section">
         <h5>📚 Verwandte Artikel</h5><a href="/artikel/algen-im-aquarium" class="rec-card">
   <div class="rthumb" style="background-image:url('/images/algen.png')"></div>
@@ -406,7 +424,7 @@
       <h4>Seiten</h4>
       <ul>
         <li><a href="/">Startseite</a></li>
-        <li><a href="/artikel/einsteiger-aquarium-guide.html">Artikel</a></li>
+        <li><a href="/artikel/">Artikel</a></li>
         <li><a href="/about.html">Über uns</a></li>
         <li><a href="/impressum.html">Impressum</a></li>
       </ul>
@@ -532,6 +550,19 @@
       searchToggle.style.display = '';
     }
   });
+})();
+
+// Sidebar toggle (mobile)
+(function() {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.querySelector('.article-sidebar');
+  if (toggle && sidebar) {
+    toggle.addEventListener('click', function() {
+      sidebar.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
+    });
+  }
 })();
 
 // Active nav link detection

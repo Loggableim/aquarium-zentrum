@@ -30,8 +30,7 @@
   --radius: 12px;
   --radius-sm: 8px;
   --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --primary: #00BCD4;
-    --nav-bg: #008ba3;}
+}
 
 /* ─── RESET ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -662,6 +661,38 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text-dim); margin-bottom: 1rem;
 }
 
+/* Sidebar category navigation */
+.side-cat-list { display: flex; flex-direction: column; gap: 0.3rem; }
+.side-cat-item {
+  display: flex; align-items: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.82rem; font-weight: 600;
+  color: #a1a1aa; text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+.side-cat-item:hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.06);
+  border-color: var(--border-light);
+}
+.side-cat-item.active {
+  color: var(--cyan);
+  background: rgba(6,182,212,0.1);
+  border-color: var(--cyan);
+  border-color: var(--cat-color, var(--cyan));
+}
+.side-cat-item::before {
+  content: '';
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-right: 0.55rem;
+  flex-shrink: 0;
+  background: var(--cat-color, var(--text-dim));
+}
+
 .article-sidebar .rec-card {
   display: flex; gap: 0.75rem; padding: 0.75rem 0;
   border-bottom: 1px solid var(--border-light); text-decoration: none;
@@ -718,6 +749,62 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 0.74rem; font-weight: 900; color: #171717;
 }
 .article-sidebar .side-product-card .prod-link:hover { color: #000; transform: translateY(-1px); }
+
+/* ─── WEITERFÜHRENDE ARTIKEL (Article Bottom) ─── */
+.related-bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-light);
+}
+.related-bottom h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+}
+.related-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.related-bottom-card {
+  display: block;
+  padding: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.related-bottom-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+.related-bottom-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+.related-bottom-card p {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+.related-bottom-card .read-link-sm {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--cyan);
+}
+.related-bottom-card:hover .read-link-sm {
+  color: var(--cyan-dark);
+}
+@media (max-width: 600px) {
+  .related-bottom-grid { grid-template-columns: 1fr; }
+}
 
 /* ─── PAGE CONTENT (About / Impressum) ─── */
 .page-hero {
@@ -797,6 +884,12 @@ img { max-width: 100%; height: auto; display: block; }
   max-width: var(--max-width); margin: 2rem auto 0;
   padding-top: 1.5rem; border-top: 1px solid var(--border-light);
   text-align: center; font-size: 0.8rem; color: var(--text-dim);
+}
+.footer-bottom .affiliate-hinweis {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+  line-height: 1.5;
 }
 /* ─── HERO QUICK TICKER ─── */
 .hero-ticker {
@@ -972,6 +1065,9 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 0 auto;
   padding: 0 2rem 2rem;
 }
+.topic-cloud-groups {
+  gap: 0.85rem;
+}
 
 .topic-tag {
   display: inline-flex;
@@ -991,6 +1087,88 @@ img { max-width: 100%; height: auto; display: block; }
   border-color: var(--topic-color, var(--cyan));
   color: var(--topic-color, var(--cyan));
   background: rgba(6,182,212,0.06);
+}
+
+.topic-show-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 100px;
+  text-decoration: none;
+  color: var(--cyan);
+  border: 1px dashed var(--border);
+  background: transparent;
+  transition: all 0.2s;
+}
+.topic-show-all:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(6,182,212,0.06);
+}
+
+/* Topic cloud grouped layout */
+.topic-cloud-groups { flex-direction: column; gap: 1.25rem; }
+.topic-group { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.topic-group-label {
+  font-size: 0.72rem; font-weight: 700; color: var(--text-dim);
+  white-space: nowrap; letter-spacing: 0.3px;
+  min-width: 160px;
+}
+.topic-group-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.topic-group-tags .topic-tag { padding: 0.35rem 0.85rem; font-size: 0.75rem; gap: 0; }
+
+.topic-show-all {
+  display: inline-flex; align-items: center;
+  margin-top: 0.35rem; margin-left: 160px;
+  padding: 0.5rem 1rem;
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--cyan); text-decoration: none;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+.topic-show-all:hover {
+  border-color: var(--cyan);
+  background: rgba(6,182,212,0.08);
+  color: var(--cyan);
+}
+
+@media (max-width: 768px) {
+  .topic-group { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+  .topic-group-label { min-width: auto; font-size: 0.68rem; }
+  .topic-show-all { margin-left: 0; width: 100%; justify-content: center; }
+}
+
+/* Sidebar mobile toggle button */
+.sidebar-toggle {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 0.4rem;
+    width: 100%; margin-bottom: 1.5rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem; font-weight: 600;
+    color: var(--text-dim); text-decoration: none;
+    background: var(--bg-alt);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .sidebar-toggle:hover { color: var(--text); border-color: var(--border); }
+  .sidebar-toggle.active { color: var(--cyan); border-color: var(--cyan); }
+
+  .article-sidebar {
+    display: none;
+  }
+  .article-sidebar.open {
+    display: block;
+  }
 }
 
 /* ─── CARD READ BADGE ─── */
