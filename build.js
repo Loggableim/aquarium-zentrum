@@ -848,13 +848,20 @@ function buildIndex() {
     const a = ARTICLES[slug];
     if (!a) return;
     const color = warholColors[i % warholColors.length];
-    const isWide = i < 2; // erste 2 = große Tiles
-    const isTall = i >= 2 && i < 4; // nächste 2 = hohe Tiles
+    const isWide = i < 2;
+    const isTall = i >= 2 && i < 4;
     const cls = isWide ? 'tile-wide' : isTall ? 'tile-tall' : '';
-    tileHTML += `<a href="/artikel/${slug}.html" class="warhol-tile ${cls}" style="--tile-color:${color};">
+    // Hintergrundbild + Farbverlauf für Warhol-Ästhetik
+    const imgStyle = a.img && !a.img.startsWith('linear-gradient')
+      ? `background-image:linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.1)),url('/images/${a.img}');background-size:cover;background-position:center;`
+      : `background:var(--tile-color);`;
+    const delay = i * 0.08;
+    tileHTML += `<a href="/artikel/${slug}.html" class="warhol-tile ${cls}" style="--tile-color:${color};--anim-delay:${delay}s;${imgStyle}">
+      <div class="tile-bg-pattern"></div>
       <span class="tile-label">${a.cat}</span>
       <span class="tile-title">${a.title}</span>
       <span class="tile-meta">${a.readingTime} Min · ${a.date}</span>
+      <span class="tile-arrow">→</span>
     </a>`;
   });
 
