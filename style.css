@@ -74,6 +74,25 @@ img { max-width: 100%; height: auto; display: block; }
   border-bottom: 1px solid var(--border-light);
 }
 
+/* ─── BREADCRUMB ─── */
+.breadcrumb {
+  max-width: var(--max-width); margin: 0 auto; padding: 0.75rem 2rem 0;
+  display: flex; align-items: center; gap: 0.35rem;
+  font-size: 0.78rem; color: var(--text-dim); flex-wrap: wrap;
+}
+.breadcrumb .crumb-link { color: var(--text-muted); text-decoration: none; transition: color var(--transition); }
+.breadcrumb .crumb-link:hover { color: var(--cyan); }
+.breadcrumb .crumb-sep { color: var(--text-dim); font-size: 0.9rem; padding: 0 0.1rem; }
+.breadcrumb .crumb-last { color: var(--text-on-card); font-weight: 500; }
+@media (max-width: 768px) {
+  .breadcrumb { padding: 0.75rem 1rem 0; font-size: 0.72rem; }
+}
+
+/* ─── HERO IMAGE ASPECT RATIO ─── */
+.hero-image { width: 100%; aspect-ratio: 1200/630; object-fit: cover; border-radius: var(--radius); }
+.article-image-full { margin-bottom: 1.5rem; }
+.article-image-full img { width: 100%; aspect-ratio: 1200/630; object-fit: cover; border-radius: var(--radius); }
+
 .nav-inner {
   display: flex; align-items: center; justify-content: space-between;
   max-width: var(--max-width); margin: 0 auto;
