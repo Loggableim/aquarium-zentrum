@@ -598,6 +598,33 @@ const ARTICLES = {
     related: [['aquarium-technik-ueberblick','Technik-Guide','Equipment-Überblick','technik.png'],['aquarium-pflegeroutine-guide','Pflegeroutine','Automatisierte Pflege','wasserwechsel.png'],['aquarium-filter-guide','Filter-Guide','Smarte Filtersteuerung','filter-guide.png'],['aquarium-beleuchtung-guide','Beleuchtung','Smarte Beleuchtung','beleuchtung.png']],
     prod: ['Smarte Steckdose WLAN', 'Für Licht & CO₂-Automatik', 'B0DDLNYNNL', '#8b5cf6', '#7c3aed'],
   },
+  'diskushaltung-pflege': {
+    title: 'Diskusfische – Haltung, Pflege und Zucht der Königsfische',
+    excerpt: 'Diskusfische im Aquarium: Herkunft, Wasserwerte, Beckengröße, Ernährung, Vergesellschaftung und Zucht der anspruchsvollen Könige der Aquaristik.',
+    date: '4. Juni 2026', cat: 'Fische', catColor: '#ec4899', catEmoji: '🐟',
+    img: 'diskushaltung.png', readingTime: 10,
+    toc: ['Herkunft & Lebensraum', 'Wildform vs. Zuchtform', 'Die richtige Aquariumgröße', 'Wasserwerte', 'Technik', 'Ernährung', 'Vergesellschaftung', 'Krankheiten', 'Zucht', 'Fazit'],
+    related: [['fische-fortgeschrittene','Fische für Profis','Anspruchsvolle Fische','fische-anspruchsvoll.png'],['wasserwerte-aquarium-guide','Wasserwerte','pH, GH, KH verstehen','linear-gradient(135deg,#06b6d4,#0891b2)'],['aquarium-technik-ueberblick','Technik-Guide','Filter & Heizung','technik.png'],['garnelen-im-aquarium','Garnelen','Mitbewohner für Diskus','garnelen.png']],
+    prod: ['Diskusfutter Granulat', 'Premium-Futter für Diskus', 'search:Diskusfutter Granulat Premium Aquarium', '#ec4899', '#db2777'],
+  },
+  'garnelen-nachzucht': {
+    title: 'Garnelennachzucht – Zwerggarnelen erfolgreich vermehren',
+    excerpt: 'Zwerggarnelen züchten: Neocaridina- und Caridina-Arten, Aquarium-Einrichtung, Wasserwerte, Aufzuchtfutter und der komplette Vermehrungszyklus.',
+    date: '4. Juni 2026', cat: 'Garnelen', catColor: '#ff6b6b', catEmoji: '🦐',
+    img: 'garnelen-nachzucht.png', readingTime: 8,
+    toc: ['Geeignete Arten', 'Das richtige Aquarium', 'Vermehrungszyklus', 'Optimale Wasserwerte', 'Ernährung für die Nachzucht', 'Häufige Fehler', 'Schritt für Schritt zur Zucht', 'Fazit'],
+    related: [['garnelen-im-aquarium','Garnelen-Guide','Grundlagen der Haltung','garnelen.png'],['nano-aquarium-guide','Nano Aquarium','Ideal für Garnelen','nano-aquarium-guide.png'],['pflanzenvermehrung-aquarium','Pflanzenvermehrung','Moos für Garnelen','pflanzen-vermehrung.png'],['aquarium-futter-ernaehrung','Futter-Guide','Ernährung','futter-arten.png']],
+    prod: ['Staubfutter für Garnelen', 'Feinstfutter für Junggarnelen', 'search:Garnelenfutter Staubfutter Aufzucht Aquarium', '#ff6b6b', '#e24545'],
+  },
+  'welse-harnischwelse': {
+    title: 'Welse im Aquarium – Antennenwelse, L-Welse und Harnischwelse',
+    excerpt: 'Antennenwelse, L-Welse und Rhythmus-Nasenwelse: Arten, Haltung, Ernährung, Vergesellschaftung und Nachzucht der faszinierenden Harnischwelse.',
+    date: '4. Juni 2026', cat: 'Fische', catColor: '#ec4899', catEmoji: '🐟',
+    img: 'welse-antennenwels.png', readingTime: 9,
+    toc: ['Antennenwelse', 'L-Welse im Überblick', 'Beliebte L-Welse', 'Rhythmus-Nasenwelse', 'Nachzucht', 'Kaufberatung', 'Häufige Fehler', 'Fazit'],
+    related: [['panzerwelse-aquarium','Panzerwelse','Verwandte Wels-Gruppe','panzerwelse.png'],['wurzeln-holz-aquarium','Wurzeln & Holz','Wichtige Einrichtung für Welse','holz-arten.png'],['steinarten-hardscape','Hardscape','Höhlen für Welse','stein-arten.png'],['aquarium-futter-ernaehrung','Futter-Guide','Bodenfutter','futter-arten.png']],
+    prod: ['Welsfutter Tabletten', 'Bodenfutter für Harnischwelse', 'search:Welsfutter Tabletten Bodenfutter Aquarium', '#ec4899', '#db2777'],
+  },
 };
 
 // ── LONG CONTENT DATA (loaded only after each scheduled article exists) ──
@@ -655,6 +682,9 @@ const TOPICS = [
   ['Nano Aquarium', '#06b6d4', '/artikel/nano-aquarium-guide.html'],
   ['Schädlinge', '#f59e0b', '/artikel/aquarium-schaedlinge.html'],
   ['Aquarium Automation', '#8b5cf6', '/artikel/aquarium-automation.html'],
+  ['Diskusfische', '#ec4899', '/artikel/diskushaltung-pflege.html'],
+  ['Garnelennachzucht', '#ff6b6b', '/artikel/garnelen-nachzucht.html'],
+  ['Antennenwelse & L-Welse', '#ec4899', '/artikel/welse-harnischwelse.html'],
 ];
 
 // ── CATEGORY DATA for index page ──
@@ -672,8 +702,8 @@ const CATEGORIES = [
     cards: ['aquarium-automation', 'aquarium-technik-ueberblick', 'co2-im-aquarium', 'aquarium-beleuchtung-guide', 'aquarium-filter-guide', 'osmoseanlage-wasseraufbereitung', 'heizung-temperatur-aquarium', 'stroemung-im-aquarium', 'wassertest-wasserpflege']
   },
   {
-    emoji: '🦐', name: 'Garnelen & Fische', count: 10, catColor: '#ff6b6b',
-    cards: ['panzerwelse-aquarium', 'salmler-aquarium', 'garnelen-im-aquarium', 'kampffisch-haltung-betta', 'beliebteste-aquarienfische', 'vergesellschaftung-aquarienfische', 'fische-fortgeschrittene', 'lebendgebärende-zahnkarpfen', 'aquarium-futter-ernaehrung', 'nachzucht-fische']
+    emoji: '🦐', name: 'Garnelen & Fische', count: 13, catColor: '#ff6b6b',
+    cards: ['garnelen-nachzucht', 'diskushaltung-pflege', 'welse-harnischwelse', 'panzerwelse-aquarium', 'salmler-aquarium', 'garnelen-im-aquarium', 'kampffisch-haltung-betta', 'beliebteste-aquarienfische', 'vergesellschaftung-aquarienfische', 'fische-fortgeschrittene', 'lebendgebärende-zahnkarpfen', 'aquarium-futter-ernaehrung', 'nachzucht-fische']
   },
   {
     emoji: '💊', name: 'Pflege & Gesundheit', count: 9, catColor: '#ffd93d',
