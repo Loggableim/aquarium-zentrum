@@ -669,6 +669,48 @@ const ARTICLES = {
     related: [['panzerwelse-aquarium','Panzerwelse','Verwandte Wels-Gruppe','panzerwelse.png'],['wurzeln-holz-aquarium','Wurzeln & Holz','Wichtige Einrichtung für Welse','holz-arten.png'],['steinarten-hardscape','Hardscape','Höhlen für Welse','stein-arten.png'],['aquarium-futter-ernaehrung','Futter-Guide','Bodenfutter','futter-arten.png']],
     prod: ['Welsfutter Tabletten', 'Bodenfutter für Harnischwelse', 'search:Welsfutter Tabletten Bodenfutter Aquarium', '#ec4899', '#db2777'],
   },
+  'futtertiere-selbst-zuechten': {
+    title: 'Futtertiere selbst züchten – Artemia, Grindalwürmer, Daphnien & Mikrowürmchen',
+    excerpt: 'Lebendfutter selbst ansetzen und ernten – Artemia, Grindalwürmer, Mikrowürmchen und Daphnien einfach gezüchtet für gesündere Fische.',
+    date: '5. Juni 2026', cat: 'Fische', catColor: '#ec4899', catEmoji: '🐟',
+    img: 'futtertiere-selbst-zuechten.webp', readingTime: 8,
+    toc: ['Warum Futtertiere selbst züchten?', 'Artemia (Salzkrebschen)', 'Grindalwürmer', 'Mikrowürmchen', 'Daphnien (Wasserflöhe)', 'Futtertier-Arten im Vergleich', 'Ausrüstung und Starter-Sets', 'Häufige Fehler vermeiden', 'FAQ', 'Fazit'],
+    related: [
+      ['nachzucht-fische', 'Fisch-Nachzucht', 'Zuchtbecken & Aufzucht', 'nachzucht-becken.png'],
+      ['aquarium-futter-ernaehrung', 'Futter-Guide', 'Ernährung für Fische', 'futter-arten.png'],
+      ['garnelen-nachzucht', 'Garnelennachzucht', 'Aufzuchtfutter für Garnelen', 'garnelen-nachzucht.png'],
+      ['kampffisch-haltung-betta', 'Kampffisch', 'Betta splendens Pflege', 'kampffisch-haltung.png'],
+    ],
+    prod: ['Artemia-Zucht Set', 'Komplettset für die Salmoniden- und Aufzuchtfutter-Produktion', 'search:Artemia Eier Zubehör Aquarium Lebendfutter Zucht', '#ec4899', '#db2777'],
+  },
+  'garnelen-krankheiten': {
+    title: 'Garnelen-Krankheiten erkennen, behandeln und vorbeugen – Der große Guide',
+    excerpt: 'Bakterielle Infektionen, Pilzerkrankungen, Häutungsprobleme und Vergiftungen bei Zwerggarnelen – Symptome, Behandlung und Vorbeugung.',
+    date: '5. Juni 2026', cat: 'Garnelen', catColor: '#ff6b6b', catEmoji: '🦐',
+    img: 'garnelen-krankheiten.webp', readingTime: 8,
+    toc: ['Warum werden Garnelen krank?', 'Bakterielle Infektionen', 'Pilzerkrankungen', 'Häutungsprobleme', 'Parasitäre Erkrankungen', 'Vergiftungen', 'Übersichtstabelle', 'Vorbeugung', 'FAQ'],
+    related: [
+      ['garnelen-im-aquarium', 'Garnelen-Guide', 'Garnelen Haltung', 'garnelen.png'],
+      ['garnelen-nachzucht', 'Garnelennachzucht', 'Vermehrung', 'garnelen-nachzucht.png'],
+      ['fischkrankheiten-aquarium-guide', 'Fischkrankheiten', 'Diagnose & Behandlung', 'krankheiten-symptome.png'],
+      ['quarantaene-medikamente', 'Quarantäne', 'Krankheiten vorbeugen', 'quarantaene-becken.png'],
+    ],
+    prod: ['Garnelen Wassertest Set', 'Präzise Tests für empfindliche Garnelen-Becken', 'search:Garnelen Wassertest Kupfer Aquarium', '#ff6b6b', '#e24545'],
+  },
+  'biotop-aquarium-suedamerika': {
+    title: 'Biotop-Aquarium Südamerika – Ein Stück Amazonas im Wohnzimmer',
+    excerpt: 'Ein Amazonas-Biotop einrichten: Wasserwerte, Pflanzen, typische Fische und Schritt-für-Schritt-Anleitung für ein naturnahes Aquarium.',
+    date: '5. Juni 2026', cat: 'Einsteiger', catColor: '#06b6d4', catEmoji: '🐟',
+    img: 'biotop-aquarium-suedamerika.webp', readingTime: 9,
+    toc: ['Was ist ein Biotop-Aquarium?', 'Der Amazonas als Vorbild', 'Beckengröße & Einrichtung', 'Typische Amazonas-Pflanzen', 'Typische Fischbesätze', 'Wasserwerte', 'Pflege & Wartung', 'Einrichtungsbeispiel', 'FAQ', 'Fazit'],
+    related: [
+      ['einsteiger-aquarium-guide', 'Einsteiger-Guide', 'Grundlagen fürs erste Becken', 'einsteiger-guide.png'],
+      ['wasserwerte-aquarium-guide', 'Wasserwerte', 'pH, GH, KH fürs Biotop', 'linear-gradient(135deg,#06b6d4,#0891b2)'],
+      ['diskushaltung-pflege', 'Diskusfische', 'Amazonas-Königsfische', 'diskushaltung.png'],
+      ['aquascaping-anfaenger', 'Aquascaping', 'Naturnahe Gestaltung', 'aquascaping.png'],
+    ],
+    prod: ['Wurzeln & Höhlen Set', 'Naturmaterialien für das Amazonas-Biotop', 'search:Aquarium Wurzeln Moorkienholz Naturdekoration', '#06b6d4', '#0891b2'],
+  },
 };
 
 // ── LONG CONTENT DATA (loaded only after each scheduled article exists) ──
@@ -729,13 +771,16 @@ const TOPICS = [
   ['Diskusfische', '#ec4899', '/artikel/diskushaltung-pflege.html'],
   ['Garnelennachzucht', '#ff6b6b', '/artikel/garnelen-nachzucht.html'],
   ['Antennenwelse & L-Welse', '#ec4899', '/artikel/welse-harnischwelse.html'],
+  ['Futtertiere züchten', '#ec4899', '/artikel/futtertiere-selbst-zuechten.html'],
+  ['Garnelen-Krankheiten', '#ff6b6b', '/artikel/garnelen-krankheiten.html'],
+  ['Biotop-Aquarium', '#06b6d4', '/artikel/biotop-aquarium-suedamerika.html'],
 ];
 
 // ── CATEGORY DATA for index page ──
 const CATEGORIES = [
   {
     emoji: '🐟', name: 'Einsteiger', count: 9, catColor: '#06b6d4',
-    cards: ['nano-aquarium-guide', 'einsteiger-aquarium-guide', 'bodengrund-aquarium-guide', 'aquarium-einfahren-nitritpeak', 'wasserwerte-aquarium-guide', 'wurzeln-holz-aquarium', 'beckenformen-groessen', 'gesellschaftsbecken-einrichten', 'diy-aquarium-bauen']
+    cards: ['biotop-aquarium-suedamerika', 'nano-aquarium-guide', 'einsteiger-aquarium-guide', 'bodengrund-aquarium-guide', 'aquarium-einfahren-nitritpeak', 'wasserwerte-aquarium-guide', 'wurzeln-holz-aquarium', 'beckenformen-groessen', 'gesellschaftsbecken-einrichten', 'diy-aquarium-bauen']
   },
   {
     emoji: '🌿', name: 'Pflanzen & Aquascaping', count: 9, catColor: '#10b981',
@@ -747,7 +792,7 @@ const CATEGORIES = [
   },
   {
     emoji: '🦐', name: 'Garnelen & Fische', count: 13, catColor: '#ff6b6b',
-    cards: ['garnelen-nachzucht', 'diskushaltung-pflege', 'welse-harnischwelse', 'panzerwelse-aquarium', 'salmler-aquarium', 'garnelen-im-aquarium', 'kampffisch-haltung-betta', 'beliebteste-aquarienfische', 'vergesellschaftung-aquarienfische', 'fische-fortgeschrittene', 'lebendgebärende-zahnkarpfen', 'aquarium-futter-ernaehrung', 'nachzucht-fische']
+    cards: ['garnelen-krankheiten', 'futtertiere-selbst-zuechten', 'garnelen-nachzucht', 'diskushaltung-pflege', 'welse-harnischwelse', 'panzerwelse-aquarium', 'salmler-aquarium', 'garnelen-im-aquarium', 'kampffisch-haltung-betta', 'beliebteste-aquarienfische', 'vergesellschaftung-aquarienfische', 'fische-fortgeschrittene', 'lebendgebärende-zahnkarpfen', 'aquarium-futter-ernaehrung', 'nachzucht-fische']
   },
   {
     emoji: '💊', name: 'Pflege & Gesundheit', count: 9, catColor: '#ffd93d',
