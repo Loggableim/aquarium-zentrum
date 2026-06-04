@@ -911,8 +911,8 @@ function buildIndex() {
         <p>Unser Newsletter liefert dir jede Woche die besten Aquaristik-Tipps – kostenlos und jederzeit kündbar.</p>
       </div>
       <div class="nl-cta">
-        <a href="#" class="btn-ghost">Instagram</a>
-        <a href="#" class="btn-glow">Newsletter abonnieren →</a>
+        <a href="https://www.instagram.com/aquaristik_zentrum" class="btn-ghost" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:hallo@aquaristik-zentrum.com?subject=Newsletter" class="btn-glow">Newsletter abonnieren →</a>
       </div>
     </div>
   </div>`;
@@ -942,7 +942,7 @@ function buildIndex() {
         <p>Melde dich an und erhalte die besten Tipps, Tricks und Guides direkt in dein Postfach.</p>
       </div>
       <div class="nl-cta">
-        <a href="#" class="btn-glow">Newsletter abonnieren →</a>
+        <a href="mailto:hallo@aquaristik-zentrum.com?subject=Newsletter" class="btn-glow">Newsletter abonnieren →</a>
       </div>
     </div>
   </div>`;
