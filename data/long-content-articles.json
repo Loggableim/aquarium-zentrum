@@ -252,7 +252,8 @@
       "#06b6d4",
       "#38bdf8"
     ],
-    "intent": "Planungsratgeber für unbeheizte Süßwasseraquarien und robuste Besatzideen."
+    "intent": "Planungsratgeber für unbeheizte Süßwasseraquarien und robuste Besatzideen.",
+    "date": "5. Juni 2026"
   },
   {
     "slug": "meerwasser-aquarium-einstieg",
@@ -558,7 +559,8 @@
       "#8b5cf6",
       "#6366f1"
     ],
-    "intent": "Vergleichsartikel mit Entscheidungshilfe für Filterkauf und Wartungsrealität."
+    "intent": "Vergleichsartikel mit Entscheidungshilfe für Filterkauf und Wartungsrealität.",
+    "date": "5. Juni 2026"
   },
   {
     "slug": "aquarium-luftpumpe-sauerstoff",
@@ -660,7 +662,8 @@
       "#10b981",
       "#34d399"
     ],
-    "intent": "Pflanzenaquarium ohne Druckgas-CO2 für Anfänger und pragmatische Aquascaper."
+    "intent": "Pflanzenaquarium ohne Druckgas-CO2 für Anfänger und pragmatische Aquascaper.",
+    "date": "5. Juni 2026"
   },
   {
     "slug": "iwagumi-aquascape-guide",
