@@ -263,7 +263,7 @@ const ARTICLES = {
     excerpt: 'Arten, Haltung und Steckbriefe der beliebtesten Aquarienfische für den Start.',
     date: '15. Juni 2025',
     cat: 'Fische', catColor: '#ec4899', catEmoji: '🐟',
-    img: 'linear-gradient(135deg,#ec4899,#db2777)', readingTime: 6,
+    img: 'beliebteste-aquarienfische.png', readingTime: 6,
     toc: ['Platz 1-3', 'Platz 4-6', 'Platz 7-10', 'Vergesellschaftung', 'Fazit'],
     related: [
       ['kampffisch-haltung-betta', 'Kampffisch', 'Betta splendens Pflege', 'kampffisch-haltung.png'],
