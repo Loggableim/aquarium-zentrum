@@ -397,5 +397,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
+  <url>
+    <loc>https://aquaristik-zentrum.com/artikel/aquarium-geraeusche-ursachen-loesungen.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aquaristik-zentrum.com/artikel/kind-und-aquarium-familien-guide.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://aquaristik-zentrum.com/artikel/wassertemperatur-aquarium-sommer-hitze-kuehlung.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
