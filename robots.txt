@@ -1,8 +1,4 @@
 User-agent: *
-Allow: /
+Disallow:
 
 Sitemap: https://aquaristik-zentrum.com/sitemap.xml
-
-# Disallow admin/private areas (if any)
-Disallow: /admin/
-Disallow: /private/
