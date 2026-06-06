@@ -1,31 +1,15 @@
 #!/usr/bin/env python3
-# Generate one long German aquaristik article via NVIDIA NIM free model.
-import argparse, html, json, os, re, time, urllib.request, urllib.error
+# Generate one long German aquaristik article via LLM provider pool.
+import argparse, html, json, re, time
 from pathlib import Path
+from _framework.provider_pool import llm_chat
 
 ROOT = Path(__file__).resolve().parents[1]
 META_PATH = ROOT / 'data' / 'long-content-articles.json'
 OUT_DIR = ROOT / 'content' / 'artikel'
-API_URL = 'https://integrate.api.nvidia.com/v1/chat/completions'
-DEFAULT_MODEL = 'nvidia/nemotron-3-super-120b-a12b'
+DEFAULT_MODEL = 'meta/llama-3.1-70b-instruct'
 MIN_WORDS = 4000
 TARGET_WORDS = 4300
-
-
-def load_key():
-    for name in ('NVIDIA_API_KEY', 'NGC_API_KEY'):
-        val = os.environ.get(name)
-        if val:
-            return val.strip()
-    cfg = Path('C:/HermesPortable/home/config.yaml')
-    if cfg.exists():
-        text = cfg.read_text(encoding='utf-8', errors='ignore')
-        m = re.search(r'(?ms)^  nvidia:\n(.*?)(?=^  \S|^\S|\Z)', text)
-        if m:
-            key = re.search(r'api_key:\s*([^\n\r]+)', m.group(1))
-            if key:
-                return key.group(1).strip().strip('"').strip("'")
-    raise RuntimeError('NVIDIA API key not found')
 
 
 def clean_html(text):
@@ -41,40 +25,6 @@ def clean_html(text):
 def word_count(text):
     stripped = html.unescape(re.sub(r'<[^>]+>', ' ', text))
     return len(re.findall(r"[A-Za-zÄÖÜäöüß0-9][A-Za-zÄÖÜäöüß0-9\-]{1,}", stripped))
-
-
-def chat(key, model, messages, max_tokens=1700, temperature=0.72):
-    body = {
-        'model': model,
-        'messages': messages,
-        'temperature': temperature,
-        'top_p': 0.9,
-        'max_tokens': max_tokens,
-        'stream': False,
-    }
-    headers = {
-        'Authorization': 'Bearer ' + key,
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'User-Agent': 'aquaristik-zentrum-content-worker/1.0',
-    }
-    last = None
-    for attempt in range(1, 6):
-        try:
-            req = urllib.request.Request(API_URL, data=json.dumps(body).encode('utf-8'), headers=headers)
-            with urllib.request.urlopen(req, timeout=180) as r:
-                return json.loads(r.read().decode('utf-8', errors='replace'))['choices'][0]['message'].get('content', '')
-        except urllib.error.HTTPError as e:
-            err = e.read().decode('utf-8', errors='replace')[:800]
-            last = f'HTTP {e.code}: {err}'
-            if e.code in (429, 500, 502, 503, 504):
-                time.sleep(min(45, 5 * attempt))
-                continue
-            raise RuntimeError(last)
-        except Exception as e:
-            last = f'{type(e).__name__}: {e}'
-            time.sleep(min(30, 4 * attempt))
-    raise RuntimeError(last or 'NVIDIA request failed')
 
 
 def affiliate_box(meta):
@@ -97,7 +47,7 @@ def internal_links(meta):
     return '<h2>Weiterlesen auf Aquaristik Zentrum</h2>\n<p>Wenn du tiefer einsteigen willst, passen diese Guides direkt zu diesem Thema:</p>\n<ul>\n' + '\n'.join(items) + '\n</ul>'
 
 
-def generate_article(meta, key, model):
+def generate_article(meta, provider, model):
     title = meta['title']
     system = (
         'Du bist ein erfahrener deutschsprachiger Aquaristik-Redakteur. Schreibe direkt, bodenständig, praktisch und SEO-stark. '
@@ -109,7 +59,7 @@ def generate_article(meta, key, model):
 Titel: {title}
 Suchintention: {meta['intent']}
 Umfang: 420-520 Wörter. Starte exakt mit <h2>Worum es in diesem Guide geht</h2>, dann 4-6 Absätze und eine kurze Bullet-Liste "Auf einen Blick". HTML-only.'''
-    article.append(clean_html(chat(key, model, [{'role': 'system', 'content': system}, {'role': 'user', 'content': intro}], max_tokens=1700)))
+    article.append(clean_html(llm_chat(system, intro, provider=provider, model=model, max_tokens=1700)))
 
     for idx, heading in enumerate(meta['toc'], 1):
         if heading.lower() == 'faq':
@@ -120,15 +70,15 @@ Suchintention: {meta['intent']}
 Geplante Gliederung: {', '.join(meta['toc'])}
 Umfang: 380-520 Wörter. Konkret, mit Zahlenbereichen, Checklisten, Beispielen und Warnhinweisen, aber ohne erfundene Studien.
 Format: <h2>{html.escape(heading)}</h2>, mehrere <p>, optional <h3>, <ul> oder eine kleine Tabelle. Kein h1. HTML-only.'''
-        article.append(clean_html(chat(key, model, [{'role': 'system', 'content': system}, {'role': 'user', 'content': prompt}], max_tokens=1800)))
+        article.append(clean_html(llm_chat(system, prompt, provider=provider, model=model, max_tokens=1800)))
         if idx == 4:
             article.append(affiliate_box(meta))
 
     faq = f'''Schreibe eine FAQ-Sektion für den Artikel "{title}". Umfang: 650-850 Wörter. Format: <h2>Häufige Fragen</h2> und danach 7 Fragen als <h3>Frage?</h3><p>Antwort...</p>. HTML-only.'''
-    article.append(clean_html(chat(key, model, [{'role': 'system', 'content': system}, {'role': 'user', 'content': faq}], max_tokens=2400)))
+    article.append(clean_html(llm_chat(system, faq, provider=provider, model=model, max_tokens=2400)))
     article.append(internal_links(meta))
     article.append('<h2>Fazit</h2>')
-    article.append(clean_html(chat(key, model, [{'role': 'system', 'content': system}, {'role': 'user', 'content': f"Schreibe ein bodenständiges Fazit für den Artikel '{title}' mit 300-420 Wörtern. Nur <p> und optional <ul>. HTML-only."}], max_tokens=1200)))
+    article.append(clean_html(llm_chat(system, f"Schreibe ein bodenständiges Fazit für den Artikel '{title}' mit 300-420 Wörtern. Nur <p> und optional <ul>. HTML-only.", provider=provider, model=model, max_tokens=1200)))
 
     content = '\n\n'.join(article).strip()
     extra_no = 1
@@ -137,7 +87,7 @@ Format: <h2>{html.escape(heading)}</h2>, mehrere <p>, optional <h3>, <ul> oder e
         extra_heading = 'Praxisbeispiel: So setzt du den Guide im Alltag um' if extra_no == 1 else f'Praxisbeispiel und Kontrollplan {extra_no}'
         prompt = f'''Der Artikel "{title}" hat aktuell {wc} Wörter und braucht noch mindestens {MIN_WORDS} Wörter.
 Schreibe einen zusätzlichen, neuen Abschnitt mit der H2-Überschrift "{extra_heading}". Umfang: 650-900 Wörter. Keine Wiederholung, sondern konkrete Praxis: Tagesplan, Wochenplan, typische Beobachtungen, Entscheidungskriterien, Fehlerkorrektur. HTML-only.'''
-        content += '\n\n' + clean_html(chat(key, model, [{'role': 'system', 'content': system}, {'role': 'user', 'content': prompt}], max_tokens=2600, temperature=0.75))
+        content += '\n\n' + clean_html(llm_chat(system, prompt, provider=provider, model=model, max_tokens=2600, temperature=0.75))
         extra_no += 1
 
     return '<!-- GENERATED_BY_NVIDIA_FREE_MODEL: nvidia/nemotron-3-super-120b-a12b -->\n' + content.strip() + '\n'
@@ -147,7 +97,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--slug', required=True)
     ap.add_argument('--model', default=DEFAULT_MODEL)
-    ap.add_argument('--force', action='store_true')
+    ap.add_argument('--provider', default='content')
     args = ap.parse_args()
 
     metas = json.loads(META_PATH.read_text(encoding='utf-8'))
@@ -156,16 +106,15 @@ def main():
         raise SystemExit(f'Unknown slug: {args.slug}')
 
     out = OUT_DIR / f'{args.slug}.html'
-    if out.exists() and not args.force:
+    if out.exists():
         existing = out.read_text(encoding='utf-8', errors='ignore')
         wc = word_count(existing)
         if wc >= MIN_WORDS and 'GENERATED_BY_NVIDIA_FREE_MODEL' in existing:
             print(json.dumps({'slug': args.slug, 'status': 'skip_existing', 'word_count': wc, 'path': str(out)}, ensure_ascii=False))
             return
 
-    key = load_key()
     started = time.time()
-    html_body = generate_article(by_slug[args.slug], key, args.model)
+    html_body = generate_article(by_slug[args.slug], args.provider, args.model)
     wc = word_count(html_body)
     if wc < MIN_WORDS:
         raise RuntimeError(f'{args.slug}: only {wc} words generated, need {MIN_WORDS}')
