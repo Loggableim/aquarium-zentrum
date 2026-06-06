@@ -1161,7 +1161,7 @@ function buildMagazineHero() {
     const img = a.img && !a.img.startsWith('linear-gradient')
       ? `linear-gradient(180deg,transparent 20%,rgba(0,0,0,0.88)),url('/images/${a.img}')`
       : `linear-gradient(135deg,${a.catColor},#1a1a2e)`;
-    return `<a href="/artikel/${slug}.html" class="mag-card" style="--idx:${i};background-image:${img};">
+    return `<a href="/artikel/${slug}.html" class="mag-card" style="--idx:${i};--cat-clr:${a.catColor};background-image:${img};">
       <span class="mag-card-cat" style="background:${a.catColor}">${a.cat}</span>
       <h3>${a.title}</h3>
       <span class="mag-card-meta">${a.readingTime} Min Lesezeit</span>
@@ -1186,7 +1186,7 @@ function buildMagazineHero() {
       <p class="mag-desc"><strong>${Object.keys(ARTICLES).length}+ praxisnahe Artikel</strong> &mdash; von der ersten Einrichtung bis zur Profi-Pflege</p>
     </div>
     <div class="mag-grid">
-      <a href="/artikel/${featureSlug}.html" class="mag-feature" style="background-image:${featureImg};">
+      <a href="/artikel/${featureSlug}.html" class="mag-feature" style="--cat-clr:${feature.catColor};background-image:${featureImg};">
         <span class="mag-feature-badge" style="background:${feature.catColor}">${feature.cat}</span>
         <div class="mag-feature-body">
           <h2>${feature.title}</h2>
