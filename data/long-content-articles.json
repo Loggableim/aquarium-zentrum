@@ -62,7 +62,8 @@
       "#6d28d9"
     ],
     "intent": "Kaufberatung und Praxisguide für Aquarium Futterautomaten 2026 inklusive Modellvergleich, Einrichtung, Futterauswahl und Urlaubsbetreuung.",
-    "date": "15. Juni 2026"
+    "date": "15. Juni 2026",
+    "generated": true
   },
   {
     "slug": "aquarium-umzug-transport-guide",
@@ -113,7 +114,8 @@
       "#06b6d4",
       "#0891b2"
     ],
-    "intent": "Umzugsplanung für laufende Aquarien inklusive Fischtransport, Filterbakterien, Wasserwerte und Neustart."
+    "intent": "Umzugsplanung für laufende Aquarien inklusive Fischtransport, Filterbakterien, Wasserwerte und Neustart.",
+    "generated": true
   },
   {
     "slug": "truebes-wasser-schaum-geruch-aquarium",
@@ -164,7 +166,8 @@
       "#ffd93d",
       "#f59e0b"
     ],
-    "intent": "Troubleshooting-Longform für sichtbare und riechbare Wasserprobleme im Süßwasseraquarium."
+    "intent": "Troubleshooting-Longform für sichtbare und riechbare Wasserprobleme im Süßwasseraquarium.",
+    "generated": true
   },
   {
     "slug": "antennenwels-l-welse-haltung",
@@ -215,7 +218,8 @@
       "#ec4899",
       "#db2777"
     ],
-    "intent": "Praxisratgeber für Harnischwelse, Antennenwelse und beliebte L-Welse im Süßwasser."
+    "intent": "Praxisratgeber für Harnischwelse, Antennenwelse und beliebte L-Welse im Süßwasser.",
+    "generated": true
   },
   {
     "slug": "brackwasser-aquarium-guide",
@@ -266,7 +270,8 @@
       "#06b6d4",
       "#0ea5e9"
     ],
-    "intent": "Einsteigerfreundlicher Longguide für Brackwasserbecken zwischen Süß- und Meerwasser."
+    "intent": "Einsteigerfreundlicher Longguide für Brackwasserbecken zwischen Süß- und Meerwasser.",
+    "generated": true
   },
   {
     "slug": "kaltwasser-aquarium-guide",
@@ -318,7 +323,8 @@
       "#38bdf8"
     ],
     "intent": "Planungsratgeber für unbeheizte Süßwasseraquarien und robuste Besatzideen.",
-    "date": "5. Juni 2026"
+    "date": "5. Juni 2026",
+    "generated": true
   },
   {
     "slug": "meerwasser-aquarium-einstieg",
@@ -369,7 +375,8 @@
       "#06b6d4",
       "#6366f1"
     ],
-    "intent": "Realistische Einstiegshilfe für Süßwasseraquarianer, die Meerwasser planen."
+    "intent": "Realistische Einstiegshilfe für Süßwasseraquarianer, die Meerwasser planen.",
+    "generated": true
   },
   {
     "slug": "wasseraufbereiter-aquarium-vergleich",
@@ -420,7 +427,8 @@
       "#ffd93d",
       "#f59e0b"
     ],
-    "intent": "Nüchterner Vergleich von Wasseraufbereitern, Startern und Alternativen."
+    "intent": "Nüchterner Vergleich von Wasseraufbereitern, Startern und Alternativen.",
+    "generated": true
   },
   {
     "slug": "artemia-grindal-futtertiere-zuechten",
@@ -471,7 +479,8 @@
       "#ec4899",
       "#f97316"
     ],
-    "intent": "Praxisanleitung für Lebendfutterkulturen im Hobbymaßstab."
+    "intent": "Praxisanleitung für Lebendfutterkulturen im Hobbymaßstab.",
+    "generated": true
   },
   {
     "slug": "aquarium-kamera-livestream",
@@ -522,7 +531,8 @@
       "#8b5cf6",
       "#6366f1"
     ],
-    "intent": "Technikguide für Aquarienüberwachung, Livestream und praktische Kamera-Setups."
+    "intent": "Technikguide für Aquarienüberwachung, Livestream und praktische Kamera-Setups.",
+    "generated": true
   },
   {
     "slug": "uv-klaerer-aquarium-guide",
@@ -573,7 +583,9 @@
       "#8b5cf6",
       "#a78bfa"
     ],
-    "intent": "Technischer Ratgeber für UV-Klärer im Süßwasseraquarium."
+    "intent": "Technischer Ratgeber für UV-Klärer im Süßwasseraquarium.",
+    "date": "7. Juni 2026",
+    "generated": true
   },
   {
     "slug": "aussenfilter-vs-innenfilter",
@@ -625,7 +637,8 @@
       "#6366f1"
     ],
     "intent": "Vergleichsartikel mit Entscheidungshilfe für Filterkauf und Wartungsrealität.",
-    "date": "5. Juni 2026"
+    "date": "5. Juni 2026",
+    "generated": true
   },
   {
     "slug": "aquarium-luftpumpe-sauerstoff",
@@ -676,7 +689,9 @@
       "#8b5cf6",
       "#60a5fa"
     ],
-    "intent": "Technik- und Notfallguide rund um Sauerstoff, Belüftung und Luftpumpen."
+    "intent": "Technik- und Notfallguide rund um Sauerstoff, Belüftung und Luftpumpen.",
+    "date": "7. Juni 2026",
+    "generated": true
   },
   {
     "slug": "low-tech-aquarium-ohne-co2",
@@ -728,7 +743,8 @@
       "#34d399"
     ],
     "intent": "Pflanzenaquarium ohne Druckgas-CO2 für Anfänger und pragmatische Aquascaper.",
-    "date": "5. Juni 2026"
+    "date": "5. Juni 2026",
+    "generated": true
   },
   {
     "slug": "iwagumi-aquascape-guide",
@@ -779,7 +795,9 @@
       "#0d9488",
       "#14b8a6"
     ],
-    "intent": "Deep-dive für minimalistische Steinlayouts im Aquascaping."
+    "intent": "Deep-dive für minimalistische Steinlayouts im Aquascaping.",
+    "date": "7. Juni 2026",
+    "generated": true
   },
   {
     "slug": "biotop-aquarium-amazonas-asien",
@@ -830,7 +848,9 @@
       "#0d9488",
       "#78716c"
     ],
-    "intent": "Naturnahe Aquariengestaltung mit regional passenden Tieren, Wasserwerten und Materialien."
+    "intent": "Naturnahe Aquariengestaltung mit regional passenden Tieren, Wasserwerten und Materialien.",
+    "date": "7. Juni 2026",
+    "generated": true
   },
   {
     "slug": "schwimmpflanzen-aquarium-guide",
@@ -881,7 +901,8 @@
       "#10b981",
       "#84cc16"
     ],
-    "intent": "Pflanzenratgeber für Oberfläche, Schatten, Nährstoffkontrolle und Garnelenbecken."
+    "intent": "Pflanzenratgeber für Oberfläche, Schatten, Nährstoffkontrolle und Garnelenbecken.",
+    "generated": true
   },
   {
     "slug": "bucephalandra-anubias-javafarn",
@@ -932,7 +953,9 @@
       "#10b981",
       "#0d9488"
     ],
-    "intent": "Spezialguide für robuste Rhizompflanzen und deren Befestigung."
+    "intent": "Spezialguide für robuste Rhizompflanzen und deren Befestigung.",
+    "date": "7. Juni 2026",
+    "generated": true
   },
   {
     "slug": "fischbesatz-nach-beckengroesse",
@@ -983,7 +1006,9 @@
       "#ec4899",
       "#f43f5e"
     ],
-    "intent": "Besatzplaner mit konkreten Ideen je Beckengröße und klarer Warnung vor Überbesatz."
+    "intent": "Besatzplaner mit konkreten Ideen je Beckengröße und klarer Warnung vor Überbesatz.",
+    "date": "7. Juni 2026",
+    "generated": true
   },
   {
     "slug": "urlaub-aquarium-futterautomat",
@@ -1034,7 +1059,8 @@
       "#ffd93d",
       "#f59e0b"
     ],
-    "intent": "Urlaubscheckliste für Aquarianer mit Technik, Fütterung und Betreuerkommunikation."
+    "intent": "Urlaubscheckliste für Aquarianer mit Technik, Fütterung und Betreuerkommunikation.",
+    "generated": true
   },
   {
     "slug": "stromausfall-aquarium-notfallplan",
@@ -1085,6 +1111,8 @@
       "#8b5cf6",
       "#60a5fa"
     ],
-    "intent": "Konkreter Notfallplan für Stromausfälle und technische Ausfälle."
+    "intent": "Konkreter Notfallplan für Stromausfälle und technische Ausfälle.",
+    "date": "7. Juni 2026",
+    "generated": true
   }
 ]
