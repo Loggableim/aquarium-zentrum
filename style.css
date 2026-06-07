@@ -30,7 +30,8 @@
   --radius: 12px;
   --radius-sm: 8px;
   --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    --primary: #00BCD4;
+    --nav-bg: #008ba3;}
 
 /* ─── RESET ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
