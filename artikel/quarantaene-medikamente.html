@@ -66,12 +66,6 @@
   }
 }
 </script>
-
-<meta property="og:locale" content="de_DE" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Aquarium Medikamente und Quarantäne – Krankheiten behandeln | Aquaristik Zentrum" />
-<meta name="twitter:description" content="Quarantänebecken einrichten, Medikamente richtig einsetzen und Krankheiten vorbeugen – der Guide zur Fischgesundheit." />
-<meta name="twitter:image" content="https://aquaristik-zentrum.com/images/default-hero.jpg" />
 </head>
 <body>
 <div class="promo-bar" id="promoBar">
@@ -261,8 +255,6 @@
         <span>6 Min. Lesezeit</span>
       </div>
       <div class="body-text">
-<img loading="lazy" src="/images/quarantaene-becken.webp" alt="Aquarium Medikamente und Quarantäne – Krankheiten behandeln" class="hero-image" style="width:100%; border-radius:8px; margin:1em 0;" />
-
         <h2>Aquarium Medikamente und Quarantäne – So schützt du deine Fische</h2>
 
 <p>Krankheiten im Aquarium sind der Albtraum jedes Aquarianers. Ob weiße Pünktchen auf den Flossen, schimmernde Beläge auf der Haut oder apathisches Verhalten – wenn Fische krank werden, ist schnelles und gezieltes Handeln gefragt. Doch die beste Behandlung ist die Vorbeugung, und die wichtigste vorbeugende Maßnahme ist die Quarantäne. Ein separates Quarantänebecken ist der Schlüssel zur Gesundheit deines gesamten Aquarienbestands. In diesem Guide erfährst du, wie du ein Quarantänebecken einrichtest, welche Medikamente für welche Krankheiten geeignet sind und wie du einen Behandlungsplan erstellst, ohne dein Hauptbecken zu gefährden.</p>
@@ -500,3 +492,85 @@
       toggleMenu(false);
     }
   });
+
+  // Mobile mega-menu accordion: tap to expand
+  document.querySelectorAll('.nav-item').forEach(function(item) {
+    const link = item.querySelector('.nav-link');
+    const dropdown = item.querySelector('.dropdown');
+    if (link && dropdown && window.innerWidth <= 768) {
+      link.addEventListener('click', function(e) {
+        // On mobile, toggle mega-menu accordion instead of navigating
+        if (window.innerWidth <= 768) {
+          // Close all others
+          document.querySelectorAll('.nav-item.mobile-open').forEach(function(other) {
+            if (other !== item) other.classList.remove('mobile-open');
+          });
+          item.classList.toggle('mobile-open');
+          e.preventDefault();
+        }
+      });
+    }
+  });
+})();
+
+// Search toggle
+(function() {
+  const searchToggle = document.getElementById('searchToggle');
+  const searchBar = document.getElementById('searchBar');
+  const searchInput = document.getElementById('searchInput');
+  const searchSubmit = document.getElementById('searchSubmit');
+
+  searchToggle?.addEventListener('click', function() {
+    const isOpen = searchBar?.classList.contains('open');
+    if (isOpen) {
+      searchBar.classList.remove('open');
+      searchToggle.style.display = '';
+    } else {
+      searchBar.classList.add('open');
+      searchToggle.style.display = 'none';
+      setTimeout(function() { searchInput?.focus(); }, 100);
+    }
+  });
+
+  searchSubmit?.addEventListener('click', function() {
+    const query = searchInput?.value?.trim();
+    if (query) {
+      window.location.href = '/?q=' + encodeURIComponent(query);
+    }
+  });
+
+  searchInput?.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') searchSubmit?.click();
+    if (e.key === 'Escape') {
+      searchBar?.classList.remove('open');
+      searchToggle.style.display = '';
+    }
+  });
+})();
+
+// Sidebar toggle (mobile)
+(function() {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.querySelector('.article-sidebar');
+  if (toggle && sidebar) {
+    toggle.addEventListener('click', function() {
+      sidebar.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
+    });
+  }
+})();
+
+// Active nav link detection
+(function() {
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(function(link) {
+    const href = link.getAttribute('href');
+    if (href && currentPath.endsWith(href)) {
+      link.classList.add('active');
+    }
+  });
+})();
+</script>
+</body>
+</html>

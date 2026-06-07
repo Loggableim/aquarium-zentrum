@@ -66,12 +66,6 @@
   }
 }
 </script>
-
-<meta property="og:locale" content="de_DE" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Aquarium Beleuchtung – Licht für gesundes Pflanzenwachstum | Aquaristik Zentrum" />
-<meta name="twitter:description" content="LED, T5, HQI: Alles über die richtige Aquarienbeleuchtung – Lichtmenge, Spektrum, Dauer und die besten Leisten für jedes Becken." />
-<meta name="twitter:image" content="https://aquaristik-zentrum.com/images/default-hero.jpg" />
 </head>
 <body>
 <div class="promo-bar" id="promoBar">
@@ -261,8 +255,6 @@
         <span>6 Min. Lesezeit</span>
       </div>
       <div class="body-text">
-<img loading="lazy" src="/images/beleuchtung.webp" alt="Aquarium Beleuchtung – Licht für gesundes Pflanzenwachstum" class="hero-image" style="width:100%; border-radius:8px; margin:1em 0;" />
-
         <h2>Aquarium Beleuchtung: Die Grundlagen</h2>
 <p>Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist nicht nur für die Optik verantwortlich, sondern steuert das Pflanzenwachstum, den Tag-Nacht-Rhythmus der Fische und beeinflusst das gesamte biologische Gleichgewicht. Anders als oft angenommen, geht es nicht darum, möglichst viel Licht ins Becken zu bringen – sondern die richtige Lichtmenge, -farbe und -dauer für deine spezifische Bepflanzung zu finden.</p>
 
@@ -500,3 +492,22 @@
   if (toggle && sidebar) {
     toggle.addEventListener('click', function() {
       sidebar.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
+    });
+  }
+})();
+
+// Active nav link detection
+(function() {
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(function(link) {
+    const href = link.getAttribute('href');
+    if (href && currentPath.endsWith(href)) {
+      link.classList.add('active');
+    }
+  });
+})();
+</script>
+</body>
+</html>

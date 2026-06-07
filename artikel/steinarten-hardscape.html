@@ -66,12 +66,6 @@
   }
 }
 </script>
-
-<meta property="og:locale" content="de_DE" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Aquarium Steinarten und Hardscape – Gestalten mit Stein | Aquaristik Zentrum" />
-<meta name="twitter:description" content="Seiryu Stone, Dragon Stone, Lava Rock: Die besten Steinarten fürs Aquarium und wie du atemberaubende Hardscape-Layouts gestaltest." />
-<meta name="twitter:image" content="https://aquaristik-zentrum.com/images/default-hero.jpg" />
 </head>
 <body>
 <div class="promo-bar" id="promoBar">
@@ -261,8 +255,6 @@
         <span>5 Min. Lesezeit</span>
       </div>
       <div class="body-text">
-<img loading="lazy" src="/images/stein-arten.webp" alt="Aquarium Steinarten und Hardscape – Gestalten mit Stein" class="hero-image" style="width:100%; border-radius:8px; margin:1em 0;" />
-
         <h2>Aquarium Steinarten und Hardscape – Gestalten mit Stein</h2>
 
 <p>Steine sind neben Wurzeln die wichtigsten Gestaltungselemente im Aquascaping. Sie geben dem Aquarium Struktur, schaffen natürliche Landschaften und dienen als Basis für Pflanzen und Dekoration. Die Wahl der richtigen Steinart ist entscheidend für den Look des Beckens – und für die Wasserwerte. Nicht jeder Stein ist für das Aquarium geeignet. Manche geben Mineralien ab und verändern die Wasserhärte, andere sind inert und lassen das Wasser unberührt. In diesem Guide erfährst du alles über die verschiedenen Steinarten, ihre Eigenschaften und wie du sie zu einem harmonischen Hardscape arrangierst.</p>
@@ -500,3 +492,78 @@
     const dropdown = item.querySelector('.dropdown');
     if (link && dropdown && window.innerWidth <= 768) {
       link.addEventListener('click', function(e) {
+        // On mobile, toggle mega-menu accordion instead of navigating
+        if (window.innerWidth <= 768) {
+          // Close all others
+          document.querySelectorAll('.nav-item.mobile-open').forEach(function(other) {
+            if (other !== item) other.classList.remove('mobile-open');
+          });
+          item.classList.toggle('mobile-open');
+          e.preventDefault();
+        }
+      });
+    }
+  });
+})();
+
+// Search toggle
+(function() {
+  const searchToggle = document.getElementById('searchToggle');
+  const searchBar = document.getElementById('searchBar');
+  const searchInput = document.getElementById('searchInput');
+  const searchSubmit = document.getElementById('searchSubmit');
+
+  searchToggle?.addEventListener('click', function() {
+    const isOpen = searchBar?.classList.contains('open');
+    if (isOpen) {
+      searchBar.classList.remove('open');
+      searchToggle.style.display = '';
+    } else {
+      searchBar.classList.add('open');
+      searchToggle.style.display = 'none';
+      setTimeout(function() { searchInput?.focus(); }, 100);
+    }
+  });
+
+  searchSubmit?.addEventListener('click', function() {
+    const query = searchInput?.value?.trim();
+    if (query) {
+      window.location.href = '/?q=' + encodeURIComponent(query);
+    }
+  });
+
+  searchInput?.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') searchSubmit?.click();
+    if (e.key === 'Escape') {
+      searchBar?.classList.remove('open');
+      searchToggle.style.display = '';
+    }
+  });
+})();
+
+// Sidebar toggle (mobile)
+(function() {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.querySelector('.article-sidebar');
+  if (toggle && sidebar) {
+    toggle.addEventListener('click', function() {
+      sidebar.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
+    });
+  }
+})();
+
+// Active nav link detection
+(function() {
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(function(link) {
+    const href = link.getAttribute('href');
+    if (href && currentPath.endsWith(href)) {
+      link.classList.add('active');
+    }
+  });
+})();
+</script>
+</body>
+</html>

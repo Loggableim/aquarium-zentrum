@@ -66,12 +66,6 @@
   }
 }
 </script>
-
-<meta property="og:locale" content="de_DE" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Bodendecker und Teppichpflanzen fürs Aquarium – Der Guide | Aquaristik Zentrum" />
-<meta name="twitter:description" content="Teppichpflanzen wie Cubahaar, Monte Carlo und Zwergnadelsimse: Arten, Pflanzung, Dry-Start-Methode und Pflege für grüne Teppiche." />
-<meta name="twitter:image" content="https://aquaristik-zentrum.com/images/default-hero.jpg" />
 </head>
 <body>
 <div class="promo-bar" id="promoBar">
@@ -261,8 +255,6 @@
         <span>6 Min. Lesezeit</span>
       </div>
       <div class="body-text">
-<img loading="lazy" src="/images/teppich-pflanzen.webp" alt="Bodendecker und Teppichpflanzen fürs Aquarium – Der Guide" class="hero-image" style="width:100%; border-radius:8px; margin:1em 0;" />
-
         <h2>Bodendecker und Teppichpflanzen fürs Aquarium</h2>
 
 <p>Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vieler Aquascaper und Pflanzenliebhaber. Bodendecker und Teppichpflanzen verwandeln den kahlen Bodengrund in eine lebendige, strukturierte Landschaft, die nicht nur atemberaubend aussieht, sondern auch einen positiven Einfluss auf das gesamte Aquarienökosystem hat. Sie bieten Kleinstlebewesen und Jungfischen Unterschlupf, verhindern Bodenanlösungen und sind hervorragende Nährstoffzehrer, die Algen keine Chance lassen. Doch nicht jede Teppichpflanze ist gleich pflegeleicht. Manche Arten wachsen auch ohne CO₂ und starkes Licht, andere brauchen eine High-Tech-Umgebung. In diesem Guide erfährst du alles über die besten Bodendecker für dein Aquarium, ihre Pflegeansprüche und wie du einen geschlossenen Pflanzenteppich kultivierst.</p>
@@ -500,3 +492,98 @@
 
   hamburger?.addEventListener('click', function() {
     const isOpen = navLinks?.classList.contains('open');
+    toggleMenu(!isOpen);
+  });
+
+  overlay?.addEventListener('click', function() {
+    toggleMenu(false);
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navLinks?.classList.contains('open')) {
+      toggleMenu(false);
+    }
+  });
+
+  // Mobile mega-menu accordion: tap to expand
+  document.querySelectorAll('.nav-item').forEach(function(item) {
+    const link = item.querySelector('.nav-link');
+    const dropdown = item.querySelector('.dropdown');
+    if (link && dropdown && window.innerWidth <= 768) {
+      link.addEventListener('click', function(e) {
+        // On mobile, toggle mega-menu accordion instead of navigating
+        if (window.innerWidth <= 768) {
+          // Close all others
+          document.querySelectorAll('.nav-item.mobile-open').forEach(function(other) {
+            if (other !== item) other.classList.remove('mobile-open');
+          });
+          item.classList.toggle('mobile-open');
+          e.preventDefault();
+        }
+      });
+    }
+  });
+})();
+
+// Search toggle
+(function() {
+  const searchToggle = document.getElementById('searchToggle');
+  const searchBar = document.getElementById('searchBar');
+  const searchInput = document.getElementById('searchInput');
+  const searchSubmit = document.getElementById('searchSubmit');
+
+  searchToggle?.addEventListener('click', function() {
+    const isOpen = searchBar?.classList.contains('open');
+    if (isOpen) {
+      searchBar.classList.remove('open');
+      searchToggle.style.display = '';
+    } else {
+      searchBar.classList.add('open');
+      searchToggle.style.display = 'none';
+      setTimeout(function() { searchInput?.focus(); }, 100);
+    }
+  });
+
+  searchSubmit?.addEventListener('click', function() {
+    const query = searchInput?.value?.trim();
+    if (query) {
+      window.location.href = '/?q=' + encodeURIComponent(query);
+    }
+  });
+
+  searchInput?.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') searchSubmit?.click();
+    if (e.key === 'Escape') {
+      searchBar?.classList.remove('open');
+      searchToggle.style.display = '';
+    }
+  });
+})();
+
+// Sidebar toggle (mobile)
+(function() {
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.querySelector('.article-sidebar');
+  if (toggle && sidebar) {
+    toggle.addEventListener('click', function() {
+      sidebar.classList.toggle('open');
+      toggle.classList.toggle('active');
+      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
+    });
+  }
+})();
+
+// Active nav link detection
+(function() {
+  const currentPath = window.location.pathname;
+  document.querySelectorAll('.nav-link').forEach(function(link) {
+    const href = link.getAttribute('href');
+    if (href && currentPath.endsWith(href)) {
+      link.classList.add('active');
+    }
+  });
+})();
+</script>
+</body>
+</html>
