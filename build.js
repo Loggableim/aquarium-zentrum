@@ -1057,8 +1057,8 @@ function buildArticle(slug) {
   const jsonLd = `<script type="application/ld+json">
 ${breadcrumbSchema([
     { label: 'Startseite', url: 'https://aquaristik-zentrum.com/' },
-    { label: a.cat, url: `https://aquaristik-zentrum.com/artikel/einsteiger-aquarium-guide.html` },
-    { label: a.title, url: `https://aquaristik-zentrum.com/artikel/${slug}.html` }
+    { label: a.cat, url: `https://aquaristik-zentrum.com/artikel/einsteiger-aquarium-guide/` },
+    { label: a.title, url: `https://aquaristik-zentrum.com/artikel/${slug}/` }
   ])}
 {
   "@context": "https://schema.org",
@@ -1077,15 +1077,15 @@ ${breadcrumbSchema([
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://aquaristik-zentrum.com/artikel/${slug}.html"
+    "@id": "https://aquaristik-zentrum.com/artikel/${slug}/"
   }
 }
 <\/script>`;
 
   const body = `${breadcrumbHTML([
     { label: 'Startseite', url: 'https://aquaristik-zentrum.com/' },
-    { label: a.cat, url: 'https://aquaristik-zentrum.com/artikel/einsteiger-aquarium-guide.html' },
-    { label: a.title, url: `https://aquaristik-zentrum.com/artikel/${slug}.html` }
+    { label: a.cat, url: 'https://aquaristik-zentrum.com/artikel/einsteiger-aquarium-guide/' },
+    { label: a.title, url: `https://aquaristik-zentrum.com/artikel/${slug}/` }
   ])}
 <div class="article-layout">
     <div class="article-main">
@@ -1106,7 +1106,7 @@ ${breadcrumbSchema([
     ${sidebarHTML}
   </div>`;
 
-  return wrapPage(`${a.title} | Aquaristik Zentrum`, a.excerpt, `https://aquaristik-zentrum.com/artikel/${slug}.html`, `/images/${a.img}`, body, jsonLd);
+  return wrapPage(`${a.title} | Aquaristik Zentrum`, a.excerpt, `https://aquaristik-zentrum.com/artikel/${slug}/`, `/images/${a.img}`, body, jsonLd);
 }
 
 function buildPage(title, desc, canonical, bodyContent, breadcrumbItems) {
@@ -1227,9 +1227,9 @@ function main() {
   const aboutPath = path.join(CONTENT, 'about.html');
   if (fs.existsSync(aboutPath)) {
     const content = fs.readFileSync(aboutPath, 'utf-8').trim();
-    fs.writeFileSync(path.join(OUTPUT, 'about.html'), buildPage('Über Aquaristik Zentrum', 'Erfahre mehr über Aquaristik Zentrum – unseren Blog, unsere Mission und das Team.', 'https://aquaristik-zentrum.com/about.html', content, [
+    fs.writeFileSync(path.join(OUTPUT, 'about.html'), buildPage('Über Aquaristik Zentrum', 'Erfahre mehr über Aquaristik Zentrum – unseren Blog, unsere Mission und das Team.', 'https://aquaristik-zentrum.com/about/', content, [
       { label: 'Startseite', url: 'https://aquaristik-zentrum.com/' },
-      { label: 'Über uns', url: 'https://aquaristik-zentrum.com/about.html' }
+      { label: 'Über uns', url: 'https://aquaristik-zentrum.com/about/' }
     ]));
     console.log('  ✓ about.html');
   }
@@ -1237,9 +1237,9 @@ function main() {
   const imprPath = path.join(CONTENT, 'impressum.html');
   if (fs.existsSync(imprPath)) {
     const content = fs.readFileSync(imprPath, 'utf-8').trim();
-    fs.writeFileSync(path.join(OUTPUT, 'impressum.html'), buildPage('Impressum', 'Impressum der Webseite Aquaristik Zentrum.', 'https://aquaristik-zentrum.com/impressum.html', content, [
+    fs.writeFileSync(path.join(OUTPUT, 'impressum.html'), buildPage('Impressum', 'Impressum der Webseite Aquaristik Zentrum.', 'https://aquaristik-zentrum.com/impressum/', content, [
       { label: 'Startseite', url: 'https://aquaristik-zentrum.com/' },
-      { label: 'Impressum', url: 'https://aquaristik-zentrum.com/impressum.html' }
+      { label: 'Impressum', url: 'https://aquaristik-zentrum.com/impressum/' }
     ]));
     console.log('  ✓ impressum.html');
   }
