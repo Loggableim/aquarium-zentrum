@@ -1259,7 +1259,7 @@
     "date": "7. Juni 2026",
     "generated": true
   },
-  {
+{
     "slug": "wurzeln-holz-aquarium",
     "title": "Aquarium Wurzeln und Holz – Natürliche Dekoration mit Wirkung auf die Wasserwerte",
     "excerpt": "Wurzeln und Holz gehören zu den beliebtesten Dekorationselementen in der Aquaristik. Sie verleihen dem Becken eine natürliche Optik, schaffen Versteckmöglichkeiten und Struktur für Fische und Wirbello…",
@@ -1275,6 +1275,24 @@
     "prod": [],
     "intent": "Ratgeber und Guide: Aquarium Wurzeln und Holz – Natürliche Dekoration mit Wirkung auf die Wasserwerte",
     "date": "7. Juni 2026",
+    "generated": true
+  },
+  {
+    "slug": "aquarium-wasserwechsel-richtig-machen",
+    "title": "Aquarium Wasserwechsel richtig machen – Der ultimative Guide 2026",
+    "excerpt": "Wasserwechsel im Aquarium: Schritt-für-Schritt-Anleitung, Häufigkeit, Technik und professionelle Tipps für klares, gesundes Wasser – Guide 2026.",
+    "topic": "Aquarium Wasserwechsel richtig machen",
+    "cat": "Pflege",
+    "categoryGroup": "Pflege & Gesundheit",
+    "catColor": "#ffd93d",
+    "catEmoji": "💊",
+    "readingTime": 12,
+    "img": "wasserwechsel-guide.webp",
+    "toc": [],
+    "related": ["wasserwerte-aquarium-guide", "wassertest-wasserpflege", "einsteiger-aquarium-guide"],
+    "prod": [],
+    "intent": "Ratgeber und Guide: Aquarium Wasserwechsel richtig machen – Der ultimative Guide 2026",
+    "date": "9. Juni 2026",
     "generated": true
   }
 ]
