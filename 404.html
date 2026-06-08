@@ -1,17 +1,499 @@
-     1|<!DOCTYPE html>
-     2|<html lang="de">
-     3|<head>
-     4|  <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
 <meta name="google-adsense-account" content="ca-pub-9094916118868532">
-     5|<meta name="viewport" content="width=device-width, initial-scale=1.0">
-     6|<title>Seite nicht gefunden – Aquaristik Zentrum</title>
-     7|<meta name="description" content="Die gesuchte Seite existiert leider nicht. Finde dein Thema mit der Suche oder starte auf der Startseite.">
-     8|<meta name="robots" content="noindex, follow">
-     9|<link rel="canonical" href="https://aquaristik-zentrum.com/404.html">
-    10|<meta property="og:title" content="Seite nicht gefunden – Aquaristik Zentrum">
-    11|<meta property="og:description" content="Die gesuchte Seite existiert leider nicht. Finde dein Thema mit der Suche oder starte auf der Startseite.">
-    12|<meta property="og:type" content="website">
-    13|<meta property="og:url" content="https://aquaristik-zentrum.com/404.html">
-    14|<meta property="og:site_name" content="Aquaristik Zentrum">
-    15|
-    16|
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seite nicht gefunden – Aquaristik Zentrum</title>
+<meta name="description" content="Die gesuchte Seite existiert leider nicht. Finde dein Thema mit der Suche oder starte auf der Startseite.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://aquaristik-zentrum.com/404.html">
+<meta property="og:title" content="Seite nicht gefunden – Aquaristik Zentrum">
+<meta property="og:description" content="Die gesuchte Seite existiert leider nicht. Finde dein Thema mit der Suche oder starte auf der Startseite.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aquaristik-zentrum.com/404.html">
+<meta property="og:site_name" content="Aquaristik Zentrum">
+
+<link rel="stylesheet" href="/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.webp">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
+<style>
+  /* ─── 404 Spezifisch ─── */
+  .error-page { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh; padding: 4rem 1.5rem; text-align: center; flex: 1; }
+  .error-code { font-size: clamp(5rem, 15vw, 10rem); font-weight: 900; line-height: 1; background: linear-gradient(135deg, #06b6d4, #0d9488, #ff6b6b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: -3px; margin-bottom: 0.5rem; }
+  .error-fish { font-size: clamp(3rem, 8vw, 5rem); margin-bottom: 0.5rem; display: block; }
+  .error-title { font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800; margin-bottom: 0.75rem; letter-spacing: -0.5px; }
+  .error-text { color: var(--text-muted); font-size: 1.1rem; max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; }
+  .error-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem; }
+  .error-btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: var(--radius); font-weight: 600; font-size: 1rem; transition: all var(--transition); border: none; cursor: pointer; }
+  .error-btn-primary { background: linear-gradient(135deg, #06b6d4, #0d9488); color: #fff; }
+  .error-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(6,182,212,0.3); color: #fff; }
+  .error-btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); }
+  .error-btn-secondary:hover { background: var(--border); color: var(--text); transform: translateY(-2px); }
+  .error-search-wrap { width: 100%; max-width: 500px; margin: 0 auto 2.5rem; position: relative; }
+  .error-search-wrap input { width: 100%; padding: 1rem 1.25rem; padding-right: 3.5rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text); font-size: 1rem; font-family: var(--font); outline: none; transition: border var(--transition); }
+  .error-search-wrap input:focus { border-color: var(--cyan); }
+  .error-search-wrap input::placeholder { color: var(--text-dim); }
+  .error-search-btn { position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: linear-gradient(135deg, #06b6d4, #0d9488); border: none; color: #fff; width: 2.5rem; height: 2.5rem; border-radius: var(--radius-sm); cursor: pointer; font-size: 1.1rem; display: flex; align-items: center; justify-content: center; transition: all var(--transition); }
+  .error-search-btn:hover { transform: translateY(-50%) scale(1.05); }
+  .error-links { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; max-width: 600px; }
+  .error-link { padding: 0.5rem 1rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.9rem; color: var(--text-muted); transition: all var(--transition); }
+  .error-link:hover { border-color: var(--cyan); color: var(--cyan); background: rgba(6,182,212,0.05); }
+  .error-countdown { margin-top: 2rem; font-size: 0.85rem; color: var(--text-dim); }
+  .error-countdown a { color: var(--cyan); text-decoration: underline; }
+</style>
+
+<meta property="og:image" content="https://aquaristik-zentrum.com/images/default-hero.jpg" />
+<meta property="og:locale" content="de_DE" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Seite nicht gefunden – Aquaristik Zentrum" />
+<meta name="twitter:description" content="Die gesuchte Seite existiert leider nicht. Finde dein Thema mit der Suche oder starte auf der Startseite." />
+<meta name="twitter:image" content="https://aquaristik-zentrum.com/images/default-hero.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://aquaristik-zentrum.com/404/#article",
+      "headline": "Seite nicht gefunden – Aquaristik Zentrum",
+      "description": "Die gesuchte Seite existiert leider nicht. Finde dein Thema mit der Suche oder starte auf der Startseite.",
+      "image": "https://aquaristik-zentrum.com/images/default-hero.jpg",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "author": {
+        "@type": "Organization",
+        "name": "Aquaristik Zentrum — Alles rund ums Aquarium"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Aquaristik Zentrum — Alles rund ums Aquarium"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://aquaristik-zentrum.com/404/"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aquaristik-zentrum.com/#website",
+      "url": "https://aquaristik-zentrum.com/",
+      "name": "Aquaristik Zentrum — Alles rund ums Aquarium",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Aquaristik Zentrum — Alles rund ums Aquarium"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://aquaristik-zentrum.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "404",
+          "item": "https://aquaristik-zentrum.com/404/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<img src="images/hero-dieses-aquarium-gibt-es-nicht.webp" alt="Dieses Aquarium gibt es nicht" class="article-hero" />
+
+<div class="promo-bar" id="promoBar">
+  🐟 Neu: Nano Aquarium Guide – Mini-Becken bis 30 Liter
+  <a href="/artikel/nano-aquarium-guide.html">→ Jetzt lesen</a>
+</div>
+
+<div class="nav-main" id="navMain">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="/" class="nav-logo">
+        <div class="mark">🐠</div>
+        <div class="name"><span>Aqua</span>ristik</div>
+      </a>
+
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <div class="nav-item" data-category="einsteiger">
+          <a href="/artikel/einsteiger-aquarium-guide.html" class="nav-link">🐟 Einsteiger <span class="count">8</span></a>
+          <div class="dropdown">
+            <div class="cat">
+              <h4>🐟 Einsteiger-Guides</h4>
+              <a href="/artikel/einsteiger-aquarium-guide.html"><span class="dot" style="background:#06b6d4"></span> Einsteiger-Guide <small>Beckengröße, Technik, Besatz</small></a>
+              <a href="/artikel/bodengrund-aquarium-guide.html"><span class="dot" style="background:#06b6d4"></span> Bodengrund-Guide <small>Kies, Sand, Soil</small></a>
+              <a href="/artikel/beckenformen-groessen.html"><span class="dot" style="background:#06b6d4"></span> Beckenformen <small>Größen & Formen</small></a>
+              <a href="/artikel/wurzeln-holz-aquarium.html"><span class="dot" style="background:#06b6d4"></span> Wurzeln & Holz <small>Dekoration</small></a>
+              <a href="/artikel/gesellschaftsbecken-einrichten.html"><span class="dot" style="background:#06b6d4"></span> Gesellschaftsbecken <small>Einrichtung</small></a>
+            </div>
+            <div class="cat">
+              <h4>⭐ Empfohlen</h4>
+              <a href="/artikel/bodengrund-aquarium-guide.html" class="featured-card">
+                <div class="thumb" style="background-image:url('/images/bodengrund-arten.png')"></div>
+                <div class="info"><h5>Bodengrund-Guide</h5><p>Die richtige Substratwahl</p></div>
+              </a>
+            </div>
+            <div class="cat">
+              <h4>📸 Neuester</h4>
+              <a href="/artikel/beckenformen-groessen.html" class="featured-card">
+                <div class="thumb" style="background:linear-gradient(135deg,#06b6d4,#0891b2)"></div>
+                <div class="info"><h5>Beckenformen-Guide</h5><p>Das richtige Becken wählen</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-category="pflanzen">
+          <a href="/artikel/aquarienpflanzen-anfaenger.html" class="nav-link">🌿 Pflanzen <span class="count">8</span></a>
+          <div class="dropdown" style="grid-template-columns:1.5fr 1fr 1fr;">
+            <div class="cat">
+              <h4>🌿 Pflanzen</h4>
+              <a href="/artikel/aquarienpflanzen-anfaenger.html"><span class="dot" style="background:#10b981"></span> Aquarienpflanzen <small>Pflegeleichte Arten</small></a>
+              <a href="/artikel/rote-aquarienpflanzen.html"><span class="dot" style="background:#10b981"></span> Rote Pflanzen <small>Arten & Pflege</small></a>
+              <a href="/artikel/bodendecker-teppichpflanzen.html"><span class="dot" style="background:#10b981"></span> Teppichpflanzen <small>Bodendecker-Guide</small></a>
+              <a href="/artikel/pflanzenvermehrung-aquarium.html"><span class="dot" style="background:#10b981"></span> Pflanzenvermehrung <small>Nachzucht & Teilung</small></a>
+            </div>
+            <div class="cat">
+              <h4>🪨 Aquascaping</h4>
+              <a href="/artikel/aquascaping-anfaenger.html"><span class="dot" style="background:#0d9488"></span> Aquascaping <small>Hardscape & Gestaltung</small></a>
+              <a href="/artikel/steinarten-hardscape.html"><span class="dot" style="background:#0d9488"></span> Steine & Hardscape <small>Steinarten</small></a>
+            </div>
+            <div class="cat">
+              <h4>💧 CO₂ & Düngung</h4>
+              <a href="/artikel/co2-im-aquarium.html"><span class="dot" style="background:#2dd4bf"></span> CO₂-Guide <small>Anlage & Diffusor</small></a>
+              <a href="/artikel/aquarium-duengung-guide.html"><span class="dot" style="background:#2dd4bf"></span> Düngung <small>NPK, Eisen, Tabs</small></a>
+              <a href="/artikel/co2-einsteiger-guide.html"><span class="dot" style="background:#2dd4bf"></span> CO₂ Einsteiger <small>Einfach starten</small></a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-category="technik">
+          <a href="/artikel/aquarium-technik-ueberblick.html" class="nav-link">⚙️ Technik <span class="count">8</span></a>
+          <div class="dropdown" style="grid-template-columns:1.5fr 1fr 1fr 1fr;">
+            <div class="cat">
+              <h4>⚙️ Equipment</h4>
+              <a href="/artikel/aquarium-technik-ueberblick.html"><span class="dot" style="background:#8b5cf6"></span> Technik-Überblick <small>Filter, Licht, Heizung</small></a>
+              <a href="/artikel/aquarium-filter-guide.html"><span class="dot" style="background:#8b5cf6"></span> Filter-Guide <small>Außen-, Innenfilter</small></a>
+              <a href="/artikel/heizung-temperatur-aquarium.html"><span class="dot" style="background:#8b5cf6"></span> Heizung <small>Heizstäbe & Temperatur</small></a>
+              <a href="/artikel/stroemung-im-aquarium.html"><span class="dot" style="background:#8b5cf6"></span> Strömung <small>Pumpen & Wellen</small></a>
+            </div>
+            <div class="cat">
+              <h4>💡 Licht & CO₂</h4>
+              <a href="/artikel/aquarium-beleuchtung-guide.html"><span class="dot" style="background:#a78bfa"></span> Beleuchtung <small>LED, T5, Spektrum</small></a>
+              <a href="/artikel/co2-im-aquarium.html"><span class="dot" style="background:#a78bfa"></span> CO₂-Guide <small>Anlage, Diffusor</small></a>
+            </div>
+            <div class="cat">
+              <h4>💧 Wasser</h4>
+              <a href="/artikel/osmoseanlage-wasseraufbereitung.html"><span class="dot" style="background:#38bdf8"></span> Osmose <small>Wasseraufbereitung</small></a>
+              <a href="/artikel/wassertest-wasserpflege.html"><span class="dot" style="background:#38bdf8"></span> Wassertests <small>pH, GH, KH, NO₂</small></a>
+            </div>
+            <div class="cat">
+              <h4>⭐ Empfohlen</h4>
+              <a href="/artikel/aquarium-beleuchtung-guide.html" class="featured-card">
+                <div class="thumb" style="background-image:url('/images/beleuchtung.png')"></div>
+                <div class="info"><h5>Beleuchtung</h5><p>LED, T5, HQI im Vergleich</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-category="tiere">
+          <a href="/artikel/garnelen-im-aquarium.html" class="nav-link">🦐 Tiere <span class="count">8</span></a>
+          <div class="dropdown" style="grid-template-columns:1.5fr 1fr 1fr 1fr;">
+            <div class="cat">
+              <h4>🦐 Garnelen</h4>
+              <a href="/artikel/garnelen-im-aquarium.html"><span class="dot" style="background:#ff6b6b"></span> Garnelen-Guide <small>Haltung, Pflege, Zucht</small></a>
+            </div>
+            <div class="cat">
+              <h4>🐟 Fische</h4>
+              <a href="/artikel/vergesellschaftung-aquarienfische.html"><span class="dot" style="background:#ec4899"></span> Vergesellschaftung <small>Fisch-Kombos</small></a>
+              <a href="/artikel/lebendgebärende-zahnkarpfen.html"><span class="dot" style="background:#ec4899"></span> Lebendgebärende <small>Guppys, Platys</small></a>
+              <a href="/artikel/fische-fortgeschrittene.html"><span class="dot" style="background:#ec4899"></span> Fische für Profis <small>Diskus, Skalare</small></a>
+              <a href="/artikel/nachzucht-fische.html"><span class="dot" style="background:#ec4899"></span> Nachzucht <small>Fischzucht</small></a>
+            </div>
+            <div class="cat">
+              <h4>🍽️ Ernährung</h4>
+              <a href="/artikel/aquarium-futter-ernaehrung.html"><span class="dot" style="background:#a855f7"></span> Futter-Guide <small>Flocken bis Frost</small></a>
+            </div>
+            <div class="cat">
+              <h4>⭐ Empfohlen</h4>
+              <a href="/artikel/vergesellschaftung-aquarienfische.html" class="featured-card">
+                <div class="thumb" style="background-image:url('/images/vergesellschaftung-vertraeglich.png')"></div>
+                <div class="info"><h5>Vergesellschaftung</h5><p>Wer verträgt sich?</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-item" data-category="pflege">
+          <a href="/artikel/algen-im-aquarium.html" class="nav-link">💊 Pflege <span class="count">8</span></a>
+          <div class="dropdown">
+            <div class="cat">
+              <h4>💊 Gesundheit</h4>
+              <a href="/artikel/algen-im-aquarium.html"><span class="dot" style="background:#ffd93d"></span> Algen-Guide <small>Erkennen & bekämpfen</small></a>
+              <a href="/artikel/fischkrankheiten-aquarium-guide.html"><span class="dot" style="background:#ffd93d"></span> Fischkrankheiten <small>Diagnose & Behandlung</small></a>
+              <a href="/artikel/quarantaene-medikamente.html"><span class="dot" style="background:#ffd93d"></span> Quarantäne <small>Medikamente & Schutz</small></a>
+            </div>
+            <div class="cat">
+              <h4>🧹 Wartung</h4>
+              <a href="/artikel/aquarium-pflegeroutine-guide.html"><span class="dot" style="background:#ffd93d"></span> Pflegeroutine <small>Wasserwechsel & Filter</small></a>
+              <a href="/artikel/wassertest-wasserpflege.html"><span class="dot" style="background:#ffd93d"></span> Wassertests <small>Kontrolle & Pflege</small></a>
+            </div>
+            <div class="cat">
+              <h4>🐌 Nützlinge</h4>
+              <a href="/artikel/schnecken-im-aquarium.html"><span class="dot" style="background:#fbbf24"></span> Schnecken <small>Arten & Pflege</small></a>
+              <a href="/artikel/algenfresser-portrait.html"><span class="dot" style="background:#84cc16"></span> Algenfresser <small>Fische & Wirbellose</small></a>
+            </div>
+            <div class="cat">
+              <h4>📸 Neu</h4>
+              <a href="/artikel/schnecken-im-aquarium.html" class="featured-card">
+                <div class="thumb" style="background-image:url('/images/schnecken-im-aquarium.png')"></div>
+                <div class="info"><h5>Schnecken-Guide</h5><p>Nützliche Helfer im Aquarium</p></div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="/artikel/" class="nav-link">📰 Alle <span class="count">41</span></a>
+        <a href="/about.html" class="nav-link">ℹ️ Über</a>
+      </div>
+    </div>
+
+    <div class="nav-right" id="navRight">
+      <div class="search-wrapper">
+        <button class="search" id="searchToggle" aria-label="Suchen">🔍</button>
+        <div class="search-bar" id="searchBar">
+          <input type="text" placeholder="Artikel durchsuchen…" id="searchInput" aria-label="Suchbegriff">
+          <button id="searchSubmit" aria-label="Suchen starten">→</button>
+        </div>
+      </div>
+      <a href="mailto:hallo@aquaristik-zentrum.com?subject=Newsletter" class="cta">📬 Abonnieren</a>
+    </div>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+  </div>
+</div>
+
+<main class="error-page">
+  <span class="error-fish">🐠</span>
+  <div class="error-code">404</div>
+  <h1 class="error-title">Dieses Aquarium gibt es nicht</h1>
+  <p class="error-text">
+    Die Seite, die du suchst, wurde entweder umgezogen, umbenannt oder existiert nicht mehr.
+    Aber keine Sorge – hier findest du dich schnell wieder zurecht.
+  </p>
+
+  <div class="error-actions">
+    <a href="/" class="error-btn error-btn-primary">🏠 Zur Startseite</a>
+    <a href="/artikel/" class="error-btn error-btn-secondary">📰 Alle Artikel</a>
+  </div>
+
+  <div class="error-search-wrap">
+    <input type="text" id="errorSearchInput" placeholder="Suchbegriff eingeben…" autofocus>
+    <button class="error-search-btn" id="errorSearchBtn">→</button>
+  </div>
+
+  <div class="error-links">
+    <a href="/artikel/einsteiger-aquarium-guide.html" class="error-link">🐟 Einsteiger-Guide</a>
+    <a href="/artikel/aquarienpflanzen-anfaenger.html" class="error-link">🌿 Aquarienpflanzen</a>
+    <a href="/artikel/garnelen-im-aquarium.html" class="error-link">🦐 Garnelen</a>
+    <a href="/artikel/aquarium-filter-guide.html" class="error-link">⚙️ Filter-Guide</a>
+    <a href="/artikel/algen-im-aquarium.html" class="error-link">💊 Algen-Guide</a>
+    <a href="/artikel/aquascaping-anfaenger.html" class="error-link">🪨 Aquascaping</a>
+    <a href="/artikel/beckenformen-groessen.html" class="error-link">📐 Beckenformen</a>
+    <a href="/artikel/vergesellschaftung-aquarienfische.html" class="error-link">🐟 Vergesellschaftung</a>
+  </div>
+
+  <p class="error-countdown">
+    ⏱️ Weiterleitung zur <a href="/">Startseite</a> in <span id="countdown">12</span> Sekunden…
+  </p>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">
+        <div style="width:28px;height:28px;background:linear-gradient(135deg,#06b6d4,#0d9488);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.8rem;">🐠</div>
+        <div style="font-weight:900;font-size:1rem;letter-spacing:-0.3px;"><span style="color:#06b6d4;">Aqua</span>ristik</div>
+      </div>
+      <p>Dein unabhängiger Blog rund um die Aquaristik. Wir teilen praxisnahe Tipps, Erfahrungsberichte und Inspiration für dein Aquarium – vom Einsteiger bis zum Profi.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Seiten</h4>
+      <ul>
+        <li><a href="/">Startseite</a></li>
+        <li><a href="/artikel/">Artikel</a></li>
+        <li><a href="/about.html">Über uns</a></li>
+        <li><a href="/impressum.html">Impressum</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kategorien</h4>
+      <ul>
+        <li><a href="/artikel/einsteiger-aquarium-guide.html">Einsteiger</a></li>
+        <li><a href="/artikel/aquascaping-anfaenger.html">Aquascaping</a></li>
+        <li><a href="/artikel/garnelen-im-aquarium.html">Garnelen</a></li>
+        <li><a href="/artikel/bodengrund-aquarium-guide.html">Bodengrund</a></li>
+        <li><a href="/artikel/fischkrankheiten-aquarium-guide.html">Fischkrankheiten</a></li>
+        <li><a href="/artikel/aquarium-pflegeroutine-guide.html">Pflegeroutine</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025-2026 Aquaristik Zentrum. Alle Rechte vorbehalten.</p>
+    <p class="affiliate-hinweis">* Diese Seite enthält Affiliate-Links (Amazon DE). Als Amazon-Partner verdienen wir an qualifizierten Verkäufen.</p>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-inner">
+    <p>🍪 Diese Website verwendet Cookies und Dienste von Drittanbietern. Mit der Nutzung stimmst du der Verwendung von Cookies zu. <a href="/impressum.html">Mehr erfahren</a></p>
+    <button class="cookie-btn" id="cookieAccept">Verstanden</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  // ── Countdown Redirect ──
+  var seconds = 12;
+  var countEl = document.getElementById('countdown');
+  var timer = setInterval(function() {
+    seconds--;
+    if (countEl) countEl.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(timer);
+      window.location.href = '/';
+    }
+  }, 1000);
+
+  // ── 404 Search ──
+  var searchInput = document.getElementById('errorSearchInput');
+  var searchBtn = document.getElementById('errorSearchBtn');
+
+  function doSearch() {
+    var query = searchInput.value.trim();
+    if (query) {
+      // Stop countdown on manual search
+      clearInterval(timer);
+      window.location.href = '/?q=' + encodeURIComponent(query);
+    }
+  }
+
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') doSearch();
+  });
+
+  // ── Cookie Banner ──
+  var banner = document.getElementById('cookieBanner');
+  var acceptBtn = document.getElementById('cookieAccept');
+  if (banner && !localStorage.getItem('cookieConsent')) {
+    banner.classList.add('show');
+  }
+  acceptBtn?.addEventListener('click', function() {
+    localStorage.setItem('cookieConsent', 'true');
+    banner.classList.remove('show');
+  });
+
+  // ── Mobile Nav ──
+  var hamburger = document.getElementById('navHamburger');
+  var navLinks = document.getElementById('navLinks');
+  var overlay = document.getElementById('navOverlay');
+
+  function toggleMenu(open) {
+    hamburger?.classList.toggle('active', open);
+    navLinks?.classList.toggle('open', open);
+    overlay?.classList.toggle('active', open);
+    hamburger?.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  hamburger?.addEventListener('click', function() {
+    var isOpen = navLinks?.classList.contains('open');
+    toggleMenu(!isOpen);
+  });
+
+  overlay?.addEventListener('click', function() { toggleMenu(false); });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navLinks?.classList.contains('open')) toggleMenu(false);
+  });
+
+  document.querySelectorAll('.nav-item').forEach(function(item) {
+    var link = item.querySelector('.nav-link');
+    var dropdown = item.querySelector('.dropdown');
+    if (link && dropdown && window.innerWidth <= 768) {
+      link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          document.querySelectorAll('.nav-item.mobile-open').forEach(function(other) {
+            if (other !== item) other.classList.remove('mobile-open');
+          });
+          item.classList.toggle('mobile-open');
+          e.preventDefault();
+        }
+      });
+    }
+  });
+
+  // ── Search Toggle ──
+  var searchToggle = document.getElementById('searchToggle');
+  var searchBar = document.getElementById('searchBar');
+  var searchInputNav = document.getElementById('searchInput');
+  var searchSubmit = document.getElementById('searchSubmit');
+
+  searchToggle?.addEventListener('click', function() {
+    var isOpen = searchBar?.classList.contains('open');
+    if (isOpen) {
+      searchBar.classList.remove('open');
+      searchToggle.style.display = '';
+    } else {
+      searchBar.classList.add('open');
+      searchToggle.style.display = 'none';
+      setTimeout(function() { searchInputNav?.focus(); }, 100);
+    }
+  });
+
+  searchSubmit?.addEventListener('click', function() {
+    var query = searchInputNav?.value?.trim();
+    if (query) {
+      window.location.href = '/?q=' + encodeURIComponent(query);
+    }
+  });
+
+  searchInputNav?.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') searchSubmit?.click();
+    if (e.key === 'Escape') {
+      searchBar?.classList.remove('open');
+      searchToggle.style.display = '';
+    }
+  });
+
+  // ── Handle pathname for 404 logging — try to extract a search term ──
+  var path = window.location.pathname;
+  if (path && path !== '/404.html') {
+    var segments = path.replace(/\.html$/, '').split('/').filter(Boolean);
+    var last = segments[segments.length - 1];
+    if (last && last.length > 2) {
+      // Pre-fill the search input with the attempted path as hint
+      var hint = decodeURIComponent(last).replace(/[-_]/g, ' ');
+      if (searchInput && !searchInput.value) {
+        searchInput.placeholder = 'Meintest du: "' + hint + '"?';
+      }
+    }
+  }
+})();
+</script>
+</body>
+</html>
