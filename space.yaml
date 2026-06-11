@@ -1,0 +1,11 @@
+color: '#00bcd4'
+description: 'Aquaristik Portal — Ratgeber, Produktvergleiche und Tipps rund ums Aquarium'
+emoji: '🐠'
+model:
+  default: deepseek-v4-flash
+  provider: opencode-go
+name: aquaristik-zentrum
+slug: aquarium-zentrum
+personality: 'CEO — direkt, praktisch, SEO-stark. Vollgas.'
+project_dir: C:\HermesPortable\home\spaces\aquarium-zentrum
+reasoning_effort: ''
