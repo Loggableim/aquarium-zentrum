@@ -934,34 +934,6 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 0.35rem;
   line-height: 1.5;
 }
-/* ─── HERO QUICK TICKER ─── */
-.hero-ticker {
-  max-width: var(--max-width); margin: 0 auto; padding: 1.05rem 2rem 0;
-  overflow: hidden;
-}
-.ticker-track {
-  display: flex; gap: 0.75rem; width: max-content;
-  animation: tickerMove 38s linear infinite;
-}
-.hero-ticker:hover .ticker-track { animation-play-state: paused; }
-.ticker-item {
-  flex: 0 0 auto; display: inline-flex; align-items: center; gap: 0.55rem;
-  color: var(--text-on-card); font-size: 0.82rem; font-weight: 800;
-  padding: 0.64rem 0.95rem; border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.045);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
-}
-.ticker-item span { color: var(--cyan); transition: transform var(--transition); }
-.ticker-item:hover { color: #fff; border-color: rgba(6,182,212,0.45); background: rgba(6,182,212,0.10); }
-.ticker-item:hover span { transform: translateX(3px); }
-@keyframes tickerMove {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
 /* ─── INTENT SECTION (Schnelleinstieg) ─── */
 .intent-section {
   max-width: var(--max-width);
@@ -1456,8 +1428,6 @@ img { max-width: 100%; height: auto; display: block; }
   .topic-rotator { min-height: 190px; }
   .hero-modern .hero-side .side-item { padding: 0.75rem; }
   .hero-modern .hero-side .side-item .thumb { width: 56px; height: 42px; }
-  .hero-ticker { padding: 0.85rem 1rem 0; }
-  .ticker-item { font-size: 0.75rem; padding: 0.52rem 0.78rem; }
   .shopping-hub { padding: 0.9rem 1rem 0; }
   .shopping-panel { border-radius: 20px; padding: 1rem; }
   .shopping-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
