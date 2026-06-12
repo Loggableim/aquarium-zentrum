@@ -837,22 +837,7 @@ function buildIndex() {
   // Hero: Magazine-style editorial layout with featured story + secondary grid + topic bar
   const heroHTML = buildMagazineHero();
 
-  const tickerItems = [
-    ['Einsteiger-Guide', '/artikel/einsteiger-aquarium-guide.html'],
-    ['Aquarium einfahren', '/artikel/aquarium-einfahren-nitritpeak.html'],
-    ['Wasserwerte prüfen', '/artikel/wasserwerte-aquarium-guide.html'],
-    ['Pflanzen wählen', '/artikel/aquarienpflanzen-anfaenger.html'],
-    ['Filter verstehen', '/artikel/aquarium-filter-guide.html'],
-    ['Fische kombinieren', '/artikel/vergesellschaftung-aquarienfische.html'],
-    ['Algen stoppen', '/artikel/algen-im-aquarium.html'],
-    ['DIY Aquarium bauen', '/artikel/diy-aquarium-bauen.html'],
-  ];
-  const tickerTrack = [...tickerItems, ...tickerItems]
-    .map(([label, url]) => `<a href="${url}" class="ticker-item">${label}<span>→</span></a>`)
-    .join('');
-  const heroTickerHTML = `<div class="hero-ticker" aria-label="Schnelleinstiege">
-    <div class="ticker-track">${tickerTrack}</div>
-  </div>`;
+  const intentSectionHTML = buildIntentSection();
 
   const shoppingHubHTML = `<section class="shopping-hub" aria-label="Amazon Shopping-Guide für Aquarium-Zubehör">
   <div class="shopping-panel">
@@ -895,14 +880,20 @@ function buildIndex() {
 
   // Category sections
   let catSections = '';
+  const MAX_VISIBLE = 6;
   for (const cat of CATEGORIES) {
+    const visibleSlugs = cat.cards.slice(0, MAX_VISIBLE);
+    const remainder = cat.cards.length - MAX_VISIBLE;
     let cardsHTML = '';
-    for (const slug of cat.cards) {
+    for (const slug of visibleSlugs) {
       const a = ARTICLES[slug];
       if (!a) continue;
       cardsHTML += cardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.date, a.readingTime);
     }
-    const catGridStyle = cat.cards.length === 2 ? ' style="grid-template-columns:repeat(2,1fr);"' : '';
+    const allLink = remainder > 0
+      ? `<div class="show-all-wrapper"><a href="/artikel/" class="show-all-link">→ Alle ${cat.count} Artikel in "${cat.name}" anzeigen</a></div>`
+      : '';
+    const catGridStyle = visibleSlugs.length === 2 ? ' style="grid-template-columns:repeat(2,1fr);"' : '';
     catSections += `<section class="mp-section">
       <div class="section-title">
         <h3><span class="emoji">${cat.emoji}</span> ${cat.name}</h3>
@@ -912,6 +903,7 @@ function buildIndex() {
       <div class="card-grid"${catGridStyle}>
         ${cardsHTML}
       </div>
+      ${allLink}
     </section>\n`;
   }
 
@@ -952,29 +944,15 @@ function buildIndex() {
     </div>
   </section>`;
 
-  // Newsletter 2
-  const nlGlow2 = `<div class="newsletter-glow">
-    <div class="nl-inner">
-      <div class="nl-text">
-        <h3>🐟 Bereit für dein Traum-Aquarium?</h3>
-        <p>Melde dich an und erhalte die besten Tipps, Tricks und Guides direkt in dein Postfach.</p>
-      </div>
-      <div class="nl-cta">
-        <a href="mailto:hallo@aquaristik-zentrum.com?subject=Newsletter" class="btn-glow">Newsletter abonnieren →</a>
-      </div>
-    </div>
-  </div>`;
-
   const body = `<main class="megapage">
 <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;white-space:nowrap;">Aquaristik Zentrum – Alles rund ums Aquarium</h1>
 ${heroHTML}
-${heroTickerHTML}
-${shoppingHubHTML}
-${nlGlow}
+${intentSectionHTML}
 ${edsPickHTML}
 ${catSections}
 ${topicsSection}
-${nlGlow2}
+${shoppingHubHTML}
+${nlGlow}
 </main>`;
 
   return wrapPage(
@@ -1203,6 +1181,36 @@ function buildMagazineHero() {
       <span class="mag-topics-label">Themen</span>
       <div class="mag-topics-list">
         ${topicsHTML}
+      </div>
+    </div>
+  </section>`;
+}
+
+// ── INTENT SECTION (Schnelleinstieg – ersetzt Ticker) ──
+function buildIntentSection() {
+  const intents = [
+    { emoji: '🐟', title: 'Ich bin Anfänger', desc: 'Erstes Aquarium einrichten', url: '/artikel/einsteiger-aquarium-guide.html' },
+    { emoji: '🌿', title: 'Ich will Pflanzen', desc: 'Arten, Pflege & Düngung', url: '/artikel/aquarienpflanzen-anfaenger.html' },
+    { emoji: '💧', title: 'Ich habe Algen', desc: 'Algen erkennen & bekämpfen', url: '/artikel/algen-im-aquarium.html' },
+    { emoji: '⚙️', title: 'Ich brauche Technik', desc: 'Filter, Licht, CO₂ & Co.', url: '/artikel/aquarium-technik-ueberblick.html' },
+    { emoji: '🪨', title: 'Ich will Aquascapen', desc: 'Hardscape & Gestaltung', url: '/artikel/aquascaping-anfaenger.html' },
+    { emoji: '🩺', title: 'Mein Fisch ist krank', desc: 'Symptome & Behandlung', url: '/artikel/fischkrankheiten-aquarium-guide.html' },
+  ];
+  const cards = intents.map((intent, i) =>
+    `<a href="${intent.url}" class="intent-card" style="--delay:${i * 0.06}s">
+      <span class="intent-emoji">${intent.emoji}</span>
+      <strong class="intent-title">${intent.title}</strong>
+      <span class="intent-desc">${intent.desc}</span>
+    </a>`
+  ).join('');
+  return `<section class="intent-section" aria-label="Schnelleinstieg">
+    <div class="intent-inner">
+      <div class="intent-head">
+        <span class="mag-eyebrow">Schnelleinstieg</span>
+        <h2>Was beschäftigt dich?</h2>
+      </div>
+      <div class="intent-grid">
+        ${cards}
       </div>
     </div>
   </section>`;
