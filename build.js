@@ -34,7 +34,7 @@ function amazonAffiliateUrl(ref) {
 }
 
 // ── Helpers ──
-function cardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
+function cardHTML(slug, title, excerpt, img, cat, catColor, readingTime) {
   const imgStyle = img.startsWith('linear-gradient')
     ? `background:${img}`
     : `background-image:url('/images/${img}')`;
@@ -47,7 +47,6 @@ function cardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
       ${readingTime ? `<span class="read-badge">${readingTime} Min</span>` : ''}
     </div>
     <div class="art-body">
-      <span class="date">${date}</span>
       <h4>${title}</h4>
       <p>${excerpt}</p>
       <span class="read-link">Weiterlesen →</span>
@@ -55,7 +54,7 @@ function cardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
   </a>`;
 }
 
-function heroCardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
+function heroCardHTML(slug, title, excerpt, img, cat, catColor, readingTime) {
   const imgStyle = img.startsWith('linear-gradient')
     ? `background:${img}`
     : `background-image:url('/images/${img}')`;
@@ -69,7 +68,7 @@ function heroCardHTML(slug, title, excerpt, img, cat, catColor, date, readingTim
       <span class="hero-card-tag" style="${catStyle}">${cat}</span>
       <h3>${title}</h3>
       <p>${excerpt}</p>
-      <span class="hero-card-meta">${date} · ${readingTime} Min Lesezeit</span>
+      <span class="hero-card-meta">${readingTime} Min Lesezeit</span>
     </div>
   </a>`;
 }
@@ -864,7 +863,7 @@ function buildIndex() {
   for (const slug of picks) {
     const a = ARTICLES[slug];
     if (!a) continue;
-    picksHTML += heroCardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.date, a.readingTime);
+    picksHTML += heroCardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.readingTime);
   }
 
   const edsPickHTML = `<section class="mp-section">
@@ -888,7 +887,7 @@ function buildIndex() {
     for (const slug of visibleSlugs) {
       const a = ARTICLES[slug];
       if (!a) continue;
-      cardsHTML += cardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.date, a.readingTime);
+      cardsHTML += cardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.readingTime);
     }
     const allLink = remainder > 0
       ? `<div class="show-all-wrapper"><a href="/artikel/" class="show-all-link">→ Alle ${cat.count} Artikel in "${cat.name}" anzeigen</a></div>`
@@ -1072,8 +1071,6 @@ ${breadcrumbSchema([
       <div class="meta">
         <span>👤 Alexander</span>
         <span class="sep">·</span>
-        <span>${a.date}</span>
-        <span class="sep">·</span>
         <span>${a.readingTime} Min. Lesezeit</span>
       </div>
       <div class="body-text">
@@ -1170,8 +1167,7 @@ function buildMagazineHero() {
           <h2>${feature.title}</h2>
           <p>${feature.excerpt}</p>
           <div class="mag-feature-meta">
-            <span>&#128197; ${feature.date}</span>
-            <span>&#128214; ${feature.readingTime} Min</span>
+            <span>&#128214; ${feature.readingTime} Min Lesezeit</span>
           </div>
         </div>
       </a>

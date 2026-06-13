@@ -10,9 +10,50 @@
     "catEmoji": "💊",
     "readingTime": 9,
     "img": "algen-im-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+      "2. Die häufigsten Algenarten erkennen",
+      "3. Ursachenanalyse: Nährstoffe, Licht und CO2 verstehen",
+      "4. Mechanische & biologische Bekämpfung",
+      "5. Chemische & technische Maßnahmen",
+      "6. Vorbeugung: Das Aquarium dauerhaft stabil halten",
+      "7. Fazit: Algen als Indikator verstehen und das Gleichgewicht finden",
+      "Fadenalgen (Grünalgen)",
+      "Bartalgen / Pinselalgen",
+      "Kieselalgen (braune Algen)",
+      "Grüne Punktalgen",
+      "Schwebealgen (grünes Wasser)",
+      "Blaualgen (Cyanobakterien)",
+      "Überschuss an Nährstoffen",
+      "Falsches Licht"
+    ],
+    "related": [
+      [
+        "algenfresser-portrait",
+        "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+        "Algen sind der ewige Begleiter jedes Aquarianers. Mal sind sie nur ein leichter ",
+        "algenfresser-portrait.png"
+      ],
+      [
+        "aquarium-pflegeroutine-guide",
+        "Warum regelmäßige Pflege so wichtig ist",
+        "Ein Aquarium ist ein faszinierendes Ökosystem auf kleinem Raum – ein Stück leben",
+        "aquarium-pflegeroutine-guide.png"
+      ],
+      [
+        "aquarium-schaedlinge",
+        "Aquarium Schädlinge erkennen, bekämpfen und vorbeugen",
+        "Lesezeit: 8 Minuten | Kategorie: Pflege | 4. Juni 2026",
+        "aquarium-schaedlinge.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: 1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
     "date": "7. Juni 2026",
     "generated": true
@@ -28,9 +69,50 @@
     "catEmoji": "💊",
     "readingTime": 8,
     "img": "algenfresser-portrait.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+      "Die effektivsten algenfressenden Fische",
+      "Wirbellose Algenfresser – klein, aber effektiv",
+      "Die richtige Kombination verschiedener Algenfresser",
+      "Grenzen der Algenbekämpfung durch Tiere",
+      "Pflege und Fütterung von Algenfressern",
+      "Fazit – Algenfresser sind Helfer, nicht Retter",
+      "Otocinclus (Ohrgitterharnischwels)",
+      "Antennenwelse (Ancistrus)",
+      "SAE – Siamesische Rüsselbarbe (Crossocheilus oblongus)",
+      "Gebänderter Saugwels (Glyptoperichthys gibbiceps)",
+      "Amano-Garnelen (Caridina multidentata)",
+      "Red Cherry und andere Zwerggarnelen",
+      "Posthornschnecken (Planorbarius corneus)",
+      "Turmdeckelschnecken (Melanoides tuberculata)"
+    ],
+    "related": [
+      [
+        "algen-im-aquarium",
+        "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+        "Algen gehören zu jedem Aquarium. Sie entstehen dort, wo Licht, Wasser und Nährst",
+        "algen-im-aquarium.png"
+      ],
+      [
+        "aquarium-pflegeroutine-guide",
+        "Warum regelmäßige Pflege so wichtig ist",
+        "Ein Aquarium ist ein faszinierendes Ökosystem auf kleinem Raum – ein Stück leben",
+        "aquarium-pflegeroutine-guide.png"
+      ],
+      [
+        "aquarium-schaedlinge",
+        "Aquarium Schädlinge erkennen, bekämpfen und vorbeugen",
+        "Lesezeit: 8 Minuten | Kategorie: Pflege | 4. Juni 2026",
+        "aquarium-schaedlinge.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Algenfresser im Porträt – Fische und Wirbellose",
     "date": "7. Juni 2026",
     "generated": true
@@ -46,9 +128,50 @@
     "catEmoji": "🐟",
     "readingTime": 27,
     "img": "antennenwels-l-welse-haltung.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Worum es in diesem Guide geht",
+      "Welse verstehen",
+      "Welse verstehen",
+      "Welse verstehen",
+      "Antennenwelse vs. L-Welse",
+      "Antennenwelse vs. L-Welse",
+      "Beckengröße und Einrichtung",
+      "Beckengröße und Einrichtung",
+      "Holz, Höhlen und Reviere",
+      "Holz, Höhlen und Reviere",
+      "Holz, Höhlen und Reviere",
+      "Futter und Verdauung",
+      "Futter und Verdauung",
+      "Vergesellschaftung",
+      "Zucht und Nachwuchs"
+    ],
+    "related": [
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ],
+      [
+        "beliebteste-aquarienfische",
+        "Die Qual der Wahl – Welcher Fisch passt zu mir?",
+        "Du hast dein erstes Aquarium erfolgreich eingefahren, die Pflanzen wachsen präch",
+        "beliebteste-aquarienfische.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Antennenwels L Welse Haltung",
     "date": "7. Juni 2026",
     "generated": true
@@ -64,9 +187,50 @@
     "catEmoji": "🌿",
     "readingTime": 8,
     "img": "aquarienpflanzen-anfaenger.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum Aquarienpflanzen?",
+      "🌱 Einfache Anfängerpflanzen (Top 5)",
+      "🌿 Mittelstufe – für mehr Abwechslung (5 Pflanzen)",
+      "🌟 Fortgeschrittene – für das perfekte Aquascape (5 Pflanzen)",
+      "💡 Pflegetipps für kräftige Aquarienpflanzen",
+      "Fazit",
+      "1. Anubias barteri (Speerblatt)",
+      "2. Javafarn (Microsorum pteropus)",
+      "3. Vallisneria (Wasserschraube / Vallisnerie)",
+      "4. Hornkraut (Ceratophyllum demersum)",
+      "5. Wasserpest (Elodea canadensis / Egeria densa)",
+      "6. Rotala rotundifolia",
+      "7. Staurogyne repens",
+      "8. Cryptocoryne wendtii (Wasserkelch)",
+      "9. Eleocharis parvula / Eleocharis acicularis (Zwergnadelsimse)"
+    ],
+    "related": [
+      [
+        "aquarium-moosarten",
+        "Warum Moos im Aquarium?",
+        "Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dich",
+        "aquarium-moosarten.png"
+      ],
+      [
+        "bodendecker-teppichpflanzen",
+        "Bodendecker und Teppichpflanzen fürs Aquarium",
+        "Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vie",
+        "bodendecker-teppichpflanzen.png"
+      ],
+      [
+        "bodengrund-aquarium-guide",
+        "Warum ist der Bodengrund so wichtig?",
+        "Der Bodengrund ist weit mehr als nur Dekoration in deinem Aquarium. Er ist die B",
+        "bodengrund-aquarium-guide.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Warum Aquarienpflanzen?",
     "date": "7. Juni 2026",
     "generated": true
@@ -82,9 +246,46 @@
     "catEmoji": "⚙️",
     "readingTime": 7,
     "img": "aquarium-automation.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+      "Verwandte Artikel",
+      "Smarte Steckdosen und Zeitschaltuhren für Licht und CO₂",
+      "Automatische Fütterung – Futterautomaten im Vergleich",
+      "Automatischer Wasserwechsel – Der Traum jedes Aquarianers",
+      "Smart-Home-Steuerung mit Alexa und Google Home",
+      "Aquarien-Controller – Das Herz der Automation",
+      "Automatische Düngung mit Dosierpumpen",
+      "Kameras und Live-Stream im Aquarium",
+      "Kosten und Nutzen abwägen",
+      "Fazit"
+    ],
+    "related": [
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ],
+      [
+        "aquarium-filter-guide",
+        "Aquarium Filter und Filtermedien – Der komplette Guide für klares und gesundes Wasser",
+        "Die Wasserqualität ist das A und O in jedem Aquarium. Egal, ob Sie ein Einsteige",
+        "aquarium-filter-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Automation – Smarte Technik für die moderne Aquaristik",
     "date": "7. Juni 2026",
     "generated": true
@@ -100,9 +301,45 @@
     "catEmoji": "⚙️",
     "readingTime": 4,
     "img": "aquarium-beleuchtung-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Beleuchtung: Die Grundlagen",
+      "Warum ist die Beleuchtung so wichtig?",
+      "LED vs. T5 vs. HQI – Die Technologien im Vergleich",
+      "Die richtige Lichtmenge: Lumen, Lux und Watt pro Liter",
+      "Lichtfarbe und Spektrum",
+      "Die richtige Beleuchtungsdauer",
+      "Beleuchtung für verschiedene Beckentypen",
+      "Häufige Fehler bei der Aquarienbeleuchtung",
+      "Fazit",
+      "Verwandte Artikel"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ],
+      [
+        "aquarium-filter-guide",
+        "Aquarium Filter und Filtermedien – Der komplette Guide für klares und gesundes Wasser",
+        "Die Wasserqualität ist das A und O in jedem Aquarium. Egal, ob Sie ein Einsteige",
+        "aquarium-filter-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Beleuchtung: Die Grundlagen",
     "date": "7. Juni 2026",
     "generated": true
@@ -118,9 +355,48 @@
     "catEmoji": "⚙️",
     "readingTime": 12,
     "img": "aquarium-duengung-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+      "Verwandte Artikel",
+      "Warum ist eine gezielte Düngung im Aquarium notwendig?",
+      "Die wichtigsten Nährstoffe für Aquarienpflanzen – Makronährstoffe (NPK)",
+      "Mikronährstoffe – Die kleinen Helfer mit großer Wirkung",
+      "Die verschiedenen Düngerarten im Detail",
+      "CO₂-Düngung – Der Turbo für das Pflanzenwachstum",
+      "Düngeplan nach Beckengröße – So düngen Sie richtig",
+      "Mangelerscheinungen erkennen und beheben",
+      "Überdüngung – Wenn zu viel des Guten schadet",
+      "Praxistipp: Die richtige Dünger-Kombination",
+      "Düngung und Algen – Zwei Seiten einer Medaille",
+      "Fazit: Eine gute Düngung ist der Schlüssel zum Erfolg"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-filter-guide",
+        "Aquarium Filter und Filtermedien – Der komplette Guide für klares und gesundes Wasser",
+        "Die Wasserqualität ist das A und O in jedem Aquarium. Egal, ob Sie ein Einsteige",
+        "aquarium-filter-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
     "date": "7. Juni 2026",
     "generated": true
@@ -136,9 +412,49 @@
     "catEmoji": "🐟",
     "readingTime": 7,
     "img": "aquarium-einfahren-nitritpeak.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Was bedeutet „Aquarium einfahren“?",
+      "Der Nitritpeak einfach erklärt",
+      "Schritt 1: Technik vollständig in Betrieb nehmen",
+      "Schritt 2: Pflanzen früh einsetzen",
+      "Schritt 3: Bakterien füttern – aber vorsichtig",
+      "Schritt 4: Wasserwerte messen und dokumentieren",
+      "Typischer Zeitplan für die Einlaufphase",
+      "Erster Besatz: langsam und in kleinen Gruppen",
+      "Was tun, wenn Nitrit nach Fischbesatz steigt?",
+      "Häufige Fehler beim Einfahren",
+      "Wasserwechsel während der Einlaufphase – ja oder nein?",
+      "Checkliste: Ist dein Aquarium bereit?",
+      "Fazit",
+      "Verwandte Artikel"
+    ],
+    "related": [
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ],
+      [
+        "beckenformen-groessen",
+        "Aquarium Beckenformen und Größen – Das richtige Becken für deine Zwecke",
+        "Die Wahl der richtigen Beckenform und -größe ist eine der grundlegendsten Entsch",
+        "beckenformen-groessen.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Was bedeutet „Aquarium einfahren“?",
     "date": "7. Juni 2026",
     "generated": true
@@ -154,9 +470,47 @@
     "catEmoji": "⚙️",
     "readingTime": 12,
     "img": "aquarium-filter-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Filter und Filtermedien – Der komplette Guide für klares und gesundes Wasser",
+      "Verwandte Artikel",
+      "Warum ist ein Aquarium Filter so wichtig?",
+      "Die verschiedenen Filterarten im Überblick",
+      "Die richtigen Filtermedien für jede Aufgabe",
+      "Wichtige Zusatzkomponenten für den Filterbetrieb",
+      "Reinigung und Wartung des Aquarienfilters",
+      "Der Aquarium Filter in der Einfahrphase",
+      "Strömung durch Filter – Wie viel ist richtig?",
+      "Häufige Fehler bei der Filterung und wie Sie sie vermeiden",
+      "Innovationen und Trends bei Aquarienfiltern",
+      "Fazit: Der richtige Filter macht den entscheidenden Unterschied"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Filter und Filtermedien – Der komplette Guide für klares und gesundes Wasser",
     "date": "7. Juni 2026",
     "generated": true
@@ -172,9 +526,50 @@
     "catEmoji": "🐟",
     "readingTime": 6,
     "img": "aquarium-futter-ernaehrung.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+      "Die Nährstoffbedürfnisse von Aquarienfischen",
+      "Die verschiedenen Futterarten im Überblick",
+      "Wie oft und wie viel füttern?",
+      "Futter für spezielle Fischgruppen",
+      "Häufige Fütterungsfehler und ihre Folgen",
+      "Fazit",
+      "Trockenfutter",
+      "Frostfutter",
+      "Lebendfutter",
+      "Pflanzliches Futter",
+      "Oberflächenfische (Guppys, Platys, Schwertträger, Zahnkarpfen)",
+      "Mittelwasserfische (Salmler, Skalare, Regenbogenfische)",
+      "Bodenbewohner (Panzerwelse, Harnischwelse, Schmerlen)",
+      "Wirbellose (Garnelen, Krebse)"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ],
+      [
+        "beliebteste-aquarienfische",
+        "Die Qual der Wahl – Welcher Fisch passt zu mir?",
+        "Du hast dein erstes Aquarium erfolgreich eingefahren, die Pflanzen wachsen präch",
+        "beliebteste-aquarienfische.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
     "date": "7. Juni 2026",
     "generated": true
@@ -190,9 +585,50 @@
     "catEmoji": "⚙️",
     "readingTime": 20,
     "img": "aquarium-futterautomat-guide-2026.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Futterautomat 2026 – Die besten Modelle, Einrichtung und Futtertipps",
+      "Was ist ein Aquarium Futterautomat und wie funktioniert er?",
+      "Wann lohnt sich ein Futterautomat für dein Aquarium?",
+      "Die besten Aquarium Futterautomaten 2026 im Vergleich",
+      "Aquarium Futterautomat einrichten – Schritt für Schritt",
+      "Welches Futter eignet sich für den Futterautomaten?",
+      "Vorteile und Nachteile eines Futterautomaten",
+      "Typische Fehler beim Einsatz von Futterautomaten vermeiden",
+      "Futterautomat und Urlaubsbetreuung – die perfekte Kombination",
+      "Wartung und Pflege des Futterautomaten",
+      "Häufige Fragen (FAQ) zu Aquarium Futterautomaten",
+      "Fazit: Welcher Aquarium Futterautomat ist der richtige für dich?",
+      "Die Technik dahinter",
+      "Stromversorgung und Laufzeit",
+      "1. Eheim Everyday Feeder – der vielseitige Allrounder"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Futterautomat 2026 – Die besten Modelle, Einrichtung und Futtertipps",
     "date": "7. Juni 2026",
     "generated": true
@@ -208,9 +644,50 @@
     "catEmoji": "⚙️",
     "readingTime": 27,
     "img": "aquarium-kamera-livestream.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Worum es in diesem Guide geht",
+      "Warum eine Aquarium-Kamera",
+      "Kameraarten",
+      "Position und Blickwinkel",
+      "Licht und Reflexionen",
+      "Livestream und Zeitraffer",
+      "Datenschutz und Sicherheit",
+      "Smart-Home-Integration",
+      "Setup-Beispiele",
+      "Häufige Fragen",
+      "Weiterlesen auf Aquaristik Zentrum",
+      "Fazit",
+      "Überwachung rund um die Uhr",
+      "Früherkennung von Problemen",
+      "Mehr als nur Überwachung: Dokumentation und Livestream"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Kamera Livestream",
     "date": "7. Juni 2026",
     "generated": true
@@ -226,9 +703,50 @@
     "catEmoji": "⚙️",
     "readingTime": 11,
     "img": "aquarium-luftpumpe-sauerstoff.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Luftpumpe und Sauerstoff im Aquarium – wann Sprudelsteine wirklich helfen",
+      "Sauerstoff im Aquarium – wie funktioniert der Gasaustausch?",
+      "Oberflächenbewegung – der unterschätzte Faktor",
+      "Wann eine Luftpumpe wirklich hilft",
+      "Sprudelstein und Schwammfilter – zwei typische Anwendungen",
+      "Sommerhitze, Medikamente und Notfälle – die wichtigsten Einsatzszenarien im Detail",
+      "Lautstärke reduzieren – die leise Luftpumpe",
+      "Fehler vermeiden – die häufigsten Irrtümer bei Luftpumpen",
+      "Praxis-Setups – drei Beispiele für den Luftpumpen-Einsatz",
+      "FAQ – häufige Fragen zu Luftpumpen und Sauerstoff",
+      "Fazit – Luftpumpe gezielt einsetzen, nicht aus Prinzip",
+      "Typische Sauerstoffwerte im Aquarium",
+      "Oberflächenbewegung vs. Luftpumpe – ein Vergleich",
+      "Akuter Sauerstoffmangel erkennen",
+      "Notfälle und akute Krisen"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Luftpumpe und Sauerstoff im Aquarium – wann Sprudelsteine wirklich helfen",
     "date": "7. Juni 2026",
     "generated": true
@@ -244,9 +762,50 @@
     "catEmoji": "🌿",
     "readingTime": 9,
     "img": "aquarium-moosarten.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum Moos im Aquarium?",
+      "Die beliebtesten Moosarten im Überblick",
+      "Javamoos (Taxiphyllum barbieri) – Der Allrounder",
+      "Christmas Moos (Vesicularia montagnei) – Der Schönling",
+      "Mooskugeln (Marimo / Aegagropila linnaei) – Die Kugel-Alge",
+      "Weitere Moosarten fürs Aquarium",
+      "Moos im Aquarium richtig pflegen – die 5 wichtigsten Tipps",
+      "Moos und Garnelen – eine perfekte Kombination",
+      "Kreative Gestaltungsideen mit Moos",
+      "Häufige Probleme und Lösungen",
+      "Fazit",
+      "Eigenschaften und Wuchs",
+      "Pflege",
+      "Befestigung",
+      "Vermehrung"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Warum Aquarienpflanzen?",
+        "Aquarienpflanzen sind weit mehr als nur Dekoration. Sie sind die Lunge deines Aq",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "bodendecker-teppichpflanzen",
+        "Bodendecker und Teppichpflanzen fürs Aquarium",
+        "Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vie",
+        "bodendecker-teppichpflanzen.png"
+      ],
+      [
+        "bodengrund-aquarium-guide",
+        "Warum ist der Bodengrund so wichtig?",
+        "Der Bodengrund ist weit mehr als nur Dekoration in deinem Aquarium. Er ist die B",
+        "bodengrund-aquarium-guide.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Warum Moos im Aquarium?",
     "date": "7. Juni 2026",
     "generated": true
@@ -262,9 +821,47 @@
     "catEmoji": "💊",
     "readingTime": 20,
     "img": "aquarium-pflegeroutine-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum regelmäßige Pflege so wichtig ist",
+      "Der wöchentliche Wasserwechsel – Schritt für Schritt",
+      "Die richtige Filterreinigung – ohne die Bakterienkultur zu schädigen",
+      "Glasscheiben reinigen und Algenwachstum kontrollieren",
+      "Pflanzen schneiden und pflegen",
+      "Wassertests – welche Tests, wie oft und worauf achten",
+      "Monatliche Aufgaben: Technik-Check und CO2-System",
+      "Saisonale Tiefenreinigung und Sonderaufgaben",
+      "Einen Pflegeplan und eine Checkliste erstellen",
+      "Häufige Fehler in der Aquarienpflege",
+      "Die richtige Ausrüstung für die Pflegeroutine",
+      "Verwandte Artikel"
+    ],
+    "related": [
+      [
+        "algen-im-aquarium",
+        "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+        "Algen gehören zu jedem Aquarium. Sie entstehen dort, wo Licht, Wasser und Nährst",
+        "algen-im-aquarium.png"
+      ],
+      [
+        "algenfresser-portrait",
+        "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+        "Algen sind der ewige Begleiter jedes Aquarianers. Mal sind sie nur ein leichter ",
+        "algenfresser-portrait.png"
+      ],
+      [
+        "aquarium-schaedlinge",
+        "Aquarium Schädlinge erkennen, bekämpfen und vorbeugen",
+        "Lesezeit: 8 Minuten | Kategorie: Pflege | 4. Juni 2026",
+        "aquarium-schaedlinge.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: Warum regelmäßige Pflege so wichtig ist",
     "date": "7. Juni 2026",
     "generated": true
@@ -280,9 +877,46 @@
     "catEmoji": "💊",
     "readingTime": 9,
     "img": "aquarium-schaedlinge.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Schädlinge erkennen, bekämpfen und vorbeugen",
+      "Verwandte Artikel",
+      "Welche Schädlinge gibt es im Aquarium?",
+      "Planarien – Erkennen und Bekämpfen",
+      "Hydra – Gefahr für Garnelen und Nachwuchs",
+      "Schneckenplage – Blasen- und Posthornschnecken in Massen",
+      "Federwürmer und Borstenwürmer",
+      "Wasserflöhe und Hüpferlinge – nützlich oder gefährlich?",
+      "Vorbeugung – Einschleppung von Schädlingen verhindern",
+      "Chemische vs. biologische Bekämpfung – Was ist besser?",
+      "Fazit – Gelassen bleiben und handeln"
+    ],
+    "related": [
+      [
+        "algen-im-aquarium",
+        "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+        "Algen gehören zu jedem Aquarium. Sie entstehen dort, wo Licht, Wasser und Nährst",
+        "algen-im-aquarium.png"
+      ],
+      [
+        "algenfresser-portrait",
+        "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+        "Algen sind der ewige Begleiter jedes Aquarianers. Mal sind sie nur ein leichter ",
+        "algenfresser-portrait.png"
+      ],
+      [
+        "aquarium-pflegeroutine-guide",
+        "Warum regelmäßige Pflege so wichtig ist",
+        "Ein Aquarium ist ein faszinierendes Ökosystem auf kleinem Raum – ein Stück leben",
+        "aquarium-pflegeroutine-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Schädlinge erkennen, bekämpfen und vorbeugen",
     "date": "7. Juni 2026",
     "generated": true
@@ -298,9 +932,50 @@
     "catEmoji": "⚙️",
     "readingTime": 10,
     "img": "aquarium-technik-ueberblick.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Einleitung: Die richtige Technik als Basis für ein gesundes Aquarium",
+      "1. Der Filter – Das Herzstück deines Aquariums",
+      "2. Beleuchtung – Das A und O für Pflanzenwachstum",
+      "3. Heizung – Die richtige Temperatur im Becken",
+      "4. CO₂-Anlage – Der Dünger für deine Pflanzen",
+      "5. Weitere Technik – Strömung, Automatisierung & Wasseraufbereitung",
+      "6. Technik-Kombinationen für verschiedene Beckentypen",
+      "Fazit – Budget-Empfehlungen für jede Größenordnung",
+      "Verwandte Artikel",
+      "Filterarten im Vergleich",
+      "Filtermedien – Welche sind nötig?",
+      "Förderleistung und Reinigung",
+      "LED vs. T5/T8",
+      "Lumen und Kelvin – Die richtigen Werte",
+      "Beleuchtungsdauer"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Einleitung: Die richtige Technik als Basis für ein gesundes Aquarium",
     "date": "7. Juni 2026",
     "generated": true
@@ -316,9 +991,50 @@
     "catEmoji": "🐟",
     "readingTime": 24,
     "img": "aquarium-umzug-transport-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Umzug planen",
+      "Umzug planen",
+      "Fische sicher fangen",
+      "Filter und Bakterien schützen",
+      "Wasser, Bodengrund und Pflanzen transportieren",
+      "Wasser, Bodengrund und Pflanzen transportieren",
+      "Aufbau am neuen Standort",
+      "Aufbau",
+      "Die ersten 14 Tage überwachen",
+      "Typische Fehler vermeiden",
+      "Typische Fehler vermeiden",
+      "Checkliste für den Umzug",
+      "Checkliste für den Umzug",
+      "Häufige Fragen",
+      "Weiterlesen auf Aquaristik Zentrum"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ],
+      [
+        "beckenformen-groessen",
+        "Aquarium Beckenformen und Größen – Das richtige Becken für deine Zwecke",
+        "Die Wahl der richtigen Beckenform und -größe ist eine der grundlegendsten Entsch",
+        "beckenformen-groessen.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Umzug planen",
     "date": "7. Juni 2026",
     "generated": true
@@ -334,9 +1050,46 @@
     "catEmoji": "🐟",
     "readingTime": 3,
     "img": "aquascaping-anfaenger.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Was ist Aquascaping?",
+      "Die Grundlagen: Hardscape",
+      "Die goldenen Regeln der Gestaltung",
+      "Pflanzenauswahl für Anfänger",
+      "Technik fürs Aquascaping",
+      "Der Aufbau Schritt für Schritt",
+      "Pflege des Aquascapes",
+      "Fazit",
+      "Vordergrund",
+      "Mittelgrund",
+      "Hintergrund"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "beckenformen-groessen",
+        "Aquarium Beckenformen und Größen – Das richtige Becken für deine Zwecke",
+        "Die Wahl der richtigen Beckenform und -größe ist eine der grundlegendsten Entsch",
+        "beckenformen-groessen.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Was ist Aquascaping?",
     "date": "7. Juni 2026",
     "generated": true
@@ -352,9 +1105,50 @@
     "catEmoji": "🐟",
     "readingTime": 28,
     "img": "artemia-grindal-futtertiere-zuechten.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Worum es in diesem Guide geht",
+      "Warum Lebendfutter",
+      "Artemia ansetzen",
+      "Grindalwürmer pflegen",
+      "Mikrowürmchen und Infusorien",
+      "Hygiene und Lagerung",
+      "Fütterungsplan",
+      "Jungfische aufziehen",
+      "Fehler vermeiden",
+      "Häufige Fragen",
+      "Weiterlesen auf Aquaristik Zentrum",
+      "Fazit",
+      "Auf einen Blick",
+      "Die drei entscheidenden Vorteile",
+      "Wann lohnt sich die eigene Zucht?"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "beliebteste-aquarienfische",
+        "Die Qual der Wahl – Welcher Fisch passt zu mir?",
+        "Du hast dein erstes Aquarium erfolgreich eingefahren, die Pflanzen wachsen präch",
+        "beliebteste-aquarienfische.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Artemia Grindal Futtertiere Zuechten",
     "date": "7. Juni 2026",
     "generated": true
@@ -370,9 +1164,50 @@
     "catEmoji": "⚙️",
     "readingTime": 11,
     "img": "aussenfilter-vs-innenfilter.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Außenfilter oder Innenfilter: Der große Aquarium-Filtervergleich für jede Beckengröße",
+      "1. Filtertypen im Überblick",
+      "2. Innenfilter – Der Klassiker für kleine Becken",
+      "3. Außenfilter – Die Profi-Lösung für anspruchsvolle Aquarien",
+      "4. Hang-On- und Schwammfilter – Spezialisten für besondere Einsätze",
+      "5. Durchfluss und Filtervolumen – Die entscheidenden Kennzahlen",
+      "6. Wartung und Sicherheit",
+      "7. Kostenvergleich",
+      "8. Entscheidungsmatrix: Welcher Filter passt zu Ihnen?",
+      "9. Häufig gestellte Fragen (FAQ)",
+      "Verwandte Artikel",
+      "Vorteile von Innenfiltern",
+      "Nachteile von Innenfiltern",
+      "Vorteile von Außenfiltern",
+      "Nachteile von Außenfiltern"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Außenfilter oder Innenfilter: Der große Aquarium-Filtervergleich für jede Beckengröße",
     "date": "7. Juni 2026",
     "generated": true
@@ -388,9 +1223,50 @@
     "catEmoji": "🐟",
     "readingTime": 7,
     "img": "beckenformen-groessen.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Beckenformen und Größen – Das richtige Becken für deine Zwecke",
+      "Die wichtigsten Beckengrößen und ihre Merkmale",
+      "Die verschiedenen Beckenformen im Überblick",
+      "Welche Beckengröße für welche Fischarten?",
+      "Standort und Statik",
+      "Unterschränke und Untergestelle",
+      "Fazit",
+      "Nano-Becken (10–30 Liter)",
+      "Kleine Becken (30–80 Liter)",
+      "Mittelgroße Becken (100–250 Liter)",
+      "Große Becken (300–600 Liter)",
+      "Extrem große Becken (600+ Liter)",
+      "Klassisches Rechteckbecken (Standard)",
+      "Würfelbecken",
+      "Eckbecken (Trapez- oder Panoramaform)"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Beckenformen und Größen – Das richtige Becken für deine Zwecke",
     "date": "7. Juni 2026",
     "generated": true
@@ -406,9 +1282,50 @@
     "catEmoji": "🐟",
     "readingTime": 9,
     "img": "beliebteste-aquarienfische.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Die Qual der Wahl – Welcher Fisch passt zu mir?",
+      "Die große Steckbrief-Tabelle – Alle 10 Fische im Überblick",
+      "1. Guppy (Poecilia reticulata)",
+      "2. Platy (Xiphophorus maculatus)",
+      "3. Molly (Poecilia sphenops)",
+      "4. Neonsalmler (Paracheirodon innesi)",
+      "5. Panzerwels (Corydoras paleatus)",
+      "6. Zwergfadenfisch (Trichogaster lalius)",
+      "7. Black Molly (Poecilia sphenops var.)",
+      "8. Amanogarnele (Caridina multidentata)",
+      "9. Otocinclus (Otocinclus vittatus)",
+      "10. Siamesischer Rüsselbarbe (Crossocheilus oblongus)",
+      "Vergesellschaftung – Welche Fische passen zusammen?",
+      "Diese Kombinationen funktionieren garantiert",
+      "Häufige Fehler bei der Fischauswahl"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Die Qual der Wahl – Welcher Fisch passt zu mir?",
     "date": "7. Juni 2026",
     "generated": true
@@ -424,9 +1341,50 @@
     "catEmoji": "🐟",
     "readingTime": 10,
     "img": "biotop-aquarium-amazonas-asien.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Biotop-Aquarium planen: Amazonas, Asien und Schwarzwasser natürlich nachbilden",
+      "Biotop-Idee verstehen – was macht ein Biotop aus?",
+      "Amazonas-Becken – der Klassiker unter den Biotopen",
+      "Asien-Becken – Südostasien natürlich nachbilden",
+      "Schwarzwasser – das dunkle, saure Biotop",
+      "Wasserwerte und Huminstoffe – die chemische Basis des Biotops",
+      "Pflanzen und Hardscape – die Gestaltung des Biotops",
+      "Besatz passend wählen – Fische, die ins Biotop passen",
+      "Pflege naturnaher Becken – weniger Eingriff, mehr Geduld",
+      "FAQ – häufige Fragen zum Biotop-Aquarium",
+      "Fazit – Biotop ist der natürlichste Weg der Aquaristik",
+      "Die drei häufigsten Biotop-Typen",
+      "Wasserwerte für das Amazonas-Becken",
+      "Pflanzen für das Amazonas-Biotop",
+      "Typische Amazonas-Fische"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Biotop-Aquarium planen: Amazonas, Asien und Schwarzwasser natürlich nachbilden",
     "date": "7. Juni 2026",
     "generated": true
@@ -442,9 +1400,50 @@
     "catEmoji": "🐟",
     "readingTime": 16,
     "img": "biotop-aquarium-suedamerika.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Biotop-Aquarium Südamerika – Ein Stück Amazonas im eigenen Wohnzimmer",
+      "Was ist ein Biotop-Aquarium? Der Unterschied zum Gesellschaftsbecken",
+      "Der Amazonas als Vorbild – Drei Wasserwelten",
+      "Beckengröße und Einrichtung – Den Amazonas ins Wohnzimmer holen",
+      "Typische Amazonas-Pflanzen für das Biotop-Aquarium",
+      "Typische Fischbesätze – Die Bewohner des Amazonas",
+      "Wasserwerte für das Amazonas-Biotop",
+      "Pflege und Wartung – So bleibt das Biotop stabil",
+      "Einrichtungsbeispiel – Schritt für Schritt zum eigenen Amazonas-Biotop",
+      "Häufige Fragen zum Amazonas-Biotop-Aquarium (FAQ)",
+      "Fazit – Warum sich ein Amazonas-Biotop lohnt",
+      "Verwandte Artikel",
+      "Die Philosophie des Biotop-Aquariums",
+      "Schwarzwasser (Rio Negro-Typ)",
+      "Klarwasser (Rio Xingu-Typ)"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Biotop-Aquarium Südamerika – Ein Stück Amazonas im eigenen Wohnzimmer",
     "date": "7. Juni 2026",
     "generated": true
@@ -460,9 +1459,49 @@
     "catEmoji": "🌿",
     "readingTime": 7,
     "img": "bodendecker-teppichpflanzen.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Bodendecker und Teppichpflanzen fürs Aquarium",
+      "Die besten Bodendecker für Einsteiger (ohne CO₂)",
+      "High-Tech-Teppiche – für Fortgeschrittene",
+      "Bodengrund – die Basis für einen gesunden Teppich",
+      "Pflanztechnik – So wird der Teppich gleichmäßig",
+      "Rückschnitt – der Schlüssel zum dichten Teppich",
+      "Häufige Probleme bei Teppichpflanzen",
+      "Die besten Fish-Begleiter für Teppichbecken",
+      "Fazit – Mit Geduld zum Traumteppich",
+      "Staurogyne repens – Der vielseitige Allrounder",
+      "Eleocharis acicularis – Die feine Nadelsimse",
+      "Micranthemum micranthemoides (Hemianthus micranthemoides)",
+      "Hemianthus callitrichoides (HC Cuba)",
+      "Glossostigma elatinoides"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Warum Aquarienpflanzen?",
+        "Aquarienpflanzen sind weit mehr als nur Dekoration. Sie sind die Lunge deines Aq",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-moosarten",
+        "Warum Moos im Aquarium?",
+        "Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dich",
+        "aquarium-moosarten.png"
+      ],
+      [
+        "bodengrund-aquarium-guide",
+        "Warum ist der Bodengrund so wichtig?",
+        "Der Bodengrund ist weit mehr als nur Dekoration in deinem Aquarium. Er ist die B",
+        "bodengrund-aquarium-guide.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Bodendecker und Teppichpflanzen fürs Aquarium",
     "date": "7. Juni 2026",
     "generated": true
@@ -478,9 +1517,50 @@
     "catEmoji": "🌿",
     "readingTime": 11,
     "img": "bodengrund-aquarium-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum ist der Bodengrund so wichtig?",
+      "Die verschiedenen Bodengrund-Arten im Überblick",
+      "Die richtige Schichtung des Bodengrunds",
+      "Die richtige Menge berechnen",
+      "Bodengrund vor dem Einbringen vorbereiten",
+      "Bodengrund für Pflanzenaquarien",
+      "Bodengrund für Garnelen",
+      "Bodengrund für Welse und Bodenbewohner",
+      "Bodengrund reinigen und pflegen",
+      "Häufige Fehler beim Bodengrund",
+      "Bodengrund und Wasserwerte",
+      "Fazit",
+      "Verwandte Artikel",
+      "1. Aquarium-Kies – Der Klassiker",
+      "2. Aquarium-Sand – Natürlich und edel"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Warum Aquarienpflanzen?",
+        "Aquarienpflanzen sind weit mehr als nur Dekoration. Sie sind die Lunge deines Aq",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-moosarten",
+        "Warum Moos im Aquarium?",
+        "Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dich",
+        "aquarium-moosarten.png"
+      ],
+      [
+        "bodendecker-teppichpflanzen",
+        "Bodendecker und Teppichpflanzen fürs Aquarium",
+        "Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vie",
+        "bodendecker-teppichpflanzen.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Warum ist der Bodengrund so wichtig?",
     "date": "7. Juni 2026",
     "generated": true
@@ -496,9 +1576,50 @@
     "catEmoji": "🐟",
     "readingTime": 12,
     "img": "brackwasser-aquarium-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Brackwasser-Aquarium einrichten: Salz, Technik, Besatz und Pflege im Praxis-Guide",
+      "1. Was Brackwasser ist",
+      "2. Salzgehalt messen",
+      "3. Technik und Einrichtung",
+      "4. Geeignete Tiere",
+      "5. Pflanzen und Hardscape",
+      "6. Wasserwechsel",
+      "7. Fehler vermeiden",
+      "8. Praxis-Setup",
+      "9. FAQ – Häufige Fragen zum Brackwasser-Aquarium",
+      "Aräometer (Spindel)",
+      "Refraktometer",
+      "Leitfähigkeitsmessgerät (TDS-/EC-Meter)",
+      "Beckengröße",
+      "Filter"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Brackwasser-Aquarium einrichten: Salz, Technik, Besatz und Pflege im Praxis-Guide",
     "date": "7. Juni 2026",
     "generated": true
@@ -514,9 +1635,50 @@
     "catEmoji": "🌿",
     "readingTime": 11,
     "img": "bucephalandra-anubias-javafarn.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Bucephalandra, Anubias und Javafarn – Aufsitzerpflanzen richtig befestigen und pflegen",
+      "Was Aufsitzerpflanzen sind – und warum sie anders wachsen",
+      "Bucephalandra – die edle Schönheit aus Borneo",
+      "Anubias – die unverwüstliche Klassikerin",
+      "Javafarn – der vielseitige Allrounder",
+      "Befestigung auf Holz und Stein – so machst du es richtig",
+      "Licht und Nährstoffe – die richtige Balance",
+      "Algen auf langsamen Blättern – das größte Problem und seine Lösung",
+      "Layout-Ideen – wie du Aufsitzerpflanzen gekonnt einsetzt",
+      "FAQ – häufige Fragen zu Aufsitzerpflanzen",
+      "Fazit – Aufsitzerpflanzen sind die Seele des Aquascapes",
+      "Arten und Varietäten",
+      "Haltungsbedingungen für Bucephalandra",
+      "Bucephalandra richtig pflanzen",
+      "Beliebte Anubias-Arten"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Warum Aquarienpflanzen?",
+        "Aquarienpflanzen sind weit mehr als nur Dekoration. Sie sind die Lunge deines Aq",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-moosarten",
+        "Warum Moos im Aquarium?",
+        "Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dich",
+        "aquarium-moosarten.png"
+      ],
+      [
+        "bodendecker-teppichpflanzen",
+        "Bodendecker und Teppichpflanzen fürs Aquarium",
+        "Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vie",
+        "bodendecker-teppichpflanzen.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Bucephalandra, Anubias und Javafarn – Aufsitzerpflanzen richtig befestigen und pflegen",
     "date": "7. Juni 2026",
     "generated": true
@@ -532,9 +1694,47 @@
     "catEmoji": "⚙️",
     "readingTime": 8,
     "img": "co2-einsteiger-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "CO₂-Düngung für Einsteiger – Einfach loslegen",
+      "Warum CO₂ auch für Einsteiger sinnvoll ist",
+      "Bio-CO₂ oder Druckgas – was ist besser für den Start?",
+      "Die richtige Dosierung – Schritt für Schritt",
+      "Auf die richtige Strömung kommt es an",
+      "Typische Anfängerfehler und wie du sie vermeidest",
+      "Düngung anpassen – mehr CO₂ bedeutet mehr Nährstoffe",
+      "CO₂ und Algen – was ist dran?",
+      "Sicherheit – worauf du achten musst",
+      "Fazit – Trau dich!",
+      "Bio-CO₂ – Günstig, aber ungenau",
+      "Druckgas-CO₂ – Stabil und präzise"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: CO₂-Düngung für Einsteiger – Einfach loslegen",
     "date": "7. Juni 2026",
     "generated": true
@@ -550,9 +1750,49 @@
     "catEmoji": "⚙️",
     "readingTime": 8,
     "img": "co2-im-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum CO2 im Aquarium so wichtig ist",
+      "CO2-Anlage: Bio-CO2 oder Druckgas?",
+      "Die richtige CO2-Menge: Zielwert und Startdosierung",
+      "Diffusor, Inline-Diffusor oder Reaktor?",
+      "Dauertest korrekt einsetzen und ablesen",
+      "Timing: Wann CO2 einschalten und ausschalten?",
+      "CO2 und Düngung: Das Liebig-Prinzip im Aquarium",
+      "Licht richtig anpassen",
+      "Typische Fehler beim Einstellen",
+      "Schritt-für-Schritt: CO2 sicher einstellen",
+      "Algen trotz CO2: Was tun?",
+      "Besatz und Sicherheit",
+      "Fazit: Stabilität schlägt Maximalwerte",
+      "Verwandte Artikel"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Warum CO2 im Aquarium so wichtig ist",
     "date": "7. Juni 2026",
     "generated": true
@@ -568,9 +1808,50 @@
     "catEmoji": "🐟",
     "readingTime": 8,
     "img": "diskushaltung-pflege.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Diskusfische – Die Könige der Aquaristik",
+      "Herkunft und Natürlicher Lebensraum",
+      "Die richtige Aquariumgröße für Diskusfische",
+      "Wasserwerte für Diskusfische: Konstanz ist alles",
+      "Technik für das Diskus-Aquarium",
+      "Ernährung von Diskusfischen",
+      "Vergesellschaftung von Diskusfischen",
+      "Krankheiten bei Diskusfischen vorbeugen und behandeln",
+      "Zucht von Diskusfischen",
+      "Fazit: Sind Diskusfische etwas für dich?",
+      "Verwandte Artikel",
+      "Wildform vs. Zuchtform",
+      "Faustregel für den Besatz",
+      "Filterung",
+      "Heizung"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Diskusfische – Die Könige der Aquaristik",
     "date": "7. Juni 2026",
     "generated": true
@@ -586,9 +1867,46 @@
     "catEmoji": "🐟",
     "readingTime": 9,
     "img": "diy-aquarium-bauen.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium DIY – Selber bauen und individuell gestalten",
+      "Planung – der wichtigste Schritt",
+      "Materialien und Werkzeuge",
+      "Der Bau – Schritt für Schritt",
+      "Dichtigkeitstest – bevor Wasser ins Becken kommt",
+      "Individuelle Einrichtung für dein DIY-Becken",
+      "DIY-Unterschrank – stabil und passgenau",
+      "Technik individuell integrieren",
+      "Rechtliche Aspekte und Versicherung",
+      "Häufige Fehler beim Aquarium-Selbstbau",
+      "Fazit – Mit Köpfchen und Handwerk zum Traumbecken"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Aquarium DIY – Selber bauen und individuell gestalten",
     "date": "7. Juni 2026",
     "generated": true
@@ -604,9 +1922,48 @@
     "catEmoji": "🐟",
     "readingTime": 3,
     "img": "einsteiger-aquarium-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum ein Aquarium?",
+      "Die richtige Beckengröße",
+      "Technik: Was du brauchst",
+      "Der richtige Standort",
+      "Einrichtung Schritt für Schritt",
+      "Erster Besatz",
+      "Regelmäßige Pflege",
+      "Fazit",
+      "Verwandte Artikel",
+      "1. Bodengrund",
+      "2. Hardscape",
+      "3. Bepflanzung",
+      "4. Einfahren (Aquarium einfahren)"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Warum ein Aquarium?",
     "date": "7. Juni 2026",
     "generated": true
@@ -622,9 +1979,50 @@
     "catEmoji": "🐟",
     "readingTime": 9,
     "img": "fischbesatz-nach-beckengroesse.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Fischbesatz nach Beckengröße – 30, 60, 100, 180 und 240 Liter sinnvoll planen",
+      "Warum Literzahl nicht alles ist – die wahren Faktoren für den Besatz",
+      "30 Liter – das Mini-Aquarium richtig besetzen",
+      "60 Liter – das Einsteiger-Standardbecken",
+      "100 Liter – der ideale Kompromiss",
+      "180 Liter – richtig Platz für Gestaltung",
+      "240 Liter und größer – das Profi-Becken",
+      "Schwarm, Paar und Revier – die soziale Struktur der Fische",
+      "Überbesatz vermeiden – die Zeichen erkennen",
+      "FAQ – häufige Fragen zum Fischbesatz",
+      "Fazit – Weniger ist mehr beim Fischbesatz",
+      "Die fünf Faktoren für den Besatz",
+      "Besatzvorschläge für 30 Liter",
+      "Was in 30 Litern nicht geht",
+      "Besatzvorschläge für 60 Liter"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Fischbesatz nach Beckengröße – 30, 60, 100, 180 und 240 Liter sinnvoll planen",
     "date": "7. Juni 2026",
     "generated": true
@@ -640,9 +2038,50 @@
     "catEmoji": "🐟",
     "readingTime": 6,
     "img": "fische-fortgeschrittene.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Fische für Fortgeschrittene – Skalare, Diskus und anspruchsvolle Arten",
+      "Was macht einen Fisch zum „Fortgeschrittenenfisch\"?",
+      "Skalare (Pterophyllum scalare) – Die Segler der Amazonasflüsse",
+      "Diskusfische (Symphysodon aequifasciatus) – Die Könige der Aquaristik",
+      "Weitere anspruchsvolle Arten für Fortgeschrittene",
+      "Technik für fortgeschrittene Aquarien",
+      "Typische Fehler bei der Haltung anspruchsvoller Fische",
+      "Fazit",
+      "Wasserwerte für Skalare",
+      "Vergesellschaftung",
+      "Haltungstipps",
+      "Beckengröße und Einrichtung",
+      "Wasserwerte",
+      "Ernährung",
+      "Krankheitsanfälligkeit"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Fische für Fortgeschrittene – Skalare, Diskus und anspruchsvolle Arten",
     "date": "7. Juni 2026",
     "generated": true
@@ -658,9 +2097,50 @@
     "catEmoji": "🐟",
     "readingTime": 23,
     "img": "fischkrankheiten-aquarium-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum werden Aquarienfische krank?",
+      "Grundlagen der Symptomerkennung",
+      "Die häufigsten Fischkrankheiten im Überblick",
+      "Quarantäne – Die wichtigste Vorsorgemaßnahme",
+      "Behandlungsmethoden im Detail",
+      "Vorbeugung ist der beste Schutz",
+      "Natürliche Behandlungen und Hausmittel",
+      "Wann Medikamente, wann natürliche Methoden?",
+      "Diagnosehilfe: So findest du die richtige Krankheit",
+      "Erste-Hilfe-Set für Aquarianer",
+      "Fazit und beste Praktiken",
+      "Verwandte Artikel",
+      "1. Ichthyophthiriose (Weißpünktchenkrankheit / Ich)",
+      "2. Flossenfäule",
+      "3. Samtkrankheit (Pünktchenkrankheit / Oodinium)"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Warum werden Aquarienfische krank?",
     "date": "7. Juni 2026",
     "generated": true
@@ -676,9 +2156,50 @@
     "catEmoji": "🐟",
     "readingTime": 11,
     "img": "futtertiere-selbst-zuechten.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Futtertiere selbst züchten – Lebendfutter für Aquarienbewohner",
+      "Warum Futtertiere selbst züchten?",
+      "Artemia (Salzkrebschen) – Der Klassiker für Aufzucht und tägliche Fütterung",
+      "Grindalwürmer – Die Mini-Futterwürmer für jedes Aquarium",
+      "Mikrowürmchen – Micro-Worms für die Aufzucht",
+      "Daphnien (Wasserflöhe) – Lebendfutter mit hohem Ballaststoffanteil",
+      "Futtertier-Arten im Vergleich",
+      "Ausrüstung und Starter-Sets",
+      "Häufige Fehler und wie du sie vermeidest",
+      "Häufig gestellte Fragen (FAQ)",
+      "Fazit: Der Einstieg lohnt sich",
+      "Verwandte Artikel",
+      "Ansatz einer Artemia-Zucht",
+      "Ernte und Fütterung",
+      "Einrichtung einer Grindalwurm-Zuchtstation"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Futtertiere selbst züchten – Lebendfutter für Aquarienbewohner",
     "date": "7. Juni 2026",
     "generated": true
@@ -694,9 +2215,47 @@
     "catEmoji": "🐟",
     "readingTime": 3,
     "img": "garnelen-im-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum Garnelen?",
+      "Die beliebtesten Arten für Einsteiger",
+      "Die richtige Beckengröße",
+      "Wasserwerte für Garnelen",
+      "Vergesellschaftung mit anderen Tieren",
+      "Fütterung",
+      "Häutung und Vermehrung",
+      "Krankheiten und Probleme",
+      "Fazit",
+      "Neocaridina davidi (z. B. Red Cherry Garnelen)",
+      "Caridina cf. cantonensis (z. B. Red Bee Garnelen)",
+      "Caridina multidentata (Amano-Garnelen)"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Warum Garnelen?",
     "date": "7. Juni 2026",
     "generated": true
@@ -712,9 +2271,50 @@
     "catEmoji": "🐟",
     "readingTime": 12,
     "img": "garnelen-krankheiten.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Garnelen-Krankheiten erkennen, behandeln und vorbeugen – Der komplette Guide",
+      "Warum werden Garnelen krank?",
+      "Bakterielle Infektionen bei Garnelen",
+      "Pilzerkrankungen (Mykosen)",
+      "Häutungsprobleme",
+      "Parasitäre Erkrankungen",
+      "Vergiftungen bei Garnelen",
+      "Übersichtstabelle: Symptome, Krankheiten und Behandlung",
+      "Vorbeugung: So bleiben deine Garnelen gesund",
+      "Häufig gestellte Fragen (FAQ)",
+      "Verwandte Artikel",
+      "Die häufigsten Stressfaktoren",
+      "Vibrio-Infektionen",
+      "Pseudomonas-Infektionen",
+      "Achlya-Infektionen (Wattenpilz)"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Garnelen-Krankheiten erkennen, behandeln und vorbeugen – Der komplette Guide",
     "date": "7. Juni 2026",
     "generated": true
@@ -730,9 +2330,50 @@
     "catEmoji": "🐟",
     "readingTime": 7,
     "img": "garnelen-nachzucht.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Garnelennachzucht – Zwerggarnelen erfolgreich vermehren",
+      "Welche Garnelen eignen sich für die Nachzucht?",
+      "Das richtige Aquarium für die Garnelennachzucht",
+      "Der Vermehrungszyklus von Zwerggarnelen",
+      "Optimale Wasserwerte für die Vermehrung",
+      "Ernährung für die Nachzucht",
+      "Häufige Fehler bei der Garnelennachzucht",
+      "Garnelen-Nachwuchs aufziehen – Schritt für Schritt",
+      "Fazit",
+      "Verwandte Artikel",
+      "Neocaridina-Arten – Die Einsteiger-Garnelen",
+      "Caridina-Arten – Die Spezialisten",
+      "Süßwassergarnelen mit Larvenstadium",
+      "Beckengröße",
+      "Einrichtung für hohe Vermehrungsraten"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Garnelennachzucht – Zwerggarnelen erfolgreich vermehren",
     "date": "7. Juni 2026",
     "generated": true
@@ -748,9 +2389,47 @@
     "catEmoji": "🐟",
     "readingTime": 7,
     "img": "gesellschaftsbecken-einrichten.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Gesellschaftsbecken richtig zusammenstellen",
+      "Die wichtigste Regel: Größe und Schwimmverhalten",
+      "Wasserwerte – die unsichtbare Grenze",
+      "Bewährte Vergesellschaftungen für Einsteiger",
+      "Die richtige Besatzdichte berechnen",
+      "Einrichtung – Struktur schafft Harmonie",
+      "Fische, die du meiden solltest",
+      "Eingewöhnung neuer Fische",
+      "Fazit – Harmonie ist planbar",
+      "Das südamerikanische Weichwasserbecken (ab 160 Liter)",
+      "Das asiatische Barbenbecken (ab 200 Liter)",
+      "Das robuste Lebendgebärenden-Becken (ab 100 Liter)"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Gesellschaftsbecken richtig zusammenstellen",
     "date": "7. Juni 2026",
     "generated": true
@@ -766,9 +2445,49 @@
     "catEmoji": "⚙️",
     "readingTime": 6,
     "img": "heizung-temperatur-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Heizung und Temperatur im Aquarium – Die richtige Wärme für deine Fische",
+      "Warum ist die richtige Temperatur so wichtig?",
+      "Die verschiedenen Heizungstypen im Vergleich",
+      "Die richtige Heizleistung berechnen",
+      "Optimale Temperaturen für verschiedene Fischarten",
+      "Die richtige Platzierung der Heizung",
+      "Temperaturkontrolle und regelmäßige Überwachung",
+      "Saisonale Temperaturanpassungen",
+      "Häufige Heizungsprobleme und ihre Lösungen",
+      "Fazit",
+      "Stabheizer (Eintauchheizer)",
+      "Außenfilter-Heizungen (Inline-Heizer)",
+      "Bodenheizungen (Heizkabel)",
+      "Heizmatten"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Heizung und Temperatur im Aquarium – Die richtige Wärme für deine Fische",
     "date": "7. Juni 2026",
     "generated": true
@@ -784,9 +2503,50 @@
     "catEmoji": "🌿",
     "readingTime": 10,
     "img": "iwagumi-aquascape-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Iwagumi Aquascape – Steine, Pflanzen, Layout und Pflege minimalistisch planen",
+      "Was Iwagumi ausmacht – die Prinzipien des minimalistischen Layouts",
+      "Steinarten und Hardscape – die richtigen Materialien wählen",
+      "Layout-Regeln – Proportionen und Positionierung",
+      "Bodendecker und Pflanzen für Iwagumi",
+      "CO₂, Licht und Nährstoffe – die technische Basis",
+      "Startphase – vom Trockenlayout zum gefluteten Becken",
+      "Pflege und Schnitt – den Teppich in Form halten",
+      "Fehlerbilder – typische Probleme im Iwagumi",
+      "FAQ – häufige Fragen zu Iwagumi",
+      "Fazit – Iwagumi lebt von Reduktion und Geduld",
+      "Die drei Grundprinzipien",
+      "Harmonie-Ishi (Ausrichtung der Steine)",
+      "Der Goldene Schnitt im Iwagumi",
+      "Die richtige Steingröße"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Warum Aquarienpflanzen?",
+        "Aquarienpflanzen sind weit mehr als nur Dekoration. Sie sind die Lunge deines Aq",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-moosarten",
+        "Warum Moos im Aquarium?",
+        "Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dich",
+        "aquarium-moosarten.png"
+      ],
+      [
+        "bodendecker-teppichpflanzen",
+        "Bodendecker und Teppichpflanzen fürs Aquarium",
+        "Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vie",
+        "bodendecker-teppichpflanzen.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Iwagumi Aquascape – Steine, Pflanzen, Layout und Pflege minimalistisch planen",
     "date": "7. Juni 2026",
     "generated": true
@@ -802,9 +2562,50 @@
     "catEmoji": "🐟",
     "readingTime": 8,
     "img": "kaltwasser-aquarium-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Kaltwasser-Aquarium: Fische, Pflanzen und Technik ohne Heizer richtig planen",
+      "1. Kaltwasser richtig definieren",
+      "2. Geeignete Fischarten im Detail",
+      "3. Beckengröße und Sauerstoffversorgung",
+      "4. Pflanzen für kühlere Becken",
+      "5. Technik ohne Heizer",
+      "6. Sommerhitze kontrollieren",
+      "7. Pflegeplan für das Kaltwasser-Aquarium",
+      "8. Besatzbeispiele für verschiedene Beckengrößen",
+      "9. FAQ – Häufige Fragen zum Kaltwasser-Aquarium",
+      "Verwandte Artikel",
+      "Goldfische – Die Klassiker",
+      "Bitterlinge – Farbe im Kaltwasserbecken",
+      "Moderlieschen – Schwarmfische mit Charme",
+      "Elritzen und Goldorfen"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Kaltwasser-Aquarium: Fische, Pflanzen und Technik ohne Heizer richtig planen",
     "date": "7. Juni 2026",
     "generated": true
@@ -820,9 +2621,50 @@
     "catEmoji": "🐟",
     "readingTime": 8,
     "img": "kampffisch-haltung-betta.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum Betta splendens besondere Ansprüche hat",
+      "Die passende Aquariumgröße",
+      "Wasserwerte und Temperatur",
+      "Filter und Strömung: sanft statt stark",
+      "Einrichtung: Pflanzen, Wurzeln und sichere Rückzugsorte",
+      "Fütterung: abwechslungsreich und sparsam",
+      "Vergesellschaftung: allein ist oft besser",
+      "Wöchentliche Pflege und Wasserwechsel",
+      "Häufige Fehler bei der Kampffisch Haltung",
+      "Checkliste für dein Betta-Aquarium",
+      "Gesundheit: Stress vermeiden und Symptome erkennen",
+      "Kauf und Eingewöhnung",
+      "Saisonale Pflege und Urlaubszeit",
+      "Fazit",
+      "Verwandte Artikel"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Warum Betta splendens besondere Ansprüche hat",
     "date": "7. Juni 2026",
     "generated": true
@@ -838,9 +2680,50 @@
     "catEmoji": "🐟",
     "readingTime": 6,
     "img": "lebendgebärende-zahnkarpfen.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Lebendgebärende Zahnkarpfen – Guppys, Platys, Schwertträger und ihre Verwandten",
+      "Die Familie der Lebendgebärenden Zahnkarpfen",
+      "Guppys – Die Klassiker der Aquaristik",
+      "Platys – Die farbenfrohen Allrounder",
+      "Schwertträger (Xiphophorus hellerii)",
+      "Mollys (Poecilia sphenops / Poecilia latipinna)",
+      "Vergesellschaftung der Lebendgebärenden",
+      "Häufige Krankheiten und ihre Vorbeugung",
+      "Fazit",
+      "Haltung und Wasserwerte",
+      "Vergesellschaftung",
+      "Zucht",
+      "Haltung",
+      "Ernährung",
+      "Besonderheiten der Haltung"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Lebendgebärende Zahnkarpfen – Guppys, Platys, Schwertträger und ihre Verwandten",
     "date": "7. Juni 2026",
     "generated": true
@@ -856,9 +2739,50 @@
     "catEmoji": "🐟",
     "readingTime": 6,
     "img": "low-tech-aquarium-ohne-co2.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Low-Tech-Aquarium ohne CO₂: Pflanzenbecken einfach, stabil und günstig betreiben",
+      "1. Low-Tech richtig verstehen",
+      "2. Licht als Stellschraube",
+      "3. Robuste Pflanzen für Low-Tech",
+      "4. Bodengrund und Nährstoffe",
+      "5. Düngung ohne Übertreibung",
+      "6. Algen vermeiden im Low-Tech",
+      "7. Besatz und Pflege",
+      "8. Beispiel-Setups für Low-Tech",
+      "9. FAQ – Häufige Fragen zum Low-Tech-Aquarium",
+      "Fazit",
+      "Verwandte Artikel",
+      "Aufsitzerpflanzen (Epiphyten)",
+      "Bodenwurzelnde Pflanzen",
+      "Einsteiger-Setup: 30-Liter Nano Cube"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Low-Tech-Aquarium ohne CO₂: Pflanzenbecken einfach, stabil und günstig betreiben",
     "date": "7. Juni 2026",
     "generated": true
@@ -874,9 +2798,50 @@
     "catEmoji": "🐟",
     "readingTime": 22,
     "img": "meerwasser-aquarium-einstieg.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Worum es in diesem Guide geht",
+      "Meerwasser realistisch einschätzen",
+      "Kosten und laufende Pflege",
+      "Becken und Technik",
+      "Lebendgestein und Riffaufbau",
+      "Salz, Osmose und Messwerte",
+      "Erste Tiere",
+      "Wartungsroutine",
+      "Fehler vermeiden",
+      "Häufige Fragen",
+      "Weiterlesen auf Aquaristik Zentrum",
+      "Fazit",
+      "Praxisbeispiel: So setzt du den Guide im Alltag um",
+      "Warum Einsteiger oft zu spät merken, was auf sie zukommt",
+      "Was du in diesem Ratgeber konkret findest"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Meerwasser Aquarium Einstieg",
     "date": "7. Juni 2026",
     "generated": true
@@ -892,9 +2857,48 @@
     "catEmoji": "🐟",
     "readingTime": 7,
     "img": "nachzucht-fische.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Nachzucht von Aquarienfischen – Zucht und Aufzucht",
+      "Lebendgebärende – der perfekte Einstieg",
+      "Eierlegende Fische – die nächste Stufe",
+      "Das richtige Zuchtbecken",
+      "Die Auswahl der Zuchttiere",
+      "Fütterung der Jungfische – die größte Herausforderung",
+      "Wachstum und Heranführung an normales Futter",
+      "Häufige Fehler bei der Aufzucht",
+      "Zucht als Teil der verantwortungsvollen Aquaristik",
+      "Fazit – Die Freude an der Zucht",
+      "Guppys, Platys, Mollys und Schwertträger",
+      "Zebrabärblinge (Danio rerio)",
+      "Skalare (Pterophyllum scalare)"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Nachzucht von Aquarienfischen – Zucht und Aufzucht",
     "date": "7. Juni 2026",
     "generated": true
@@ -910,9 +2914,50 @@
     "catEmoji": "🐟",
     "readingTime": 9,
     "img": "nano-aquarium-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Nano Aquarium Guide: Mini-Becken bis 30 Liter für Einsteiger",
+      "Was ist ein Nano Aquarium?",
+      "Geeignete Beckengrößen für Nano Aquarien",
+      "Technik für Nano-Becken: Das brauchst du wirklich",
+      "Geeignete Fische &amp; Garnelen für Nano Aquarien",
+      "Bepflanzung &amp; Aquascaping im Mini-Format",
+      "Pflegeroutine für Nano Aquarien",
+      "Vor- und Nachteile von Nano Aquarien",
+      "Fazit: Lohnt sich ein Nano Aquarium?",
+      "Verwandte Artikel",
+      "Vorteile eines Nano Aquariums auf einen Blick",
+      "20 x 20 x 20 cm (8 Liter)",
+      "30 x 30 x 30 cm (27 Liter)",
+      "45 x 25 x 25 cm (28 Liter)",
+      "Weitere gängige Formate"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Nano Aquarium Guide: Mini-Becken bis 30 Liter für Einsteiger",
     "date": "7. Juni 2026",
     "generated": true
@@ -928,9 +2973,50 @@
     "catEmoji": "⚙️",
     "readingTime": 6,
     "img": "osmoseanlage-wasseraufbereitung.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Osmoseanlage und Wasseraufbereitung im Aquarium – Reines Wasser für empfindliche Fische",
+      "Warum Osmosewasser? Die Vorteile im Überblick",
+      "Wie funktioniert eine Osmoseanlage?",
+      "Die richtige Osmoseanlage für dein Aquarium",
+      "Wasseraufbereitung nach der Osmose",
+      "Osmoseanlage oder Vollentsalzer?",
+      "Installation und Inbetriebnahme",
+      "Wartung und Pflege",
+      "Fazit",
+      "Leistung und Durchfluss",
+      "Anschlüsse und Platzierung",
+      "Wasserdruck",
+      "Filterlebensdauer",
+      "Mischen mit Leitungswasser",
+      "Aufhärten mit Mineralsalzen"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Osmoseanlage und Wasseraufbereitung im Aquarium – Reines Wasser für empfindliche Fische",
     "date": "7. Juni 2026",
     "generated": true
@@ -946,9 +3032,50 @@
     "catEmoji": "🐟",
     "readingTime": 8,
     "img": "panzerwelse-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum Panzerwelse?",
+      "Herkunft und natürlicher Lebensraum",
+      "Die beliebtesten Panzerwels-Arten für das Aquarium",
+      "Die richtige Beckengröße und Einrichtung",
+      "Wasserwerte für Panzerwelse",
+      "Vergesellschaftung von Panzerwelsen",
+      "Ernährung und Fütterung",
+      "Nachzucht von Panzerwelsen",
+      "Krankheiten und typische Probleme",
+      "Häufig gestellte Fragen (FAQ)",
+      "Fazit",
+      "Metall-Panzerwels (Corydoras aeneus)",
+      "Gepunkteter Panzerwels (Corydoras paleatus)",
+      "Gestromter Panzerwels (Corydoras schwartzi)",
+      "Kleiner Panzerwels (Corydoras pygmaeus)"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Warum Panzerwelse?",
     "date": "7. Juni 2026",
     "generated": true
@@ -964,9 +3091,49 @@
     "catEmoji": "🌿",
     "readingTime": 7,
     "img": "pflanzenvermehrung-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Pflanzenvermehrung – Nachzucht und Teilung für üppiges Grün",
+      "Warum Pflanzenvermehrung?",
+      "Stängelpflanzen vermehren – Der Klassiker",
+      "Rosettenpflanzen teilen – Die bewährte Methode",
+      "Rhizompflanzen teilen – Anubias, Bucephalandra und Javafarn",
+      "Brutknospen und Tochterpflanzen",
+      "Vermehrung durch Sporen und Samen",
+      "Optimale Bedingungen für die Pflanzenvermehrung",
+      "Tipps für die Aufzucht in separaten Becken",
+      "Fazit",
+      "Teppichpflanzen teilen",
+      "Javafarn-Brutknospen",
+      "Sumpf-Drachenwurz-Tochterpflanzen",
+      "Hornfarn und Wassersalat"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Warum Aquarienpflanzen?",
+        "Aquarienpflanzen sind weit mehr als nur Dekoration. Sie sind die Lunge deines Aq",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-moosarten",
+        "Warum Moos im Aquarium?",
+        "Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dich",
+        "aquarium-moosarten.png"
+      ],
+      [
+        "bodendecker-teppichpflanzen",
+        "Bodendecker und Teppichpflanzen fürs Aquarium",
+        "Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vie",
+        "bodendecker-teppichpflanzen.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Pflanzenvermehrung – Nachzucht und Teilung für üppiges Grün",
     "date": "7. Juni 2026",
     "generated": true
@@ -982,9 +3149,47 @@
     "catEmoji": "💊",
     "readingTime": 7,
     "img": "quarantaene-medikamente.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Medikamente und Quarantäne – So schützt du deine Fische",
+      "Das Quarantänebecken – einfach und effektiv",
+      "Quarantäne-Ablauf – Schritt für Schritt",
+      "Die häufigsten Aquarienkrankheiten und ihre Behandlung",
+      "Medikamente richtig dosieren und anwenden",
+      "Vorbeugung ist der beste Schutz",
+      "Pflanzenquarantäne – oft unterschätzt",
+      "Wann zum Tierarzt?",
+      "Fazit – Quarantäne rettet Leben",
+      "Ichthyophthirius (Pünktchenkrankheit / Weißpünktchen)",
+      "Flossenfäule",
+      "Samenflecken / Samtkrankheit"
+    ],
+    "related": [
+      [
+        "algen-im-aquarium",
+        "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+        "Algen gehören zu jedem Aquarium. Sie entstehen dort, wo Licht, Wasser und Nährst",
+        "algen-im-aquarium.png"
+      ],
+      [
+        "algenfresser-portrait",
+        "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+        "Algen sind der ewige Begleiter jedes Aquarianers. Mal sind sie nur ein leichter ",
+        "algenfresser-portrait.png"
+      ],
+      [
+        "aquarium-pflegeroutine-guide",
+        "Warum regelmäßige Pflege so wichtig ist",
+        "Ein Aquarium ist ein faszinierendes Ökosystem auf kleinem Raum – ein Stück leben",
+        "aquarium-pflegeroutine-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Medikamente und Quarantäne – So schützt du deine Fische",
     "date": "7. Juni 2026",
     "generated": true
@@ -1000,9 +3205,49 @@
     "catEmoji": "🌿",
     "readingTime": 8,
     "img": "rote-aquarienpflanzen.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Rote Aquarienpflanzen – Arten, Pflege und Düngung",
+      "Die schönsten roten Aquarienpflanzen im Porträt",
+      "Der Schlüssel zur perfekten Rotfärbung: Licht",
+      "Eisen und Spurenelemente – die Farbtreiber",
+      "CO₂ – der Turbo für Farbe und Wuchs",
+      "Rückschnitt und Vermehrung",
+      "Typische Probleme und ihre Lösungen",
+      "Die richtige Platzierung im Aquarium",
+      "Fazit – Rot ist eine Frage der Hingabe",
+      "Rotala macrandra – Die Königin der roten Pflanzen",
+      "Ludwigia repens – Der robuste Klassiker",
+      "Alternanthera reineckii – Das leuchtende Blutblatt",
+      "Lobelia cardinalis – Rotblättrige Kardinalslobelie",
+      "Proserpinaca palustris – Die Sumpffeder"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Warum Aquarienpflanzen?",
+        "Aquarienpflanzen sind weit mehr als nur Dekoration. Sie sind die Lunge deines Aq",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-moosarten",
+        "Warum Moos im Aquarium?",
+        "Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dich",
+        "aquarium-moosarten.png"
+      ],
+      [
+        "bodendecker-teppichpflanzen",
+        "Bodendecker und Teppichpflanzen fürs Aquarium",
+        "Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vie",
+        "bodendecker-teppichpflanzen.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Rote Aquarienpflanzen – Arten, Pflege und Düngung",
     "date": "7. Juni 2026",
     "generated": true
@@ -1018,9 +3263,50 @@
     "catEmoji": "🐟",
     "readingTime": 10,
     "img": "salmler-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Was sind Salmler?",
+      "Die beliebtesten Salmler-Arten im Überblick",
+      "Die richtige Beckengröße für Salmler",
+      "Einrichtung des Salmler-Aquariums",
+      "Wasserwerte – Die Grundlage für gesunde Salmler",
+      "Vergesellschaftung – Welche Fische passen zu Salmlern?",
+      "Ernährung und Fütterung",
+      "Beckengröße und Besatzdichte",
+      "Nachzucht und Vermehrung von Salmlern",
+      "Krankheiten bei Salmlern vorbeugen",
+      "Besondere Salmler-Arten für Fortgeschrittene",
+      "Häufige Fehler bei der Salmler-Haltung",
+      "Fazit",
+      "Neonsalmler (Paracheirodon innesi)",
+      "Roter von Rio (Hyphessobrycon flammeus)"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Was sind Salmler?",
     "date": "7. Juni 2026",
     "generated": true
@@ -1036,9 +3322,49 @@
     "catEmoji": "💊",
     "readingTime": 12,
     "img": "schnecken-im-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Schnecken im Aquarium – Nützliche Helfer im Kampf gegen Algen und Mulm",
+      "Verwandte Artikel",
+      "Schnecken – Die unverzichtbaren Putzkräfte im Aquarium",
+      "Turmschnecken – Die unermüdlichen Bodengrundlockerer",
+      "Posthornschnecken – Die farbenfrohen Alleskönner",
+      "Napfschnecken – Die Spezialisten für hartnäckige Algen",
+      "Blasenschnecken – Die unscheinbaren, aber effektiven Reinigungskräfte",
+      "Weitere interessante Schneckenarten für das Aquarium",
+      "Schnecken richtig halten – Tipps zu Aquarium, Wasserwerten und Fütterung",
+      "Schneckenplage vermeiden – So behalten Sie die Kontrolle",
+      "Einschleppung verhindern – Quarantäne für neue Pflanzen",
+      "Schnecken als ökologische Indikatoren",
+      "Mythen und Missverständnisse über Aquarium Schnecken",
+      "Fazit: Schnecken – die unverzichtbaren Helfer im Aquarium"
+    ],
+    "related": [
+      [
+        "algen-im-aquarium",
+        "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+        "Algen gehören zu jedem Aquarium. Sie entstehen dort, wo Licht, Wasser und Nährst",
+        "algen-im-aquarium.png"
+      ],
+      [
+        "algenfresser-portrait",
+        "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+        "Algen sind der ewige Begleiter jedes Aquarianers. Mal sind sie nur ein leichter ",
+        "algenfresser-portrait.png"
+      ],
+      [
+        "aquarium-pflegeroutine-guide",
+        "Warum regelmäßige Pflege so wichtig ist",
+        "Ein Aquarium ist ein faszinierendes Ökosystem auf kleinem Raum – ein Stück leben",
+        "aquarium-pflegeroutine-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: Schnecken im Aquarium – Nützliche Helfer im Kampf gegen Algen und Mulm",
     "date": "7. Juni 2026",
     "generated": true
@@ -1054,9 +3380,50 @@
     "catEmoji": "🌿",
     "readingTime": 12,
     "img": "schwimmpflanzen-aquarium-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Schwimmpflanzen im Aquarium: Arten, Nutzen, Pflege und Kontrolle ohne Lichtchaos",
+      "1. Warum Schwimmpflanzen?",
+      "2. Beliebte Arten",
+      "3. Licht und Schatten",
+      "4. Nährstoffverbrauch",
+      "5. Strömung und Abdeckung",
+      "6. Pflege und Ausdünnen",
+      "7. Probleme vermeiden",
+      "8. Einsatz bei Zucht und Garnelen",
+      "9. FAQ",
+      "Froschbiss – der Allrounder",
+      "Muschelblume – die Schattenspenderin",
+      "Lemna – das unterschätzte Kraftpaket",
+      "Salvinia und Riccia",
+      "Zu viele Schwimmpflanzen → nächtlicher Sauerstoffmangel"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Warum Aquarienpflanzen?",
+        "Aquarienpflanzen sind weit mehr als nur Dekoration. Sie sind die Lunge deines Aq",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-moosarten",
+        "Warum Moos im Aquarium?",
+        "Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dich",
+        "aquarium-moosarten.png"
+      ],
+      [
+        "bodendecker-teppichpflanzen",
+        "Bodendecker und Teppichpflanzen fürs Aquarium",
+        "Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vie",
+        "bodendecker-teppichpflanzen.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Schwimmpflanzen im Aquarium: Arten, Nutzen, Pflege und Kontrolle ohne Lichtchaos",
     "date": "7. Juni 2026",
     "generated": true
@@ -1072,9 +3439,50 @@
     "catEmoji": "🌿",
     "readingTime": 8,
     "img": "steinarten-hardscape.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Steinarten und Hardscape – Gestalten mit Stein",
+      "Die wichtigsten Steinarten fürs Aquarium",
+      "Hardscape richtig aufbauen – die goldenen Regeln",
+      "Steine vorbereiten und einsetzen",
+      "Der Essig-Test: So prüfst du, ob ein Stein geeignet ist",
+      "Steine mit Pflanzen kombinieren",
+      "Iwagumi – der klassische Steingarten-Stil",
+      "Hardscape pflegen und reinigen",
+      "Fazit – Mit Stein zum Meisterwerk",
+      "Lava Flow / Lavastein",
+      "Dragon Stone (Ohko Stone)",
+      "Seiryu Stone (Raindrop Stone)",
+      "River Stones / Flusskiesel",
+      "Koke Stone / Yamaya Stone",
+      "Pagoda Stone"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Warum Aquarienpflanzen?",
+        "Aquarienpflanzen sind weit mehr als nur Dekoration. Sie sind die Lunge deines Aq",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-moosarten",
+        "Warum Moos im Aquarium?",
+        "Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dich",
+        "aquarium-moosarten.png"
+      ],
+      [
+        "bodendecker-teppichpflanzen",
+        "Bodendecker und Teppichpflanzen fürs Aquarium",
+        "Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vie",
+        "bodendecker-teppichpflanzen.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Steinarten und Hardscape – Gestalten mit Stein",
     "date": "7. Juni 2026",
     "generated": true
@@ -1090,9 +3498,50 @@
     "catEmoji": "⚙️",
     "readingTime": 6,
     "img": "stroemung-im-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Strömung im Aquarium – Pumpen, Wellen und die richtige Wasserbewegung",
+      "Warum ist Strömung so wichtig?",
+      "Strömungsarten und ihre Wirkung",
+      "Die richtige Strömungspumpe auswählen",
+      "Strömung und Pflanzenwachstum",
+      "Strömungsoptimierung durch Einrichtung",
+      "Strömung für spezielle Bewohnergruppen",
+      "Häufige Fehler bei der Strömungsgestaltung",
+      "Fazit",
+      "Gleichmäßige Grundströmung",
+      "Intervall- oder Wellenströmung",
+      "Starke Strömung für Biotopbecken",
+      "Sanfte Oberflächenbewegung",
+      "Förderleistung (Durchfluss)",
+      "Verstellbare Durchflussmenge"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Strömung im Aquarium – Pumpen, Wellen und die richtige Wasserbewegung",
     "date": "7. Juni 2026",
     "generated": true
@@ -1108,9 +3557,50 @@
     "catEmoji": "⚙️",
     "readingTime": 11,
     "img": "stromausfall-aquarium-notfallplan.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Stromausfall im Aquarium – Notfallplan für Filter, Sauerstoff, Temperatur und Bakterien",
+      "Was beim Stromausfall im Aquarium passiert",
+      "Die ersten 30 Minuten – was du sofort tun musst",
+      "Sauerstoff sichern – die wichtigste Maßnahme",
+      "Filterbakterien schützen – das biologische Gleichgewicht bewahren",
+      "Temperatur halten – die Wärme im Becken bewahren",
+      "Nach 2 bis 8 Stunden – die kritische Phase",
+      "Wiederanlauf des Filters – der kritischste Moment",
+      "Vorbereitung und Technik – wie du dich für den Notfall wappnest",
+      "FAQ – häufige Fragen zum Stromausfall im Aquarium",
+      "Fazit – Vorbereitung ist alles",
+      "Die biologische Kaskade in Stichpunkten",
+      "Sofortmaßnahmen-Checkliste",
+      "Methode 1: Batteriebetriebene Luftpumpe (empfohlen)",
+      "Methode 2: Manuelle Belüftung"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: Stromausfall im Aquarium – Notfallplan für Filter, Sauerstoff, Temperatur und Bakterien",
     "date": "7. Juni 2026",
     "generated": true
@@ -1126,9 +3616,50 @@
     "catEmoji": "💊",
     "readingTime": 22,
     "img": "truebes-wasser-schaum-geruch-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Symptome richtig lesen",
+      "Symptome richtig lesen",
+      "Weiße, grüne und braune Trübungen",
+      "Weiße, grüne und braune Trübungen",
+      "Schaum an der Oberfläche",
+      "Schaum an der Oberfläche",
+      "Muffiger Geruch",
+      "Sofortmaßnahmen",
+      "Ursachen dauerhaft abstellen",
+      "Ursachen dauerhaft abstellen",
+      "Diagnose-Tabelle",
+      "Diagnose-Tabelle",
+      "Vorbeugung",
+      "Weiterlesen auf Aquaristik Zentrum",
+      "Fazit"
+    ],
+    "related": [
+      [
+        "algen-im-aquarium",
+        "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+        "Algen gehören zu jedem Aquarium. Sie entstehen dort, wo Licht, Wasser und Nährst",
+        "algen-im-aquarium.png"
+      ],
+      [
+        "algenfresser-portrait",
+        "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+        "Algen sind der ewige Begleiter jedes Aquarianers. Mal sind sie nur ein leichter ",
+        "algenfresser-portrait.png"
+      ],
+      [
+        "aquarium-pflegeroutine-guide",
+        "Warum regelmäßige Pflege so wichtig ist",
+        "Ein Aquarium ist ein faszinierendes Ökosystem auf kleinem Raum – ein Stück leben",
+        "aquarium-pflegeroutine-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: Symptome richtig lesen",
     "date": "7. Juni 2026",
     "generated": true
@@ -1144,9 +3675,50 @@
     "catEmoji": "💊",
     "readingTime": 14,
     "img": "urlaub-aquarium-futterautomat.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium im Urlaub: Futterautomat, Licht, Wasserwechsel und Notfallplan richtig vorbereiten",
+      "1. Urlaub realistisch planen",
+      "2. Futterautomat oder Futterpause",
+      "3. Vorbereitung eine Woche vorher",
+      "4. Wasserwechsel und Reinigung",
+      "5. Licht und Technik",
+      "6. Betreuer einweisen",
+      "7. Notfallzettel",
+      "8. Nach der Rückkehr",
+      "9. FAQ – Häufige Fragen zum Urlaub mit Aquarium",
+      "Wann reicht eine Futterpause?",
+      "Wann brauchst du zwingend einen Futterautomaten oder Betreuer?",
+      "Futterpause – die unterschätzte Option",
+      "Futterautomat – wann sinnvoll?",
+      "Futterautomat-Typen im Überblick"
+    ],
+    "related": [
+      [
+        "algen-im-aquarium",
+        "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+        "Algen gehören zu jedem Aquarium. Sie entstehen dort, wo Licht, Wasser und Nährst",
+        "algen-im-aquarium.png"
+      ],
+      [
+        "algenfresser-portrait",
+        "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+        "Algen sind der ewige Begleiter jedes Aquarianers. Mal sind sie nur ein leichter ",
+        "algenfresser-portrait.png"
+      ],
+      [
+        "aquarium-pflegeroutine-guide",
+        "Warum regelmäßige Pflege so wichtig ist",
+        "Ein Aquarium ist ein faszinierendes Ökosystem auf kleinem Raum – ein Stück leben",
+        "aquarium-pflegeroutine-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: Aquarium im Urlaub: Futterautomat, Licht, Wasserwechsel und Notfallplan richtig vorbereiten",
     "date": "7. Juni 2026",
     "generated": true
@@ -1162,9 +3734,50 @@
     "catEmoji": "⚙️",
     "readingTime": 13,
     "img": "uv-klaerer-aquarium-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "UV-Klärer im Aquarium: Wann sie helfen und wann nicht",
+      "Was UV-C im Aquarium wirklich macht",
+      "Grünes Wasser und Schwebealgen – die klassische UV-Anwendung",
+      "Keimdruck realistisch einordnen",
+      "Dimensionierung – die richtige Größe für dein Becken",
+      "Durchfluss und Installation – worauf du achten musst",
+      "Dauerbetrieb oder Kur – was ist besser?",
+      "Nebenwirkungen – was passiert mit den Bakterien?",
+      "Kaufkriterien – worauf du beim UV-Klärer achten solltest",
+      "Reinigung und Wartung des UV-Klärers",
+      "Häufige Fehler beim UV-Klärer",
+      "FAQ – häufige Fragen zum UV-Klärer",
+      "Fazit – UV-Klärer gezielt und bewusst einsetzen",
+      "Was ein UV-Klärer kann",
+      "Was ein UV-Klärer nicht kann"
+    ],
+    "related": [
+      [
+        "aquarium-automation",
+        "Aquarium Automation – Smarte Technik für die moderne Aquaristik",
+        "Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten",
+        "aquarium-automation.png"
+      ],
+      [
+        "aquarium-beleuchtung-guide",
+        "Aquarium Beleuchtung: Die Grundlagen",
+        "Die Beleuchtung ist eines der wichtigsten Elemente in deinem Aquarium. Sie ist n",
+        "aquarium-beleuchtung-guide.png"
+      ],
+      [
+        "aquarium-duengung-guide",
+        "Aquarium Düngung – Pflanzendünger für gesundes und prächtiges Pflanzenwachstum",
+        "Ein üppig bepflanztes Aquarium ist der Traum eines jeden Aquarianers. Doch damit",
+        "aquarium-duengung-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Filter Set",
+      "Leistungsstark & leise",
+      "search:Aquarium Filter Außenfilter",
+      "#8b5cf6",
+      "#7c3aed"
+    ],
     "intent": "Ratgeber und Guide: UV-Klärer im Aquarium: Wann sie helfen und wann nicht",
     "date": "7. Juni 2026",
     "generated": true
@@ -1180,9 +3793,50 @@
     "catEmoji": "🐟",
     "readingTime": 6,
     "img": "vergesellschaftung-aquarienfische.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Vergesellschaftung von Aquarienfischen – Wer verträgt sich?",
+      "Die Grundregeln der Vergesellschaftung",
+      "Die friedlichsten Gesellschaftsfische",
+      "Achtung: Diese Fische vertragen sich nicht",
+      "Die richtige Besatzdichte",
+      "Vergesellschaftungstabelle",
+      "Häufige Fehler bei der Vergesellschaftung",
+      "Fazit",
+      "Kompatible Wasserwerte",
+      "Größenverhältnisse beachten",
+      "Friedliche vs. aggressive Arten",
+      "Sozialverhalten und Schwimmzonen",
+      "Neonsalmler (Paracheirodon innesi)",
+      "Guppys (Poecilia reticulata)",
+      "Panzerwelse (Corydoras)"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Vergesellschaftung von Aquarienfischen – Wer verträgt sich?",
     "date": "7. Juni 2026",
     "generated": true
@@ -1198,9 +3852,50 @@
     "catEmoji": "💊",
     "readingTime": 25,
     "img": "wasseraufbereiter-aquarium-vergleich.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Worum es in diesem Guide geht",
+      "Was Wasseraufbereiter leisten",
+      "Chlor, Metalle und Schleimhaut",
+      "Bakterienstarter einordnen",
+      "Huminstoffe und Schwarzwasser",
+      "Osmose statt Chemie",
+      "Notfälle und Wasserwechsel",
+      "Produktarten vergleichen",
+      "Dosierfehler vermeiden",
+      "Häufige Fragen",
+      "Weiterlesen auf Aquaristik Zentrum",
+      "Fazit",
+      "Auf einen Blick",
+      "Die drei Hauptaufgaben im Überblick",
+      "Was Aufbereiter nicht sind"
+    ],
+    "related": [
+      [
+        "algen-im-aquarium",
+        "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+        "Algen gehören zu jedem Aquarium. Sie entstehen dort, wo Licht, Wasser und Nährst",
+        "algen-im-aquarium.png"
+      ],
+      [
+        "algenfresser-portrait",
+        "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+        "Algen sind der ewige Begleiter jedes Aquarianers. Mal sind sie nur ein leichter ",
+        "algenfresser-portrait.png"
+      ],
+      [
+        "aquarium-pflegeroutine-guide",
+        "Warum regelmäßige Pflege so wichtig ist",
+        "Ein Aquarium ist ein faszinierendes Ökosystem auf kleinem Raum – ein Stück leben",
+        "aquarium-pflegeroutine-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: Wasseraufbereiter Aquarium Vergleich",
     "date": "7. Juni 2026",
     "generated": true
@@ -1216,9 +3911,50 @@
     "catEmoji": "💊",
     "readingTime": 8,
     "img": "wassertest-wasserpflege.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Wassertest und Wasserpflege – Alles im Griff",
+      "Die wichtigsten Wasserparameter im Überblick",
+      "Die richtige Testmethode",
+      "Wasserwechsel – die wichtigste Pflegemaßnahme",
+      "Wasseraufbereitung – Osmoseanlage, Entkalkung und Co.",
+      "Vorbeugende Wasserpflege – tägliche und wöchentliche Routinen",
+      "Häufige Wasserwert-Probleme und ihre Lösungen",
+      "Dokumentation – der unterschätzte Erfolgsfaktor",
+      "Fazit – Wer misst, der weiß",
+      "Ammonium (NH₄⁺) und Ammoniak (NH₃)",
+      "Nitrit (NO₂⁻)",
+      "Nitrat (NO₃⁻)",
+      "Phosphat (PO₄³⁻)",
+      "pH-Wert",
+      "Gesamthärte (GH) und Karbonathärte (KH)"
+    ],
+    "related": [
+      [
+        "algen-im-aquarium",
+        "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+        "Algen gehören zu jedem Aquarium. Sie entstehen dort, wo Licht, Wasser und Nährst",
+        "algen-im-aquarium.png"
+      ],
+      [
+        "algenfresser-portrait",
+        "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+        "Algen sind der ewige Begleiter jedes Aquarianers. Mal sind sie nur ein leichter ",
+        "algenfresser-portrait.png"
+      ],
+      [
+        "aquarium-pflegeroutine-guide",
+        "Warum regelmäßige Pflege so wichtig ist",
+        "Ein Aquarium ist ein faszinierendes Ökosystem auf kleinem Raum – ein Stück leben",
+        "aquarium-pflegeroutine-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Wassertest und Wasserpflege – Alles im Griff",
     "date": "7. Juni 2026",
     "generated": true
@@ -1234,9 +3970,50 @@
     "catEmoji": "🐟",
     "readingTime": 8,
     "img": "wasserwerte-aquarium-guide.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Warum Wasserwerte so wichtig sind",
+      "Die 5 wichtigsten Wasserwerte im Überblick",
+      "1. pH-Wert – Das Säure-Base-Gleichgewicht",
+      "2. Gesamthärte (GH) – Weiches oder hartes Wasser?",
+      "3. Karbonathärte (KH) – Der Puffer des Wassers",
+      "4. Nitrit (NO₂) – Der Giftstoff, der nie auftauchen darf",
+      "5. Nitrat (NO₃) – Der Zeiger für die Wasserqualität",
+      "Wie messe ich Wasserwerte richtig?",
+      "Häufige Fragen zu Wasserwerten",
+      "Fazit",
+      "Warum ist der pH-Wert so wichtig?",
+      "pH-Richtwerte nach Fischarten",
+      "pH-Wert senken oder erhöhen",
+      "Härtespektrum im Überblick",
+      "GH anpassen"
+    ],
+    "related": [
+      [
+        "aquarium-einfahren-nitritpeak",
+        "Was bedeutet „Aquarium einfahren“?",
+        "Ein neues Aquarium wirkt oft schon nach wenigen Stunden fertig: Bodengrund liegt",
+        "aquarium-einfahren-nitritpeak.png"
+      ],
+      [
+        "aquarium-umzug-transport-guide",
+        "Umzug planen",
+        "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen ",
+        "aquarium-umzug-transport-guide.png"
+      ],
+      [
+        "aquascaping-anfaenger",
+        "Was ist Aquascaping?",
+        "Aquascaping ist mehr als nur Aquarienhaltung – es ist die Kunst, Unterwasserland",
+        "aquascaping-anfaenger.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Komplettset 60l",
+      "Ideal für den Start",
+      "search:Aquarium Komplettset 60l",
+      "#06b6d4",
+      "#0891b2"
+    ],
     "intent": "Ratgeber und Guide: Warum Wasserwerte so wichtig sind",
     "date": "7. Juni 2026",
     "generated": true
@@ -1252,14 +4029,55 @@
     "catEmoji": "🐟",
     "readingTime": 6,
     "img": "welse-harnischwelse.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Welse im Aquarium – Antennenwelse, L-Welse und Harnischwelse",
+      "Antennenwelse (Ancistrus) – Die pflegeleichten Klassiker",
+      "L-Welse – Die faszinierende Vielfalt",
+      "Rhythmus-Nasenwelse (Rineloricaria)",
+      "Kann Antennenwelse und L-Welse züchten?",
+      "Kaufberatung – Darauf solltest du achten",
+      "Häufige Fehler bei der Wels-Haltung",
+      "Fazit",
+      "Verwandte Artikel",
+      "Arten im Überblick",
+      "Haltung und Pflege",
+      "Ernährung",
+      "Die beliebtesten L-Welse fürs Aquarium",
+      "Haltungsbedingungen für L-Welse",
+      "Antennenwels-Nachzucht"
+    ],
+    "related": [
+      [
+        "antennenwels-l-welse-haltung",
+        "Antennenwels L Welse Haltung",
+        "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebteste",
+        "antennenwels-l-welse-haltung.png"
+      ],
+      [
+        "aquarium-futter-ernaehrung",
+        "Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
+        "Die richtige Ernährung ist einer der wichtigsten Faktoren für die Gesundheit und",
+        "aquarium-futter-ernaehrung.png"
+      ],
+      [
+        "artemia-grindal-futtertiere-zuechten",
+        "Artemia Grindal Futtertiere Zuechten",
+        "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwi",
+        "artemia-grindal-futtertiere-zuechten.png"
+      ]
+    ],
+    "prod": [
+      "Garnelenfutter Premium",
+      "Hochwertige Nahrung",
+      "search:Garnelenfutter Aquarium",
+      "#ff6b6b",
+      "#e24545"
+    ],
     "intent": "Ratgeber und Guide: Welse im Aquarium – Antennenwelse, L-Welse und Harnischwelse",
     "date": "7. Juni 2026",
     "generated": true
   },
-{
+  {
     "slug": "wurzeln-holz-aquarium",
     "title": "Aquarium Wurzeln und Holz – Natürliche Dekoration mit Wirkung auf die Wasserwerte",
     "excerpt": "Wurzeln und Holz gehören zu den beliebtesten Dekorationselementen in der Aquaristik. Sie verleihen dem Becken eine natürliche Optik, schaffen Versteckmöglichkeiten und Struktur für Fische und Wirbello…",
@@ -1270,9 +4088,49 @@
     "catEmoji": "🌿",
     "readingTime": 5,
     "img": "wurzeln-holz-aquarium.png",
-    "toc": [],
-    "related": [],
-    "prod": [],
+    "toc": [
+      "Aquarium Wurzeln und Holz – Natürliche Dekoration mit Wirkung auf die Wasserwerte",
+      "Warum Holz im Aquarium?",
+      "Die wichtigsten Holzarten im Überblick",
+      "Holz richtig vorbereiten und einsetzen",
+      "Einfluss von Holz auf die Wasserwerte",
+      "Holz mit Pflanzen kombinieren",
+      "Probleme und Lösungen",
+      "Fazit",
+      "Moorkienwurzel",
+      "Mangrovenholz",
+      "Seemandelbaumholz",
+      "Drachenwurzel",
+      "Korkröhre",
+      "Auskochen oder Wässern?"
+    ],
+    "related": [
+      [
+        "aquarienpflanzen-anfaenger",
+        "Warum Aquarienpflanzen?",
+        "Aquarienpflanzen sind weit mehr als nur Dekoration. Sie sind die Lunge deines Aq",
+        "aquarienpflanzen-anfaenger.png"
+      ],
+      [
+        "aquarium-moosarten",
+        "Warum Moos im Aquarium?",
+        "Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dich",
+        "aquarium-moosarten.png"
+      ],
+      [
+        "bodendecker-teppichpflanzen",
+        "Bodendecker und Teppichpflanzen fürs Aquarium",
+        "Ein dichter, sattgrüner Pflanzenteppich am Boden des Aquariums ist der Traum vie",
+        "bodendecker-teppichpflanzen.png"
+      ]
+    ],
+    "prod": [
+      "Pflanzendünger Set",
+      "Eisen + NPK + Spurenelemente",
+      "search:Aquarium Pflanzendünger Set",
+      "#10b981",
+      "#059669"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Wurzeln und Holz – Natürliche Dekoration mit Wirkung auf die Wasserwerte",
     "date": "7. Juni 2026",
     "generated": true
@@ -1288,9 +4146,43 @@
     "catEmoji": "💊",
     "readingTime": 12,
     "img": "wasserwechsel-guide.webp",
-    "toc": [],
-    "related": ["wasserwerte-aquarium-guide", "wassertest-wasserpflege", "einsteiger-aquarium-guide"],
-    "prod": [],
+    "toc": [
+      "Warum regelmäßige Wasserwechsel lebenswichtig sind",
+      "Wie oft und wie viel Wasser wechseln? – Der Rhythmus für jedes Becken",
+      "Die richtige Technik – Schritt für Schritt zum perfekten Wasserwechsel",
+      "Bedingungen des Nachfüllwassers – Temperatur, Konditionierer, pH-Anpassung",
+      "Automatischer Wasserwechsel – Systeme und Lösungen für die moderne Aquaristik",
+      "Tipps für Anfänger vs. Fortgeschrittene",
+      "FAQ – Häufige Fragen zum Aquarium Wasserwechsel",
+      "Fazit"
+    ],
+    "related": [
+      [
+        "algen-im-aquarium",
+        "1. Einleitung: Algen sind normal – aber wann werden sie zum Problem?",
+        "Algen gehören zu jedem Aquarium. Sie entstehen dort, wo Licht, Wasser und Nährst",
+        "algen-im-aquarium.png"
+      ],
+      [
+        "algenfresser-portrait",
+        "Aquarium Algenfresser im Porträt – Fische und Wirbellose",
+        "Algen sind der ewige Begleiter jedes Aquarianers. Mal sind sie nur ein leichter ",
+        "algenfresser-portrait.png"
+      ],
+      [
+        "aquarium-pflegeroutine-guide",
+        "Warum regelmäßige Pflege so wichtig ist",
+        "Ein Aquarium ist ein faszinierendes Ökosystem auf kleinem Raum – ein Stück leben",
+        "aquarium-pflegeroutine-guide.png"
+      ]
+    ],
+    "prod": [
+      "Aquarium Pflege Set",
+      "Mulmsauger & Bürsten",
+      "search:Aquarium Reinigung Set",
+      "#ffd93d",
+      "#f59e0b"
+    ],
     "intent": "Ratgeber und Guide: Aquarium Wasserwechsel richtig machen – Der ultimative Guide 2026",
     "date": "9. Juni 2026",
     "generated": true
