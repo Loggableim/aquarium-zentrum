@@ -86,6 +86,9 @@ SUBJECTS = {
     "wasserwerte-aquarium-guide": "aquarium water parameters chart, pH GH KH measurement tools",
     "welse-harnischwelse": "loricariid catfish, plecos and suckermouth catfish in aquarium",
     "wurzeln-holz-aquarium": "driftwood and roots in aquarium, natural wood decoration",
+    "aquarium-umzug-transport-guide": "transporting an aquarium, moving tank with fish in plastic bags",
+    "bucephalandra-anubias-javafarn": "bucephalandra, anubias and java fern plants on driftwood",
+    "iwagumi-aquascape-guide": "iwagumi style aquascape with arranged stones and green carpet plants",
 }
 
 def submit_job(slug, subject):
