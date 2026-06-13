@@ -954,12 +954,28 @@ ${shoppingHubHTML}
 ${nlGlow}
 </main>`;
 
+  const indexJsonLd = `<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Aquaristik Zentrum",
+  "url": "https://aquaristik-zentrum.com/",
+  "description": "Aquaristik Zentrum – Dein modernes Aquarium-Magazin mit praktischen Guides, klarer Themenführung und Tipps für Einsteiger und Profis.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://aquaristik-zentrum.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>`;
+
   return wrapPage(
     'Aquaristik Zentrum – Alles rund ums Aquarium | Megapage',
     'Aquaristik Zentrum – Dein modernes Aquarium-Magazin mit praktischen Guides, klarer Themenführung und Tipps für Einsteiger und Profis.',
     'https://aquaristik-zentrum.com/',
     '/images/hero.png',
-    body
+    body,
+    indexJsonLd
   );
 }
 
@@ -1081,7 +1097,7 @@ ${breadcrumbSchema([
     ${sidebarHTML}
   </div>`;
 
-  return wrapPage(`${a.title} | Aquaristik Zentrum`, a.excerpt, `https://aquaristik-zentrum.com/artikel/${slug}/`, `/images/${a.img}`, body, jsonLd);
+  return wrapPage(`${a.title} | Aquaristik Zentrum`, a.excerpt, `https://aquaristik-zentrum.com/artikel/${slug}/`, `/images/${a.img}`, body, jsonLd, 'article');
 }
 
 function buildPage(title, desc, canonical, bodyContent, breadcrumbItems) {
@@ -1093,7 +1109,7 @@ function buildPage(title, desc, canonical, bodyContent, breadcrumbItems) {
 }
 
 // ── WRAPPER ──
-function wrapPage(title, desc, canonical, ogImage, body, jsonLd) {
+function wrapPage(title, desc, canonical, ogImage, body, jsonLd, ogType = 'website') {
   const jsonLdTag = jsonLd ? `\n${jsonLd}` : '';
   const head = `<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1103,10 +1119,14 @@ function wrapPage(title, desc, canonical, ogImage, body, jsonLd) {
 <link rel="canonical" href="${canonical}">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${desc}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${ogType}">
 <meta property="og:url" content="${canonical}">
 <meta property="og:site_name" content="Aquaristik Zentrum">
 ${ogImage ? `<meta property="og:image" content="https://aquaristik-zentrum.com${ogImage}">` : ''}
+${ogImage ? `<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${title}">
+<meta name="twitter:description" content="${desc}">
+<meta name="twitter:image" content="https://aquaristik-zentrum.com${ogImage}">` : ''}
 ${T.head}${jsonLdTag}`;
   return `<!DOCTYPE html>
 <html lang="de">
