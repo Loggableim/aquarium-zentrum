@@ -96,6 +96,26 @@ function relatedBottomHTML(related) {
   return html;
 }
 
+// ── INTERNAL CROSS-LINKING ──
+function injectInternalLinks(bodyContent, related) {
+  if (!related || related.length === 0) return bodyContent;
+  // Inject after first </h2> if the body has any h2
+  const h2Match = bodyContent.match(/<\/h2>/);
+  if (!h2Match) return bodyContent;
+
+  const idx = h2Match.index + 6; // after </h2>
+  const linkBox = related.map(([rslug, rtitle]) =>
+    `<a href="/artikel/${rslug}.html" class="inline-related">→ ${rtitle}</a>`
+  ).join('\n    ');
+
+  const snippet = `\n  <div class="inline-related-box">
+    <strong>📌 Passend dazu:</strong>
+    ${linkBox}
+  </div>\n  `;
+
+  return bodyContent.slice(0, idx) + snippet + bodyContent.slice(idx);
+}
+
 function tocItem(text) {
   return `<div class="toc-item">→ ${text}</div>`;
 }
@@ -1090,7 +1110,7 @@ ${breadcrumbSchema([
         <span>${a.readingTime} Min. Lesezeit</span>
       </div>
       <div class="body-text">
-        ${addLazyLoading(bodyContent)}
+        ${addLazyLoading(injectInternalLinks(bodyContent, a.related))}
         ${relatedBottomHTML(a.related)}
       </div>
     </div>

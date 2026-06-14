@@ -849,6 +849,41 @@ img { max-width: 100%; height: auto; display: block; }
   .related-bottom-grid { grid-template-columns: 1fr; }
 }
 
+/* ─── INLINE CROSS-LINK BOX ─── */
+.inline-related-box {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: rgba(6,182,212,0.06);
+  border: 1px solid rgba(6,182,212,0.15);
+  border-left: 3px solid var(--cyan);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+.inline-related-box strong {
+  font-size: 0.85rem;
+  color: var(--cyan);
+  white-space: nowrap;
+}
+.inline-related {
+  font-size: 0.82rem;
+  color: var(--text-on-card);
+  text-decoration: none;
+  padding: 0.25rem 0.65rem;
+  background: rgba(255,255,255,0.045);
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.inline-related:hover {
+  color: #fff;
+  border-color: rgba(6,182,212,0.4);
+  background: rgba(6,182,212,0.10);
+}
+
 /* ─── PAGE CONTENT (About / Impressum) ─── */
 .page-hero {
   background: linear-gradient(135deg, var(--bg), var(--cyan));
