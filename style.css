@@ -849,6 +849,41 @@ img { max-width: 100%; height: auto; display: block; }
   .related-bottom-grid { grid-template-columns: 1fr; }
 }
 
+/* ─── INLINE CROSS-LINK BOX ─── */
+.inline-related-box {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: rgba(6,182,212,0.06);
+  border: 1px solid rgba(6,182,212,0.15);
+  border-left: 3px solid var(--cyan);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+.inline-related-box strong {
+  font-size: 0.85rem;
+  color: var(--cyan);
+  white-space: nowrap;
+}
+.inline-related {
+  font-size: 0.82rem;
+  color: var(--text-on-card);
+  text-decoration: none;
+  padding: 0.25rem 0.65rem;
+  background: rgba(255,255,255,0.045);
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.inline-related:hover {
+  color: #fff;
+  border-color: rgba(6,182,212,0.4);
+  background: rgba(6,182,212,0.10);
+}
+
 /* ─── PAGE CONTENT (About / Impressum) ─── */
 .page-hero {
   background: linear-gradient(135deg, var(--bg), var(--cyan));
@@ -934,32 +969,116 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 0.35rem;
   line-height: 1.5;
 }
-/* ─── HERO QUICK TICKER ─── */
-.hero-ticker {
-  max-width: var(--max-width); margin: 0 auto; padding: 1.05rem 2rem 0;
-  overflow: hidden;
+/* ─── INTENT SECTION (Schnelleinstieg) ─── */
+.intent-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 2rem 0;
 }
-.ticker-track {
-  display: flex; gap: 0.75rem; width: max-content;
-  animation: tickerMove 38s linear infinite;
+.intent-inner {
+  background: linear-gradient(135deg, rgba(6,182,212,0.06), rgba(139,92,246,0.06));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
 }
-.hero-ticker:hover .ticker-track { animation-play-state: paused; }
-.ticker-item {
-  flex: 0 0 auto; display: inline-flex; align-items: center; gap: 0.55rem;
-  color: var(--text-on-card); font-size: 0.82rem; font-weight: 800;
-  padding: 0.64rem 0.95rem; border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.045);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+.intent-head {
+  text-align: center;
+  margin-bottom: 1.75rem;
 }
-.ticker-item span { color: var(--cyan); transition: transform var(--transition); }
-.ticker-item:hover { color: #fff; border-color: rgba(6,182,212,0.45); background: rgba(6,182,212,0.10); }
-.ticker-item:hover span { transform: translateX(3px); }
-@keyframes tickerMove {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+.intent-head .mag-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--cyan);
+  margin-bottom: 0.5rem;
+}
+.intent-head h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #fff;
+}
+.intent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+.intent-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+  padding: 1.35rem 0.85rem;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all var(--transition);
+  animation: intentFadeUp 0.5s ease-out both;
+  animation-delay: var(--delay, 0s);
+  text-decoration: none;
+  color: inherit;
+}
+.intent-card:hover {
+  background: rgba(6,182,212,0.10);
+  border-color: rgba(6,182,212,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.intent-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+.intent-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+}
+.intent-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+@keyframes intentFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* show all link */
+.show-all-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+.show-all-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cyan);
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(6,182,212,0.25);
+  transition: all var(--transition);
+}
+.show-all-link:hover {
+  background: rgba(6,182,212,0.10);
+  border-color: rgba(6,182,212,0.5);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .intent-section { padding: 0.9rem 1rem 0; }
+  .intent-inner { padding: 1.5rem 1rem; }
+  .intent-grid { grid-template-columns: repeat(2, 1fr); gap: 0.65rem; }
+  .intent-head h2 { font-size: 1.3rem; }
+  .intent-emoji { font-size: 1.6rem; }
+  .intent-card { padding: 1rem 0.65rem; }
+}
+@media (max-width: 480px) {
+  .intent-grid { grid-template-columns: repeat(2, 1fr); }
+  .intent-title { font-size: 0.78rem; }
+  .intent-desc { font-size: 0.7rem; }
 }
 
 /* ─── AMAZON SHOPPING HUB ─── */
@@ -1344,8 +1463,6 @@ img { max-width: 100%; height: auto; display: block; }
   .topic-rotator { min-height: 190px; }
   .hero-modern .hero-side .side-item { padding: 0.75rem; }
   .hero-modern .hero-side .side-item .thumb { width: 56px; height: 42px; }
-  .hero-ticker { padding: 0.85rem 1rem 0; }
-  .ticker-item { font-size: 0.75rem; padding: 0.52rem 0.78rem; }
   .shopping-hub { padding: 0.9rem 1rem 0; }
   .shopping-panel { border-radius: 20px; padding: 1rem; }
   .shopping-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

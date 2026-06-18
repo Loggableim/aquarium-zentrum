@@ -34,7 +34,7 @@ function amazonAffiliateUrl(ref) {
 }
 
 // ── Helpers ──
-function cardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
+function cardHTML(slug, title, excerpt, img, cat, catColor, readingTime) {
   const imgStyle = img.startsWith('linear-gradient')
     ? `background:${img}`
     : `background-image:url('/images/${img}')`;
@@ -47,7 +47,6 @@ function cardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
       ${readingTime ? `<span class="read-badge">${readingTime} Min</span>` : ''}
     </div>
     <div class="art-body">
-      <span class="date">${date}</span>
       <h4>${title}</h4>
       <p>${excerpt}</p>
       <span class="read-link">Weiterlesen →</span>
@@ -55,7 +54,7 @@ function cardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
   </a>`;
 }
 
-function heroCardHTML(slug, title, excerpt, img, cat, catColor, date, readingTime) {
+function heroCardHTML(slug, title, excerpt, img, cat, catColor, readingTime) {
   const imgStyle = img.startsWith('linear-gradient')
     ? `background:${img}`
     : `background-image:url('/images/${img}')`;
@@ -69,7 +68,7 @@ function heroCardHTML(slug, title, excerpt, img, cat, catColor, date, readingTim
       <span class="hero-card-tag" style="${catStyle}">${cat}</span>
       <h3>${title}</h3>
       <p>${excerpt}</p>
-      <span class="hero-card-meta">${date} · ${readingTime} Min Lesezeit</span>
+      <span class="hero-card-meta">${readingTime} Min Lesezeit</span>
     </div>
   </a>`;
 }
@@ -95,6 +94,26 @@ function relatedBottomHTML(related) {
   }
   html += '</div></div>';
   return html;
+}
+
+// ── INTERNAL CROSS-LINKING ──
+function injectInternalLinks(bodyContent, related) {
+  if (!related || related.length === 0) return bodyContent;
+  // Inject after first </h2> if the body has any h2
+  const h2Match = bodyContent.match(/<\/h2>/);
+  if (!h2Match) return bodyContent;
+
+  const idx = h2Match.index + 6; // after </h2>
+  const linkBox = related.map(([rslug, rtitle]) =>
+    `<a href="/artikel/${rslug}.html" class="inline-related">→ ${rtitle}</a>`
+  ).join('\n    ');
+
+  const snippet = `\n  <div class="inline-related-box">
+    <strong>📌 Passend dazu:</strong>
+    ${linkBox}
+  </div>\n  `;
+
+  return bodyContent.slice(0, idx) + snippet + bodyContent.slice(idx);
 }
 
 function tocItem(text) {
@@ -837,22 +856,7 @@ function buildIndex() {
   // Hero: Magazine-style editorial layout with featured story + secondary grid + topic bar
   const heroHTML = buildMagazineHero();
 
-  const tickerItems = [
-    ['Einsteiger-Guide', '/artikel/einsteiger-aquarium-guide.html'],
-    ['Aquarium einfahren', '/artikel/aquarium-einfahren-nitritpeak.html'],
-    ['Wasserwerte prüfen', '/artikel/wasserwerte-aquarium-guide.html'],
-    ['Pflanzen wählen', '/artikel/aquarienpflanzen-anfaenger.html'],
-    ['Filter verstehen', '/artikel/aquarium-filter-guide.html'],
-    ['Fische kombinieren', '/artikel/vergesellschaftung-aquarienfische.html'],
-    ['Algen stoppen', '/artikel/algen-im-aquarium.html'],
-    ['DIY Aquarium bauen', '/artikel/diy-aquarium-bauen.html'],
-  ];
-  const tickerTrack = [...tickerItems, ...tickerItems]
-    .map(([label, url]) => `<a href="${url}" class="ticker-item">${label}<span>→</span></a>`)
-    .join('');
-  const heroTickerHTML = `<div class="hero-ticker" aria-label="Schnelleinstiege">
-    <div class="ticker-track">${tickerTrack}</div>
-  </div>`;
+  const intentSectionHTML = buildIntentSection();
 
   const shoppingHubHTML = `<section class="shopping-hub" aria-label="Amazon Shopping-Guide für Aquarium-Zubehör">
   <div class="shopping-panel">
@@ -879,7 +883,7 @@ function buildIndex() {
   for (const slug of picks) {
     const a = ARTICLES[slug];
     if (!a) continue;
-    picksHTML += heroCardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.date, a.readingTime);
+    picksHTML += heroCardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.readingTime);
   }
 
   const edsPickHTML = `<section class="mp-section">
@@ -895,14 +899,20 @@ function buildIndex() {
 
   // Category sections
   let catSections = '';
+  const MAX_VISIBLE = 6;
   for (const cat of CATEGORIES) {
+    const visibleSlugs = cat.cards.slice(0, MAX_VISIBLE);
+    const remainder = cat.cards.length - MAX_VISIBLE;
     let cardsHTML = '';
-    for (const slug of cat.cards) {
+    for (const slug of visibleSlugs) {
       const a = ARTICLES[slug];
       if (!a) continue;
-      cardsHTML += cardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.date, a.readingTime);
+      cardsHTML += cardHTML(slug, a.title, a.excerpt, a.img, a.cat, a.catColor, a.readingTime);
     }
-    const catGridStyle = cat.cards.length === 2 ? ' style="grid-template-columns:repeat(2,1fr);"' : '';
+    const allLink = remainder > 0
+      ? `<div class="show-all-wrapper"><a href="/artikel/" class="show-all-link">→ Alle ${cat.count} Artikel in "${cat.name}" anzeigen</a></div>`
+      : '';
+    const catGridStyle = visibleSlugs.length === 2 ? ' style="grid-template-columns:repeat(2,1fr);"' : '';
     catSections += `<section class="mp-section">
       <div class="section-title">
         <h3><span class="emoji">${cat.emoji}</span> ${cat.name}</h3>
@@ -912,6 +922,7 @@ function buildIndex() {
       <div class="card-grid"${catGridStyle}>
         ${cardsHTML}
       </div>
+      ${allLink}
     </section>\n`;
   }
 
@@ -952,37 +963,39 @@ function buildIndex() {
     </div>
   </section>`;
 
-  // Newsletter 2
-  const nlGlow2 = `<div class="newsletter-glow">
-    <div class="nl-inner">
-      <div class="nl-text">
-        <h3>🐟 Bereit für dein Traum-Aquarium?</h3>
-        <p>Melde dich an und erhalte die besten Tipps, Tricks und Guides direkt in dein Postfach.</p>
-      </div>
-      <div class="nl-cta">
-        <a href="mailto:hallo@aquaristik-zentrum.com?subject=Newsletter" class="btn-glow">Newsletter abonnieren →</a>
-      </div>
-    </div>
-  </div>`;
-
   const body = `<main class="megapage">
 <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0;white-space:nowrap;">Aquaristik Zentrum – Alles rund ums Aquarium</h1>
 ${heroHTML}
-${heroTickerHTML}
-${shoppingHubHTML}
-${nlGlow}
+${intentSectionHTML}
 ${edsPickHTML}
 ${catSections}
 ${topicsSection}
-${nlGlow2}
+${shoppingHubHTML}
+${nlGlow}
 </main>`;
+
+  const indexJsonLd = `<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Aquaristik Zentrum",
+  "url": "https://aquaristik-zentrum.com/",
+  "description": "Aquaristik Zentrum – Dein modernes Aquarium-Magazin mit praktischen Guides, klarer Themenführung und Tipps für Einsteiger und Profis.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://aquaristik-zentrum.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>`;
 
   return wrapPage(
     'Aquaristik Zentrum – Alles rund ums Aquarium | Megapage',
     'Aquaristik Zentrum – Dein modernes Aquarium-Magazin mit praktischen Guides, klarer Themenführung und Tipps für Einsteiger und Profis.',
     'https://aquaristik-zentrum.com/',
     '/images/hero.png',
-    body
+    body,
+    indexJsonLd
   );
 }
 
@@ -1094,19 +1107,17 @@ ${breadcrumbSchema([
       <div class="meta">
         <span>👤 Alexander</span>
         <span class="sep">·</span>
-        <span>${a.date}</span>
-        <span class="sep">·</span>
         <span>${a.readingTime} Min. Lesezeit</span>
       </div>
       <div class="body-text">
-        ${addLazyLoading(bodyContent)}
+        ${addLazyLoading(injectInternalLinks(bodyContent, a.related))}
         ${relatedBottomHTML(a.related)}
       </div>
     </div>
     ${sidebarHTML}
   </div>`;
 
-  return wrapPage(`${a.title} | Aquaristik Zentrum`, a.excerpt, `https://aquaristik-zentrum.com/artikel/${slug}/`, `/images/${a.img}`, body, jsonLd);
+  return wrapPage(`${a.title} | Aquaristik Zentrum`, a.excerpt, `https://aquaristik-zentrum.com/artikel/${slug}/`, `/images/${a.img}`, body, jsonLd, 'article');
 }
 
 function buildPage(title, desc, canonical, bodyContent, breadcrumbItems) {
@@ -1118,7 +1129,7 @@ function buildPage(title, desc, canonical, bodyContent, breadcrumbItems) {
 }
 
 // ── WRAPPER ──
-function wrapPage(title, desc, canonical, ogImage, body, jsonLd) {
+function wrapPage(title, desc, canonical, ogImage, body, jsonLd, ogType = 'website') {
   const jsonLdTag = jsonLd ? `\n${jsonLd}` : '';
   const head = `<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1128,10 +1139,14 @@ function wrapPage(title, desc, canonical, ogImage, body, jsonLd) {
 <link rel="canonical" href="${canonical}">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${desc}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${ogType}">
 <meta property="og:url" content="${canonical}">
 <meta property="og:site_name" content="Aquaristik Zentrum">
 ${ogImage ? `<meta property="og:image" content="https://aquaristik-zentrum.com${ogImage}">` : ''}
+${ogImage ? `<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${title}">
+<meta name="twitter:description" content="${desc}">
+<meta name="twitter:image" content="https://aquaristik-zentrum.com${ogImage}">` : ''}
 ${T.head}${jsonLdTag}`;
   return `<!DOCTYPE html>
 <html lang="de">
@@ -1192,8 +1207,7 @@ function buildMagazineHero() {
           <h2>${feature.title}</h2>
           <p>${feature.excerpt}</p>
           <div class="mag-feature-meta">
-            <span>&#128197; ${feature.date}</span>
-            <span>&#128214; ${feature.readingTime} Min</span>
+            <span>&#128214; ${feature.readingTime} Min Lesezeit</span>
           </div>
         </div>
       </a>
@@ -1203,6 +1217,36 @@ function buildMagazineHero() {
       <span class="mag-topics-label">Themen</span>
       <div class="mag-topics-list">
         ${topicsHTML}
+      </div>
+    </div>
+  </section>`;
+}
+
+// ── INTENT SECTION (Schnelleinstieg – ersetzt Ticker) ──
+function buildIntentSection() {
+  const intents = [
+    { emoji: '🐟', title: 'Ich bin Anfänger', desc: 'Erstes Aquarium einrichten', url: '/artikel/einsteiger-aquarium-guide.html' },
+    { emoji: '🌿', title: 'Ich will Pflanzen', desc: 'Arten, Pflege & Düngung', url: '/artikel/aquarienpflanzen-anfaenger.html' },
+    { emoji: '💧', title: 'Ich habe Algen', desc: 'Algen erkennen & bekämpfen', url: '/artikel/algen-im-aquarium.html' },
+    { emoji: '⚙️', title: 'Ich brauche Technik', desc: 'Filter, Licht, CO₂ & Co.', url: '/artikel/aquarium-technik-ueberblick.html' },
+    { emoji: '🪨', title: 'Ich will Aquascapen', desc: 'Hardscape & Gestaltung', url: '/artikel/aquascaping-anfaenger.html' },
+    { emoji: '🩺', title: 'Mein Fisch ist krank', desc: 'Symptome & Behandlung', url: '/artikel/fischkrankheiten-aquarium-guide.html' },
+  ];
+  const cards = intents.map((intent, i) =>
+    `<a href="${intent.url}" class="intent-card" style="--delay:${i * 0.06}s">
+      <span class="intent-emoji">${intent.emoji}</span>
+      <strong class="intent-title">${intent.title}</strong>
+      <span class="intent-desc">${intent.desc}</span>
+    </a>`
+  ).join('');
+  return `<section class="intent-section" aria-label="Schnelleinstieg">
+    <div class="intent-inner">
+      <div class="intent-head">
+        <span class="mag-eyebrow">Schnelleinstieg</span>
+        <h2>Was beschäftigt dich?</h2>
+      </div>
+      <div class="intent-grid">
+        ${cards}
       </div>
     </div>
   </section>`;
