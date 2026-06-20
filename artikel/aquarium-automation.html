@@ -24,7 +24,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.webp">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+<script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  // Events die AdSense laden
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  // Fallback: nach 3s trotzdem laden (für Bounce/No-Interaction)
+  setTimeout(loadAds, 3000);
+})();
+</script>
 
 <script type="application/ld+json">
 {
@@ -271,7 +291,7 @@
 
 <p><em>Veröffentlicht am 4. Juni 2026 · Kategorie: Technik · Lesezeit: 7 Minuten</em></p>
 
-<img loading="lazy" src="/images/aquarium-automation.webp" alt="Aquarium Automation – Smarte Technik für die moderne Aquaristik" style="width:100%; border-radius:8px; margin:1em 0;" />
+<img loading="lazy" src="/images/aquarium-automation.webp" srcset="/images/aquarium-automation-640.webp 640w, /images/aquarium-automation-960.webp 960w, /images/aquarium-automation.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Aquarium Automation – Smarte Technik für die moderne Aquaristik" style="width:100%; border-radius:8px; margin:1em 0;" />
 
 <p>Die Aquaristik hat sich in den letzten Jahren rasant weiterentwickelt. Was früher mit aufwändiger Handarbeit, ständigen Kontrollgängen und viel Bauchgefühl verbunden war, lässt sich heute dank smarter Technik präzise automatisieren. Immer mehr Aquarianer entdecken die Vorteile der Aquarium Automation – von der digitalen Steuerung der Beleuchtung bis hin zur vollautomatischen Wasseraufbereitung. Dieser Guide gibt Ihnen einen umfassenden Überblick über die wichtigsten Komponenten, ihre Funktionsweisen und wie Sie Schritt für Schritt Ihr Aquarium in ein Smart-Home-Ökosystem einbinden können.</p>
 

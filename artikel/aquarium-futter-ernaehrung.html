@@ -24,7 +24,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.webp">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+<script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  // Events die AdSense laden
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  // Fallback: nach 3s trotzdem laden (für Bounce/No-Interaction)
+  setTimeout(loadAds, 3000);
+})();
+</script>
 
 <script type="application/ld+json">
 {
@@ -285,10 +305,10 @@
 
 <div class="img-grid-2">
   <div class="img-grid-item">
-    <img loading="lazy" src="../images/futter-arten.webp" alt="Verschiedene Fischfutter-Arten wie Flocken, Granulat und Frostfutter im Vergleich" style="width:100%;height:auto;border-radius:8px;">
+    <img loading="lazy" src="../images/futter-arten.webp" srcset="../images/futter-arten-640.webp 640w, ../images/futter-arten-960.webp 960w, ../images/futter-arten.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Verschiedene Fischfutter-Arten wie Flocken, Granulat und Frostfutter im Vergleich" style="width:100%;height:auto;border-radius:8px;">
   </div>
   <div class="img-grid-item">
-    <img loading="lazy" src="../images/futter-fuetterung.webp" alt="Richtige Fütterung im Aquarium" style="width:100%;height:auto;border-radius:8px;">
+    <img loading="lazy" src="../images/futter-fuetterung.webp" srcset="../images/futter-fuetterung-640.webp 640w, ../images/futter-fuetterung-960.webp 960w, ../images/futter-fuetterung.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Richtige Fütterung im Aquarium" style="width:100%;height:auto;border-radius:8px;">
   </div>
 </div>
 

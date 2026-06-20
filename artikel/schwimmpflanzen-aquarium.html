@@ -234,7 +234,7 @@
     <div class="article-main">
       <span class="cat-head" style="background:#10b981;color:#fff;">Pflanzen</span>
       <h1>Schwimmpflanzen im Aquarium – Arten, Pflege & Vorteile</h1>
-      <img loading="lazy" src="../images/schwimmpflanzen-aquarium_00001_.webp" alt="Schwimmpflanzen im Aquarium – Arten, Pflege & Vorteile" class="hero-image">
+      <img loading="lazy" src="../images/schwimmpflanzen-aquarium_00001_.webp" srcset="../images/schwimmpflanzen-aquarium_00001_-640.webp 640w, ../images/schwimmpflanzen-aquarium_00001_-960.webp 960w, ../images/schwimmpflanzen-aquarium_00001_.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Schwimmpflanzen im Aquarium – Arten, Pflege & Vorteile" class="hero-image">
       
       <div class="meta">
         <span>👤 Alexander</span>
@@ -252,7 +252,7 @@
 
 <p>Ob du ein dicht bepflanztes Gesellschaftsbecken betreibst, ein minimalistisches Aquascape gestaltest oder Fische züchten möchtest – Schwimmpflanzen können in fast jedem Aquarium einen wertvollen Beitrag leisten. In diesem Artikel erfährst du alles über die wichtigsten Arten, ihre Vor- und Nachteile, die richtige Pflege und wie du sie gekonnt in deine Unterwasserlandschaft integrieren kannst.</p>
 
-<img loading="lazy" src="/images/schwimmpflanzen-aquarium.webp" class="article-image-full" alt="Schwimmpflanzen im Aquarium – Arten, Pflege & Vorteile">
+<img loading="lazy" src="/images/schwimmpflanzen-aquarium.webp" srcset="/images/schwimmpflanzen-aquarium-640.webp 640w, /images/schwimmpflanzen-aquarium-960.webp 960w, /images/schwimmpflanzen-aquarium.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" class="article-image-full" alt="Schwimmpflanzen im Aquarium – Arten, Pflege & Vorteile">
 
 <h2>Die besten Schwimmpflanzen-Arten fürs Aquarium</h2>
 
@@ -303,7 +303,25 @@
 
 <div class="adsense-placeholder">
   <!-- AdSense-Platzhalter: Schwimmpflanzen Vorteile -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+  <script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  setTimeout(loadAds, 3000);
+})();
+</script>
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-9094916118868532"
@@ -365,7 +383,25 @@
 
 <div class="adsense-placeholder">
   <!-- AdSense-Platzhalter: Aquascaping -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+  <script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  setTimeout(loadAds, 3000);
+})();
+</script>
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-9094916118868532"

@@ -19,7 +19,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.webp">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+<script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  setTimeout(loadAds, 3000);
+})();
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -270,7 +288,7 @@
       </div>
       <div class="body-text">
         <div class="article-image-full">
-      <img loading="lazy" src="../images/aquarium-stromkosten-berechnen.webp" alt="Modernes Aquarium mit energiesparender LED-Beleuchtung, Stromzähler und Stromrechnung daneben – visuelle Darstellung der Aquarium Stromkosten" class="hero-image">
+      <img loading="lazy" src="../images/aquarium-stromkosten-berechnen.webp" srcset="../images/aquarium-stromkosten-berechnen-640.webp 640w, ../images/aquarium-stromkosten-berechnen-960.webp 960w, ../images/aquarium-stromkosten-berechnen.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Modernes Aquarium mit energiesparender LED-Beleuchtung, Stromzähler und Stromrechnung daneben – visuelle Darstellung der Aquarium Stromkosten" class="hero-image">
     </div>
 
     <p>Stell dir vor, du stehst im Zoofachgeschäft, siehst das schicke 200-Liter-Becken und denkst: „Sieht gut aus, das nehme ich mit." Was dabei fast niemand auf dem Schirm hat: Die <strong>laufenden Stromkosten</strong> eines Aquariums. Heizung, Filter, Licht, CO<sub>2</sub>-Anlage – alles summiert sich, Monat für Monat, Jahr für Jahr.</p>

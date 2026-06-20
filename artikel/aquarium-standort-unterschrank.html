@@ -233,7 +233,7 @@
     <div class="article-main">
       <span class="cat-head" style="background:#06b6d4;color:#fff;">Einsteiger</span>
       <h1>Aquarium Standort und Unterschrank – Der richtige Platz für dein Becken</h1>
-      <img loading="lazy" src="../images/aquarium-standort-unterschrank_00001_.webp" alt="Aquarium Standort und Unterschrank – Der richtige Platz für dein Becken" class="hero-image">
+      <img loading="lazy" src="../images/aquarium-standort-unterschrank_00001_.webp" srcset="../images/aquarium-standort-unterschrank_00001_-640.webp 640w, ../images/aquarium-standort-unterschrank_00001_-960.webp 960w, ../images/aquarium-standort-unterschrank_00001_.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Aquarium Standort und Unterschrank – Der richtige Platz für dein Becken" class="hero-image">
       
       <div class="meta">
         <span>👤 Alexander</span>
@@ -244,7 +244,7 @@
       </div>
       <div class="body-text">
         <div class="article-image-full">
-      <img loading="lazy" src="../images/standort-unterschrank.webp" alt="Modernes Aquarium mit Unterschrank, elegant eingerichtet mit Holzunterschrank und integrierter Technik" class="article-image-full">
+      <img loading="lazy" src="../images/standort-unterschrank.webp" srcset="../images/standort-unterschrank-640.webp 640w, ../images/standort-unterschrank-960.webp 960w, ../images/standort-unterschrank.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Modernes Aquarium mit Unterschrank, elegant eingerichtet mit Holzunterschrank und integrierter Technik" class="article-image-full">
     </div>
 
     <p>Du hast dich für ein Aquarium entschieden – oder bist kurz davor. Bevor du jedoch Wasser einlässst, Fische kaufst oder auch nur einen einzigen Kieselstein ins Becken legst, gibt es eine Entscheidung, die alles andere beeinflusst: <strong>der Standort</strong>. Ein Aquarium ist kein Möbelstück, das du einfach irgendwo hinstellen kannst. Es ist ein lebendes Ökosystem, das auf seine Umgebung reagiert – und mit seinem oft enormen Gewicht eine ernstzunehmende statische Herausforderung darstellt.</p>
@@ -370,7 +370,25 @@
     </ol>
     <p>Ein sauber ausgerichtetes Aquarium steht spannungsfrei und hat eine deutlich längere Lebensdauer. Besonders bei größeren Becken (ab 200 Litern) ist dieser Schritt absolut kritisch.</p>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+    <script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  setTimeout(loadAds, 3000);
+})();
+</script>
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-9094916118868532"

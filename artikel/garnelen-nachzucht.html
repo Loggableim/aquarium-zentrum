@@ -24,7 +24,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.webp">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+<script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  // Events die AdSense laden
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  // Fallback: nach 3s trotzdem laden (für Bounce/No-Interaction)
+  setTimeout(loadAds, 3000);
+})();
+</script>
 
 <script type="application/ld+json">
 {
@@ -271,7 +291,7 @@
 
 <p>Die Nachzucht von Zwerggarnelen ist einer der spannendsten Aspekte der Aquaristik. Kaum etwas ist so faszinierend wie die Beobachtung einer funktionierenden Garnelenkolonie, in der regelmäßig Nachwuchs heranwächst. Das Gute: Viele Zwerggarnelen-Arten sind ausgesprochen pflegeleicht und vermehren sich im gut eingerichteten Aquarium fast von selbst. In diesem Guide erfährst du alles über die Voraussetzungen, den Ablauf und die optimale Pflege für eine erfolgreiche Garnelennachzucht – von den ersten Häutungen bis zum ausgewachsenen Tier.</p>
 
-<img loading="lazy" src="/images/garnelen-nachzucht.webp" class="article-image-full" alt="Garnelennachzucht – Zwerggarnelen erfolgreich vermehren">
+<img loading="lazy" src="/images/garnelen-nachzucht.webp" srcset="/images/garnelen-nachzucht-640.webp 640w, /images/garnelen-nachzucht-960.webp 960w, /images/garnelen-nachzucht.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" class="article-image-full" alt="Garnelennachzucht – Zwerggarnelen erfolgreich vermehren">
 
 <h2>Welche Garnelen eignen sich für die Nachzucht?</h2>
 

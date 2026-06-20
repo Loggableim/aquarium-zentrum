@@ -24,7 +24,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.webp">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+<script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  // Events die AdSense laden
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  // Fallback: nach 3s trotzdem laden (für Bounce/No-Interaction)
+  setTimeout(loadAds, 3000);
+})();
+</script>
 
 <script type="application/ld+json">
 {
@@ -260,7 +280,7 @@
       </div>
       <div class="body-text">
         <!-- GENERATED_BY_NOVA_BATCH_FIX -->
-<img src="../images/aquarium-moos.webp" alt="Moosarten im Aquarium – Javamoos, Christmas Moos und Mooskugeln" class="hero-image">
+<img src="../images/aquarium-moos.webp" srcset="../images/aquarium-moos-640.webp 640w, ../images/aquarium-moos-960.webp 960w, ../images/aquarium-moos.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Moosarten im Aquarium – Javamoos, Christmas Moos und Mooskugeln" class="hero-image">
         </div>
 
         <p>Moos ist aus der modernen Aquaristik nicht mehr wegzudenken. Egal ob du ein dichtes Moos-Teppich auf einem Lavastein anlegen, einen Moos-Baum als Gestaltungselement erschaffen oder einfach nur eine pflegeleichte Hintergrundbepflanzung suchst – <strong>Aquarium-Moose</strong> sind extrem vielseitig, anspruchslos und optisch ein echter Hingucker.</p>
