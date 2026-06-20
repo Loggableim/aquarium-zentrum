@@ -1,0 +1,13 @@
+{
+  "key": "2572b1da71c5c59fcd30e46216bc4db3",
+  "key_file": "2572b1da71c5c59fcd30e46216bc4db3.txt",
+  "host": "aquaristik-zentrum.com",
+  "endpoints": [
+    "https://api.indexnow.org/IndexNow",
+    "https://yandex.com/indexnow"
+  ],
+  "last_submission": {
+    "urls": 99,
+    "timestamp": "2026-06-20T02:22:11.902886"
+  }
+}
