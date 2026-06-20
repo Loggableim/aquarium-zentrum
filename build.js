@@ -34,6 +34,38 @@ function amazonAffiliateUrl(ref) {
 }
 
 // ── Helpers ──
+
+// SEO: Title für SERPs truncaten (Google ~60 Zeichen)
+function truncateSERP(s, max = 60) {
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max - 1);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).trim() + '…';
+}
+
+// SEO: Description für SERPs truncaten (Google ~155 Zeichen)
+function truncateDesc(s, max = 155) {
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max - 1);
+  const lastSpace = cut.lastIndexOf(' ');
+  return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).trim() + '…';
+}
+
+// SEO: Deutsches Datum → ISO 8601 (Google benötigt YYYY-MM-DD für datePublished)
+const DE_MONTHS = { 'Januar': '01', 'Februar': '02', 'März': '03', 'April': '04', 'Mai': '05', 'Juni': '06', 'Juli': '07', 'August': '08', 'September': '09', 'Oktober': '10', 'November': '11', 'Dezember': '12' };
+function dateToISO(deDate) {
+  if (!deDate) return new Date().toISOString().slice(0, 10);
+  // Bereits ISO?
+  if (/^\d{4}-\d{2}-\d{2}/.test(deDate)) return deDate.slice(0, 10);
+  // Deutsches Format: "7. Juni 2026" → "2026-06-07"
+  const m = deDate.match(/(\d{1,2})\.\s*(\w+)\s*(\d{4})/);
+  if (m) {
+    const day = m[1].padStart(2, '0');
+    const month = DE_MONTHS[m[2]] || '01';
+    return `${m[3]}-${month}-${day}`;
+  }
+  return new Date().toISOString().slice(0, 10);
+}
 function cardHTML(slug, title, excerpt, img, cat, catColor, readingTime) {
   const imgStyle = img.startsWith('linear-gradient')
     ? `background:${img}`
@@ -1083,7 +1115,7 @@ ${breadcrumbSchema([
     "@type": "Person",
     "name": "Alexander"
   },
-  "datePublished": "${a.date}",
+  "datePublished": "${dateToISO(a.date)}",
   "publisher": {
     "@type": "Organization",
     "name": "Aquaristik Zentrum"
@@ -1130,22 +1162,26 @@ function buildPage(title, desc, canonical, bodyContent, breadcrumbItems) {
 
 // ── WRAPPER ──
 function wrapPage(title, desc, canonical, ogImage, body, jsonLd, ogType = 'website') {
+  // SEO: Title auf 60 Zeichen truncaten für SERPs (Google truncatet sonst unkontrolliert)
+  const serpTitle = truncateSERP(title, 60);
+  // SEO: Description auf 155 Zeichen truncaten (Google truncatet bei ~160)
+  const serpDesc = truncateDesc(desc, 155);
   const jsonLdTag = jsonLd ? `\n${jsonLd}` : '';
   const head = `<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${title}</title>
-<meta name="description" content="${desc}">
+<title>${serpTitle}</title>
+<meta name="description" content="${serpDesc}">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="${canonical}">
 <meta property="og:title" content="${title}">
-<meta property="og:description" content="${desc}">
+<meta property="og:description" content="${serpDesc}">
 <meta property="og:type" content="${ogType}">
 <meta property="og:url" content="${canonical}">
 <meta property="og:site_name" content="Aquaristik Zentrum">
 ${ogImage ? `<meta property="og:image" content="https://aquaristik-zentrum.com${ogImage}">` : ''}
 ${ogImage ? `<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="${title}">
-<meta name="twitter:description" content="${desc}">
+<meta name="twitter:title" content="${truncateSERP(title, 70)}">
+<meta name="twitter:description" content="${truncateDesc(desc, 200)}">
 <meta name="twitter:image" content="https://aquaristik-zentrum.com${ogImage}">` : ''}
 ${T.head}${jsonLdTag}`;
   return `<!DOCTYPE html>

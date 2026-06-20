@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Disallow: /content/
 
 Sitemap: https://aquaristik-zentrum.com/sitemap.xml
