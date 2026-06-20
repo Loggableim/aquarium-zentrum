@@ -234,7 +234,7 @@
     <div class="article-main">
       <span class="cat-head" style="background:#10b981;color:#fff;">Pflanzen</span>
       <h1>Schwimmpflanzen im Aquarium – Arten, Pflege & Vorteile</h1>
-      <img loading="lazy" src="../images/schwimmpflanzen-aquarium_00001_.png" alt="Schwimmpflanzen im Aquarium – Arten, Pflege & Vorteile" class="hero-image">
+      <img loading="lazy" src="../images/schwimmpflanzen-aquarium_00001_.webp" srcset="../images/schwimmpflanzen-aquarium_00001_-640.webp 640w, ../images/schwimmpflanzen-aquarium_00001_-960.webp 960w, ../images/schwimmpflanzen-aquarium_00001_.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Schwimmpflanzen im Aquarium – Arten, Pflege & Vorteile" class="hero-image">
       
       <div class="meta">
         <span>👤 Alexander</span>
@@ -252,7 +252,7 @@
 
 <p>Ob du ein dicht bepflanztes Gesellschaftsbecken betreibst, ein minimalistisches Aquascape gestaltest oder Fische züchten möchtest – Schwimmpflanzen können in fast jedem Aquarium einen wertvollen Beitrag leisten. In diesem Artikel erfährst du alles über die wichtigsten Arten, ihre Vor- und Nachteile, die richtige Pflege und wie du sie gekonnt in deine Unterwasserlandschaft integrieren kannst.</p>
 
-<img src="/images/schwimmpflanzen-aquarium.webp" class="article-image-full" alt="Schwimmpflanzen im Aquarium – Arten, Pflege & Vorteile">
+<img loading="lazy" src="/images/schwimmpflanzen-aquarium.webp" srcset="/images/schwimmpflanzen-aquarium-640.webp 640w, /images/schwimmpflanzen-aquarium-960.webp 960w, /images/schwimmpflanzen-aquarium.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" class="article-image-full" alt="Schwimmpflanzen im Aquarium – Arten, Pflege & Vorteile">
 
 <h2>Die besten Schwimmpflanzen-Arten fürs Aquarium</h2>
 
@@ -303,7 +303,25 @@
 
 <div class="adsense-placeholder">
   <!-- AdSense-Platzhalter: Schwimmpflanzen Vorteile -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+  <script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  setTimeout(loadAds, 3000);
+})();
+</script>
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-9094916118868532"
@@ -365,7 +383,25 @@
 
 <div class="adsense-placeholder">
   <!-- AdSense-Platzhalter: Aquascaping -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+  <script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  setTimeout(loadAds, 3000);
+})();
+</script>
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-9094916118868532"
@@ -527,115 +563,6 @@
   </div>
 </div>
 
-<script>
-// Cookie Banner
-(function() {
-  const banner = document.getElementById('cookieBanner');
-  const acceptBtn = document.getElementById('cookieAccept');
-  if (banner && !localStorage.getItem('cookieConsent')) {
-    banner.classList.add('show');
-  }
-  acceptBtn?.addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'true');
-    banner.classList.remove('show');
-  });
-})();
-
-// Mobile Nav Toggle
-(function() {
-  const hamburger = document.getElementById('navHamburger');
-  const navLinks = document.getElementById('navLinks');
-  const overlay = document.getElementById('navOverlay');
-
-  function toggleMenu(open) {
-    hamburger?.classList.toggle('active', open);
-    navLinks?.classList.toggle('open', open);
-    overlay?.classList.toggle('active', open);
-    hamburger?.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-
-  hamburger?.addEventListener('click', function() {
-    const isOpen = navLinks?.classList.contains('open');
-    toggleMenu(!isOpen);
-  });
-
-  overlay?.addEventListener('click', function() {
-    toggleMenu(false);
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && navLinks?.classList.contains('open')) {
-      toggleMenu(false);
-    }
-  });
-
-  // Mobile mega-menu accordion: tap to expand
-  document.querySelectorAll('.nav-item').forEach(function(item) {
-    const link = item.querySelector('.nav-link');
-    const dropdown = item.querySelector('.dropdown');
-    if (link && dropdown && window.innerWidth <= 768) {
-      link.addEventListener('click', function(e) {
-        // On mobile, toggle mega-menu accordion instead of navigating
-        if (window.innerWidth <= 768) {
-          // Close all others
-          document.querySelectorAll('.nav-item.mobile-open').forEach(function(other) {
-            if (other !== item) other.classList.remove('mobile-open');
-          });
-          item.classList.toggle('mobile-open');
-          e.preventDefault();
-        }
-      });
-    }
-  });
-})();
-
-// Search toggle
-(function() {
-  const searchToggle = document.getElementById('searchToggle');
-  const searchBar = document.getElementById('searchBar');
-  const searchInput = document.getElementById('searchInput');
-  const searchSubmit = document.getElementById('searchSubmit');
-
-  searchToggle?.addEventListener('click', function() {
-    const isOpen = searchBar?.classList.contains('open');
-    if (isOpen) {
-      searchBar.classList.remove('open');
-      searchToggle.style.display = '';
-    } else {
-      searchBar.classList.add('open');
-      searchToggle.style.display = 'none';
-      setTimeout(function() { searchInput?.focus(); }, 100);
-    }
-  });
-
-  searchSubmit?.addEventListener('click', function() {
-    const query = searchInput?.value?.trim();
-    if (query) {
-      window.location.href = '/?q=' + encodeURIComponent(query);
-    }
-  });
-
-  searchInput?.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') searchSubmit?.click();
-    if (e.key === 'Escape') {
-      searchBar?.classList.remove('open');
-      searchToggle.style.display = '';
-    }
-  });
-})();
-
-// Active nav link detection
-(function() {
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('.nav-link').forEach(function(link) {
-    const href = link.getAttribute('href');
-    if (href && currentPath.endsWith(href)) {
-      link.classList.add('active');
-    }
-  });
-})();
-</script>
+<script src="/app.js" defer></script>
 </body>
 </html>

@@ -233,7 +233,7 @@
     <div class="article-main">
       <span class="cat-head" style="background:#ec4899;color:#fff;">Fische</span>
       <h1>Fadenfische & Guramis – Labyrinthfische im Aquarium halten</h1>
-      <img loading="lazy" src="../images/fadenfische-guramis-haltung_00001_.png" alt="Fadenfische & Guramis – Labyrinthfische im Aquarium halten" class="hero-image">
+      <img loading="lazy" src="../images/fadenfische-guramis-haltung_00001_.webp" srcset="../images/fadenfische-guramis-haltung_00001_-640.webp 640w, ../images/fadenfische-guramis-haltung_00001_-960.webp 960w, ../images/fadenfische-guramis-haltung_00001_.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Fadenfische & Guramis – Labyrinthfische im Aquarium halten" class="hero-image">
       
       <div class="meta">
         <span>👤 Alexander</span>
@@ -247,7 +247,7 @@
 
 <p>Fadenfische und Guramis zählen zu den eleganzesten und faszinierendsten Bewohnern des Süßwasseraquariums. Mit ihren langen, fadenförmigen Bauchflossen, den leuchtenden Farben und ihrem interessanten Verhalten haben sie sich einen festen Platz in der Herzen vieler Aquarianer erobert. Ihre besondere Fähigkeit, atmosphärischen Sauerstoff atmen zu können, macht sie nicht nur biologisch einzigartig, sondern auch zu vergleichsweise anpassungsfähigen Pfleglingen. In diesem Artikel erfährst du alles über die Haltung, die verschiedenen Arten, die richtige Einrichtung des Aquariums und die erfolgreiche Zucht dieser wunderbaren Fische.</p>
 
-<img src="/images/fadenfische-guramis-haltung.webp" class="article-image-full" alt="Fadenfische und Guramis – Labyrinthfische im Aquarium halten">
+<img loading="lazy" src="/images/fadenfische-guramis-haltung.webp" srcset="/images/fadenfische-guramis-haltung-640.webp 640w, /images/fadenfische-guramis-haltung-960.webp 960w, /images/fadenfische-guramis-haltung.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" class="article-image-full" alt="Fadenfische und Guramis – Labyrinthfische im Aquarium halten">
 
 <!-- AdSense Platzhalter -->
 <div style="margin:2rem 0;padding:1rem;background:#f1f5f9;border-radius:8px;text-align:center;min-height:90px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:0.875rem;">📢 Anzeige (AdSense)</div>
@@ -545,115 +545,6 @@
   </div>
 </div>
 
-<script>
-// Cookie Banner
-(function() {
-  const banner = document.getElementById('cookieBanner');
-  const acceptBtn = document.getElementById('cookieAccept');
-  if (banner && !localStorage.getItem('cookieConsent')) {
-    banner.classList.add('show');
-  }
-  acceptBtn?.addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'true');
-    banner.classList.remove('show');
-  });
-})();
-
-// Mobile Nav Toggle
-(function() {
-  const hamburger = document.getElementById('navHamburger');
-  const navLinks = document.getElementById('navLinks');
-  const overlay = document.getElementById('navOverlay');
-
-  function toggleMenu(open) {
-    hamburger?.classList.toggle('active', open);
-    navLinks?.classList.toggle('open', open);
-    overlay?.classList.toggle('active', open);
-    hamburger?.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-
-  hamburger?.addEventListener('click', function() {
-    const isOpen = navLinks?.classList.contains('open');
-    toggleMenu(!isOpen);
-  });
-
-  overlay?.addEventListener('click', function() {
-    toggleMenu(false);
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && navLinks?.classList.contains('open')) {
-      toggleMenu(false);
-    }
-  });
-
-  // Mobile mega-menu accordion: tap to expand
-  document.querySelectorAll('.nav-item').forEach(function(item) {
-    const link = item.querySelector('.nav-link');
-    const dropdown = item.querySelector('.dropdown');
-    if (link && dropdown && window.innerWidth <= 768) {
-      link.addEventListener('click', function(e) {
-        // On mobile, toggle mega-menu accordion instead of navigating
-        if (window.innerWidth <= 768) {
-          // Close all others
-          document.querySelectorAll('.nav-item.mobile-open').forEach(function(other) {
-            if (other !== item) other.classList.remove('mobile-open');
-          });
-          item.classList.toggle('mobile-open');
-          e.preventDefault();
-        }
-      });
-    }
-  });
-})();
-
-// Search toggle
-(function() {
-  const searchToggle = document.getElementById('searchToggle');
-  const searchBar = document.getElementById('searchBar');
-  const searchInput = document.getElementById('searchInput');
-  const searchSubmit = document.getElementById('searchSubmit');
-
-  searchToggle?.addEventListener('click', function() {
-    const isOpen = searchBar?.classList.contains('open');
-    if (isOpen) {
-      searchBar.classList.remove('open');
-      searchToggle.style.display = '';
-    } else {
-      searchBar.classList.add('open');
-      searchToggle.style.display = 'none';
-      setTimeout(function() { searchInput?.focus(); }, 100);
-    }
-  });
-
-  searchSubmit?.addEventListener('click', function() {
-    const query = searchInput?.value?.trim();
-    if (query) {
-      window.location.href = '/?q=' + encodeURIComponent(query);
-    }
-  });
-
-  searchInput?.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') searchSubmit?.click();
-    if (e.key === 'Escape') {
-      searchBar?.classList.remove('open');
-      searchToggle.style.display = '';
-    }
-  });
-})();
-
-// Active nav link detection
-(function() {
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('.nav-link').forEach(function(link) {
-    const href = link.getAttribute('href');
-    if (href && currentPath.endsWith(href)) {
-      link.classList.add('active');
-    }
-  });
-})();
-</script>
+<script src="/app.js" defer></script>
 </body>
 </html>

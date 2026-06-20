@@ -24,7 +24,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.webp">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐠</text></svg>">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+<script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  // Events die AdSense laden
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  // Fallback: nach 3s trotzdem laden (für Bounce/No-Interaction)
+  setTimeout(loadAds, 3000);
+})();
+</script>
 
 <script type="application/ld+json">
 {
@@ -262,7 +282,7 @@
         <!-- GENERATED_BY_NOVA_BATCH_FIX -->
 <p>Der Bodengrund ist weit mehr als nur Dekoration in deinem Aquarium. Er ist die Basis für das gesamte biologische Gleichgewicht, das Fundament für Pflanzenwurzeln, der Lebensraum für Millionen von Bakterien und ein entscheidender Faktor für die Wasserchemie. Die Wahl des richtigen Substrats kann über Erfolg oder Misserfolg deines Aquariums entscheiden. In diesem ausführlichen Ratgeber erfährst du alles, was du über Aquarium-Bodengrund wissen musst – von den verschiedenen Substratarten über die richtige Schichtung bis zur praktischen Umsetzung.</p>
 
-      <img loading="lazy" src="/images/bodengrund-arten.webp" alt="Verschiedene Aquarium Bodengrund Arten im Vergleich" class="article-image-full" width="1216" height="832" loading="lazy">
+      <img src="/images/bodengrund-arten.webp" srcset="/images/bodengrund-arten-640.webp 640w, /images/bodengrund-arten-960.webp 960w, /images/bodengrund-arten.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Verschiedene Aquarium Bodengrund Arten im Vergleich" class="article-image-full" width="1216" height="832" loading="lazy">
 
       <h2>Warum ist der Bodengrund so wichtig?</h2>
   <div class="inline-related-box">
@@ -293,7 +313,7 @@
       <h3>5. Spezialsubstrate für spezifische Anwendungen</h3>
       <p>Es gibt eine Reihe von Spezialsubstraten für besondere Einsatzbereiche. Aquarium-Ton ist ein natürliches Substrat mit hohem Eisengehalt, das besonders für Pflanzen geeignet ist, die viele Nährstoffe benötigen. Quarzsand ist chemisch nahezu inert und eignet sich für Meerwasseraquarien oder als Dekoration. Laterit, ein eisenreicher Ton, wird als Zusatz in Nährböden verwendet. Für Garnelenbecken gibt es spezielle Garnelenböden, die auf die Bedürfnisse von Zwerggarnelen abgestimmt sind und den pH-Wert im optimalen Bereich von 6,0 bis 6,8 halten. Auch für Malawisee- und Tanganjikasee-Aquarien gibt es spezielle Sande, die den hohen pH-Wert dieser Biotope unterstützen.</p>
 
-      <img loading="lazy" src="/images/bodengrund-einrichten.webp" alt="Aquarium Bodengrund richtig schichten und einrichten" class="article-image-full" width="1216" height="832" loading="lazy">
+      <img src="/images/bodengrund-einrichten.webp" srcset="/images/bodengrund-einrichten-640.webp 640w, /images/bodengrund-einrichten-960.webp 960w, /images/bodengrund-einrichten.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="Aquarium Bodengrund richtig schichten und einrichten" class="article-image-full" width="1216" height="832" loading="lazy">
 
       <h2>Die richtige Schichtung des Bodengrunds</h2>
       <p>Die klassische und bewährteste Methode ist der Aufbau in zwei oder drei Schichten. Die unterste Schicht bildet ein Nährboden oder Deponit. Diese Schicht sollte etwa zwei bis drei Zentimeter hoch sein. Sie versorgt die Pflanzenwurzeln langfristig mit Nährstoffen und ist die Basis für kräftiges Pflanzenwachstum. Darüber folgt die Hauptschicht aus Kies oder Sand, die mindestens fünf bis sechs Zentimeter hoch sein sollte. In einem stark bepflanzten Aquarium kann die Gesamthöhe des Bodengrunds durchaus acht bis zehn Zentimeter betragen.</p>
@@ -468,128 +488,6 @@
   </div>
 </div>
 
-<script>
-// Cookie Banner
-(function() {
-  const banner = document.getElementById('cookieBanner');
-  const acceptBtn = document.getElementById('cookieAccept');
-  if (banner && !localStorage.getItem('cookieConsent')) {
-    banner.classList.add('show');
-  }
-  acceptBtn?.addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'true');
-    banner.classList.remove('show');
-  });
-})();
-
-// Mobile Nav Toggle
-(function() {
-  const hamburger = document.getElementById('navHamburger');
-  const navLinks = document.getElementById('navLinks');
-  const overlay = document.getElementById('navOverlay');
-
-  function toggleMenu(open) {
-    hamburger?.classList.toggle('active', open);
-    navLinks?.classList.toggle('open', open);
-    overlay?.classList.toggle('active', open);
-    hamburger?.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-
-  hamburger?.addEventListener('click', function() {
-    const isOpen = navLinks?.classList.contains('open');
-    toggleMenu(!isOpen);
-  });
-
-  overlay?.addEventListener('click', function() {
-    toggleMenu(false);
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && navLinks?.classList.contains('open')) {
-      toggleMenu(false);
-    }
-  });
-
-  // Mobile mega-menu accordion: tap to expand
-  document.querySelectorAll('.nav-item').forEach(function(item) {
-    const link = item.querySelector('.nav-link');
-    const dropdown = item.querySelector('.dropdown');
-    if (link && dropdown && window.innerWidth <= 768) {
-      link.addEventListener('click', function(e) {
-        // On mobile, toggle mega-menu accordion instead of navigating
-        if (window.innerWidth <= 768) {
-          // Close all others
-          document.querySelectorAll('.nav-item.mobile-open').forEach(function(other) {
-            if (other !== item) other.classList.remove('mobile-open');
-          });
-          item.classList.toggle('mobile-open');
-          e.preventDefault();
-        }
-      });
-    }
-  });
-})();
-
-// Search toggle
-(function() {
-  const searchToggle = document.getElementById('searchToggle');
-  const searchBar = document.getElementById('searchBar');
-  const searchInput = document.getElementById('searchInput');
-  const searchSubmit = document.getElementById('searchSubmit');
-
-  searchToggle?.addEventListener('click', function() {
-    const isOpen = searchBar?.classList.contains('open');
-    if (isOpen) {
-      searchBar.classList.remove('open');
-      searchToggle.style.display = '';
-    } else {
-      searchBar.classList.add('open');
-      searchToggle.style.display = 'none';
-      setTimeout(function() { searchInput?.focus(); }, 100);
-    }
-  });
-
-  searchSubmit?.addEventListener('click', function() {
-    const query = searchInput?.value?.trim();
-    if (query) {
-      window.location.href = '/?q=' + encodeURIComponent(query);
-    }
-  });
-
-  searchInput?.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') searchSubmit?.click();
-    if (e.key === 'Escape') {
-      searchBar?.classList.remove('open');
-      searchToggle.style.display = '';
-    }
-  });
-})();
-
-// Sidebar toggle (mobile)
-(function() {
-  const toggle = document.getElementById('sidebarToggle');
-  const sidebar = document.querySelector('.article-sidebar');
-  if (toggle && sidebar) {
-    toggle.addEventListener('click', function() {
-      sidebar.classList.toggle('open');
-      toggle.classList.toggle('active');
-      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
-    });
-  }
-})();
-
-// Active nav link detection
-(function() {
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('.nav-link').forEach(function(link) {
-    const href = link.getAttribute('href');
-    if (href && currentPath.endsWith(href)) {
-      link.classList.add('active');
-    }
-  });
-})();
-</script>
+<script src="/app.js" defer></script>
 </body>
 </html>

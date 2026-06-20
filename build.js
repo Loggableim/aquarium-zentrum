@@ -181,10 +181,21 @@ function breadcrumbSchema(items) {
 },`;
 }
 
-// ── LAZY LOAD HELPER ──
+// ── LAZY LOAD + RESPONSIVE IMAGES HELPER ──
 function addLazyLoading(html) {
-  // Add loading="lazy", width and height to img tags
-  return html.replace(/<img\s+/g, '<img loading="lazy" ');
+  // Add loading="lazy" + srcset/sizes to img tags — but NOT to hero images (above the fold)
+  return html.replace(/<img\s+(?![^>]*loading=)(?![^>]*class="hero)/g, '<img loading="lazy" ')
+    .replace(/<img\s+([^>]*?)src="([^"]+\.webp)"/g, (match, attrs, src) => {
+      if (match.includes('srcset=')) return match; // already has srcset
+      const base = src.replace(/\.webp$/, '');
+      const prefix = src.includes('/') ? src.substring(0, src.lastIndexOf('/') + 1) : '';
+      const baseName = src.split('/').pop().replace(/\.webp$/, '');
+      // Responsive srcset: 640w (mobile), 960w (tablet), 1216w (desktop)
+      return match.replace(
+        `src="${src}"`,
+        `src="${src}" srcset="${prefix}${baseName}-640.webp 640w, ${prefix}${baseName}-960.webp 960w, ${src} 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px"`
+      );
+    });
 }
 
 // ── ARTICLE DATA ──

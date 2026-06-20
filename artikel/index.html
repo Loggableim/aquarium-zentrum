@@ -17,7 +17,25 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.webp">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532" crossorigin="anonymous"></script>
+<script>
+// AdSense lazy load — lädt adsbygoogle.js erst bei scroll/interaction (spart ~200KB initial load)
+(function(){
+  var loaded = false;
+  function loadAds() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9094916118868532';
+    document.head.appendChild(s);
+  }
+  window.addEventListener('scroll', loadAds, { once: true, passive: true });
+  window.addEventListener('mousemove', loadAds, { once: true, passive: true });
+  window.addEventListener('touchstart', loadAds, { once: true, passive: true });
+  setTimeout(loadAds, 3000);
+})();
+</script>
 <style>
 .art-page { max-width:1200px;margin:0 auto;padding:2rem 1.5rem; }
 .art-page h1 { font-size:2.2rem;font-weight:900;margin-bottom:0.5rem;letter-spacing:-0.5px; }
@@ -58,7 +76,7 @@
 <meta name="twitter:image" content="https://aquaristik-zentrum.com/images/default-hero.jpg" />
 </head>
 <body>
-<img src="../images/hero-alle-aquaristik-artikel.webp" alt="🐠 Alle Aquaristik-Artikel" class="article-hero" />
+<img loading="lazy" src="../images/hero-alle-aquaristik-artikel.webp" srcset="../images/hero-alle-aquaristik-artikel-640.webp 640w, ../images/hero-alle-aquaristik-artikel-960.webp 960w, ../images/hero-alle-aquaristik-artikel.webp 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px" alt="🐠 Alle Aquaristik-Artikel" class="article-hero" />
 
 
 <div class="promo-bar" id="promoBar">
@@ -771,67 +789,6 @@
     </div>
   </div>
 </footer>
-<script>
-// Cookie Banner
-(function() {
-  const banner = document.getElementById('cookieBanner');
-  const acceptBtn = document.getElementById('cookieAccept');
-  if (banner && !localStorage.getItem('cookieConsent')) {
-    banner.classList.add('show');
-  }
-  acceptBtn?.addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'true');
-    banner.classList.remove('show');
-  });
-})();
-
-// Mobile Nav Toggle
-(function() {
-  const hamburger = document.getElementById('navHamburger');
-  const navLinks = document.getElementById('navLinks');
-  const overlay = document.getElementById('navOverlay');
-  function toggle(open) {
-    hamburger?.classList.toggle('active', open);
-    navLinks?.classList.toggle('open', open);
-    overlay?.classList.toggle('active', open);
-    hamburger?.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-  hamburger?.addEventListener('click', () => toggle(!navLinks?.classList.contains('open')));
-  overlay?.addEventListener('click', () => toggle(false));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape' && navLinks?.classList.contains('open')) toggle(false); });
-})();
-
-// Search Toggle
-(function() {
-  const toggle = document.getElementById('searchToggle');
-  const bar = document.getElementById('searchBar');
-  const input = document.getElementById('searchInput');
-  const submit = document.getElementById('searchSubmit');
-  toggle?.addEventListener('click', () => {
-    const open = bar?.classList.toggle('open');
-    if (open) input?.focus();
-  });
-  submit?.addEventListener('click', () => {
-    const q = input?.value?.trim();
-    if (q) window.location.href = '/artikel/?q=' + encodeURIComponent(q);
-  });
-  input?.addEventListener('keydown', e => {
-    if (e.key === 'Enter') submit?.click();
-    if (e.key === 'Escape') { bar?.classList.remove('open'); }
-  });
-})();
-
-// Active nav link detection
-(function() {
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('.nav-link').forEach(function(link) {
-    const href = link.getAttribute('href');
-    if (href && currentPath.endsWith(href)) {
-      link.classList.add('active');
-    }
-  });
-})();
-</script>
+<script src="/app.js" defer></script>
 </body>
 </html>
