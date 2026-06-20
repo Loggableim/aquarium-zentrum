@@ -183,8 +183,8 @@ function breadcrumbSchema(items) {
 
 // ── LAZY LOAD HELPER ──
 function addLazyLoading(html) {
-  // Add loading="lazy", width and height to img tags
-  return html.replace(/<img\s+/g, '<img loading="lazy" ');
+  // Add loading="lazy" to img tags — but NOT to hero images (above the fold)
+  return html.replace(/<img\s+(?![^>]*loading=)(?![^>]*class="hero)/g, '<img loading="lazy" ');
 }
 
 // ── ARTICLE DATA ──

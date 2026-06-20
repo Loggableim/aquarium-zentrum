@@ -269,7 +269,7 @@
   </div>
   
 
-<div class="article-image-full"><img loading="lazy" src="../images/aussenfilter-vs-innenfilter.png" alt="Außenfilter und Innenfilter im Vergleich für verschiedene Aquariumgrößen" class="hero-image"></div>
+<div class="article-image-full"><img src="../images/aussenfilter-vs-innenfilter.webp" alt="Außenfilter und Innenfilter im Vergleich für verschiedene Aquariumgrößen" class="hero-image"></div>
 
 <p>Die Wahl des richtigen Filters gehört zu den wichtigsten Entscheidungen bei der Einrichtung eines Aquariums. Kaum ein anderer technischer Bestandteil beeinflusst die Wasserqualität, den Pflegeaufwand und letztlich das Wohlbefinden der Fische und Pflanzen so stark wie die Filteranlage. Doch welche Lösung ist die richtige für Ihr Becken? In diesem ausführlichen Vergleich zeigen wir Ihnen die Vor- und Nachteile von Außen- und Innenfiltern, helfen Ihnen bei der Entscheidung für Ihre Beckengröße und geben praktische Kauftipps.</p>
 
@@ -635,7 +635,7 @@
 <p><strong>Unser Kauftipp:</strong> Für Einsteiger mit Becken unter 60 Litern empfehlen wir einen hochwertigen Innenfilter von Tetra oder Eheim. Für alle, die ein mittleres oder großes Becken betreiben oder planen, sich zu vergrößern, lohnt sich der direkte Griff zu einem Außenfilter von Eheim, Oase oder JBL. Die Mehrinvestition von 30–50 Euro gegenüber einem einfachen Innenfilter ist auf lange Sicht die beste Entscheidung für Ihr Aquarium.</p>
 
 <div style="text-align: center; margin: 30px 0;">
-  <img loading="lazy" src="/images/aussenfilter-vs-innenfilter.png" alt="Außenfilter vs. Innenfilter – Vergleich der Aquarienfilter-Typen" style="max-width: 100%; height: auto;" loading="lazy" />
+  <img src="/images/aussenfilter-vs-innenfilter.webp" alt="Außenfilter vs. Innenfilter – Vergleich der Aquarienfilter-Typen" style="max-width: 100%; height: auto;" loading="lazy" />
   <p style="font-style: italic; color: #666; font-size: 0.9em;">Außenfilter (links) und Innenfilter (rechts) im direkten Vergleich – die wichtigsten Unterschiede auf einen Blick.</p>
 </div>
 
@@ -762,128 +762,6 @@
   </div>
 </div>
 
-<script>
-// Cookie Banner
-(function() {
-  const banner = document.getElementById('cookieBanner');
-  const acceptBtn = document.getElementById('cookieAccept');
-  if (banner && !localStorage.getItem('cookieConsent')) {
-    banner.classList.add('show');
-  }
-  acceptBtn?.addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'true');
-    banner.classList.remove('show');
-  });
-})();
-
-// Mobile Nav Toggle
-(function() {
-  const hamburger = document.getElementById('navHamburger');
-  const navLinks = document.getElementById('navLinks');
-  const overlay = document.getElementById('navOverlay');
-
-  function toggleMenu(open) {
-    hamburger?.classList.toggle('active', open);
-    navLinks?.classList.toggle('open', open);
-    overlay?.classList.toggle('active', open);
-    hamburger?.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-
-  hamburger?.addEventListener('click', function() {
-    const isOpen = navLinks?.classList.contains('open');
-    toggleMenu(!isOpen);
-  });
-
-  overlay?.addEventListener('click', function() {
-    toggleMenu(false);
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && navLinks?.classList.contains('open')) {
-      toggleMenu(false);
-    }
-  });
-
-  // Mobile mega-menu accordion: tap to expand
-  document.querySelectorAll('.nav-item').forEach(function(item) {
-    const link = item.querySelector('.nav-link');
-    const dropdown = item.querySelector('.dropdown');
-    if (link && dropdown && window.innerWidth <= 768) {
-      link.addEventListener('click', function(e) {
-        // On mobile, toggle mega-menu accordion instead of navigating
-        if (window.innerWidth <= 768) {
-          // Close all others
-          document.querySelectorAll('.nav-item.mobile-open').forEach(function(other) {
-            if (other !== item) other.classList.remove('mobile-open');
-          });
-          item.classList.toggle('mobile-open');
-          e.preventDefault();
-        }
-      });
-    }
-  });
-})();
-
-// Search toggle
-(function() {
-  const searchToggle = document.getElementById('searchToggle');
-  const searchBar = document.getElementById('searchBar');
-  const searchInput = document.getElementById('searchInput');
-  const searchSubmit = document.getElementById('searchSubmit');
-
-  searchToggle?.addEventListener('click', function() {
-    const isOpen = searchBar?.classList.contains('open');
-    if (isOpen) {
-      searchBar.classList.remove('open');
-      searchToggle.style.display = '';
-    } else {
-      searchBar.classList.add('open');
-      searchToggle.style.display = 'none';
-      setTimeout(function() { searchInput?.focus(); }, 100);
-    }
-  });
-
-  searchSubmit?.addEventListener('click', function() {
-    const query = searchInput?.value?.trim();
-    if (query) {
-      window.location.href = '/?q=' + encodeURIComponent(query);
-    }
-  });
-
-  searchInput?.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') searchSubmit?.click();
-    if (e.key === 'Escape') {
-      searchBar?.classList.remove('open');
-      searchToggle.style.display = '';
-    }
-  });
-})();
-
-// Sidebar toggle (mobile)
-(function() {
-  const toggle = document.getElementById('sidebarToggle');
-  const sidebar = document.querySelector('.article-sidebar');
-  if (toggle && sidebar) {
-    toggle.addEventListener('click', function() {
-      sidebar.classList.toggle('open');
-      toggle.classList.toggle('active');
-      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
-    });
-  }
-})();
-
-// Active nav link detection
-(function() {
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('.nav-link').forEach(function(link) {
-    const href = link.getAttribute('href');
-    if (href && currentPath.endsWith(href)) {
-      link.classList.add('active');
-    }
-  });
-})();
-</script>
+<script src="/app.js" defer></script>
 </body>
 </html>

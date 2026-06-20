@@ -262,7 +262,7 @@
         <!-- GENERATED_BY_NOVA_BATCH_FIX -->
 <p>Kaum etwas beunruhigt Aquarianer mehr als der Anblick eines kranken Fisches. Plötzliche Verhaltensänderungen, seltsame Flecken auf der Haut oder aufgeblähte Bäuche – die Symptome von Fischkrankheiten sind vielfältig und oft schwer zu deuten. Dabei ist eines der wichtigsten Prinzipien in der Aquaristik: Vorbeugen ist besser als heilen. Doch selbst bei bester Pflege können Krankheiten auftreten. In diesem umfassenden Guide erfährst du alles, was du über die häufigsten Fischkrankheiten wissen musst – von der Erkennung erster Symptome über die richtige Diagnose bis hin zu wirksamen Behandlungsmethoden und präventiven Maßnahmen. Mit diesem Wissen bist du bestens gerüstet, um deine Fische gesund zu halten und im Ernstfall schnell und richtig zu handeln.</p>
 
-      <img loading="lazy" src="/images/krankheiten-symptome.webp" alt="Symptome von Fischkrankheiten im Aquarium erkennen" class="article-image-full" width="1216" height="832" loading="lazy">
+      <img src="/images/krankheiten-symptome.webp" alt="Symptome von Fischkrankheiten im Aquarium erkennen" class="article-image-full" width="1216" height="832" loading="lazy">
 
       <h2>Warum werden Aquarienfische krank?</h2>
   <div class="inline-related-box">
@@ -324,7 +324,7 @@
 
       <p>Die Behandlung der Maulverpilzung muss schnell und konsequent erfolgen. Antibakterielle Medikamente aus dem Fachhandel mit Wirkstoffen wie Oxytetracyclin, Nitrofurazon oder Kanamycin sind die erste Wahl. Die Medikation sollte in einem Quarantänebecken erfolgen, um die Filterbakterien im Hauptbecken zu schonen. Zusätzlich helfen häufige Wasserwechsel, die Keimbelastung zu reduzieren. Eine Temperaturabsenkung auf 22 bis 24 Grad Celsius kann das Bakterienwachstum verlangsamen. In leichten Fällen können auch Teebaumöl-haltige Präparate helfen. Die Vorbeugung besteht vor allem in einer guten Wasserqualität, angemessenen Temperaturen und der Vermeidung von Überbesatz und Stress. Neue Fische sollten grundsätzlich unter Quarantäne gestellt werden, bevor sie ins Hauptbecken kommen.</p>
 
-      <img loading="lazy" src="/images/krankheiten-behandlung.webp" alt="Fischkrankheiten behandeln – Medikamente und Quarantäne" class="article-image-full" width="1216" height="832" loading="lazy">
+      <img src="/images/krankheiten-behandlung.webp" alt="Fischkrankheiten behandeln – Medikamente und Quarantäne" class="article-image-full" width="1216" height="832" loading="lazy">
 
       <h2>Quarantäne – Die wichtigste Vorsorgemaßnahme</h2>
       <p>Die Quarantäne ist die effektivste Methode, um die Einschleppung von Krankheiten in dein Aquarium zu verhindern. Jeder neue Fisch sollte vor dem Einsetzen in das Hauptbecken für mindestens drei bis vier Wochen in einem separaten Quarantänebecken untergebracht werden. Während dieser Zeit können sich eventuell vorhandene Krankheitserreger zeigen und behandelt werden, ohne dass der gesamte Fischbestand gefährdet ist. Ein Quarantänebecken muss nicht groß sein – ein Becken mit 20 bis 40 Litern reicht für die meisten Zierfische aus. Wichtig ist, dass es über eine funktionierende Filterung, eine Heizung und eine Abdeckung verfügt. Die Einrichtung sollte schlicht sein: ein Luftausströmer, etwas Dekoration und ein Versteckplatz für die Fische.</p>
@@ -525,128 +525,6 @@
   </div>
 </div>
 
-<script>
-// Cookie Banner
-(function() {
-  const banner = document.getElementById('cookieBanner');
-  const acceptBtn = document.getElementById('cookieAccept');
-  if (banner && !localStorage.getItem('cookieConsent')) {
-    banner.classList.add('show');
-  }
-  acceptBtn?.addEventListener('click', function() {
-    localStorage.setItem('cookieConsent', 'true');
-    banner.classList.remove('show');
-  });
-})();
-
-// Mobile Nav Toggle
-(function() {
-  const hamburger = document.getElementById('navHamburger');
-  const navLinks = document.getElementById('navLinks');
-  const overlay = document.getElementById('navOverlay');
-
-  function toggleMenu(open) {
-    hamburger?.classList.toggle('active', open);
-    navLinks?.classList.toggle('open', open);
-    overlay?.classList.toggle('active', open);
-    hamburger?.setAttribute('aria-expanded', open);
-    document.body.style.overflow = open ? 'hidden' : '';
-  }
-
-  hamburger?.addEventListener('click', function() {
-    const isOpen = navLinks?.classList.contains('open');
-    toggleMenu(!isOpen);
-  });
-
-  overlay?.addEventListener('click', function() {
-    toggleMenu(false);
-  });
-
-  // Close on Escape
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && navLinks?.classList.contains('open')) {
-      toggleMenu(false);
-    }
-  });
-
-  // Mobile mega-menu accordion: tap to expand
-  document.querySelectorAll('.nav-item').forEach(function(item) {
-    const link = item.querySelector('.nav-link');
-    const dropdown = item.querySelector('.dropdown');
-    if (link && dropdown && window.innerWidth <= 768) {
-      link.addEventListener('click', function(e) {
-        // On mobile, toggle mega-menu accordion instead of navigating
-        if (window.innerWidth <= 768) {
-          // Close all others
-          document.querySelectorAll('.nav-item.mobile-open').forEach(function(other) {
-            if (other !== item) other.classList.remove('mobile-open');
-          });
-          item.classList.toggle('mobile-open');
-          e.preventDefault();
-        }
-      });
-    }
-  });
-})();
-
-// Search toggle
-(function() {
-  const searchToggle = document.getElementById('searchToggle');
-  const searchBar = document.getElementById('searchBar');
-  const searchInput = document.getElementById('searchInput');
-  const searchSubmit = document.getElementById('searchSubmit');
-
-  searchToggle?.addEventListener('click', function() {
-    const isOpen = searchBar?.classList.contains('open');
-    if (isOpen) {
-      searchBar.classList.remove('open');
-      searchToggle.style.display = '';
-    } else {
-      searchBar.classList.add('open');
-      searchToggle.style.display = 'none';
-      setTimeout(function() { searchInput?.focus(); }, 100);
-    }
-  });
-
-  searchSubmit?.addEventListener('click', function() {
-    const query = searchInput?.value?.trim();
-    if (query) {
-      window.location.href = '/?q=' + encodeURIComponent(query);
-    }
-  });
-
-  searchInput?.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') searchSubmit?.click();
-    if (e.key === 'Escape') {
-      searchBar?.classList.remove('open');
-      searchToggle.style.display = '';
-    }
-  });
-})();
-
-// Sidebar toggle (mobile)
-(function() {
-  const toggle = document.getElementById('sidebarToggle');
-  const sidebar = document.querySelector('.article-sidebar');
-  if (toggle && sidebar) {
-    toggle.addEventListener('click', function() {
-      sidebar.classList.toggle('open');
-      toggle.classList.toggle('active');
-      toggle.textContent = sidebar.classList.contains('open') ? '✕ schließen' : '☰ Menü';
-    });
-  }
-})();
-
-// Active nav link detection
-(function() {
-  const currentPath = window.location.pathname;
-  document.querySelectorAll('.nav-link').forEach(function(link) {
-    const href = link.getAttribute('href');
-    if (href && currentPath.endsWith(href)) {
-      link.classList.add('active');
-    }
-  });
-})();
-</script>
+<script src="/app.js" defer></script>
 </body>
 </html>
