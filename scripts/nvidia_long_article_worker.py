@@ -2,7 +2,9 @@
 # Generate one long German aquaristik article via LLM provider pool.
 import argparse, html, json, re, time
 from pathlib import Path
-from _framework.provider_pool import llm_chat
+import sys
+sys.path.insert(0, 'C:/HermesPortable/home/scripts/blog-automation/_framework')
+from provider_pool import llm_chat
 
 ROOT = Path(__file__).resolve().parents[1]
 META_PATH = ROOT / 'data' / 'long-content-articles.json'

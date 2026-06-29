@@ -1164,7 +1164,7 @@ ${breadcrumbSchema([
 }
 
 function buildPage(title, desc, canonical, bodyContent, breadcrumbItems) {
-  const hero = T.pageHero.replace('{{PAGE_TITLE}}', title);
+  const hero = T.pageHero.replaceAll('{{PAGE_TITLE}}', title);
   const bcHTML = breadcrumbItems ? breadcrumbHTML(breadcrumbItems) : '';
   const bcSchema = breadcrumbItems ? `<script type="application/ld+json">\n${breadcrumbSchema(breadcrumbItems)}</script>` : '';
   const body = `${bcHTML}${hero}\n<main>\n  <div class="page-content">\n    ${bodyContent}\n  </div>\n</main>`;
