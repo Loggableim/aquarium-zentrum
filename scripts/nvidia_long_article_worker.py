@@ -9,7 +9,7 @@ from provider_pool import llm_chat
 ROOT = Path(__file__).resolve().parents[1]
 META_PATH = ROOT / 'data' / 'long-content-articles.json'
 OUT_DIR = ROOT / 'content' / 'artikel'
-DEFAULT_MODEL = 'meta/llama-3.1-70b-instruct'
+DEFAULT_MODEL = ''  # empty = use each provider's own configured model
 MIN_WORDS = 4000
 TARGET_WORDS = 4300
 
