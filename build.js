@@ -1337,6 +1337,7 @@ function main() {
 
   require('./scripts/pause-advertising.js').pauseAdvertising(ROOT);
   require('./scripts/generate-sitemap.js').writeSitemap(ROOT);
+  require('./scripts/generate-content-routes.js').writeContentRoutes(ROOT);
   console.log('\n✨ Build complete! All pages generated.');
 }
 
