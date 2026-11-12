@@ -1119,7 +1119,7 @@ ${a.prod ? `      <div class="side-section">
     '@context': 'https://schema.org', '@type': 'Article',
     headline: a.title, description: a.excerpt,
     image: `https://aquaristik-zentrum.com/images/${a.img}`,
-    author: { '@type': a.authorType || 'Person', name: a.author || 'Alexander' },
+    author: { '@type': a.authorType || 'Organization', name: a.author || 'Redaktion Aquaristik Zentrum' },
     datePublished: dateToISO(a.date),
     ...(a.dateModified ? { dateModified: a.dateModified } : {}),
     publisher: { '@type': 'Organization', name: 'Aquaristik Zentrum' },
@@ -1137,7 +1137,7 @@ ${a.prod ? `      <div class="side-section">
       <span class="cat-head" style="${style}">${a.catEmoji} ${a.cat}</span>
       <h1>${a.title}</h1>
       <div class="meta">
-        <span>👤 ${a.author || 'Alexander'}</span>
+        <span>👤 ${a.author || 'Redaktion Aquaristik Zentrum'}</span>
         ${a.dateModified ? `<span>Aktualisiert: ${a.dateModified}</span>` : ''}
         <span class="sep">·</span>
         <span>${a.readingTime} Min. Lesezeit</span>
@@ -1309,7 +1309,7 @@ function main() {
   const aboutPath = path.join(CONTENT, 'about.html');
   if (fs.existsSync(aboutPath)) {
     const content = fs.readFileSync(aboutPath, 'utf-8').trim();
-    fs.writeFileSync(path.join(OUTPUT, 'about.html'), buildPage('Über Aquaristik Zentrum', 'Erfahre mehr über Aquaristik Zentrum – unseren Blog, unsere Mission und das Team.', 'https://aquaristik-zentrum.com/about/', content, [
+    fs.writeFileSync(path.join(OUTPUT, 'about.html'), buildPage('Über Aquaristik Zentrum', 'Informationen zu Aquaristik Zentrum, KI-Unterstützung, Quellen, Korrekturen und Affiliate-Links.', 'https://aquaristik-zentrum.com/about/', content, [
       { label: 'Startseite', url: 'https://aquaristik-zentrum.com/' },
       { label: 'Über uns', url: 'https://aquaristik-zentrum.com/about/' }
     ]));

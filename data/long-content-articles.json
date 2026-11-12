@@ -576,31 +576,21 @@
   },
   {
     "slug": "aquarium-futterautomat-guide-2026",
-    "title": "Aquarium Futterautomat 2026 – Die besten Modelle, Einrichtung und Futtertipps",
-    "excerpt": "Veröffentlicht am 7. Juni 2026 · Kategorie: Technik · Lesezeit: 14 Minuten",
-    "topic": "Aquarium Futterautomat 2026",
+    "title": "Futterautomat fürs Aquarium: Auswahl und sicherer Probelauf",
+    "excerpt": "Futter, Montage, Stromversorgung und Betreuung prüfen: eine Kauf- und Einrichtungscheckliste ohne unbelegte Testsieger.",
+    "topic": "Futterautomat fürs Aquarium: Auswahl und Probelauf",
     "cat": "Technik",
     "categoryGroup": "Technik",
     "catColor": "#8b5cf6",
     "catEmoji": "⚙️",
-    "readingTime": 20,
+    "readingTime": 3,
     "img": "aquarium-futterautomat-guide-2026.png",
     "toc": [
-      "Aquarium Futterautomat 2026 – Die besten Modelle, Einrichtung und Futtertipps",
-      "Was ist ein Aquarium Futterautomat und wie funktioniert er?",
-      "Wann lohnt sich ein Futterautomat für dein Aquarium?",
-      "Die besten Aquarium Futterautomaten 2026 im Vergleich",
-      "Aquarium Futterautomat einrichten – Schritt für Schritt",
-      "Welches Futter eignet sich für den Futterautomaten?",
-      "Vorteile und Nachteile eines Futterautomaten",
-      "Typische Fehler beim Einsatz von Futterautomaten vermeiden",
-      "Futterautomat und Urlaubsbetreuung – die perfekte Kombination",
-      "Wartung und Pflege des Futterautomaten",
-      "Häufige Fragen (FAQ) zu Aquarium Futterautomaten",
-      "Fazit: Welcher Aquarium Futterautomat ist der richtige für dich?",
-      "Die Technik dahinter",
-      "Stromversorgung und Laufzeit",
-      "1. Eheim Everyday Feeder – der vielseitige Allrounder"
+      "Welche Anforderungen dein Aquarium stellt",
+      "Diese Angaben solltest du beim Hersteller prüfen",
+      "Vor der Abreise einen betreuten Probelauf machen",
+      "Betreuung und Notfallplan vereinbaren",
+      "Eine nachvollziehbare Kaufentscheidung treffen"
     ],
     "related": [
       [
@@ -622,16 +612,19 @@
         "aquarium-duengung-guide.png"
       ]
     ],
-    "prod": [
-      "Aquarium Filter Set",
-      "Leistungsstark & leise",
-      "search:Aquarium Filter Außenfilter",
-      "#8b5cf6",
-      "#7c3aed"
-    ],
-    "intent": "Ratgeber und Guide: Aquarium Futterautomat 2026 – Die besten Modelle, Einrichtung und Futtertipps",
+    "prod": null,
+    "intent": "Kriterienbasierte Kauf- und Einrichtungscheckliste, kein Produkttest und keine Rangliste",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "tocAnchors": [
+      "auswahl",
+      "pruefen",
+      "probelauf",
+      "betreuung",
+      "entscheidung"
+    ],
+    "dateModified": "2026-11-12",
+    "skipInlineRelated": true
   },
   {
     "slug": "aquarium-kamera-livestream",
