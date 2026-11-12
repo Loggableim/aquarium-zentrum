@@ -4,7 +4,9 @@
   "description": "Aquaristik Zentrum – static megapage built from templates",
   "scripts": {
     "build": "node build.js",
-    "dev": "node build.js && npx serve ."
+    "dev": "node build.js && npx serve .",
+    "test": "node --test tests/*.test.js",
+    "sitemap": "node scripts/generate-sitemap.js"
   },
   "repository": {
     "type": "git",

@@ -1335,6 +1335,8 @@ function main() {
     console.log('  ✓ impressum.html');
   }
 
+  require('./scripts/pause-advertising.js').pauseAdvertising(ROOT);
+  require('./scripts/generate-sitemap.js').writeSitemap(ROOT);
   console.log('\n✨ Build complete! All pages generated.');
 }
 
