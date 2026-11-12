@@ -381,19 +381,19 @@ const ARTICLES = {
     prod: ['CO₂-Anlage Set', 'Komplett mit Diffusor', 'B0DDLNYNNL', '#8b5cf6', '#7c3aed'],
   },
   'fischkrankheiten-aquarium-guide': {
-    title: 'Fischkrankheiten erkennen, behandeln und vorbeugen – Der große Guide',
-    excerpt: 'Ich, Flossenfäule, Bauchwassersucht & Co. – alle Krankheiten erkennen und behandeln.',
+    title: "Fischkrankheiten erkennen: Warnzeichen, Wasserchecks und tierärztliche Hilfe",
+    excerpt: "Auffälligkeiten bei Süßwasserfischen einordnen, Wasserwerte dokumentieren und gezielt tierärztliche Hilfe suchen. Keine pauschalen Medikamentenrezepte.",
     date: '3. Juni 2026',
     cat: 'Pflege', catColor: '#ffd93d', catEmoji: '💊',
     img: 'krankheiten-symptome.png', readingTime: 10,
-    toc: ['Warum werden Fische krank?', 'Symptome erkennen', 'Ich/Weißpünktchen', 'Flossenfäule', 'Bauchwassersucht', 'Pilzinfektionen', 'Quarantäne', 'Behandlung', 'Vorbeugung', 'Fazit'],
+    toc: ["Wann du sofort Hilfe brauchst", "Erst beobachten und Wasser prüfen", "Symptome einordnen, nicht selbst diagnostizieren", "Warum es hier keine Salz- und Medikamentenrezepte gibt", "Quarantäne und Vorsorge sinnvoll planen", "Checkliste für das Gespräch mit der Tierarztpraxis"],
     related: [
       ['algen-im-aquarium', 'Algen-Guide', 'Erkennen & vorbeugen', 'algen.png'],
       ['aquarium-pflegeroutine-guide', 'Pflegeroutine', 'Krankheiten vermeiden', 'wasserwechsel.png'],
       ['kampffisch-haltung-betta', 'Kampffisch', 'Typische Krankheiten', 'kampffisch-haltung.png'],
       ['garnelen-im-aquarium', 'Garnelen-Guide', 'Krankheiten bei Garnelen', 'garnelen.png'],
     ],
-    prod: ['Medikamenten Set', 'Für häufige Krankheiten', 'search:Aquarium Fischkrankheiten Medikamente kupferfrei', '#ffd93d', '#f59e0b'],
+    prod: null,
   },
   'aquarium-pflegeroutine-guide': {
     title: 'Aquarium Pflegeroutine – Wasserwechsel, Filterreinigung und Wartungsplan',
@@ -1052,10 +1052,10 @@ function buildArticle(slug) {
     relatedHTML += recCardHTML(rslug, rtitle, rdesc, rimg);
   }
   let tocHTML = '';
-  for (const item of a.toc) {
-    tocHTML += tocItem(item);
+  for (const [index, item] of a.toc.entries()) {
+    tocHTML += a.tocAnchors ? `<div class="toc-item"><a href="#${a.tocAnchors[index]}">→ ${item}</a></div>` : tocItem(item);
   }
-  const [pname, pdesc, pasin, pc1, pc2] = a.prod;
+  const [pname, pdesc, pasin, pc1, pc2] = a.prod || [];
 
   const contentPath = path.join(CONTENT, 'artikel', `${slug}.html`);
   let bodyContent = '';
@@ -1091,7 +1091,7 @@ function buildArticle(slug) {
       <div class="side-section">
         <h5>📚 Verwandte Artikel</h5>${relatedHTML}
       </div>
-      <div class="side-section">
+${a.prod ? `      <div class="side-section">
         <h5>🛒 Empfohlenes Zubehör</h5>
         <div class="side-product-card">
           <div class="prod-thumb" style="background:linear-gradient(135deg,${pc1},${pc2})"></div>
@@ -1099,7 +1099,7 @@ function buildArticle(slug) {
           <p class="prod-sub">${pdesc}</p>
           <a href="${amazonAffiliateUrl(pasin)}" target="_blank" rel="nofollow sponsored noopener" class="prod-link">→ Bei Amazon ansehen</a>
         </div>
-      </div>
+      </div>` : ''}
       <div class="side-section">
         <h5>📋 Inhaltsverzeichnis</h5>
         <div>${tocHTML}</div>
@@ -1110,33 +1110,22 @@ function buildArticle(slug) {
     ? `background:${a.catColor};color:#0a0a0f;`
     : `background:${a.catColor};color:#fff;`;
 
-  const jsonLd = `<script type="application/ld+json">
-${breadcrumbSchema([
+  const crumbs = JSON.parse(breadcrumbSchema([
     { label: 'Startseite', url: 'https://aquaristik-zentrum.com/' },
-    { label: a.cat, url: `https://aquaristik-zentrum.com/artikel/einsteiger-aquarium-guide/` },
+    { label: a.cat, url: 'https://aquaristik-zentrum.com/artikel/einsteiger-aquarium-guide/' },
     { label: a.title, url: `https://aquaristik-zentrum.com/artikel/${slug}/` }
-  ])}
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "${a.title}",
-  "description": "${a.excerpt}",
-  "image": "https://aquaristik-zentrum.com/images/${a.img}",
-  "author": {
-    "@type": "Person",
-    "name": "Alexander"
-  },
-  "datePublished": "${dateToISO(a.date)}",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Aquaristik Zentrum"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://aquaristik-zentrum.com/artikel/${slug}/"
-  }
-}
-<\/script>`;
+  ]).replace(/,\s*$/, ''));
+  const articleSchema = {
+    '@context': 'https://schema.org', '@type': 'Article',
+    headline: a.title, description: a.excerpt,
+    image: `https://aquaristik-zentrum.com/images/${a.img}`,
+    author: { '@type': a.authorType || 'Person', name: a.author || 'Alexander' },
+    datePublished: dateToISO(a.date),
+    ...(a.dateModified ? { dateModified: a.dateModified } : {}),
+    publisher: { '@type': 'Organization', name: 'Aquaristik Zentrum' },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `https://aquaristik-zentrum.com/artikel/${slug}/` }
+  };
+  const jsonLd = `<script type="application/ld+json">\n${JSON.stringify([crumbs, articleSchema], null, 2).replace(/</g, '\\u003c')}\n<\/script>`;
 
   const body = `${breadcrumbHTML([
     { label: 'Startseite', url: 'https://aquaristik-zentrum.com/' },
@@ -1148,12 +1137,13 @@ ${breadcrumbSchema([
       <span class="cat-head" style="${style}">${a.catEmoji} ${a.cat}</span>
       <h1>${a.title}</h1>
       <div class="meta">
-        <span>👤 Alexander</span>
+        <span>👤 ${a.author || 'Alexander'}</span>
+        ${a.dateModified ? `<span>Aktualisiert: ${a.dateModified}</span>` : ''}
         <span class="sep">·</span>
         <span>${a.readingTime} Min. Lesezeit</span>
       </div>
       <div class="body-text">
-        ${addLazyLoading(injectInternalLinks(bodyContent, a.related))}
+        ${addLazyLoading(a.skipInlineRelated ? bodyContent : injectInternalLinks(bodyContent, a.related))}
         ${relatedBottomHTML(a.related)}
       </div>
     </div>
@@ -1189,6 +1179,7 @@ function wrapPage(title, desc, canonical, ogImage, body, jsonLd, ogType = 'websi
 <meta property="og:type" content="${ogType}">
 <meta property="og:url" content="${canonical}">
 <meta property="og:site_name" content="Aquaristik Zentrum">
+<meta property="og:locale" content="de_DE">
 ${ogImage ? `<meta property="og:image" content="https://aquaristik-zentrum.com${ogImage}">` : ''}
 ${ogImage ? `<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${truncateSERP(title, 70)}">

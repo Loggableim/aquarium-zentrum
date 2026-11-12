@@ -2088,31 +2088,22 @@
   },
   {
     "slug": "fischkrankheiten-aquarium-guide",
-    "title": "Warum werden Aquarienfische krank?",
-    "excerpt": "Kaum etwas beunruhigt Aquarianer mehr als der Anblick eines kranken Fisches. Plötzliche Verhaltensänderungen, seltsame Flecken auf der Haut oder aufgeblähte Bäuche – die Symptome von Fischkrankheiten …",
-    "topic": "Warum werden Aquarienfische krank?",
+    "title": "Fischkrankheiten erkennen: Warnzeichen, Wasserchecks und tierärztliche Hilfe",
+    "excerpt": "Auffälligkeiten bei Süßwasserfischen einordnen, Wasserwerte dokumentieren und gezielt tierärztliche Hilfe suchen. Keine pauschalen Medikamentenrezepte.",
+    "topic": "Fischkrankheiten: Warnzeichen und Hilfe",
     "cat": "Fische",
     "categoryGroup": "Garnelen & Fische",
     "catColor": "#ec4899",
     "catEmoji": "🐟",
-    "readingTime": 23,
+    "readingTime": 4,
     "img": "fischkrankheiten-aquarium-guide.png",
     "toc": [
-      "Warum werden Aquarienfische krank?",
-      "Grundlagen der Symptomerkennung",
-      "Die häufigsten Fischkrankheiten im Überblick",
-      "Quarantäne – Die wichtigste Vorsorgemaßnahme",
-      "Behandlungsmethoden im Detail",
-      "Vorbeugung ist der beste Schutz",
-      "Natürliche Behandlungen und Hausmittel",
-      "Wann Medikamente, wann natürliche Methoden?",
-      "Diagnosehilfe: So findest du die richtige Krankheit",
-      "Erste-Hilfe-Set für Aquarianer",
-      "Fazit und beste Praktiken",
-      "Verwandte Artikel",
-      "1. Ichthyophthiriose (Weißpünktchenkrankheit / Ich)",
-      "2. Flossenfäule",
-      "3. Samtkrankheit (Pünktchenkrankheit / Oodinium)"
+      "Wann du sofort Hilfe brauchst",
+      "Erst beobachten und Wasser prüfen",
+      "Symptome einordnen, nicht selbst diagnostizieren",
+      "Warum es hier keine Salz- und Medikamentenrezepte gibt",
+      "Quarantäne und Vorsorge sinnvoll planen",
+      "Checkliste für das Gespräch mit der Tierarztpraxis"
     ],
     "related": [
       [
@@ -2134,16 +2125,22 @@
         "artemia-grindal-futtertiere-zuechten.png"
       ]
     ],
-    "prod": [
-      "Garnelenfutter Premium",
-      "Hochwertige Nahrung",
-      "search:Garnelenfutter Aquarium",
-      "#ff6b6b",
-      "#e24545"
-    ],
-    "intent": "Ratgeber und Guide: Warum werden Aquarienfische krank?",
+    "prod": null,
+    "intent": "Warnzeichen einordnen und fischkundige tierärztliche Hilfe vorbereiten",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "tocAnchors": [
+      "wann-du-sofort-hilfe-brauchst",
+      "erst-beobachten-und-wasser-prufen",
+      "symptome-einordnen-nicht-selbst-diagnostizieren",
+      "warum-es-hier-keine-salz-und-medikamentenrezepte-gibt",
+      "quarantane-und-vorsorge-sinnvoll-planen",
+      "checkliste-fur-das-gesprach-mit-der-tierarztpraxis"
+    ],
+    "author": "Redaktion Aquaristik Zentrum",
+    "authorType": "Organization",
+    "dateModified": "2026-11-12",
+    "skipInlineRelated": true
   },
   {
     "slug": "futtertiere-selbst-zuechten",
