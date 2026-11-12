@@ -2259,31 +2259,22 @@
   },
   {
     "slug": "garnelen-krankheiten",
-    "title": "Garnelen-Krankheiten erkennen, behandeln und vorbeugen – Der komplette Guide",
-    "excerpt": "Zwerggarnelen sind faszinierende Aquarienbewohner, die mit ihrer Farbenpracht und ihrem emsigen Treiben begeistern. Doch so robust viele Arten wie die Red Cherry Garnele oder die Bienengarnele auch wi…",
+    "title": "Garnelen-Krankheiten: Auffälligkeiten prüfen und Hilfe vorbereiten",
+    "excerpt": "Beläge, Häutungsprobleme und plötzliche Ausfälle bei Zwerggarnelen einordnen. Mit Beobachtungscheckliste statt riskanter Baderezepte.",
     "topic": "Garnelen-Krankheiten erkennen, behandeln und vorbeugen",
     "cat": "Fische",
     "categoryGroup": "Garnelen & Fische",
     "catColor": "#ec4899",
     "catEmoji": "🐟",
-    "readingTime": 12,
+    "readingTime": 3,
     "img": "garnelen-krankheiten.png",
     "toc": [
-      "Garnelen-Krankheiten erkennen, behandeln und vorbeugen – Der komplette Guide",
-      "Warum werden Garnelen krank?",
-      "Bakterielle Infektionen bei Garnelen",
-      "Pilzerkrankungen (Mykosen)",
-      "Häutungsprobleme",
-      "Parasitäre Erkrankungen",
-      "Vergiftungen bei Garnelen",
-      "Übersichtstabelle: Symptome, Krankheiten und Behandlung",
-      "Vorbeugung: So bleiben deine Garnelen gesund",
-      "Häufig gestellte Fragen (FAQ)",
-      "Verwandte Artikel",
-      "Die häufigsten Stressfaktoren",
-      "Vibrio-Infektionen",
-      "Pseudomonas-Infektionen",
-      "Achlya-Infektionen (Wattenpilz)"
+      "Bei mehreren Ausfällen zügig handeln",
+      "Welche Angaben bei der Abklärung helfen",
+      "Beläge und Aufsitzer nicht verwechseln",
+      "Warum wir keine Salz-, Jod- oder Neemrezepte empfehlen",
+      "Häutungsprobleme und Wasserwerte",
+      "Fischmedikamente nicht auf Garnelen übertragen"
     ],
     "related": [
       [
@@ -2305,16 +2296,22 @@
         "artemia-grindal-futtertiere-zuechten.png"
       ]
     ],
-    "prod": [
-      "Garnelenfutter Premium",
-      "Hochwertige Nahrung",
-      "search:Garnelenfutter Aquarium",
-      "#ff6b6b",
-      "#e24545"
-    ],
+    "prod": null,
     "intent": "Ratgeber und Guide: Garnelen-Krankheiten erkennen, behandeln und vorbeugen – Der komplette Guide",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "tocAnchors": [
+      "abschnitt-1",
+      "abschnitt-2",
+      "abschnitt-3",
+      "abschnitt-4",
+      "abschnitt-5",
+      "abschnitt-6"
+    ],
+    "author": "Redaktion Aquaristik Zentrum",
+    "authorType": "Organization",
+    "dateModified": "2026-11-12",
+    "skipInlineRelated": true
   },
   {
     "slug": "garnelen-nachzucht",
@@ -3137,28 +3134,21 @@
   },
   {
     "slug": "quarantaene-medikamente",
-    "title": "Aquarium Medikamente und Quarantäne – So schützt du deine Fische",
-    "excerpt": "Krankheiten im Aquarium sind der Albtraum jedes Aquarianers. Ob weiße Pünktchen auf den Flossen, schimmernde Beläge auf der Haut oder apathisches Verhalten – wenn Fische krank werden, ist schnelles un…",
+    "title": "Quarantäne im Aquarium: sicher beobachten und Behandlungen planen",
+    "excerpt": "Quarantäne vorbereiten, Auffälligkeiten dokumentieren und Medikamente nur gezielt einsetzen. Ohne pauschale Wärme- oder Kupferkur.",
     "topic": "Aquarium Medikamente und Quarantäne",
     "cat": "Pflege",
     "categoryGroup": "Pflege & Gesundheit",
     "catColor": "#ffd93d",
     "catEmoji": "💊",
-    "readingTime": 7,
+    "readingTime": 3,
     "img": "quarantaene-medikamente.png",
     "toc": [
-      "Aquarium Medikamente und Quarantäne – So schützt du deine Fische",
-      "Das Quarantänebecken – einfach und effektiv",
-      "Quarantäne-Ablauf – Schritt für Schritt",
-      "Die häufigsten Aquarienkrankheiten und ihre Behandlung",
-      "Medikamente richtig dosieren und anwenden",
-      "Vorbeugung ist der beste Schutz",
-      "Pflanzenquarantäne – oft unterschätzt",
-      "Wann zum Tierarzt?",
-      "Fazit – Quarantäne rettet Leben",
-      "Ichthyophthirius (Pünktchenkrankheit / Weißpünktchen)",
-      "Flossenfäule",
-      "Samenflecken / Samtkrankheit"
+      "Beobachtungsbecken und Behandlungsbecken unterscheiden",
+      "Quarantäne vorbereiten und dokumentieren",
+      "Bei Krankheitszeichen zuerst die Ursache klären",
+      "Keine allgemeine Wärme- oder Kupferkur",
+      "Wenn eine Behandlung verordnet wurde"
     ],
     "related": [
       [
@@ -3180,16 +3170,21 @@
         "aquarium-pflegeroutine-guide.png"
       ]
     ],
-    "prod": [
-      "Aquarium Pflege Set",
-      "Mulmsauger & Bürsten",
-      "search:Aquarium Reinigung Set",
-      "#ffd93d",
-      "#f59e0b"
-    ],
+    "prod": null,
     "intent": "Ratgeber und Guide: Aquarium Medikamente und Quarantäne – So schützt du deine Fische",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "tocAnchors": [
+      "abschnitt-1",
+      "abschnitt-2",
+      "abschnitt-3",
+      "abschnitt-4",
+      "abschnitt-5"
+    ],
+    "author": "Redaktion Aquaristik Zentrum",
+    "authorType": "Organization",
+    "dateModified": "2026-11-12",
+    "skipInlineRelated": true
   },
   {
     "slug": "rote-aquarienpflanzen",
