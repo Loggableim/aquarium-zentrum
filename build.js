@@ -178,7 +178,7 @@ function breadcrumbSchema(items) {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": ${JSON.stringify(itemList, null, 2)}
-},`;
+}`;
 }
 
 // ── LAZY LOAD + RESPONSIVE IMAGES HELPER ──
@@ -1329,6 +1329,7 @@ function main() {
   require('./scripts/pause-advertising.js').pauseAdvertising(ROOT);
   require('./scripts/generate-sitemap.js').writeSitemap(ROOT);
   require('./scripts/generate-content-routes.js').writeContentRoutes(ROOT);
+  require('./scripts/validate-structured-data.js').validateStructuredData(ROOT);
   console.log('\n✨ Build complete! All pages generated.');
 }
 
