@@ -2018,7 +2018,8 @@
     ],
     "intent": "Ratgeber und Guide: Fischbesatz nach Beckengröße – 30, 60, 100, 180 und 240 Liter sinnvoll planen",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-12"
   },
   {
     "slug": "fische-fortgeschrittene",
@@ -2419,7 +2420,8 @@
     ],
     "intent": "Ratgeber und Guide: Gesellschaftsbecken richtig zusammenstellen",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-12"
   },
   {
     "slug": "heizung-temperatur-aquarium",
@@ -3533,31 +3535,22 @@
   },
   {
     "slug": "stromausfall-aquarium-notfallplan",
-    "title": "Stromausfall im Aquarium – Notfallplan für Filter, Sauerstoff, Temperatur und Bakterien",
-    "excerpt": "Es passiert meist dann, wenn man es am wenigsten erwartet: Ein Gewitter legt die Stromversorgung lahm, der Sicherungskasten fliegt raus, oder eine Baustelle kappt versehentlich die Leitung. Plötzlich …",
-    "topic": "Stromausfall im Aquarium",
+    "title": "Stromausfall im Aquarium: sicher beobachten und vorbereitet handeln",
+    "excerpt": "Belüftung, Temperatur und Filter prüfen, ohne pauschale Überlebenszeiten. Mit sicherer Vorbereitung und Quellen.",
+    "topic": "Stromausfall im Aquarium: sicher beobachten und vorbereitet handeln",
     "cat": "Technik",
     "categoryGroup": "Technik",
     "catColor": "#8b5cf6",
     "catEmoji": "⚙️",
-    "readingTime": 11,
+    "readingTime": 5,
     "img": "stromausfall-aquarium-notfallplan.png",
     "toc": [
-      "Stromausfall im Aquarium – Notfallplan für Filter, Sauerstoff, Temperatur und Bakterien",
-      "Was beim Stromausfall im Aquarium passiert",
-      "Die ersten 30 Minuten – was du sofort tun musst",
-      "Sauerstoff sichern – die wichtigste Maßnahme",
-      "Filterbakterien schützen – das biologische Gleichgewicht bewahren",
-      "Temperatur halten – die Wärme im Becken bewahren",
-      "Nach 2 bis 8 Stunden – die kritische Phase",
-      "Wiederanlauf des Filters – der kritischste Moment",
-      "Vorbereitung und Technik – wie du dich für den Notfall wappnest",
-      "FAQ – häufige Fragen zum Stromausfall im Aquarium",
-      "Fazit – Vorbereitung ist alles",
-      "Die biologische Kaskade in Stichpunkten",
-      "Sofortmaßnahmen-Checkliste",
-      "Methode 1: Batteriebetriebene Luftpumpe (empfohlen)",
-      "Methode 2: Manuelle Belüftung"
+      "Zuerst Menschen und Tiere schützen",
+      "Sauerstoffversorgung und Verhalten beobachten",
+      "Temperatur messen statt Abkühlung voraussetzen",
+      "Filter und Wasserwerte kontrolliert beurteilen",
+      "Nach der Stromrückkehr nicht nur einschalten und weggehen",
+      "Eine kleine Vorbereitungsliste"
     ],
     "related": [
       [
@@ -3579,16 +3572,20 @@
         "aquarium-duengung-guide.png"
       ]
     ],
-    "prod": [
-      "Aquarium Filter Set",
-      "Leistungsstark & leise",
-      "search:Aquarium Filter Außenfilter",
-      "#8b5cf6",
-      "#7c3aed"
-    ],
-    "intent": "Ratgeber und Guide: Stromausfall im Aquarium – Notfallplan für Filter, Sauerstoff, Temperatur und Bakterien",
+    "prod": null,
+    "intent": "Quellenbasierte Orientierung ohne pauschale Dosier- oder Überlebensangaben",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-12",
+    "skipInlineRelated": true,
+    "tocAnchors": [
+      "sicherheit",
+      "sauerstoff",
+      "temperatur",
+      "filter",
+      "neustart",
+      "vorbereitung"
+    ]
   },
   {
     "slug": "truebes-wasser-schaum-geruch-aquarium",
@@ -3828,31 +3825,22 @@
   },
   {
     "slug": "wasseraufbereiter-aquarium-vergleich",
-    "title": "Wasseraufbereiter Aquarium Vergleich",
-    "excerpt": "Kaum ein Produkt im Aquarienhandel wird so selbstverständlich gekauft wie der Wasseraufbereiter. Die kleinen Fläschchen versprechen gesundes Wasser, glückliche Fische und einen einfachen Start ins Hob…",
-    "topic": "Wasseraufbereiter Aquarium Vergleich",
+    "title": "Wasseraufbereiter fürs Aquarium: Bedarf und Grenzen prüfen",
+    "excerpt": "Chloramin, Umkehrosmose und Produktanleitungen richtig einordnen. Ohne pauschale chemische Dosierrezepte oder Produkttests.",
+    "topic": "Wasseraufbereiter fürs Aquarium: Bedarf und Grenzen prüfen",
     "cat": "Pflege",
     "categoryGroup": "Pflege & Gesundheit",
     "catColor": "#ffd93d",
     "catEmoji": "💊",
-    "readingTime": 25,
+    "readingTime": 4,
     "img": "wasseraufbereiter-aquarium-vergleich.png",
     "toc": [
-      "Worum es in diesem Guide geht",
-      "Was Wasseraufbereiter leisten",
-      "Chlor, Metalle und Schleimhaut",
-      "Bakterienstarter einordnen",
-      "Huminstoffe und Schwarzwasser",
-      "Osmose statt Chemie",
-      "Notfälle und Wasserwechsel",
-      "Produktarten vergleichen",
-      "Dosierfehler vermeiden",
-      "Häufige Fragen",
-      "Weiterlesen auf Aquaristik Zentrum",
-      "Fazit",
-      "Auf einen Blick",
-      "Die drei Hauptaufgaben im Überblick",
-      "Was Aufbereiter nicht sind"
+      "Mit dem Ausgangswasser beginnen",
+      "Aufbereiter und Bakterienstarter unterscheiden",
+      "Chloramin und Umkehrosmose nicht verwechseln",
+      "Warum hier kein Vitamin-C-Rezept steht",
+      "Osmosewasser auf die Tiere abstimmen",
+      "Checkliste vor dem Wasserwechsel"
     ],
     "related": [
       [
@@ -3874,16 +3862,20 @@
         "aquarium-pflegeroutine-guide.png"
       ]
     ],
-    "prod": [
-      "Aquarium Pflege Set",
-      "Mulmsauger & Bürsten",
-      "search:Aquarium Reinigung Set",
-      "#ffd93d",
-      "#f59e0b"
-    ],
-    "intent": "Ratgeber und Guide: Wasseraufbereiter Aquarium Vergleich",
+    "prod": null,
+    "intent": "Quellenbasierte Orientierung ohne pauschale Dosier- oder Überlebensangaben",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-12",
+    "skipInlineRelated": true,
+    "tocAnchors": [
+      "ausgangswasser",
+      "produkt",
+      "chloramin",
+      "dosierung",
+      "mineralien",
+      "checkliste"
+    ]
   },
   {
     "slug": "wassertest-wasserpflege",
