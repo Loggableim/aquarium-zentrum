@@ -14,7 +14,7 @@ for (const slug of slugs) test(`${slug}: corrected claims persist in source and 
  const html = fs.readFileSync(path.join(root,'artikel',slug+'.html'),'utf8');
  const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1]));
  assert.equal(blocks.filter(x=>['Article','BlogPosting'].includes(x['@type'])).length,1);
- assert.equal(blocks.find(x=>x['@type']==='Article').dateModified,'2026-11-12');
+ assert.equal(blocks.find(x=>x['@type']==='Article').dateModified,slug === 'fischbesatz-nach-beckengroesse' ? '2026-11-13' : '2026-11-12');
  assert.equal((html.match(/<h1\b/g)||[]).length,1);
 });
 test('power and water guides do not sell products or offer unsupported recipes', () => {
