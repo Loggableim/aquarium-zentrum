@@ -18,6 +18,7 @@ export default {
   "/content/artikel/aquarium-moosarten": "/artikel/aquarium-moosarten/",
   "/content/artikel/aquarium-pflegeroutine-guide": "/artikel/aquarium-pflegeroutine-guide/",
   "/content/artikel/aquarium-schaedlinge": "/artikel/aquarium-schaedlinge/",
+  "/content/artikel/aquarium-tagebuch-vorlage": "/artikel/aquarium-tagebuch-vorlage/",
   "/content/artikel/aquarium-technik-ueberblick": "/artikel/aquarium-technik-ueberblick/",
   "/content/artikel/aquarium-umzug-transport-guide": "/artikel/aquarium-umzug-transport-guide/",
   "/content/artikel/aquarium-wasserwechsel-richtig-machen": "/artikel/aquarium-wasserwechsel-richtig-machen/",

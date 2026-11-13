@@ -4163,5 +4163,51 @@
     "intent": "Ratgeber und Guide: Aquarium Wasserwechsel richtig machen – Der ultimative Guide 2026",
     "date": "7. Juli 2026",
     "generated": true
+  },
+  {
+    "slug": "aquarium-tagebuch-vorlage",
+    "title": "Aquarium-Tagebuch: Vorlage für Beobachtungen und Wasserwerte",
+    "excerpt": "Eine kopierbare Protokollvorlage für Messungen, Veränderungen und Auffälligkeiten. Mit Einheiten, Beispielen und Vorbereitung auf fachkundige Hilfe.",
+    "topic": "Aquarium-Tagebuch",
+    "cat": "Pflege",
+    "categoryGroup": "Pflege & Gesundheit",
+    "catColor": "#ffd93d",
+    "catEmoji": "📝",
+    "readingTime": 5,
+    "img": "wassertest-set.webp",
+    "toc": [
+      "Einmal ausfüllen: der Becken-Steckbrief",
+      "Die kopierbare Vorlage für einen Eintrag",
+      "Messwerte so notieren, dass sie vergleichbar bleiben",
+      "Beobachtung und Vermutung getrennt halten",
+      "Das Protokoll für fachkundige Hilfe nutzen"
+    ],
+    "tocAnchors": [
+      "start",
+      "vorlage",
+      "messwerte",
+      "beispiel",
+      "hilfe"
+    ],
+    "related": [
+      [
+        "fischkrankheiten-aquarium-guide",
+        "Fischkrankheiten",
+        "Warnzeichen und fachkundige Hilfe",
+        "fischkrankheiten-aquarium-guide.webp"
+      ],
+      [
+        "quarantaene-medikamente",
+        "Quarantäne",
+        "Sicher beobachten und dokumentieren",
+        "quarantaene-medikamente.webp"
+      ]
+    ],
+    "prod": null,
+    "intent": "Praktische Dokumentationsvorlage ohne Diagnose, Datenspeicherung oder Dosierempfehlungen",
+    "date": "13. November 2026",
+    "author": "Redaktion Aquaristik Zentrum",
+    "authorType": "Organization",
+    "skipInlineRelated": true
   }
 ]
