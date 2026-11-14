@@ -119,31 +119,22 @@
   },
   {
     "slug": "antennenwels-l-welse-haltung",
-    "title": "Antennenwels L Welse Haltung",
-    "excerpt": "Antennenwelse (Ancistrus spp.) und die vielen L‑Welse gehören zu den beliebtesten Harnischwelsen im Süßwasseraquarium. Sie schätzen sowohl Anfänger als auch erfahrene Aquarianer wegen ihrer Algenfress…",
+    "title": "Antennenwelse und L-Welse: Art, Größe und Haltung richtig einordnen",
+    "excerpt": "Keine Einheitsregel für Harnischwelse: Arten bestimmen, belegte Größen vergleichen und Becken, Futter sowie Wasserqualität passend planen.",
     "topic": "Antennenwels L Welse Haltung",
     "cat": "Fische",
     "categoryGroup": "Garnelen & Fische",
     "catColor": "#ec4899",
     "catEmoji": "🐟",
-    "readingTime": 27,
+    "readingTime": 6,
     "img": "antennenwels-l-welse-haltung.png",
     "toc": [
-      "Worum es in diesem Guide geht",
-      "Welse verstehen",
-      "Welse verstehen",
-      "Welse verstehen",
-      "Antennenwelse vs. L-Welse",
-      "Antennenwelse vs. L-Welse",
-      "Beckengröße und Einrichtung",
-      "Beckengröße und Einrichtung",
-      "Holz, Höhlen und Reviere",
-      "Holz, Höhlen und Reviere",
-      "Holz, Höhlen und Reviere",
-      "Futter und Verdauung",
-      "Futter und Verdauung",
-      "Vergesellschaftung",
-      "Zucht und Nachwuchs"
+      "Zuerst die Art klären",
+      "Größenangaben richtig vergleichen",
+      "Becken, Verstecke und Mitbewohner planen",
+      "Kein Wels lebt von einem Reinigungsauftrag",
+      "Wasserqualität und Biofilter kontrollieren",
+      "Checkliste vor dem Kauf"
     ],
     "related": [
       [
@@ -165,16 +156,20 @@
         "beliebteste-aquarienfische.png"
       ]
     ],
-    "prod": [
-      "Garnelenfutter Premium",
-      "Hochwertige Nahrung",
-      "search:Garnelenfutter Aquarium",
-      "#ff6b6b",
-      "#e24545"
-    ],
+    "prod": null,
     "intent": "Ratgeber und Guide: Antennenwels L Welse Haltung",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "tocAnchors": [
+      "artbestimmung",
+      "groesse",
+      "becken",
+      "futter",
+      "wasser",
+      "kaufcheck"
+    ],
+    "dateModified": "2026-11-14",
+    "skipInlineRelated": true
   },
   {
     "slug": "aquarienpflanzen-anfaenger",
