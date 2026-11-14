@@ -3581,31 +3581,23 @@
   },
   {
     "slug": "truebes-wasser-schaum-geruch-aquarium",
-    "title": "Symptome richtig lesen",
-    "excerpt": "Trübes Wasser, Schaum auf der Oberfläche und ein unangenehmer Geruch sind klare Warnsignale, dass das biologische Gleichgewicht im Süßwasseraquarium gestört ist. Diese Symptome können plötzlich auftre…",
+    "title": "Trübes Aquariumwasser, Schaum und Geruch: Ursachen sicher eingrenzen",
+    "excerpt": "Warnzeichen erkennen, Wasserwerte prüfen und Ursachen gezielt eingrenzen: ein Leitfaden ohne pauschale Chemiekuren oder Diagnosen allein nach Wasserfarbe.",
     "topic": "Symptome richtig lesen",
     "cat": "Pflege",
     "categoryGroup": "Pflege & Gesundheit",
     "catColor": "#ffd93d",
     "catEmoji": "💊",
-    "readingTime": 22,
+    "readingTime": 6,
     "img": "truebes-wasser-schaum-geruch-aquarium.png",
     "toc": [
-      "Symptome richtig lesen",
-      "Symptome richtig lesen",
-      "Weiße, grüne und braune Trübungen",
-      "Weiße, grüne und braune Trübungen",
-      "Schaum an der Oberfläche",
-      "Schaum an der Oberfläche",
-      "Muffiger Geruch",
-      "Sofortmaßnahmen",
-      "Ursachen dauerhaft abstellen",
-      "Ursachen dauerhaft abstellen",
-      "Diagnose-Tabelle",
-      "Diagnose-Tabelle",
-      "Vorbeugung",
-      "Weiterlesen auf Aquaristik Zentrum",
-      "Fazit"
+      "Zuerst die Tiere prüfen: Wann es dringend ist",
+      "Farbe und Verlauf als Hinweise nutzen",
+      "Schaum: Entstehung dokumentieren, nicht erraten",
+      "Ungewohnter Geruch: Vorsicht mit dem Bodengrund",
+      "Messwerte richtig erfassen",
+      "Maßnahmen nach Befund statt nach Wasserfarbe",
+      "Die Ursache dauerhaft reduzieren"
     ],
     "related": [
       [
@@ -3627,16 +3619,21 @@
         "aquarium-pflegeroutine-guide.png"
       ]
     ],
-    "prod": [
-      "Aquarium Pflege Set",
-      "Mulmsauger & Bürsten",
-      "search:Aquarium Reinigung Set",
-      "#ffd93d",
-      "#f59e0b"
-    ],
+    "prod": null,
     "intent": "Ratgeber und Guide: Symptome richtig lesen",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "tocAnchors": [
+      "warnzeichen",
+      "beobachtung",
+      "schaum",
+      "geruch",
+      "messungen",
+      "massnahmen",
+      "vorbeugung"
+    ],
+    "dateModified": "2026-11-14",
+    "skipInlineRelated": true
   },
   {
     "slug": "urlaub-aquarium-futterautomat",
