@@ -12,6 +12,6 @@ for (const slug of ['wasserwerte-aquarium-guide','aquarium-wasserwechsel-richtig
   const s=fs.readFileSync(`artikel/${slug}.html`,'utf8');
   const blocks=[...s.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(m=>JSON.parse(m[1]));
   assert.equal(blocks.filter(x=>x['@type']==='Article').length,1);
-  assert.equal(blocks.find(x=>x['@type']==='Article').dateModified,'2026-11-13');
+  assert.equal(blocks.find(x=>x['@type']==='Article').dateModified,slug === 'aquarium-wasserwechsel-richtig-machen' ? '2026-11-14' : '2026-11-13');
  });
 }
