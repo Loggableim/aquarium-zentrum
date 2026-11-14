@@ -970,31 +970,22 @@
   },
   {
     "slug": "aquarium-umzug-transport-guide",
-    "title": "Umzug planen",
-    "excerpt": "Ein Aquarium umzuziehen ist weit mehr als nur das Becken von A nach B zu tragen – es bedeutet, ein komplettes Mini‑Ökosystem sicher über die Strecke zu bringen, ohne dass die empfindlichen Bewohner St…",
+    "title": "Aquarium umziehen: Tiere, Biofilter und Glasbecken sicher trennen",
+    "excerpt": "Aquarienumzug ohne pauschale Zeit- und Dosierregeln: leeres Glasbecken, geeigneter Fischtransport, Biofilter erhalten und Wasserwerte am Ziel kontrollieren.",
     "topic": "Umzug planen",
     "cat": "Einsteiger",
     "categoryGroup": "Einsteiger",
     "catColor": "#06b6d4",
     "catEmoji": "🐟",
-    "readingTime": 24,
+    "readingTime": 6,
     "img": "aquarium-umzug-transport-guide.png",
     "toc": [
-      "Umzug planen",
-      "Umzug planen",
-      "Fische sicher fangen",
-      "Filter und Bakterien schützen",
-      "Wasser, Bodengrund und Pflanzen transportieren",
-      "Wasser, Bodengrund und Pflanzen transportieren",
-      "Aufbau am neuen Standort",
-      "Aufbau",
-      "Die ersten 14 Tage überwachen",
-      "Typische Fehler vermeiden",
-      "Typische Fehler vermeiden",
-      "Checkliste für den Umzug",
-      "Checkliste für den Umzug",
-      "Häufige Fragen",
-      "Weiterlesen auf Aquaristik Zentrum"
+      "Vor dem Abbauen: Ziel und Transport vorbereiten",
+      "Aquarium leer transportieren",
+      "Fische getrennt und schonend transportieren",
+      "Biofilter erhalten, nicht durch Altwasser ersetzen",
+      "Am Ziel: Werte prüfen und Tiere passend eingewöhnen",
+      "Nach dem Umzug engmaschig kontrollieren"
     ],
     "related": [
       [
@@ -1016,16 +1007,20 @@
         "beckenformen-groessen.png"
       ]
     ],
-    "prod": [
-      "Aquarium Komplettset 60l",
-      "Ideal für den Start",
-      "search:Aquarium Komplettset 60l",
-      "#06b6d4",
-      "#0891b2"
-    ],
+    "prod": null,
     "intent": "Ratgeber und Guide: Umzug planen",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "tocAnchors": [
+      "planung",
+      "glasbecken",
+      "tiere",
+      "biofilter",
+      "ankunft",
+      "nachkontrolle"
+    ],
+    "dateModified": "2026-11-14",
+    "skipInlineRelated": true
   },
   {
     "slug": "aquascaping-anfaenger",
