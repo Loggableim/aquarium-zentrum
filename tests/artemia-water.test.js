@@ -1,0 +1,2 @@
+const test=require('node:test'); const assert=require('node:assert/strict'); const fs=require('node:fs');
+test('Artemia water and survival claims are qualified in source/output',()=>{for(const dir of ['content/artikel','artikel']){const s=fs.readFileSync(`${dir}/artemia-grindal-futtertiere-zuechten.html`,'utf8');assert.doesNotMatch(s,/24\s*(?:h|Stunden) stehen lassen|Überlebensrate steigt von 30|Überlebensrate von über 80/);assert.match(s,/Chloramin/);assert.match(s,/cdc\.gov\/drinking-water/);assert.match(s,/fao\.org/);}});
