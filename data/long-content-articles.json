@@ -1259,31 +1259,21 @@
   },
   {
     "slug": "beliebteste-aquarienfische",
-    "title": "Die Qual der Wahl – Welcher Fisch passt zu mir?",
-    "excerpt": "Du hast dein erstes Aquarium erfolgreich eingefahren, die Pflanzen wachsen prächtig und jetzt fehlt nur noch das Wichtigste: die Fische. Aber welche Arten sind wirklich für Anfänger geeignet? Nicht je…",
+    "title": "Aquarienfische für Anfänger: Arten passend auswählen",
+    "excerpt": "Guppy, Platy, Molly, Neon und weitere beliebte Tiere: Auswahl nach Wasser, Platz und Sozialverhalten statt pauschaler Besatzgarantien.",
     "topic": "Die Qual der Wahl",
     "cat": "Fische",
     "categoryGroup": "Garnelen & Fische",
     "catColor": "#ec4899",
     "catEmoji": "🐟",
-    "readingTime": 9,
+    "readingTime": 8,
     "img": "beliebteste-aquarienfische.png",
     "toc": [
-      "Die Qual der Wahl – Welcher Fisch passt zu mir?",
-      "Die große Steckbrief-Tabelle – Alle 10 Fische im Überblick",
-      "1. Guppy (Poecilia reticulata)",
-      "2. Platy (Xiphophorus maculatus)",
-      "3. Molly (Poecilia sphenops)",
-      "4. Neonsalmler (Paracheirodon innesi)",
-      "5. Panzerwels (Corydoras paleatus)",
-      "6. Zwergfadenfisch (Trichogaster lalius)",
-      "7. Black Molly (Poecilia sphenops var.)",
-      "8. Amanogarnele (Caridina multidentata)",
-      "9. Otocinclus (Otocinclus vittatus)",
-      "10. Siamesischer Rüsselbarbe (Crossocheilus oblongus)",
-      "Vergesellschaftung – Welche Fische passen zusammen?",
-      "Diese Kombinationen funktionieren garantiert",
-      "Häufige Fehler bei der Fischauswahl"
+      "Vor dem Fischkauf: fünf Angaben sammeln",
+      "Häufige Arten: Was spricht dafür, was muss geprüft werden?",
+      "Warum es hier keinen garantierten Mischbesatz gibt",
+      "Einsetzen nach Messwerten, nicht nur Kalender",
+      "Häufige Fragen"
     ],
     "related": [
       [
@@ -1305,16 +1295,19 @@
         "artemia-grindal-futtertiere-zuechten.png"
       ]
     ],
-    "prod": [
-      "Garnelenfutter Premium",
-      "Hochwertige Nahrung",
-      "search:Garnelenfutter Aquarium",
-      "#ff6b6b",
-      "#e24545"
-    ],
+    "prod": null,
     "intent": "Ratgeber und Guide: Die Qual der Wahl – Welcher Fisch passt zu mir?",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15",
+    "tocAnchors": [
+      "auswahl",
+      "vergleich",
+      "besatz",
+      "einsetzen",
+      "faq"
+    ],
+    "skipInlineRelated": true
   },
   {
     "slug": "biotop-aquarium-amazonas-asien",
@@ -2416,7 +2409,7 @@
     "intent": "Ratgeber und Guide: Gesellschaftsbecken richtig zusammenstellen",
     "date": "7. Juni 2026",
     "generated": true,
-    "dateModified": "2026-11-12"
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "heizung-temperatur-aquarium",
@@ -3813,7 +3806,8 @@
     ],
     "intent": "Ratgeber und Guide: Vergesellschaftung von Aquarienfischen – Wer verträgt sich?",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "wasseraufbereiter-aquarium-vergleich",
