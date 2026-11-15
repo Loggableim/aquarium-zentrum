@@ -2069,7 +2069,8 @@
     ],
     "intent": "Ratgeber und Guide: Aquarium Fische für Fortgeschrittene – Skalare, Diskus und anspruchsvolle Arten",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "fischkrankheiten-aquarium-guide",
@@ -2825,7 +2826,8 @@
     ],
     "intent": "Ratgeber und Guide: Meerwasser Aquarium Einstieg",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "nachzucht-fische",
@@ -3288,7 +3290,8 @@
     ],
     "intent": "Ratgeber und Guide: Was sind Salmler?",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "schnecken-im-aquarium",
@@ -3346,7 +3349,8 @@
     ],
     "intent": "Ratgeber und Guide: Schnecken im Aquarium – Nützliche Helfer im Kampf gegen Algen und Mulm",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "schwimmpflanzen-aquarium-guide",
