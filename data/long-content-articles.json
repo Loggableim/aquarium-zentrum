@@ -907,7 +907,8 @@
     ],
     "intent": "Ratgeber und Guide: Aquarium Schädlinge erkennen, bekämpfen und vorbeugen",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "aquarium-technik-ueberblick",
@@ -1371,7 +1372,8 @@
     ],
     "intent": "Ratgeber und Guide: Biotop-Aquarium planen: Amazonas, Asien und Schwarzwasser natürlich nachbilden",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "biotop-aquarium-suedamerika",
@@ -2525,7 +2527,8 @@
     ],
     "intent": "Ratgeber und Guide: Iwagumi Aquascape – Steine, Pflanzen, Layout und Pflege minimalistisch planen",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "kaltwasser-aquarium-guide",
@@ -3418,7 +3421,7 @@
       "Die wichtigsten Steinarten fürs Aquarium",
       "Hardscape richtig aufbauen – die goldenen Regeln",
       "Steine vorbereiten und einsetzen",
-      "Der Essig-Test: So prüfst du, ob ein Stein geeignet ist",
+      "Der Essig-Test ist keine Sicherheitsprüfung",
       "Steine mit Pflanzen kombinieren",
       "Iwagumi – der klassische Steingarten-Stil",
       "Hardscape pflegen und reinigen",
@@ -3459,7 +3462,8 @@
     ],
     "intent": "Ratgeber und Guide: Aquarium Steinarten und Hardscape – Gestalten mit Stein",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "stroemung-im-aquarium",
