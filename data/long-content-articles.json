@@ -1552,31 +1552,22 @@
   },
   {
     "slug": "brackwasser-aquarium-guide",
-    "title": "Brackwasser-Aquarium einrichten: Salz, Technik, Besatz und Pflege im Praxis-Guide",
-    "excerpt": "Brackwasser-Aquaristik ist das spannende Bindeglied zwischen Süß- und Meerwasseraquaristik. Wer genug vom „08/15-Becken\" hat und sich für Mangrovenbiotope, Flussmündungen oder die Ostsee-Fauna begeist…",
+    "title": "Brackwasser-Aquarium: Arten, Salz und Wasserwerte richtig planen",
+    "excerpt": "Brackwasser ohne Pauschalrezepte: Arten und Lebensstadien prüfen, Salzmischungen einordnen und Wechselwasser zuverlässig vorbereiten.",
     "topic": "Brackwasser-Aquarium einrichten",
     "cat": "Einsteiger",
     "categoryGroup": "Einsteiger",
     "catColor": "#06b6d4",
     "catEmoji": "🐟",
-    "readingTime": 12,
+    "readingTime": 7,
     "img": "brackwasser-aquarium-guide.png",
     "toc": [
-      "Brackwasser-Aquarium einrichten: Salz, Technik, Besatz und Pflege im Praxis-Guide",
-      "1. Was Brackwasser ist",
-      "2. Salzgehalt messen",
-      "3. Technik und Einrichtung",
-      "4. Geeignete Tiere",
-      "5. Pflanzen und Hardscape",
-      "6. Wasserwechsel",
-      "7. Fehler vermeiden",
-      "8. Praxis-Setup",
-      "9. FAQ – Häufige Fragen zum Brackwasser-Aquarium",
-      "Aräometer (Spindel)",
-      "Refraktometer",
-      "Leitfähigkeitsmessgerät (TDS-/EC-Meter)",
-      "Beckengröße",
-      "Filter"
+      "Zuerst Arten und Lebensstadien bestimmen",
+      "Salzmischung statt Jod-Pauschalregel",
+      "Salzgehalt mit passenden Geräten messen",
+      "Wechselwasser separat vorbereiten",
+      "Technik und Biofilter auf das System abstimmen",
+      "Eingewöhnung und laufende Kontrolle"
     ],
     "related": [
       [
@@ -1598,16 +1589,20 @@
         "aquascaping-anfaenger.png"
       ]
     ],
-    "prod": [
-      "Aquarium Komplettset 60l",
-      "Ideal für den Start",
-      "search:Aquarium Komplettset 60l",
-      "#06b6d4",
-      "#0891b2"
-    ],
+    "prod": null,
     "intent": "Ratgeber und Guide: Brackwasser-Aquarium einrichten: Salz, Technik, Besatz und Pflege im Praxis-Guide",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "tocAnchors": [
+      "besatz",
+      "salz",
+      "messung",
+      "wechselwasser",
+      "technik",
+      "kontrolle"
+    ],
+    "dateModified": "2026-11-14",
+    "skipInlineRelated": true
   },
   {
     "slug": "bucephalandra-anubias-javafarn",
