@@ -852,7 +852,8 @@
     ],
     "intent": "Ratgeber und Guide: Warum regelmäßige Pflege so wichtig ist",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "aquarium-schaedlinge",
@@ -3695,31 +3696,22 @@
   },
   {
     "slug": "uv-klaerer-aquarium-guide",
-    "title": "UV-Klärer im Aquarium: Wann sie helfen und wann nicht",
-    "excerpt": "Ein UV-Klärer klingt nach Wunderwaffe gegen trübes Wasser – und in vielen Fällen ist er das auch. Doch wie jedes technische Gerät im Aquarium hat auch die UV-C-Lampe ihre Grenzen, ihre Nebenwirkungen …",
+    "title": "UV-C-Klärer im Aquarium: Wirkung, Sicherheit und Wartung",
+    "excerpt": "UV-C sinnvoll einordnen: passende Geräteauslegung, sichere Netztrennung und Wartung nach der konkreten Herstelleranleitung.",
     "topic": "UV-Klärer im Aquarium",
     "cat": "Technik",
     "categoryGroup": "Technik",
     "catColor": "#8b5cf6",
     "catEmoji": "⚙️",
-    "readingTime": 13,
+    "readingTime": 6,
     "img": "uv-klaerer-aquarium-guide.png",
     "toc": [
-      "UV-Klärer im Aquarium: Wann sie helfen und wann nicht",
-      "Was UV-C im Aquarium wirklich macht",
-      "Grünes Wasser und Schwebealgen – die klassische UV-Anwendung",
-      "Keimdruck realistisch einordnen",
-      "Dimensionierung – die richtige Größe für dein Becken",
-      "Durchfluss und Installation – worauf du achten musst",
-      "Dauerbetrieb oder Kur – was ist besser?",
-      "Nebenwirkungen – was passiert mit den Bakterien?",
-      "Kaufkriterien – worauf du beim UV-Klärer achten solltest",
-      "Reinigung und Wartung des UV-Klärers",
-      "Häufige Fehler beim UV-Klärer",
-      "FAQ – häufige Fragen zum UV-Klärer",
-      "Fazit – UV-Klärer gezielt und bewusst einsetzen",
-      "Was ein UV-Klärer kann",
-      "Was ein UV-Klärer nicht kann"
+      "Sicherheit: Strom und UV-C",
+      "Wirkung und Grenzen",
+      "Gerät und Durchfluss auswählen",
+      "Installation und Betrieb",
+      "Wartung",
+      "Häufige Fragen"
     ],
     "related": [
       [
@@ -3741,16 +3733,20 @@
         "aquarium-duengung-guide.png"
       ]
     ],
-    "prod": [
-      "Aquarium Filter Set",
-      "Leistungsstark & leise",
-      "search:Aquarium Filter Außenfilter",
-      "#8b5cf6",
-      "#7c3aed"
-    ],
+    "prod": null,
     "intent": "Ratgeber und Guide: UV-Klärer im Aquarium: Wann sie helfen und wann nicht",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15",
+    "skipInlineRelated": true,
+    "tocAnchors": [
+      "sicherheit",
+      "einsatz",
+      "auswahl",
+      "betrieb",
+      "wartung",
+      "faq"
+    ]
   },
   {
     "slug": "vergesellschaftung-aquarienfische",
