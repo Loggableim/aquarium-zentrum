@@ -4068,7 +4068,7 @@
       "Seemandelbaumholz",
       "Drachenwurzel",
       "Korkröhre",
-      "Auskochen oder Wässern?"
+      "Vorbereitung ist kein Unbedenklichkeitsnachweis"
     ],
     "related": [
       [
@@ -4099,7 +4099,8 @@
     ],
     "intent": "Ratgeber und Guide: Aquarium Wurzeln und Holz – Natürliche Dekoration mit Wirkung auf die Wasserwerte",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15"
   },
   {
     "slug": "aquarium-wasserwechsel-richtig-machen",
