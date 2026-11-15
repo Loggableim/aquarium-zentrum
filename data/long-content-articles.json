@@ -1842,27 +1842,24 @@
   },
   {
     "slug": "diy-aquarium-bauen",
-    "title": "Aquarium DIY – Selber bauen und individuell gestalten",
-    "excerpt": "Ein Aquarium selbst zu bauen ist der Traum vieler Aquarianer. Warum ein Standard-Becken aus dem Zoofachhandel kaufen, wenn du dein eigenes, maßgeschneidertes Aquarium bauen kannst? Ein DIY-Aquarium bi…",
+    "title": "Aquarium selber bauen: Planung, Glas und Sicherheitsgrenzen",
+    "excerpt": "Was vor einem Aquarium-Eigenbau geklärt werden muss: fachliche Bemessung, passende Verklebung, vollständige Aushärtung und die Grenzen eines Dichtheitstests.",
     "topic": "Aquarium DIY",
     "cat": "Einsteiger",
     "categoryGroup": "Einsteiger",
     "catColor": "#06b6d4",
     "catEmoji": "🐟",
-    "readingTime": 9,
+    "readingTime": 6,
     "img": "diy-aquarium-bauen.png",
     "toc": [
-      "Aquarium DIY – Selber bauen und individuell gestalten",
-      "Planung – der wichtigste Schritt",
-      "Materialien und Werkzeuge",
-      "Der Bau – Schritt für Schritt",
-      "Dichtigkeitstest – bevor Wasser ins Becken kommt",
-      "Individuelle Einrichtung für dein DIY-Becken",
-      "DIY-Unterschrank – stabil und passgenau",
-      "Technik individuell integrieren",
-      "Rechtliche Aspekte und Versicherung",
-      "Häufige Fehler beim Aquarium-Selbstbau",
-      "Fazit – Mit Köpfchen und Handwerk zum Traumbecken"
+      "Erst Nutzung und Konstruktion klären",
+      "Glasstärke und Verstrebung gehören zusammen",
+      "Klebstoff und Fugen nicht improvisieren",
+      "Vollständige Aushärtung vor Belastung",
+      "Unterbau, Auflage und Standort",
+      "Ein Dichtheitstest ist keine statische Freigabe",
+      "Was du sinnvoll selbst vorbereiten kannst",
+      "Häufige Fragen"
     ],
     "related": [
       [
@@ -1884,16 +1881,22 @@
         "aquascaping-anfaenger.png"
       ]
     ],
-    "prod": [
-      "Aquarium Komplettset 60l",
-      "Ideal für den Start",
-      "search:Aquarium Komplettset 60l",
-      "#06b6d4",
-      "#0891b2"
-    ],
+    "prod": null,
     "intent": "Ratgeber und Guide: Aquarium DIY – Selber bauen und individuell gestalten",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "tocAnchors": [
+      "planung",
+      "glas",
+      "klebstoff",
+      "aushaertung",
+      "unterbau",
+      "pruefung",
+      "naechste-schritte",
+      "fragen"
+    ],
+    "dateModified": "2026-11-15",
+    "skipInlineRelated": true
   },
   {
     "slug": "einsteiger-aquarium-guide",
