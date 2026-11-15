@@ -79,7 +79,7 @@
       "Fazit – Algenfresser sind Helfer, nicht Retter",
       "Otocinclus (Ohrgitterharnischwels)",
       "Antennenwelse (Ancistrus)",
-      "SAE – Siamesische Rüsselbarbe (Crossocheilus oblongus)",
+      "Siamesische Rüsselbarben: Artbestimmung vor Algenversprechen",
       "Gebänderter Saugwels (Glyptoperichthys gibbiceps)",
       "Amano-Garnelen (Caridina multidentata)",
       "Red Cherry und andere Zwerggarnelen",
@@ -115,7 +115,9 @@
     ],
     "intent": "Ratgeber und Guide: Aquarium Algenfresser im Porträt – Fische und Wirbellose",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15",
+    "skipInlineRelated": true
   },
   {
     "slug": "antennenwels-l-welse-haltung",
@@ -1658,32 +1660,31 @@
     ],
     "intent": "Ratgeber und Guide: Bucephalandra, Anubias und Javafarn – Aufsitzerpflanzen richtig befestigen und pflegen",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15",
+    "skipInlineRelated": true
   },
   {
     "slug": "co2-einsteiger-guide",
-    "title": "CO₂-Düngung für Einsteiger – Einfach loslegen",
-    "excerpt": "CO₂ ist einer der wichtigsten Bausteine für gesundes Pflanzenwachstum im Aquarium. Ohne ausreichend Kohlendioxid können selbst robuste Pflanzen nicht richtig wachsen – Blätter bleiben klein, Stängelpf…",
+    "title": "CO₂-Düngung für Einsteiger: Bedarf, Kontrolle und Risiken",
+    "excerpt": "Wann zusätzliches CO₂ sinnvoll ist, warum Pflanzenzielwerte keine Sicherheitsgarantie sind und wie du Technik, Kontrolle und Warnzeichen einordnest.",
     "topic": "CO₂-Düngung für Einsteiger",
     "cat": "Technik",
     "categoryGroup": "Technik",
     "catColor": "#8b5cf6",
     "catEmoji": "⚙️",
-    "readingTime": 8,
+    "readingTime": 7,
     "img": "co2-einsteiger-guide.png",
     "toc": [
-      "CO₂-Düngung für Einsteiger – Einfach loslegen",
-      "Warum CO₂ auch für Einsteiger sinnvoll ist",
-      "Bio-CO₂ oder Druckgas – was ist besser für den Start?",
-      "Die richtige Dosierung – Schritt für Schritt",
-      "Auf die richtige Strömung kommt es an",
-      "Typische Anfängerfehler und wie du sie vermeidest",
-      "Düngung anpassen – mehr CO₂ bedeutet mehr Nährstoffe",
-      "CO₂ und Algen – was ist dran?",
-      "Sicherheit – worauf du achten musst",
-      "Fazit – Trau dich!",
-      "Bio-CO₂ – Günstig, aber ungenau",
-      "Druckgas-CO₂ – Stabil und präzise"
+      "Bedarf prüfen",
+      "Risiken für Tiere",
+      "Druckgas und Bio-CO₂",
+      "Einstellen und kontrollieren",
+      "Nachtabschaltung",
+      "Warnzeichen",
+      "Flaschensicherheit",
+      "FAQ",
+      "Fazit"
     ],
     "related": [
       [
@@ -1705,16 +1706,23 @@
         "aquarium-duengung-guide.png"
       ]
     ],
-    "prod": [
-      "Aquarium Filter Set",
-      "Leistungsstark & leise",
-      "search:Aquarium Filter Außenfilter",
-      "#8b5cf6",
-      "#7c3aed"
-    ],
+    "prod": null,
     "intent": "Ratgeber und Guide: CO₂-Düngung für Einsteiger – Einfach loslegen",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15",
+    "skipInlineRelated": true,
+    "tocAnchors": [
+      "entscheidung",
+      "risiken",
+      "technik",
+      "kontrolle",
+      "nacht",
+      "notfall",
+      "flasche",
+      "faq",
+      "fazit"
+    ]
   },
   {
     "slug": "co2-im-aquarium",
@@ -1772,7 +1780,9 @@
     ],
     "intent": "Ratgeber und Guide: Warum CO2 im Aquarium so wichtig ist",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-15",
+    "skipInlineRelated": true
   },
   {
     "slug": "diskushaltung-pflege",
