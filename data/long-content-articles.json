@@ -569,7 +569,8 @@
     ],
     "intent": "Ratgeber und Guide: Aquarium Futter und Ernährung – Gesund füttern für vitale Fische",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-16"
   },
   {
     "slug": "aquarium-futterautomat-guide-2026",
@@ -2655,7 +2656,8 @@
     ],
     "intent": "Ratgeber und Guide: Warum Betta splendens besondere Ansprüche hat",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-16"
   },
   {
     "slug": "lebendgebärende-zahnkarpfen",
@@ -3297,7 +3299,7 @@
     "intent": "Ratgeber und Guide: Was sind Salmler?",
     "date": "7. Juni 2026",
     "generated": true,
-    "dateModified": "2026-11-15"
+    "dateModified": "2026-11-16"
   },
   {
     "slug": "schnecken-im-aquarium",
