@@ -1084,7 +1084,7 @@
   },
   {
     "slug": "artemia-grindal-futtertiere-zuechten",
-    "dateModified": "2026-11-14",
+    "dateModified": "2026-11-17",
     "title": "Artemia Grindal Futtertiere Zuechten",
     "excerpt": "Jeder Aquarianer kennt das Problem: Die Fische fressen Trockenfutter nur widerwillig, Jungfische wachsen kaum, und die Wasserqualität leidet unter Überfütterung. Die Lösung liegt oft direkt in der eig…",
     "topic": "Artemia Grindal Futtertiere Zuechten",
@@ -3932,7 +3932,8 @@
     ],
     "intent": "Ratgeber und Guide: Aquarium Wassertest und Wasserpflege – Alles im Griff",
     "date": "7. Juni 2026",
-    "generated": true
+    "generated": true,
+    "dateModified": "2026-11-17"
   },
   {
     "slug": "wasserwerte-aquarium-guide",
