@@ -183,19 +183,44 @@ function breadcrumbSchema(items) {
 
 // ── LAZY LOAD + RESPONSIVE IMAGES HELPER ──
 function addLazyLoading(html) {
-  // Add loading="lazy" + srcset/sizes to img tags — but NOT to hero images (above the fold)
-  return html.replace(/<img\s+(?![^>]*loading=)(?![^>]*class="hero)/g, '<img loading="lazy" ')
-    .replace(/<img\s+([^>]*?)src="([^"]+\.webp)"/g, (match, attrs, src) => {
-      if (match.includes('srcset=')) return match; // already has srcset
-      const base = src.replace(/\.webp$/, '');
-      const prefix = src.includes('/') ? src.substring(0, src.lastIndexOf('/') + 1) : '';
-      const baseName = src.split('/').pop().replace(/\.webp$/, '');
-      // Responsive srcset: 640w (mobile), 960w (tablet), 1216w (desktop)
-      return match.replace(
-        `src="${src}"`,
-        `src="${src}" srcset="${prefix}${baseName}-640.webp 640w, ${prefix}${baseName}-960.webp 960w, ${src} 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px"`
-      );
-    });
+  // These two articles already show the same working hero above the legacy duplicate.
+  html = html.replace(
+    /<div class="article-image-full"><img src="\.\.\/images\/(schwimmpflanzen-aquarium-guide|urlaub-aquarium-futterautomat)\.png"[^>]*><\/div>\r?\n/g,
+    (tag, name) => html.includes(`src="../../images/${name}.webp"`) ? '' : tag,
+  );
+  return html.replace(/<img\b[^>]*>/g, tag => {
+    if (!/\sloading=/.test(tag) && !/class="hero/.test(tag)) {
+      tag = tag.replace(/^<img\s+/, '<img loading="lazy" ');
+    }
+    const source = tag.match(/\ssrc="((?:\.{1,2}\/|\/)*images\/([^"/]+))"/);
+    if (!source) return tag;
+    let [, src, filename] = source;
+    const exists = name => fs.existsSync(path.join(ROOT, 'images', name));
+    if (!exists(filename)) {
+      const replacement = filename === 'wasserwerte-guide.webp'
+        ? 'wasserwerte-aquarium-guide.webp'
+        : filename.replace(/\.png$/, '.webp');
+      if (replacement !== filename && exists(replacement)) {
+        tag = tag.replace(`src="${src}"`, `src="/images/${replacement}"`);
+        if (filename === 'wasserwerte-guide.webp') {
+          tag = tag.replace('alt="Wasserwerte-Testkit und Messstreifen im Aquarium"',
+            'alt="Illustration von Reagenzgläsern zum Messen der Wasserwerte"');
+        }
+        src = `/images/${replacement}`;
+        filename = replacement;
+      }
+    }
+    // Keep explicit responsive sets and never generate a URL for a nonexistent variant.
+    if (filename.endsWith('.webp') && !/\ssrcset=/.test(tag)) {
+      const base = filename.slice(0, -5);
+      if (exists(`${base}-640.webp`) && exists(`${base}-960.webp`)) {
+        const prefix = src.slice(0, src.lastIndexOf('/') + 1);
+        tag = tag.replace(`src="${src}"`,
+          `src="${src}" srcset="${prefix}${base}-640.webp 640w, ${prefix}${base}-960.webp 960w, ${src} 1216w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 960px, 1216px"`);
+      }
+    }
+    return tag;
+  });
 }
 
 // ── ARTICLE DATA ──
