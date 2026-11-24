@@ -1326,6 +1326,89 @@ function buildIntentSection() {
   </section>`;
 }
 
+// Historical MiniMax exports were written as complete HTML directly into artikel/.
+// Wrap only that recognizable export shape; existing modern articles are untouched.
+function wrapLegacyArticles() {
+  const directory = path.join(OUTPUT, 'artikel');
+  // Reviewed topic illustrations replace the branded legacy title cards.
+  const covers = new Map([
+    ["aquarium-fuer-anfaenger-schritt-anleitung", ["einsteiger-aquarium-guide.webp", "Illustration eines bepflanzten Aquariums mit Beleuchtung"]],
+    ["biotop-aquarium-2026-amazonas-unterwasserwelt-mit-schwarzwasser-schwarmfischen-u", ["biotop-aquarium-suedamerika.webp", "Illustration einer dicht bewachsenen Unterwasserlandschaft"]],
+    ["bodengrund-aquascape-2026-so-waehlst-du-soil-sand-und-kies-fuer-gesunde-wurzeln-", ["bodengrund-aquarium-guide.webp", "Illustration verschiedener Substrate für ein Aquarium"]],
+    ["dschungel-aquascape-2026-tropische-unterwasserwelten-mit-grossblaettrigen-amazon", ["aquascaping-anfaenger.webp", "Illustration eines Aquascapes mit üppigen Pflanzen und Wurzeln"]],
+    ["garnelen-aquarium-haltung-zucht-arten", ["garnelen-im-aquarium.webp", "Illustration einer roten Garnele zwischen Aquarienpflanzen"]],
+    ["iwagumi-aquascape-2026-schritt-fuer-schritt-zum-minimalistischen-stein-layout-mi", ["steinarten-hardscape_00001_.webp", "Aquarium mit einer Gruppe dunkler Steine und niedrigem Pflanzenbewuchs"]],
+    ["led-beleuchtung-2026-so-findest-du-das-perfekte-lichtspektrum-fuer-dein-pflanzen", ["aquarium-beleuchtung-guide.webp", "Beleuchtetes Pflanzenaquarium mit farbigen Lichtakzenten"]],
+    ["low-tech-aquarium-2026-pflanzenvielfalt-ohne-co2-so-gelingt-der-balance-akt-zwis", ["low-tech-aquarium-ohne-co2.webp", "Illustration eines dicht bepflanzten Aquariums"]],
+    ["nano-aquarium-2026-so-gelingt-der-perfekte-start-mit-zwerggarnelen-mooskugel-min", ["nano-aquarium-guide.webp", "Illustration eines kleinen Aquariums auf einem Tisch"]],
+    ["naturglas-aquarium-2026-so-planst-du-ein-artgerechtes-garnelen-biotop-mit-lebend", ["nano-aquarium-guide_00001_.webp", "Kleines bepflanztes Glasaquarium mit grünen Moospolstern"]],
+    ["wabi-kusa-aquascape-2026-natuerliche-unterwasserlandschaften-mit-schwimmpflanzen", ["schwimmpflanzen-aquarium-guide.webp", "Illustration schwimmender Blätter an der Wasseroberfläche"]],
+    ["wurzelholz-aquascape-2026-so-inszenierst-du-treibende-hoelzer-mit-aufsitzerpflan", ["wurzeln-holz-aquarium.webp", "Illustration von verzweigtem Wurzelholz unter Wasser"]],
+  ]);
+  const nav = resolveHomepageImages(T.nav).replace(
+    /<div class="search-wrapper">[\s\S]*?\r?\n      <\/div>/,
+    '<a class="search" href="/artikel/" aria-label="Artikelübersicht">📚</a>',
+  );
+  const plainFooter = T.footer.replace(/^ *<p class="affiliate-hinweis">.*<\/p>\r?\n/m, '');
+  const sidebar = `<aside class="article-sidebar legacy-article-sidebar" aria-label="Artikelkategorien">
+    <div class="side-section side-cat-nav">
+      <h5>📂 Kategorien</h5>
+      <div class="side-cat-list">${SIDEBAR_CATS.map(([name, url, color]) =>
+        `<a href="${url}" class="side-cat-item" style="--cat-color:${color}">${name}</a>`).join('')}</div>
+    </div>
+  </aside>`;
+
+  for (const name of fs.readdirSync(directory).filter(file => file.endsWith('.html'))) {
+    const file = path.join(directory, name);
+    const html = fs.readFileSync(file, 'utf8');
+    if (html.includes('class="article-layout"') || html.includes('href="/style.css"')) continue;
+    const legacy = html.match(/<body>\s*(<img\b[^>]*class="article-hero"[^>]*>)\s*<article>\s*(<h1>([\s\S]*?)<\/h1>)\s*<div class="article-meta">([\s\S]*?)<\/div>\s*<div class="article-content">([\s\S]*?)<\/article>\s*<\/body>/);
+    if (!legacy) continue;
+    const [, oldHero, heading, title, metadata, legacyProse] = legacy;
+    const cover = covers.get(path.basename(name, '.html'));
+    let hero = oldHero;
+    if (cover) {
+      const [asset, alt] = cover;
+      if (!fs.existsSync(path.join(ROOT, 'images', asset))) throw new Error(`Missing legacy article illustration: ${asset}`);
+      hero = oldHero.replace(/\bsrc="[^"]*"/, `src="/images/${asset}"`)
+        .replace(/\balt="[^"]*"/, `alt="${alt}"`);
+    }
+    // Close a malformed legacy emphasis tag before the shared shell is parsed.
+    const proseAndRelated = legacyProse.replace('<em>Anubias congensis</strong>', '<em>Anubias congensis</em>');
+    const newline = html.includes('\r\n') ? '\r\n' : '\n';
+    const normalize = part => part.replace(/\r?\n/g, newline);
+    const crumbs = breadcrumbHTML([
+      { label: 'Startseite', url: '/' },
+      { label: 'Artikel', url: '/artikel/' },
+      { label: title.replace(/<[^>]*>/g, '') },
+    ]);
+    const footer = /<a\b[^>]*href="https:\/\/(?:www\.)?amazon\.[^"]+[?&](?:amp;)?tag=/.test(proseAndRelated)
+      ? T.footer : plainFooter;
+    const body = normalize(`<body>
+${nav}
+${crumbs}
+<main class="article-layout">
+  <article class="article-main">
+    ${heading}
+    <div class="article-meta meta">${metadata}</div>
+    <div class="article-content body-text">
+${hero}
+${proseAndRelated}</article>
+${sidebar}
+</main>
+${footer}
+<script src="/app.js" defer></script>
+</body>`);
+    const localStyles = normalize(`<meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline'; font-src 'self'">
+<link rel="stylesheet" href="/style.css">
+<style>@media (max-width:768px){.article-layout > .legacy-article-sidebar{display:block}}</style>
+`);
+    const next = html.replace(legacy[0], () => body)
+      .replace('</head>', () => `${localStyles}</head>`);
+    fs.writeFileSync(file, next);
+  }
+}
+
 // ── MAIN ──
 function main() {
   console.log('🔨 Building aquaristik-zentrum.com (Megamagazin v3)...\n');
@@ -1341,6 +1424,8 @@ function main() {
       console.log(`  ✓ artikel/${slug}.html`);
     }
   }
+
+  wrapLegacyArticles();
 
   const aboutPath = path.join(CONTENT, 'about.html');
   if (fs.existsSync(aboutPath)) {
