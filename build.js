@@ -894,6 +894,17 @@ function topicTagByName(name) {
   return `<a href="${t[2]}" class="topic-tag" style="--topic-color:${t[1]}">${t[0]}</a>`;
 }
 
+// Resolve the legacy image names used by homepage cards, navigation and previews.
+function resolveHomepageImages(html) {
+  return html.replace(/\/images\/[\w.-]+\.(?:png|webp)\b/g, src => {
+    if (fs.existsSync(path.join(ROOT, src))) return src;
+    const fallback = src === '/images/wasserwechsel-guide.webp'
+      ? '/images/hero-aquarium-wasserwechsel-richtig-machen.webp'
+      : src.replace(/\.png$/, '.webp');
+    return fs.existsSync(path.join(ROOT, fallback)) ? fallback : src;
+  });
+}
+
 // ── GENERATE INDEX ──
 function buildIndex() {
   // Hero: Magazine-style editorial layout with featured story + secondary grid + topic bar
@@ -1032,14 +1043,14 @@ ${nlGlow}
 }
 </script>`;
 
-  return wrapPage(
+  return resolveHomepageImages(wrapPage(
     'Aquaristik Zentrum – Alles rund ums Aquarium | Megapage',
     'Aquaristik Zentrum – Dein modernes Aquarium-Magazin mit praktischen Guides, klarer Themenführung und Tipps für Einsteiger und Profis.',
     'https://aquaristik-zentrum.com/',
     '/images/hero.png',
     body,
     indexJsonLd
-  );
+  ));
 }
 
 // ── GENERATE ARTICLE ──
