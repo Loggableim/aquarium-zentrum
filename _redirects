@@ -1,1 +1,73 @@
-# Alte/umbenannte Artikel-Pfade (Domain-Redirects werden via functions/_middleware.js abgewickelt)
+# Legacy-/umbenannte Artikel-Pfade (Domain- und Trailing-Slash-Redirects
+# laufen ueber functions/_middleware.js). Die folgenden Artikel existieren
+# nicht unter content/ und brauchen daher eigene Cloudflare-Pages-Redirects
+# auf die kanonische Trailing-Slash-URL (301):
+
+/artikel/3d-rueckwand-aquarium-bauen      /artikel/3d-rueckwand-aquarium-bauen/      301
+/artikel/3d-rueckwand-aquarium-bauen.html  /artikel/3d-rueckwand-aquarium-bauen/      301
+/artikel/aquarium-fotografie-guide      /artikel/aquarium-fotografie-guide/      301
+/artikel/aquarium-fotografie-guide.html  /artikel/aquarium-fotografie-guide/      301
+/artikel/aquarium-fuer-anfaenger-schritt-anleitung      /artikel/aquarium-fuer-anfaenger-schritt-anleitung/      301
+/artikel/aquarium-fuer-anfaenger-schritt-anleitung.html  /artikel/aquarium-fuer-anfaenger-schritt-anleitung/      301
+/artikel/aquarium-geraeusche-ursachen-loesungen      /artikel/aquarium-geraeusche-ursachen-loesungen/      301
+/artikel/aquarium-geraeusche-ursachen-loesungen.html  /artikel/aquarium-geraeusche-ursachen-loesungen/      301
+/artikel/aquarium-kaufberatung-2026      /artikel/aquarium-kaufberatung-2026/      301
+/artikel/aquarium-kaufberatung-2026.html  /artikel/aquarium-kaufberatung-2026/      301
+/artikel/aquarium-mondlicht-beleuchtung      /artikel/aquarium-mondlicht-beleuchtung/      301
+/artikel/aquarium-mondlicht-beleuchtung.html  /artikel/aquarium-mondlicht-beleuchtung/      301
+/artikel/aquarium-schnecken-bekaempfung      /artikel/aquarium-schnecken-bekaempfung/      301
+/artikel/aquarium-schnecken-bekaempfung.html  /artikel/aquarium-schnecken-bekaempfung/      301
+/artikel/aquarium-standort-unterschrank      /artikel/aquarium-standort-unterschrank/      301
+/artikel/aquarium-standort-unterschrank.html  /artikel/aquarium-standort-unterschrank/      301
+/artikel/aquarium-stromkosten-berechnen      /artikel/aquarium-stromkosten-berechnen/      301
+/artikel/aquarium-stromkosten-berechnen.html  /artikel/aquarium-stromkosten-berechnen/      301
+/artikel/aquarium-urlaubsbetreuung-guide      /artikel/aquarium-urlaubsbetreuung-guide/      301
+/artikel/aquarium-urlaubsbetreuung-guide.html  /artikel/aquarium-urlaubsbetreuung-guide/      301
+/artikel/barben-aquarium      /artikel/barben-aquarium/      301
+/artikel/barben-aquarium.html  /artikel/barben-aquarium/      301
+/artikel/biotop-aquarium-2026-amazonas-unterwasserwelt-mit-schwarzwasser-schwarmfischen-u      /artikel/biotop-aquarium-2026-amazonas-unterwasserwelt-mit-schwarzwasser-schwarmfischen-u/      301
+/artikel/biotop-aquarium-2026-amazonas-unterwasserwelt-mit-schwarzwasser-schwarmfischen-u.html  /artikel/biotop-aquarium-2026-amazonas-unterwasserwelt-mit-schwarzwasser-schwarmfischen-u/      301
+/artikel/bodengrund-aquascape-2026-so-waehlst-du-soil-sand-und-kies-fuer-gesunde-wurzeln-      /artikel/bodengrund-aquascape-2026-so-waehlst-du-soil-sand-und-kies-fuer-gesunde-wurzeln-/      301
+/artikel/bodengrund-aquascape-2026-so-waehlst-du-soil-sand-und-kies-fuer-gesunde-wurzeln-.html  /artikel/bodengrund-aquascape-2026-so-waehlst-du-soil-sand-und-kies-fuer-gesunde-wurzeln-/      301
+/artikel/buero-aquarium-guide      /artikel/buero-aquarium-guide/      301
+/artikel/buero-aquarium-guide.html  /artikel/buero-aquarium-guide/      301
+/artikel/buntbarsche-cichliden-aquarium      /artikel/buntbarsche-cichliden-aquarium/      301
+/artikel/buntbarsche-cichliden-aquarium.html  /artikel/buntbarsche-cichliden-aquarium/      301
+/artikel/dschungel-aquascape-2026-tropische-unterwasserwelten-mit-grossblaettrigen-amazon      /artikel/dschungel-aquascape-2026-tropische-unterwasserwelten-mit-grossblaettrigen-amazon/      301
+/artikel/dschungel-aquascape-2026-tropische-unterwasserwelten-mit-grossblaettrigen-amazon.html  /artikel/dschungel-aquascape-2026-tropische-unterwasserwelten-mit-grossblaettrigen-amazon/      301
+/artikel/fadenfische-guramis-haltung      /artikel/fadenfische-guramis-haltung/      301
+/artikel/fadenfische-guramis-haltung.html  /artikel/fadenfische-guramis-haltung/      301
+/artikel/garnelen-aquarium-haltung-zucht-arten      /artikel/garnelen-aquarium-haltung-zucht-arten/      301
+/artikel/garnelen-aquarium-haltung-zucht-arten.html  /artikel/garnelen-aquarium-haltung-zucht-arten/      301
+/artikel/hintergrundpflanzen-aquarium-arten      /artikel/hintergrundpflanzen-aquarium-arten/      301
+/artikel/hintergrundpflanzen-aquarium-arten.html  /artikel/hintergrundpflanzen-aquarium-arten/      301
+/artikel/iwagumi-aquascape-2026-schritt-fuer-schritt-zum-minimalistischen-stein-layout-mi      /artikel/iwagumi-aquascape-2026-schritt-fuer-schritt-zum-minimalistischen-stein-layout-mi/      301
+/artikel/iwagumi-aquascape-2026-schritt-fuer-schritt-zum-minimalistischen-stein-layout-mi.html  /artikel/iwagumi-aquascape-2026-schritt-fuer-schritt-zum-minimalistischen-stein-layout-mi/      301
+/artikel/kind-und-aquarium-familien-guide      /artikel/kind-und-aquarium-familien-guide/      301
+/artikel/kind-und-aquarium-familien-guide.html  /artikel/kind-und-aquarium-familien-guide/      301
+/artikel/krebse-krabben-aquarium-guide-2026      /artikel/krebse-krabben-aquarium-guide-2026/      301
+/artikel/krebse-krabben-aquarium-guide-2026.html  /artikel/krebse-krabben-aquarium-guide-2026/      301
+/artikel/led-beleuchtung-2026-so-findest-du-das-perfekte-lichtspektrum-fuer-dein-pflanzen      /artikel/led-beleuchtung-2026-so-findest-du-das-perfekte-lichtspektrum-fuer-dein-pflanzen/      301
+/artikel/led-beleuchtung-2026-so-findest-du-das-perfekte-lichtspektrum-fuer-dein-pflanzen.html  /artikel/led-beleuchtung-2026-so-findest-du-das-perfekte-lichtspektrum-fuer-dein-pflanzen/      301
+/artikel/low-tech-aquarium-2026-pflanzenvielfalt-ohne-co2-so-gelingt-der-balance-akt-zwis      /artikel/low-tech-aquarium-2026-pflanzenvielfalt-ohne-co2-so-gelingt-der-balance-akt-zwis/      301
+/artikel/low-tech-aquarium-2026-pflanzenvielfalt-ohne-co2-so-gelingt-der-balance-akt-zwis.html  /artikel/low-tech-aquarium-2026-pflanzenvielfalt-ohne-co2-so-gelingt-der-balance-akt-zwis/      301
+/artikel/nano-aquarium-2026-so-gelingt-der-perfekte-start-mit-zwerggarnelen-mooskugel-min      /artikel/nano-aquarium-2026-so-gelingt-der-perfekte-start-mit-zwerggarnelen-mooskugel-min/      301
+/artikel/nano-aquarium-2026-so-gelingt-der-perfekte-start-mit-zwerggarnelen-mooskugel-min.html  /artikel/nano-aquarium-2026-so-gelingt-der-perfekte-start-mit-zwerggarnelen-mooskugel-min/      301
+/artikel/naturglas-aquarium-2026-so-planst-du-ein-artgerechtes-garnelen-biotop-mit-lebend      /artikel/naturglas-aquarium-2026-so-planst-du-ein-artgerechtes-garnelen-biotop-mit-lebend/      301
+/artikel/naturglas-aquarium-2026-so-planst-du-ein-artgerechtes-garnelen-biotop-mit-lebend.html  /artikel/naturglas-aquarium-2026-so-planst-du-ein-artgerechtes-garnelen-biotop-mit-lebend/      301
+/artikel/pflanzenkrankheiten-mangel-aquarium      /artikel/pflanzenkrankheiten-mangel-aquarium/      301
+/artikel/pflanzenkrankheiten-mangel-aquarium.html  /artikel/pflanzenkrankheiten-mangel-aquarium/      301
+/artikel/schwimmpflanzen-aquarium      /artikel/schwimmpflanzen-aquarium/      301
+/artikel/schwimmpflanzen-aquarium.html  /artikel/schwimmpflanzen-aquarium/      301
+/artikel/skalare-haltung-pflege      /artikel/skalare-haltung-pflege/      301
+/artikel/skalare-haltung-pflege.html  /artikel/skalare-haltung-pflege/      301
+/artikel/tetras-aquarium      /artikel/tetras-aquarium/      301
+/artikel/tetras-aquarium.html  /artikel/tetras-aquarium/      301
+/artikel/uv-c-klaerer-aquarium-entkeimung      /artikel/uv-c-klaerer-aquarium-entkeimung/      301
+/artikel/uv-c-klaerer-aquarium-entkeimung.html  /artikel/uv-c-klaerer-aquarium-entkeimung/      301
+/artikel/wabi-kusa-aquascape-2026-natuerliche-unterwasserlandschaften-mit-schwimmpflanzen      /artikel/wabi-kusa-aquascape-2026-natuerliche-unterwasserlandschaften-mit-schwimmpflanzen/      301
+/artikel/wabi-kusa-aquascape-2026-natuerliche-unterwasserlandschaften-mit-schwimmpflanzen.html  /artikel/wabi-kusa-aquascape-2026-natuerliche-unterwasserlandschaften-mit-schwimmpflanzen/      301
+/artikel/wassertemperatur-aquarium-sommer-hitze-kuehlung      /artikel/wassertemperatur-aquarium-sommer-hitze-kuehlung/      301
+/artikel/wassertemperatur-aquarium-sommer-hitze-kuehlung.html  /artikel/wassertemperatur-aquarium-sommer-hitze-kuehlung/      301
+/artikel/wurzelholz-aquascape-2026-so-inszenierst-du-treibende-hoelzer-mit-aufsitzerpflan      /artikel/wurzelholz-aquascape-2026-so-inszenierst-du-treibende-hoelzer-mit-aufsitzerpflan/      301
+/artikel/wurzelholz-aquascape-2026-so-inszenierst-du-treibende-hoelzer-mit-aufsitzerpflan.html  /artikel/wurzelholz-aquascape-2026-so-inszenierst-du-treibende-hoelzer-mit-aufsitzerpflan/      301
