@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-/**
- * build.js — Aquaristik Zentrum Static Site Builder v3 (Megamagazin)
- * Reads templates/ + page data → generates all HTML files.
- */
+// Aquaristik Zentrum Static Site Builder v3 (Megamagazin)
+// Reads templates/ + page data → generates all HTML files.
+// URL-Konsolidierung: interne Links zeigen ausschliesslich auf kanonische
+// Trailing-Slash-URLs (/artikel/<slug>/, /about/, /impressum/).
+// (Original: build.js — erweitert, Inhalte unveraendert.)
 
 const fs = require('fs');
 const path = require('path');
@@ -22,6 +23,23 @@ const T = {
   footer: readTemplate('footer.html'),
   cookie: readTemplate('cookie.html'),
   pageHero: readTemplate('page-hero.html'),
+};
+
+// URL consolidation helper: internal article/section links use the canonical
+// trailing-slash form everywhere. External links are left untouched.
+const canonicalPath = href => {
+  if (typeof href !== 'string') return href;
+  // Only rewrite site-internal paths.
+  if (!href.startsWith('/')) return href;
+  // Static assets and special files keep their exact URL.
+  if (/\/(?:images|style\.css|app\.js|favicon\.svg|ads\.txt|robots\.txt|sitemap\.xml|404\.html)(?:$|[/?#])/.test(href)) return href;
+  // /artikel/<slug>.html → /artikel/<slug>/  ;  /about.html → /about/
+  let out = href.replace(/^\/(.+)\.html(\?|#|$)/, '/$1$2');
+  // Directory-style links (/artikel/) already end with a slash.
+  if (!out.endsWith('/') && !/\.[a-z0-9]+(\?|#|$)/i.test(out) && !out.includes('/artikel/')) {
+    out = `${out}/`;
+  }
+  return out;
 };
 
 const AMAZON_TAG = 'nova079-20';
@@ -73,7 +91,7 @@ function cardHTML(slug, title, excerpt, img, cat, catColor, readingTime) {
   const catStyle = catColor && catColor.startsWith('#ffd93d')
     ? `background:${catColor};color:#0a0a0f;`
     : `background:${catColor || 'rgba(0,0,0,0.5)'};`;
-  return `<a href="/artikel/${slug}" class="card-modern">
+  return `<a href="/artikel/${slug}/" class="card-modern">
     <div class="art-img" style="${imgStyle}">
       <span class="cat-badge" style="${catStyle}">${cat}</span>
       ${readingTime ? `<span class="read-badge">${readingTime} Min</span>` : ''}
@@ -93,7 +111,7 @@ function heroCardHTML(slug, title, excerpt, img, cat, catColor, readingTime) {
   const catStyle = catColor && catColor.startsWith('#ffd93d')
     ? `background:${catColor};color:#0a0a0f;`
     : `background:${catColor || 'rgba(0,0,0,0.5)'};`;
-  return `<a href="/artikel/${slug}" class="hero-card">
+  return `<a href="/artikel/${slug}/" class="hero-card">
     <div class="hero-card-bg" style="${imgStyle}"></div>
     <div class="hero-card-overlay"></div>
     <div class="hero-card-body">
@@ -109,7 +127,7 @@ function recCardHTML(slug, title, desc, img) {
   const imgStyle = img.startsWith('linear-gradient')
     ? `background:${img}`
     : `background-image:url('/images/${img}')`;
-  return `<a href="/artikel/${slug}" class="rec-card">
+  return `<a href="/artikel/${slug}/" class="rec-card">
   <div class="rthumb" style="${imgStyle}"></div>
   <div class="rinfo"><h6>${title}</h6><small>${desc}</small></div>
 </a>`;
@@ -118,7 +136,7 @@ function recCardHTML(slug, title, desc, img) {
 function relatedBottomHTML(related) {
   let html = '<div class="related-bottom"><h3>📖 Weiterführende Artikel</h3><div class="related-bottom-grid">';
   for (const [rslug, rtitle, rdesc] of related) {
-    html += `<a href="/artikel/${rslug}.html" class="related-bottom-card">
+    html += `<a href="/artikel/${rslug}/" class="related-bottom-card">
       <h4>${rtitle}</h4>
       <p>${rdesc}</p>
       <span class="read-link-sm">Weiterlesen →</span>
@@ -137,7 +155,7 @@ function injectInternalLinks(bodyContent, related) {
 
   const idx = h2Match.index + 6; // after </h2>
   const linkBox = related.map(([rslug, rtitle]) =>
-    `<a href="/artikel/${rslug}.html" class="inline-related">→ ${rtitle}</a>`
+    `<a href="/artikel/${rslug}/" class="inline-related">→ ${rtitle}</a>`
   ).join('\n    ');
 
   const snippet = `\n  <div class="inline-related-box">
@@ -153,7 +171,7 @@ function tocItem(text) {
 }
 
 function topicTag(name, color, url) {
-  return `<a href="${url}" class="topic-tag" style="--topic-color:${color}">${name}</a>`;
+  return `<a href="${canonicalPath(url)}" class="topic-tag" style="--topic-color:${color}">${name}</a>`;
 }
 
 // ── BREADCRUMB ──
@@ -162,7 +180,7 @@ function breadcrumbHTML(items) {
     if (i === items.length - 1) {
       return `<span class="crumb-last">${item.label}</span>`;
     }
-    return `<a href="${item.url}" class="crumb-link">${item.label}</a><span class="crumb-sep">›</span>`;
+    return `<a href="${canonicalPath(item.url)}" class="crumb-link">${item.label}</a><span class="crumb-sep">›</span>`;
   }).join('');
   return `<nav class="breadcrumb" aria-label="Breadcrumb">${crumbs}</nav>`;
 }
@@ -384,9 +402,9 @@ const ARTICLES = {
     toc: ['Herkunft & Mythos', 'Beckengröße', 'Wasserwerte', 'Einrichtung', 'Vergesellschaftung', 'Ernährung', 'Fazit'],
     related: [
       ['beliebteste-aquarienfische', 'Aquarienfische', 'Top 10 für Einsteiger', 'linear-gradient(135deg,#ec4899,#db2777)'],
-      ['garnelen-im-aquarium', 'Garnelen-Guide', 'Vergesellschaftung', 'garnelen.png'],
+      ['garnelen-im-aquarium', 'Garnelen', 'Vergesellschaftung', 'garnelen.png'],
       ['aquarienpflanzen-anfaenger', 'Pflanzen-Guide', 'Bepflanzungsideen', 'aquarienpflanzen.png'],
-      ['fischkrankheiten-aquarium-guide', 'Fischkrankheiten', 'Kampffisch typisch', 'krankheiten-symptome.png'],
+      ['fischkrankheiten-aquarium-guide', 'Kampffisch typisch', 'Krankheiten', 'krankheiten-symptome.png'],
     ],
     prod: ['Kampffisch Futter', 'Spezialnahrung', 'B0CBHFMY7H', '#ec4899', '#db2777'],
   },
@@ -813,54 +831,54 @@ for (const item of LONG_CONTENT_ARTICLES) {
 
 // ── TOPICS / TAGS ──
 const TOPICS = [
-  ['Einsteiger', '#06b6d4', '/artikel/einsteiger-aquarium-guide.html'],
-  ['Aquarienpflanzen', '#10b981', '/artikel/aquarienpflanzen-anfaenger.html'],
-  ['Aquascaping', '#0d9488', '/artikel/aquascaping-anfaenger.html'],
-  ['Garnelen', '#ff6b6b', '/artikel/garnelen-im-aquarium.html'],
-  ['Fischkrankheiten', '#ec4899', '/artikel/fischkrankheiten-aquarium-guide.html'],
-  ['Algen', '#ffd93d', '/artikel/algen-im-aquarium.html'],
-  ['Technik', '#8b5cf6', '/artikel/aquarium-technik-ueberblick.html'],
-  ['CO₂', '#a78bfa', '/artikel/co2-im-aquarium.html'],
-  ['Bodengrund', '#06b6d4', '/artikel/bodengrund-aquarium-guide.html'],
-  ['Pflegeroutine', '#f59e0b', '/artikel/aquarium-pflegeroutine-guide.html'],
-  ['Wasserwerte', '#0891b2', '/artikel/wasserwerte-aquarium-guide.html'],
-  ['Kampffisch', '#db2777', '/artikel/kampffisch-haltung-betta.html'],
-  ['Beleuchtung', '#a78bfa', '/artikel/aquarium-beleuchtung-guide.html'],
-  ['Filter', '#6366f1', '/artikel/aquarium-filter-guide.html'],
-  ['Düngung', '#34d399', '/artikel/aquarium-duengung-guide.html'],
-  ['Schnecken', '#fbbf24', '/artikel/schnecken-im-aquarium.html'],
-  ['Wurzeln & Holz', '#78716c', '/artikel/wurzeln-holz-aquarium.html'],
-  ['Vergesellschaftung', '#f472b6', '/artikel/vergesellschaftung-aquarienfische.html'],
-  ['Osmose', '#38bdf8', '/artikel/osmoseanlage-wasseraufbereitung.html'],
-  ['Fische für Profis', '#d946ef', '/artikel/fische-fortgeschrittene.html'],
-  ['Heizung', '#fb923c', '/artikel/heizung-temperatur-aquarium.html'],
-  ['Strömung', '#60a5fa', '/artikel/stroemung-im-aquarium.html'],
-  ['Beckenformen', '#06b6d4', '/artikel/beckenformen-groessen.html'],
-  ['Lebendgebärende', '#f43f5e', '/artikel/lebendgebärende-zahnkarpfen.html'],
-  ['Futter', '#a855f7', '/artikel/aquarium-futter-ernaehrung.html'],
-  ['Pflanzenvermehrung', '#34d399', '/artikel/pflanzenvermehrung-aquarium.html'],
-  ['CO₂ Einsteiger', '#2dd4bf', '/artikel/co2-einsteiger-guide.html'],
-  ['Teppichpflanzen', '#10b981', '/artikel/bodendecker-teppichpflanzen.html'],
-  ['Gesellschaftsbecken', '#0ea5e9', '/artikel/gesellschaftsbecken-einrichten.html'],
-  ['Quarantäne', '#f59e0b', '/artikel/quarantaene-medikamente.html'],
-  ['Rote Pflanzen', '#ef4444', '/artikel/rote-aquarienpflanzen.html'],
-  ['Hardscape', '#78716c', '/artikel/steinarten-hardscape.html'],
-  ['Nachzucht', '#f97316', '/artikel/nachzucht-fische.html'],
-  ['Algenfresser', '#84cc16', '/artikel/algenfresser-portrait.html'],
-  ['Wassertests', '#06b6d4', '/artikel/wassertest-wasserpflege.html'],
-  ['DIY Aquarium', '#a8a29e', '/artikel/diy-aquarium-bauen.html'],
-  ['Panzerwelse', '#ec4899', '/artikel/panzerwelse-aquarium.html'],
-  ['Salmler', '#ec4899', '/artikel/salmler-aquarium.html'],
-  ['Aquarium Moos', '#10b981', '/artikel/aquarium-moosarten.html'],
-  ['Nano Aquarium', '#06b6d4', '/artikel/nano-aquarium-guide.html'],
-  ['Schädlinge', '#f59e0b', '/artikel/aquarium-schaedlinge.html'],
-  ['Aquarium Automation', '#8b5cf6', '/artikel/aquarium-automation.html'],
-  ['Diskusfische', '#ec4899', '/artikel/diskushaltung-pflege.html'],
-  ['Garnelennachzucht', '#ff6b6b', '/artikel/garnelen-nachzucht.html'],
-  ['Antennenwelse & L-Welse', '#ec4899', '/artikel/welse-harnischwelse.html'],
-  ['Futtertiere züchten', '#ec4899', '/artikel/futtertiere-selbst-zuechten.html'],
-  ['Garnelen-Krankheiten', '#ff6b6b', '/artikel/garnelen-krankheiten.html'],
-  ['Biotop-Aquarium', '#06b6d4', '/artikel/biotop-aquarium-suedamerika.html'],
+  ['Einsteiger', '#06b6d4', '/artikel/einsteiger-aquarium-guide/'],
+  ['Aquarienpflanzen', '#10b981', '/artikel/aquarienpflanzen-anfaenger/'],
+  ['Aquascaping', '#0d9488', '/artikel/aquascaping-anfaenger/'],
+  ['Garnelen', '#ff6b6b', '/artikel/garnelen-im-aquarium/'],
+  ['Fischkrankheiten', '#ec4899', '/artikel/fischkrankheiten-aquarium-guide/'],
+  ['Algen', '#ffd93d', '/artikel/algen-im-aquarium/'],
+  ['Technik', '#8b5cf6', '/artikel/aquarium-technik-ueberblick/'],
+  ['CO₂', '#a78bfa', '/artikel/co2-im-aquarium/'],
+  ['Bodengrund', '#06b6d4', '/artikel/bodengrund-aquarium-guide/'],
+  ['Pflegeroutine', '#f59e0b', '/artikel/aquarium-pflegeroutine-guide/'],
+  ['Wasserwerte', '#0891b2', '/artikel/wasserwerte-aquarium-guide/'],
+  ['Kampffisch', '#db2777', '/artikel/kampffisch-haltung-betta/'],
+  ['Beleuchtung', '#a78bfa', '/artikel/aquarium-beleuchtung-guide/'],
+  ['Filter', '#6366f1', '/artikel/aquarium-filter-guide/'],
+  ['Düngung', '#34d399', '/artikel/aquarium-duengung-guide/'],
+  ['Schnecken', '#fbbf24', '/artikel/schnecken-im-aquarium/'],
+  ['Wurzeln & Holz', '#78716c', '/artikel/wurzeln-holz-aquarium/'],
+  ['Vergesellschaftung', '#f472b6', '/artikel/vergesellschaftung-aquarienfische/'],
+  ['Osmose', '#38bdf8', '/artikel/osmoseanlage-wasseraufbereitung/'],
+  ['Fische für Profis', '#d946ef', '/artikel/fische-fortgeschrittene/'],
+  ['Heizung', '#fb923c', '/artikel/heizung-temperatur-aquarium/'],
+  ['Strömung', '#60a5fa', '/artikel/stroemung-im-aquarium/'],
+  ['Beckenformen', '#06b6d4', '/artikel/beckenformen-groessen/'],
+  ['Lebendgebärende', '#f43f5e', '/artikel/lebendgebärende-zahnkarpfen/'],
+  ['Futter', '#a855f7', '/artikel/aquarium-futter-ernaehrung/'],
+  ['Pflanzenvermehrung', '#34d399', '/artikel/pflanzenvermehrung-aquarium/'],
+  ['CO₂ Einsteiger', '#2dd4bf', '/artikel/co2-einsteiger-guide/'],
+  ['Teppichpflanzen', '#10b981', '/artikel/bodendecker-teppichpflanzen/'],
+  ['Gesellschaftsbecken', '#0ea5e9', '/artikel/gesellschaftsbecken-einrichten/'],
+  ['Quarantäne', '#f59e0b', '/artikel/quarantaene-medikamente/'],
+  ['Rote Pflanzen', '#ef4444', '/artikel/rote-aquarienpflanzen/'],
+  ['Hardscape', '#78716c', '/artikel/steinarten-hardscape/'],
+  ['Nachzucht', '#f97316', '/artikel/nachzucht-fische/'],
+  ['Algenfresser', '#84cc16', '/artikel/algenfresser-portrait/'],
+  ['Wassertests', '#06b6d4', '/artikel/wassertest-wasserpflege/'],
+  ['DIY Aquarium', '#a8a29e', '/artikel/diy-aquarium-bauen/'],
+  ['Panzerwelse', '#ec4899', '/artikel/panzerwelse-aquarium/'],
+  ['Salmler', '#ec4899', '/artikel/salmler-aquarium/'],
+  ['Aquarium Moos', '#10b981', '/artikel/aquarium-moosarten/'],
+  ['Nano Aquarium', '#06b6d4', '/artikel/nano-aquarium-guide/'],
+  ['Schädlinge', '#f59e0b', '/artikel/aquarium-schaedlinge/'],
+  ['Aquarium Automation', '#8b5cf6', '/artikel/aquarium-automation/'],
+  ['Diskusfische', '#ec4899', '/artikel/diskushaltung-pflege/'],
+  ['Garnelennachzucht', '#ff6b6b', '/artikel/garnelen-nachzucht/'],
+  ['Antennenwelse & L-Welse', '#ec4899', '/artikel/welse-harnischwelse/'],
+  ['Futtertiere züchten', '#ec4899', '/artikel/futtertiere-selbst-zuechten/'],
+  ['Garnelen-Krankheiten', '#ff6b6b', '/artikel/garnelen-krankheiten/'],
+  ['Biotop-Aquarium', '#06b6d4', '/artikel/biotop-aquarium-suedamerika/'],
 ];
 
 // ── CATEGORY DATA for index page ──
@@ -888,7 +906,7 @@ const CATEGORIES = [
 ];
 
 for (const item of LONG_CONTENT_ARTICLES) {
-  TOPICS.push([item.topic || item.title, item.catColor, `/artikel/${item.slug}.html`]);
+  TOPICS.push([item.topic || item.title, item.catColor, `/artikel/${item.slug}/`]);
   const group = CATEGORIES.find(cat => cat.name === item.categoryGroup);
   if (group && !group.cards.includes(item.slug)) group.cards.unshift(item.slug);
 }
@@ -896,12 +914,12 @@ for (const group of CATEGORIES) group.count = group.cards.length;
 
 // ── SIDEBAR CATEGORY NAV for article pages (5-6 main categories) ──
 const SIDEBAR_CATS = [
-  ['🐟 Einsteiger', '/artikel/einsteiger-aquarium-guide.html', '#06b6d4'],
-  ['🌿 Pflanzen', '/artikel/aquarienpflanzen-anfaenger.html', '#10b981'],
-  ['🪨 Aquascaping', '/artikel/aquascaping-anfaenger.html', '#0d9488'],
-  ['⚙️ Technik', '/artikel/aquarium-technik-ueberblick.html', '#8b5cf6'],
-  ['🦐 Garnelen & Fische', '/artikel/garnelen-im-aquarium.html', '#ff6b6b'],
-  ['💊 Pflege', '/artikel/algen-im-aquarium.html', '#ffd93d'],
+  ['🐟 Einsteiger', '/artikel/einsteiger-aquarium-guide/', '#06b6d4'],
+  ['🌿 Pflanzen', '/artikel/aquarienpflanzen-anfaenger/', '#10b981'],
+  ['🪨 Aquascaping', '/artikel/aquascaping-anfaenger/', '#0d9488'],
+  ['⚙️ Technik', '/artikel/aquarium-technik-ueberblick/', '#8b5cf6'],
+  ['🦐 Garnelen & Fische', '/artikel/garnelen-im-aquarium/', '#ff6b6b'],
+  ['💊 Pflege', '/artikel/algen-im-aquarium/', '#ffd93d'],
 ];
 
 // ── TOPIC GROUPS for compact topic cloud ──
@@ -916,7 +934,7 @@ const TOPIC_GROUPS = [
 function topicTagByName(name) {
   const t = TOPICS.find(t => t[0] === name);
   if (!t) return '';
-  return `<a href="${t[2]}" class="topic-tag" style="--topic-color:${t[1]}">${t[0]}</a>`;
+  return `<a href="${canonicalPath(t[2])}" class="topic-tag" style="--topic-color:${t[1]}">${t[0]}</a>`;
 }
 
 // Resolve the legacy image names used by homepage cards, navigation and previews.
@@ -1120,7 +1138,7 @@ function buildArticle(slug) {
           ${SIDEBAR_CATS.map(([name, url, color]) => {
             const isActive = a.cat === name.split(' ').slice(1).join(' ') || a.catColor === color;
             // Match: check if article's category matches the category
-            return `<a href="${url}" class="side-cat-item${isActive ? ' active' : ''}" style="--cat-color:${color}">${name}</a>`;
+            return `<a href="${canonicalPath(url)}" class="side-cat-item${isActive ? ' active' : ''}" style="--cat-color:${color}">${name}</a>`;
           }).join('')}
         </div>
       </div>
@@ -1250,7 +1268,7 @@ function buildMagazineHero() {
     const img = a.img && !a.img.startsWith('linear-gradient')
       ? `linear-gradient(180deg,transparent 20%,rgba(0,0,0,0.88)),url('/images/${a.img}')`
       : `linear-gradient(135deg,${a.catColor},#1a1a2e)`;
-    return `<a href="/artikel/${slug}.html" class="mag-card" style="--idx:${i};--cat-clr:${a.catColor};background-image:${img};">
+    return `<a href="/artikel/${slug}/" class="mag-card" style="--idx:${i};--cat-clr:${a.catColor};background-image:${img};">
       <span class="mag-card-cat" style="background:${a.catColor}">${a.cat}</span>
       <h3>${a.title}</h3>
       <span class="mag-card-meta">${a.readingTime} Min Lesezeit</span>
@@ -1261,7 +1279,7 @@ function buildMagazineHero() {
   const topicsHTML = topics.map(t => {
     const topic = TOPICS.find(x => x[0] === t);
     if (!topic) return '';
-    return `<a href="${topic[2]}" class="mag-topic" style="--topic-clr:${topic[1]}">${t}</a>`;
+    return `<a href="${canonicalPath(topic[2])}" class="mag-topic" style="--topic-clr:${topic[1]}">${t}</a>`;
   }).join('');
 
   const featureImg = feature.img && !feature.img.startsWith('linear-gradient')
@@ -1275,7 +1293,7 @@ function buildMagazineHero() {
       <p class="mag-desc"><strong>${Object.keys(ARTICLES).length}+ praxisnahe Artikel</strong> &mdash; von der ersten Einrichtung bis zur Profi-Pflege</p>
     </div>
     <div class="mag-grid">
-      <a href="/artikel/${featureSlug}.html" class="mag-feature" style="--cat-clr:${feature.catColor};background-image:${featureImg};">
+      <a href="/artikel/${featureSlug}/" class="mag-feature" style="--cat-clr:${feature.catColor};background-image:${featureImg};">
         <span class="mag-feature-badge" style="background:${feature.catColor}">${feature.cat}</span>
         <div class="mag-feature-body">
           <h2>${feature.title}</h2>
@@ -1299,15 +1317,15 @@ function buildMagazineHero() {
 // ── INTENT SECTION (Schnelleinstieg – ersetzt Ticker) ──
 function buildIntentSection() {
   const intents = [
-    { emoji: '🐟', title: 'Ich bin Anfänger', desc: 'Erstes Aquarium einrichten', url: '/artikel/einsteiger-aquarium-guide.html' },
-    { emoji: '🌿', title: 'Ich will Pflanzen', desc: 'Arten, Pflege & Düngung', url: '/artikel/aquarienpflanzen-anfaenger.html' },
-    { emoji: '💧', title: 'Ich habe Algen', desc: 'Algen erkennen & bekämpfen', url: '/artikel/algen-im-aquarium.html' },
-    { emoji: '⚙️', title: 'Ich brauche Technik', desc: 'Filter, Licht, CO₂ & Co.', url: '/artikel/aquarium-technik-ueberblick.html' },
-    { emoji: '🪨', title: 'Ich will Aquascapen', desc: 'Hardscape & Gestaltung', url: '/artikel/aquascaping-anfaenger.html' },
-    { emoji: '🩺', title: 'Mein Fisch ist krank', desc: 'Symptome & Behandlung', url: '/artikel/fischkrankheiten-aquarium-guide.html' },
+    { emoji: '🐟', title: 'Ich bin Anfänger', desc: 'Erstes Aquarium einrichten', url: '/artikel/einsteiger-aquarium-guide/' },
+    { emoji: '🌿', title: 'Ich will Pflanzen', desc: 'Arten, Pflege & Düngung', url: '/artikel/aquarienpflanzen-anfaenger/' },
+    { emoji: '💧', title: 'Ich habe Algen', desc: 'Algen erkennen & bekämpfen', url: '/artikel/algen-im-aquarium/' },
+    { emoji: '⚙️', title: 'Ich brauche Technik', desc: 'Filter, Licht, CO₂ & Co.', url: '/artikel/aquarium-technik-ueberblick/' },
+    { emoji: '🪨', title: 'Ich will Aquascapen', desc: 'Hardscape & Gestaltung', url: '/artikel/aquascaping-anfaenger/' },
+    { emoji: '🩺', title: 'Mein Fisch ist krank', desc: 'Symptome & Behandlung', url: '/artikel/fischkrankheiten-aquarium-guide/' },
   ];
   const cards = intents.map((intent, i) =>
-    `<a href="${intent.url}" class="intent-card" style="--delay:${i * 0.06}s">
+    `<a href="${canonicalPath(intent.url)}" class="intent-card" style="--delay:${i * 0.06}s">
       <span class="intent-emoji">${intent.emoji}</span>
       <strong class="intent-title">${intent.title}</strong>
       <span class="intent-desc">${intent.desc}</span>
@@ -1345,16 +1363,16 @@ function wrapLegacyArticles() {
     ["wabi-kusa-aquascape-2026-natuerliche-unterwasserlandschaften-mit-schwimmpflanzen", ["schwimmpflanzen-aquarium-guide.webp", "Illustration schwimmender Blätter an der Wasseroberfläche"]],
     ["wurzelholz-aquascape-2026-so-inszenierst-du-treibende-hoelzer-mit-aufsitzerpflan", ["wurzeln-holz-aquarium.webp", "Illustration von verzweigtem Wurzelholz unter Wasser"]],
   ]);
-  const nav = resolveHomepageImages(T.nav).replace(
+  const nav = resolveHomepageImages(canonicalizeInternalLinks(T.nav)).replace(
     /<div class="search-wrapper">[\s\S]*?\r?\n      <\/div>/,
     '<a class="search" href="/artikel/" aria-label="Artikelübersicht">📚</a>',
   );
-  const plainFooter = T.footer.replace(/^ *<p class="affiliate-hinweis">.*<\/p>\r?\n/m, '');
+  const plainFooter = canonicalizeInternalLinks(T.footer).replace(/^ *<p class="affiliate-hinweis">.*<\/p>\r?\n/m, '');
   const sidebar = `<aside class="article-sidebar legacy-article-sidebar" aria-label="Artikelkategorien">
     <div class="side-section side-cat-nav">
       <h5>📂 Kategorien</h5>
       <div class="side-cat-list">${SIDEBAR_CATS.map(([name, url, color]) =>
-        `<a href="${url}" class="side-cat-item" style="--cat-color:${color}">${name}</a>`).join('')}</div>
+        `<a href="${canonicalPath(url)}" class="side-cat-item" style="--cat-color:${color}">${name}</a>`).join('')}</div>
     </div>
   </aside>`;
 
@@ -1383,7 +1401,7 @@ function wrapLegacyArticles() {
       { label: title.replace(/<[^>]*>/g, '') },
     ]);
     const footer = /<a\b[^>]*href="https:\/\/(?:www\.)?amazon\.[^"]+[?&](?:amp;)?tag=/.test(proseAndRelated)
-      ? T.footer : plainFooter;
+      ? canonicalizeInternalLinks(T.footer) : plainFooter;
     const body = normalize(`<body>
 ${nav}
 ${crumbs}
@@ -1407,6 +1425,11 @@ ${footer}
       .replace('</head>', () => `${localStyles}</head>`);
     fs.writeFileSync(file, next);
   }
+}
+
+// Legacy article files may still carry old-style internal links; canonicalize them.
+function canonicalizeInternalLinks(html) {
+  return html.replace(/href="(\/[^"]*)"/g, (m, href) => `href="${canonicalPath(href)}"`);
 }
 
 // ── MAIN ──
@@ -1449,6 +1472,7 @@ function main() {
 
   require('./scripts/pause-advertising.js').pauseAdvertising(ROOT);
   require('./scripts/generate-sitemap.js').writeSitemap(ROOT);
+  require('./scripts/write-redirects.js').writeRedirects(ROOT);
   require('./scripts/generate-content-routes.js').writeContentRoutes(ROOT);
   require('./scripts/validate-structured-data.js').validateStructuredData(ROOT);
   console.log('\n✨ Build complete! All pages generated.');

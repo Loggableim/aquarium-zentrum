@@ -1,5 +1,7 @@
 #!/usr/bin/env node
-// Only publish the public HTML output, never templates or content fragments.
+// Generates sitemap.xml listing ONLY canonical trailing-slash URLs.
+// Legacy articles keep their own .html URLs out of the sitemap so that search
+// engines only ever see the canonical form.
 const fs = require('node:fs');
 const path = require('node:path');
 const SITE = 'https://aquaristik-zentrum.com';
@@ -36,6 +38,10 @@ function generateSitemap(root = ROOT) {
     const canonical = [...html.matchAll(/<link\b[^>]*>/gi)].map(m => attributes(m[0])).filter(a => /\bcanonical\b/i.test(a.rel || ''));
     // Do not silently submit pages that canonicalize away from their public URL.
     const url = canonical[0]?.href || expected;
+    // URL consolidation: only trailing-slash URLs belong in the sitemap.
+    // Legacy .html URLs (their canonical redirects to a trailing-slash target)
+    // are excluded instead of published in two shapes.
+    if (url.endsWith('.html') || !url.endsWith('/')) continue;
     const variants = new Set([expected, `${SITE}/${file}`, expected.replace(/\/$/, '')]);
     if (canonical.length > 1 || !variants.has(url)) throw new Error(`Unexpected canonical in ${file}`);
     if (!dates.has(url) && dates.has(expected)) dates.set(url, dates.get(expected));
@@ -54,7 +60,7 @@ function generateSitemap(root = ROOT) {
 function writeSitemap(root = ROOT) {
   const xml = generateSitemap(root);
   fs.writeFileSync(path.join(root, 'sitemap.xml'), xml);
-  console.log(`Sitemap: ${(xml.match(/<loc>/g) || []).length} public URLs`);
+  console.log(`Sitemap: ${(xml.match(/<loc>/g) || []).length} canonical (trailing-slash) URLs`);
 }
 if (require.main === module) writeSitemap();
 module.exports = { generateSitemap, writeSitemap };

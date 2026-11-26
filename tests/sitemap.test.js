@@ -49,10 +49,13 @@ test('uses same-site canonical URLs and rejects off-site canonicals', t => {
   assert.throws(() => generateSitemap(root), /canonical/i);
 });
 
-test('matches existing .html canonicals rather than inventing a competing URL', t => {
+test('only trailing-slash canonical URLs are listed; legacy .html canonicals redirect and are excluded', t => {
   const { root, page } = fixture(t);
   page('index.html'); page('artikel/fish.html', '<link rel="canonical" href="https://aquaristik-zentrum.com/artikel/fish.html">');
-  assert.match(generateSitemap(root), /<loc>https:\/\/aquaristik-zentrum.com\/artikel\/fish.html<\/loc>/);
+  const xml = generateSitemap(root);
+  assert.match(xml, /<loc>https:\/\/aquaristik-zentrum.com\/<\/loc>/);
+  assert.doesNotMatch(xml, /fish\.html/);
+  assert.doesNotMatch(xml, /\/artikel\/fish"/);
 });
 
 test('only the exact index.html basename represents a directory homepage', t => {
